@@ -1,0 +1,457 @@
+# Understanding eGPS Main GUI Classes
+本文件汇总 `src/` 下的类（已排除 `src/egps/` 的 L&F 代码），按目录分组给出用途简述。
+
+## com/raven (43 classes)
+- **Action** (`src/com/raven/swing/table/Action.java`): Raven UI template component used inside the eGPS shell.
+- **Button** (`src/com/raven/swing/Button.java`): Raven UI template component used inside the eGPS shell.
+- **ButtonBadges** (`src/com/raven/swing/ButtonBadges.java`): Raven UI template component used inside the eGPS shell.
+- **Card** (`src/com/raven/component/Card.java`): Raven UI template component used inside the eGPS shell.
+- **DefaultIconCode** (`src/com/raven/swing/icon/DefaultIconCode.java`): Raven UI template component used inside the eGPS shell.
+- **EventAction** (`src/com/raven/swing/table/EventAction.java`): Raven UI template component used inside the eGPS shell.
+- **EventMenu** (`src/com/raven/event/EventMenu.java`): Raven UI template component used inside the eGPS shell.
+- **EventMenuSelected** (`src/com/raven/event/EventMenuSelected.java`): Raven UI template component used inside the eGPS shell.
+- **EventShowPopupMenu** (`src/com/raven/event/EventShowPopupMenu.java`): Raven UI template component used inside the eGPS shell.
+- **Form1** (`src/com/raven/form/Form1.java`): Raven UI template component used inside the eGPS shell.
+- **Form_Home** (`src/com/raven/form/Form_Home.java`): Raven UI template component used inside the eGPS shell.
+- **GoogleMaterialDesignIcons** (`src/com/raven/swing/icon/GoogleMaterialDesignIcons.java`): Raven UI template component used inside the eGPS shell.
+- **Header** (`src/com/raven/component/Header.java`): Raven UI template component used inside the eGPS shell.
+- **IconCode** (`src/com/raven/swing/icon/IconCode.java`): Raven UI template component used inside the eGPS shell.
+- **IconFont** (`src/com/raven/swing/icon/IconFont.java`): Raven UI template component used inside the eGPS shell.
+- **IconFontSwing** (`src/com/raven/swing/icon/IconFontSwing.java`): Raven UI template component used inside the eGPS shell.
+- **ImageAvatar** (`src/com/raven/swing/ImageAvatar.java`): Raven UI template component used inside the eGPS shell.
+- **IndependentModuleLoader** (`src/com/raven/IndependentModuleLoader.java`): Raven UI template component used inside the eGPS shell.
+- **Main** (`src/com/raven/main/Main.java`): Raven UI template component used inside the eGPS shell.
+- **MainFace** (`src/com/raven/MainFace.java`): Raven UI template component used inside the eGPS shell.
+- **MainForm** (`src/com/raven/form/MainForm.java`): Raven UI template component used inside the eGPS shell.
+- **Menu** (`src/com/raven/component/Menu.java`): Raven UI template component used inside the eGPS shell.
+- **MenuAnimation** (`src/com/raven/swing/MenuAnimation.java`): Raven UI template component used inside the eGPS shell.
+- **MenuButton** (`src/com/raven/swing/MenuButton.java`): Raven UI template component used inside the eGPS shell.
+- **MenuItem** (`src/com/raven/swing/MenuItem.java`): Raven UI template component used inside the eGPS shell.
+- **Message** (`src/com/raven/dialog/Message.java`): Raven UI template component used inside the eGPS shell.
+- **ModelAction** (`src/com/raven/swing/table/ModelAction.java`): Raven UI template component used inside the eGPS shell.
+- **ModelCard** (`src/com/raven/model/ModelCard.java`): Raven UI template component used inside the eGPS shell.
+- **ModelMenu** (`src/com/raven/model/ModelMenu.java`): Raven UI template component used inside the eGPS shell.
+- **ModelNoticeBoard** (`src/com/raven/swing/noticeboard/ModelNoticeBoard.java`): Raven UI template component used inside the eGPS shell.
+- **ModelProfile** (`src/com/raven/swing/table/ModelProfile.java`): Raven UI template component used inside the eGPS shell.
+- **ModelStudent** (`src/com/raven/model/ModelStudent.java`): Raven UI template component used inside the eGPS shell.
+- **ModernScrollBarUI** (`src/com/raven/swing/scrollbar/ModernScrollBarUI.java`): Raven UI template component used inside the eGPS shell.
+- **NoticeBoard** (`src/com/raven/swing/noticeboard/NoticeBoard.java`): Raven UI template component used inside the eGPS shell.
+- **PanelPopup** (`src/com/raven/swing/PanelPopup.java`): Raven UI template component used inside the eGPS shell.
+- **PopupMenu** (`src/com/raven/swing/PopupMenu.java`): Raven UI template component used inside the eGPS shell.
+- **Profile** (`src/com/raven/component/Profile.java`): Raven UI template component used inside the eGPS shell.
+- **Profile** (`src/com/raven/swing/table/Profile.java`): Raven UI template component used inside the eGPS shell.
+- **ProgressBarCustom** (`src/com/raven/swing/ProgressBarCustom.java`): Raven UI template component used inside the eGPS shell.
+- **ScrollBarCustom** (`src/com/raven/swing/scrollbar/ScrollBarCustom.java`): Raven UI template component used inside the eGPS shell.
+- **Table** (`src/com/raven/swing/table/Table.java`): Raven UI template component used inside the eGPS shell.
+- **TableCellAction** (`src/com/raven/swing/table/TableCellAction.java`): Raven UI template component used inside the eGPS shell.
+- **TableHeader** (`src/com/raven/swing/table/TableHeader.java`): Raven UI template component used inside the eGPS shell.
+
+## egps2/Authors.java (1 classes)
+- **Authors** (`src/egps2/Authors.java`): Part of the eGPS desktop application.
+
+## egps2/EGPSProperties.java (1 classes)
+- **EGPSProperties** (`src/egps2/EGPSProperties.java`): Part of the eGPS desktop application.
+
+## egps2/LaunchProperty.java (1 classes)
+- **LaunchProperty** (`src/egps2/LaunchProperty.java`): Part of the eGPS desktop application.
+
+## egps2/Launcher.java (1 classes)
+- **Launcher** (`src/egps2/Launcher.java`): Part of the eGPS desktop application.
+
+## egps2/Launcher4Dev.java (1 classes)
+- **Launcher4Dev** (`src/egps2/Launcher4Dev.java`): Part of the eGPS desktop application.
+
+## egps2/PreferencePanel.java (1 classes)
+- **PreferencePanel** (`src/egps2/PreferencePanel.java`): Part of the eGPS desktop application.
+
+## egps2/UnifiedAccessPoint.java (1 classes)
+- **UnifiedAccessPoint** (`src/egps2/UnifiedAccessPoint.java`): Part of the eGPS desktop application.
+
+## egps2/builtin (148 classes)
+- **AbstractConvert** (`src/egps2/builtin/modules/bonus/modules/convert/interfaces/AbstractConvert.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **AbstractGuiBaseVoiceFeaturedPanel** (`src/egps2/builtin/modules/voice/template/AbstractGuiBaseVoiceFeaturedPanel.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **AbstractParamsAssignerAndParser4VOICE** (`src/egps2/builtin/modules/voice/bean/AbstractParamsAssignerAndParser4VOICE.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **AddedCenterJPanel** (`src/egps2/builtin/modules/bonus/modules/convert/model/AddedCenterJPanel.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **BookmarkDisplayPanel** (`src/egps2/builtin/modules/voice/BookmarkDisplayPanel.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **BookmarkElement** (`src/egps2/builtin/modules/filemanager/BookmarkElement.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **BookMarkNode** (`src/egps2/builtin/modules/voice/BookMarkNode.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **BookmarkOperationPanel** (`src/egps2/builtin/modules/voice/BookmarkOperationPanel.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **BookmarkPanel** (`src/egps2/builtin/modules/filemanager/BookmarkPanel.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **CLI** (`src/egps2/builtin/modules/CLI.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **ColorfulToggleButtons** (`src/egps2/builtin/modules/bonus/modules/colorman/ColorfulToggleButtons.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **CommandLineArgsInterpreter4VOICE** (`src/egps2/builtin/modules/voice/template/CommandLineArgsInterpreter4VOICE.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **CompleteModuleFace4Voice** (`src/egps2/builtin/modules/voice/template/CompleteModuleFace4Voice.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **ComputationalModuleInjector** (`src/egps2/builtin/modules/voice/fastmodvoice/ComputationalModuleInjector.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **ContainerModuleFace4Voice** (`src/egps2/builtin/modules/voice/template/ContainerModuleFace4Voice.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **ConvertEmf** (`src/egps2/builtin/modules/bonus/modules/convert/wholeGemomeAlignment/ConvertEmf.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **ConvertFileMain** (`src/egps2/builtin/modules/bonus/modules/convert/ConvertFileMain.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **ConvertFileStart** (`src/egps2/builtin/modules/bonus/modules/convert/ConvertFileStart.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **ConvertMaf** (`src/egps2/builtin/modules/bonus/modules/convert/wholeGemomeAlignment/ConvertMaf.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **ConvertPhylogeneticFormat** (`src/egps2/builtin/modules/bonus/modules/convert/core/tree/ConvertPhylogeneticFormat.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **ConvertPhylogeneticTree** (`src/egps2/builtin/modules/bonus/modules/convert/core/tree/ConvertPhylogeneticTree.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **ConvertSequenceFormat** (`src/egps2/builtin/modules/bonus/modules/convert/fregmentAlignment/ConvertSequenceFormat.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **ConvertWholeGemomeAlignment** (`src/egps2/builtin/modules/bonus/modules/convert/wholeGemomeAlignment/ConvertWholeGemomeAlignment.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **CtrlPanel** (`src/egps2/builtin/modules/lowtextedi/CtrlPanel.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **DashedSeparator** (`src/egps2/builtin/modules/lowtextedi/DashedSeparator.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **DeleteLineAction** (`src/egps2/builtin/modules/largetextedi/model/DeleteLineAction.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **DemoButtonsOrganizer** (`src/egps2/builtin/modules/gallerymod/DemoButtonsOrganizer.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **DemoViewer** (`src/egps2/builtin/modules/bonus/modules/threedpower/p1/DemoViewer.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **DemoViewer1** (`src/egps2/builtin/modules/bonus/modules/threedpower/p2/DemoViewer1.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **DirNavigatorPanel** (`src/egps2/builtin/modules/filemanager/DirNavigatorPanel.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **DirNavigatorPanelElement** (`src/egps2/builtin/modules/filemanager/DirNavigatorPanelElement.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **DIYToolModuleFace** (`src/egps2/builtin/modules/voice/diytools/DIYToolModuleFace.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **DIYToolSubTabModuleFace** (`src/egps2/builtin/modules/voice/diytools/DIYToolSubTabModuleFace.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **DockableTabModuleFaceOfVoice** (`src/egps2/builtin/modules/voice/fastmodvoice/DockableTabModuleFaceOfVoice.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **DockableTabModuleRunnerCreator** (`src/egps2/builtin/modules/voice/fastmodvoice/DockableTabModuleRunnerCreator.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **Editor** (`src/egps2/builtin/modules/lowtextedi/Editor.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **EditorBufferedReader** (`src/egps2/builtin/modules/largetextedi/io/EditorBufferedReader.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **EditorCaret** (`src/egps2/builtin/modules/largetextedi/model/EditorCaret.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **EditorJDialog** (`src/egps2/builtin/modules/largetextedi/util/EditorJDialog.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **EditorScrollBar** (`src/egps2/builtin/modules/largetextedi/gui/EditorScrollBar.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **EditorWriteFile** (`src/egps2/builtin/modules/largetextedi/io/EditorWriteFile.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **EditScriptState** (`src/egps2/builtin/modules/voice/EditScriptState.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **EGPSOutputFileChooser4TextEditor** (`src/egps2/builtin/modules/largetextedi/gui/EGPSOutputFileChooser4TextEditor.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **EgpsTextPane** (`src/egps2/builtin/modules/largetextedi/gui/EgpsTextPane.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **EgpsTextPanelKeyListener** (`src/egps2/builtin/modules/largetextedi/listener/EgpsTextPanelKeyListener.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **ElegantJTable** (`src/egps2/builtin/modules/itoolmanager/ElegantJTable.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **EventUniformlyProcessor** (`src/egps2/builtin/modules/voice/EventUniformlyProcessor.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **ExitSituation** (`src/egps2/builtin/modules/largetextedi/actions/ExitSituation.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **ExplorerPanel** (`src/egps2/builtin/modules/filemanager/ExplorerPanel.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **ExtendedStyledEditorKit** (`src/egps2/builtin/modules/largetextedi/gui/ExtendedStyledEditorKit.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **FileChooserJButton** (`src/egps2/builtin/modules/bonus/modules/convert/model/FileChooserJButton.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **FileInfoPanel** (`src/egps2/builtin/modules/filemanager/FileInfoPanel.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **FileManagerFileDetailsDialog** (`src/egps2/builtin/modules/filemanager/FileManagerFileDetailsDialog.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **FindAndReplaceDialog** (`src/egps2/builtin/modules/largetextedi/actions/FindAndReplaceDialog.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **FindDialog** (`src/egps2/builtin/modules/lowtextedi/FindDialog.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **FindElementTask** (`src/egps2/builtin/modules/largetextedi/actions/FindElementTask.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **FixationIndex** (`src/egps2/builtin/modules/bonus/modules/fstDemo/FixationIndex.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **FormatJButtonMouseListener** (`src/egps2/builtin/modules/bonus/modules/convert/model/FormatJButtonMouseListener.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **FstCoancestryCoefficient** (`src/egps2/builtin/modules/bonus/modules/fstDemo/FstCoancestryCoefficient.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **FstSNPCommon** (`src/egps2/builtin/modules/bonus/modules/fstDemo/FstSNPCommon.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **GoToLineJDialog** (`src/egps2/builtin/modules/largetextedi/actions/GoToLineJDialog.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **GuiMain** (`src/egps2/builtin/modules/filemanager/GuiMain.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **GuiMain** (`src/egps2/builtin/modules/itoolmanager/GuiMain.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **HistoryNodeTreeRenderer** (`src/egps2/builtin/modules/voice/HistoryNodeTreeRenderer.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **IconObtainer** (`src/egps2/builtin/modules/IconObtainer.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **IModuleElement** (`src/egps2/builtin/modules/itoolmanager/IModuleElement.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **ImportDataInfo** (`src/egps2/builtin/modules/lowtextedi/ImportDataInfo.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **IndependentModuleLoader** (`src/egps2/builtin/modules/bonus/modules/colorman/IndependentModuleLoader.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **IndependentModuleLoader** (`src/egps2/builtin/modules/bonus/modules/computationtest/IndependentModuleLoader.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **IndependentModuleLoader** (`src/egps2/builtin/modules/bonus/modules/mapmaker/IndependentModuleLoader.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **IndependentModuleLoader** (`src/egps2/builtin/modules/bonus/modules/reminder/IndependentModuleLoader.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **IndependentModuleLoader** (`src/egps2/builtin/modules/bonus/modules/schedule/IndependentModuleLoader.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **IndependentModuleLoader** (`src/egps2/builtin/modules/bonus/modules/threedpower/IndependentModuleLoader.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **IndependentModuleLoader** (`src/egps2/builtin/modules/filemanager/IndependentModuleLoader.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **IndependentModuleLoader** (`src/egps2/builtin/modules/gallerymod/IndependentModuleLoader.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **IndependentModuleLoader** (`src/egps2/builtin/modules/itoolmanager/IndependentModuleLoader.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **IndependentModuleLoader** (`src/egps2/builtin/modules/largetextedi/IndependentModuleLoader.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **IndependentModuleLoader** (`src/egps2/builtin/modules/lowtextedi/IndependentModuleLoader.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **InputAreaPanel** (`src/egps2/builtin/modules/voice/InputAreaPanel.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **IntroMain** (`src/egps2/builtin/modules/gallerymod/IntroMain.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **JLabel4NavigatorPanel** (`src/egps2/builtin/modules/filemanager/JLabel4NavigatorPanel.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **LimitQueue** (`src/egps2/builtin/modules/largetextedi/gui/LimitQueue.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **LineNumberHeaderView** (`src/egps2/builtin/modules/largetextedi/gui/LineNumberHeaderView.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **LineObj** (`src/egps2/builtin/modules/largetextedi/model/LineObj.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **LineTerminator** (`src/egps2/builtin/modules/largetextedi/model/LineTerminator.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **ListOfTextEditActions** (`src/egps2/builtin/modules/largetextedi/actions/ListOfTextEditActions.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **Main_FormatCon** (`src/egps2/builtin/modules/bonus/modules/Main_FormatCon.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **Main_FST_Calculator** (`src/egps2/builtin/modules/bonus/modules/Main_FST_Calculator.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **Main_turtle** (`src/egps2/builtin/modules/bonus/modules/Main_turtle.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **MainFace** (`src/egps2/builtin/modules/bonus/modules/colorman/MainFace.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **MainFace** (`src/egps2/builtin/modules/bonus/modules/computationtest/MainFace.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **MainFace** (`src/egps2/builtin/modules/bonus/modules/mapmaker/MainFace.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **MainFace** (`src/egps2/builtin/modules/bonus/modules/reminder/MainFace.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **MainFace** (`src/egps2/builtin/modules/bonus/modules/schedule/MainFace.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **MainFace** (`src/egps2/builtin/modules/bonus/modules/threedpower/MainFace.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **MapDrawer** (`src/egps2/builtin/modules/bonus/modules/mapmaker/MapDrawer.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **MethodsForText2Editor** (`src/egps2/builtin/modules/largetextedi/MethodsForText2Editor.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **MyScheduler** (`src/egps2/builtin/modules/bonus/modules/schedule/MyScheduler.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **NewLinesAction** (`src/egps2/builtin/modules/largetextedi/model/NewLinesAction.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **OneBlockShownContent** (`src/egps2/builtin/modules/largetextedi/model/OneBlockShownContent.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **OpenFilterClustal** (`src/egps2/builtin/modules/bonus/modules/convert/util/io/OpenFilterClustal.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **OpenFilterEmbl** (`src/egps2/builtin/modules/bonus/modules/convert/util/io/OpenFilterEmbl.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **OpenFilterEtree** (`src/egps2/builtin/modules/bonus/modules/convert/util/io/OpenFilterEtree.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **OpenFilterGcgMultiple** (`src/egps2/builtin/modules/bonus/modules/convert/util/io/OpenFilterGcgMultiple.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **OpenFilterGenBank** (`src/egps2/builtin/modules/bonus/modules/convert/util/io/OpenFilterGenBank.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **OpenFilterMega** (`src/egps2/builtin/modules/bonus/modules/convert/util/io/OpenFilterMega.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **OpenFilterNex** (`src/egps2/builtin/modules/bonus/modules/convert/util/io/OpenFilterNex.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **OpenFilterNexml** (`src/egps2/builtin/modules/bonus/modules/convert/util/io/OpenFilterNexml.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **OpenFilterNhx** (`src/egps2/builtin/modules/bonus/modules/convert/util/io/OpenFilterNhx.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **OpenFilterNwk** (`src/egps2/builtin/modules/bonus/modules/convert/util/io/OpenFilterNwk.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **OpenFilterPaml** (`src/egps2/builtin/modules/bonus/modules/convert/util/io/OpenFilterPaml.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **OpenFilterPaup** (`src/egps2/builtin/modules/bonus/modules/convert/util/io/OpenFilterPaup.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **OpenFilterPhylip** (`src/egps2/builtin/modules/bonus/modules/convert/util/io/OpenFilterPhylip.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **OrganizedParameterGetter** (`src/egps2/builtin/modules/voice/fastmodvoice/OrganizedParameterGetter.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **PanelOrganizer** (`src/egps2/builtin/modules/bonus/modules/schedule/PanelOrganizer.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **PluginDataCenter** (`src/egps2/builtin/modules/bonus/modules/convert/util/datacenter/PluginDataCenter.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **PluginDataFormatError** (`src/egps2/builtin/modules/bonus/modules/convert/util/datacenter/PluginDataFormatError.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **PluginFormat** (`src/egps2/builtin/modules/bonus/modules/convert/interfaces/PluginFormat.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **PluginFormatInfo** (`src/egps2/builtin/modules/bonus/modules/convert/interfaces/PluginFormatInfo.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **PropertiesSetter** (`src/egps2/builtin/modules/filemanager/PropertiesSetter.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **ReplaceAllAction** (`src/egps2/builtin/modules/largetextedi/model/ReplaceAllAction.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **ReplaceAllJDialog** (`src/egps2/builtin/modules/largetextedi/actions/ReplaceAllJDialog.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **RevisedLineAction** (`src/egps2/builtin/modules/largetextedi/model/RevisedLineAction.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **RightDemoPanel** (`src/egps2/builtin/modules/gallerymod/RightDemoPanel.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **SelectEditor** (`src/egps2/builtin/modules/largetextedi/model/SelectEditor.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **StorageIO** (`src/egps2/builtin/modules/filemanager/StorageIO.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **SubTabJPanel4Voice** (`src/egps2/builtin/modules/voice/template/SubTabJPanel4Voice.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **SubTabJPanel4VoiceCreator** (`src/egps2/builtin/modules/voice/template/SubTabJPanel4VoiceCreator.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **SubTabJPanel4VoiceInjector** (`src/egps2/builtin/modules/voice/template/SubTabJPanel4VoiceInjector.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **SubTabModule4VoiceInjector** (`src/egps2/builtin/modules/voice/fastmodvoice/SubTabModule4VoiceInjector.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **SubTabModuleRunner** (`src/egps2/builtin/modules/voice/fastmodvoice/SubTabModuleRunner.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **SwingWorkerWithProgressBar** (`src/egps2/builtin/modules/bonus/modules/convert/thread/SwingWorkerWithProgressBar.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **TabModuleFaceOfVoice** (`src/egps2/builtin/modules/voice/fastmodvoice/TabModuleFaceOfVoice.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **TaskPanel** (`src/egps2/builtin/modules/bonus/modules/schedule/TaskPanel.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **TextEditAction** (`src/egps2/builtin/modules/largetextedi/model/TextEditAction.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **TextEditor2D** (`src/egps2/builtin/modules/largetextedi/gui/TextEditor2D.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **TextEditorDataManager** (`src/egps2/builtin/modules/largetextedi/gui/TextEditorDataManager.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **TextEditorMain** (`src/egps2/builtin/modules/largetextedi/TextEditorMain.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **TextEditorViewPort** (`src/egps2/builtin/modules/largetextedi/gui/TextEditorViewPort.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **TextInputDialogWithOKCancel** (`src/egps2/builtin/modules/voice/TextInputDialogWithOKCancel.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **TextViewMainFace** (`src/egps2/builtin/modules/lowtextedi/TextViewMainFace.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **VersatileOpenInputClickAbstractGuiBase** (`src/egps2/builtin/modules/voice/VersatileOpenInputClickAbstractGuiBase.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **VoiceExampleGenerator** (`src/egps2/builtin/modules/voice/bean/VoiceExampleGenerator.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **VoiceParameterHandler4DIYTabModuleFace** (`src/egps2/builtin/modules/voice/fastmodvoice/VoiceParameterHandler4DIYTabModuleFace.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **VoiceParameterHandler4SubTabJPanel4Voice** (`src/egps2/builtin/modules/voice/template/VoiceParameterHandler4SubTabJPanel4Voice.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **VoiceParameterParser** (`src/egps2/builtin/modules/voice/fastmodvoice/VoiceParameterParser.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **VoiceValueParameterBean** (`src/egps2/builtin/modules/voice/bean/VoiceValueParameterBean.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **Voice4DIYTools** (`src/egps2/builtin/modules/voice/diytools/Voice4DIYTools.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+
+## egps2/frame (67 classes)
+- **AbstractSoftAction** (`src/egps2/frame/AbstractSoftAction.java`): Supports the main eGPS window, actions, or tab management.
+- **Action4Download2update** (`src/egps2/frame/features/Action4Download2update.java`): Supports the main eGPS window, actions, or tab management.
+- **ActionAbout** (`src/egps2/frame/ActionAbout.java`): Supports the main eGPS window, actions, or tab management.
+- **ActionExit** (`src/egps2/frame/ActionExit.java`): Supports the main eGPS window, actions, or tab management.
+- **ActionExportData** (`src/egps2/frame/ActionExportData.java`): Supports the main eGPS window, actions, or tab management.
+- **ActionFaq** (`src/egps2/frame/ActionFaq.java`): Supports the main eGPS window, actions, or tab management.
+- **ActionHelp** (`src/egps2/frame/ActionHelp.java`): Supports the main eGPS window, actions, or tab management.
+- **ActionHistory** (`src/egps2/frame/ActionHistory.java`): Supports the main eGPS window, actions, or tab management.
+- **ActionHomePage** (`src/egps2/frame/ActionHomePage.java`): Supports the main eGPS window, actions, or tab management.
+- **ActionImportData** (`src/egps2/frame/ActionImportData.java`): Supports the main eGPS window, actions, or tab management.
+- **ActionInformation** (`src/egps2/frame/ActionInformation.java`): Supports the main eGPS window, actions, or tab management.
+- **ActionLicenseTerm** (`src/egps2/frame/ActionLicenseTerm.java`): Supports the main eGPS window, actions, or tab management.
+- **ActionPreference** (`src/egps2/frame/ActionPreference.java`): Supports the main eGPS window, actions, or tab management.
+- **ActionReportBugs** (`src/egps2/frame/ActionReportBugs.java`): Supports the main eGPS window, actions, or tab management.
+- **ActionSearch** (`src/egps2/frame/ActionSearch.java`): Supports the main eGPS window, actions, or tab management.
+- **ActionsManager** (`src/egps2/frame/ActionsManager.java`): Supports the main eGPS window, actions, or tab management.
+- **ActionStatics** (`src/egps2/frame/ActionStatics.java`): Supports the main eGPS window, actions, or tab management.
+- **ActionStdErrConsole** (`src/egps2/frame/ActionStdErrConsole.java`): Supports the main eGPS window, actions, or tab management.
+- **ActionStop** (`src/egps2/frame/ActionStop.java`): Supports the main eGPS window, actions, or tab management.
+- **AdjustedSoft4HelpInfoStaticsAction** (`src/egps2/frame/AdjustedSoft4HelpInfoStaticsAction.java`): Supports the main eGPS window, actions, or tab management.
+- **AdjustedSoftAction** (`src/egps2/frame/AdjustedSoftAction.java`): Supports the main eGPS window, actions, or tab management.
+- **AutoConfigThePropertiesAction** (`src/egps2/frame/features/AutoConfigThePropertiesAction.java`): Supports the main eGPS window, actions, or tab management.
+- **Bean4eGPSUpdateInfor** (`src/egps2/frame/features/Bean4eGPSUpdateInfor.java`): Supports the main eGPS window, actions, or tab management.
+- **ButtomStatesBar** (`src/egps2/frame/ButtomStatesBar.java`): Supports the main eGPS window, actions, or tab management.
+- **ComplexRectObj** (`src/egps2/frame/gui/interacive/ComplexRectObj.java`): Supports the main eGPS window, actions, or tab management.
+- **ComputationalModuleFace** (`src/egps2/frame/ComputationalModuleFace.java`): Supports the main eGPS window, actions, or tab management.
+- **DataImportPanel_OneTypeMultiFiles** (`src/egps2/frame/gui/comp/DataImportPanel_OneTypeMultiFiles.java`): Supports the main eGPS window, actions, or tab management.
+- **DataImportPanel_OneTypeMultiFiles_WithInputBox** (`src/egps2/frame/gui/comp/DataImportPanel_OneTypeMultiFiles_WithInputBox.java`): Supports the main eGPS window, actions, or tab management.
+- **DataImportPanel_OneTypeOneFile** (`src/egps2/frame/gui/comp/DataImportPanel_OneTypeOneFile.java`): Supports the main eGPS window, actions, or tab management.
+- **DataImportPanel_OneTypeOneFile_WithInputBox** (`src/egps2/frame/gui/comp/DataImportPanel_OneTypeOneFile_WithInputBox.java`): Supports the main eGPS window, actions, or tab management.
+- **DefaultParamsAssignerAndParserHandler4VOICE** (`src/egps2/frame/DefaultParamsAssignerAndParserHandler4VOICE.java`): Supports the main eGPS window, actions, or tab management.
+- **DialogMoreInfoGenerator** (`src/egps2/frame/gui/dialog/DialogMoreInfoGenerator.java`): Supports the main eGPS window, actions, or tab management.
+- **DraggableTabbedPane** (`src/egps2/frame/gui/comp/DraggableTabbedPane.java`): Supports the main eGPS window, actions, or tab management.
+- **EGPS2ServiceLoader** (`src/egps2/frame/features/EGPS2ServiceLoader.java`): Supports the main eGPS window, actions, or tab management.
+- **EGPSCustomTabbedPaneUI** (`src/egps2/frame/gui/EGPSCustomTabbedPaneUI.java`): Supports the main eGPS window, actions, or tab management.
+- **EGPSJTextArea** (`src/egps2/frame/gui/comp/EGPSJTextArea.java`): Supports the main eGPS window, actions, or tab management.
+- **EGPSMainGuiUtil** (`src/egps2/frame/gui/EGPSMainGuiUtil.java`): Supports the main eGPS window, actions, or tab management.
+- **EGPSSwingUtil** (`src/egps2/frame/gui/EGPSSwingUtil.java`): Supports the main eGPS window, actions, or tab management.
+- **EGPSTextTransferHandler** (`src/egps2/frame/gui/handler/EGPSTextTransferHandler.java`): Supports the main eGPS window, actions, or tab management.
+- **EGPSVersion** (`src/egps2/frame/features/EGPSVersion.java`): Supports the main eGPS window, actions, or tab management.
+- **GlassPanelAchievement** (`src/egps2/frame/GlassPanelAchievement.java`): Supports the main eGPS window, actions, or tab management.
+- **GlassPanelBusyStates** (`src/egps2/frame/GlassPanelBusyStates.java`): Supports the main eGPS window, actions, or tab management.
+- **GlassPanelGesture** (`src/egps2/frame/GlassPanelGesture.java`): Supports the main eGPS window, actions, or tab management.
+- **GraphicsUtilities** (`src/egps2/frame/gui/comp/toggle/swing/shadow/GraphicsUtilities.java`): Supports the main eGPS window, actions, or tab management.
+- **HintManager** (`src/egps2/frame/HintManager.java`): Supports the main eGPS window, actions, or tab management.
+- **HistoryJTreeDialog** (`src/egps2/frame/html/HistoryJTreeDialog.java`): Supports the main eGPS window, actions, or tab management.
+- **InfiniteProgressPanel** (`src/egps2/frame/gui/comp/InfiniteProgressPanel.java`): Supports the main eGPS window, actions, or tab management.
+- **InstantFillAndLineJPanel** (`src/egps2/frame/InstantFillAndLineJPanel.java`): Supports the main eGPS window, actions, or tab management.
+- **InstantSizeAndPositionJPanel** (`src/egps2/frame/InstantSizeAndPositionJPanel.java`): Supports the main eGPS window, actions, or tab management.
+- **JTextAreaTransferHandler** (`src/egps2/frame/gui/handler/JTextAreaTransferHandler.java`): Supports the main eGPS window, actions, or tab management.
+- **JTextAreaWithDefaultContent_MouseAdapter** (`src/egps2/frame/gui/comp/JTextAreaWithDefaultContent_MouseAdapter.java`): Supports the main eGPS window, actions, or tab management.
+- **MainFrameGestureConfig** (`src/egps2/frame/MainFrameGestureConfig.java`): Supports the main eGPS window, actions, or tab management.
+- **MainFrameProperties** (`src/egps2/frame/MainFrameProperties.java`): Supports the main eGPS window, actions, or tab management.
+- **ModuleFace** (`src/egps2/frame/ModuleFace.java`): Supports the main eGPS window, actions, or tab management.
+- **MyFrame** (`src/egps2/frame/MyFrame.java`): Supports the main eGPS window, actions, or tab management.
+- **MyResourceBundle** (`src/egps2/frame/MyResourceBundle.java`): Supports the main eGPS window, actions, or tab management.
+- **RectAdjustMent** (`src/egps2/frame/gui/interacive/RectAdjustMent.java`): Supports the main eGPS window, actions, or tab management.
+- **RectObj** (`src/egps2/frame/gui/interacive/RectObj.java`): Supports the main eGPS window, actions, or tab management.
+- **SearchItem** (`src/egps2/frame/gui/comp/search/SearchItem.java`): Supports the main eGPS window, actions, or tab management.
+- **ShadowRenderer** (`src/egps2/frame/gui/comp/toggle/swing/shadow/ShadowRenderer.java`): Supports the main eGPS window, actions, or tab management.
+- **SimplestWorkBench** (`src/egps2/frame/gui/comp/SimplestWorkBench.java`): Supports the main eGPS window, actions, or tab management.
+- **StringKeySaver** (`src/egps2/frame/gui/StringKeySaver.java`): Supports the main eGPS window, actions, or tab management.
+- **TabbedPaneMouseAdapter** (`src/egps2/frame/TabbedPaneMouseAdapter.java`): Supports the main eGPS window, actions, or tab management.
+- **ToggleAdapter** (`src/egps2/frame/gui/comp/toggle/toggle/ToggleAdapter.java`): Supports the main eGPS window, actions, or tab management.
+- **ToggleButton** (`src/egps2/frame/gui/comp/toggle/toggle/ToggleButton.java`): Supports the main eGPS window, actions, or tab management.
+- **ToggleListener** (`src/egps2/frame/gui/comp/toggle/toggle/ToggleListener.java`): Supports the main eGPS window, actions, or tab management.
+- **VectorGraphicsEncoder** (`src/egps2/frame/gui/VectorGraphicsEncoder.java`): Supports the main eGPS window, actions, or tab management.
+
+## egps2/modulei (16 classes)
+- **AdjusterFillAndLine** (`src/egps2/modulei/AdjusterFillAndLine.java`): Core module interfaces and contracts for eGPS.
+- **AdjusterSizeAndPosition** (`src/egps2/modulei/AdjusterSizeAndPosition.java`): Core module interfaces and contracts for eGPS.
+- **BaseInformationImp** (`src/egps2/modulei/BaseInformationImp.java`): Core module interfaces and contracts for eGPS.
+- **Credit** (`src/egps2/modulei/Credit.java`): Core module interfaces and contracts for eGPS.
+- **CreditBean** (`src/egps2/modulei/CreditBean.java`): Core module interfaces and contracts for eGPS.
+- **DataOperator** (`src/egps2/modulei/DataOperator.java`): Core module interfaces and contracts for eGPS.
+- **ICategory** (`src/egps2/modulei/ICategory.java`): Core module interfaces and contracts for eGPS.
+- **IconBean** (`src/egps2/modulei/IconBean.java`): Core module interfaces and contracts for eGPS.
+- **IHelp** (`src/egps2/modulei/IHelp.java`): Core module interfaces and contracts for eGPS.
+- **IInformation** (`src/egps2/modulei/IInformation.java`): Core module interfaces and contracts for eGPS.
+- **IModuleFace** (`src/egps2/modulei/IModuleFace.java`): Core module interfaces and contracts for eGPS.
+- **IModuleLoader** (`src/egps2/modulei/IModuleLoader.java`): Core module interfaces and contracts for eGPS.
+- **IStatistics** (`src/egps2/modulei/IStatistics.java`): Core module interfaces and contracts for eGPS.
+- **IThreadOperator** (`src/egps2/modulei/IThreadOperator.java`): Core module interfaces and contracts for eGPS.
+- **ModuleClassification** (`src/egps2/modulei/ModuleClassification.java`): Core module interfaces and contracts for eGPS.
+- **RunningTask** (`src/egps2/modulei/RunningTask.java`): Core module interfaces and contracts for eGPS.
+
+## egps2/panels (41 classes)
+- **AllocatorPanel** (`src/egps2/panels/dialog/AllocatorPanel.java`): Reusable Swing panel or dialog within eGPS.
+- **CallBackTransferBehevior** (`src/egps2/panels/dialog/opendialog/CallBackTransferBehevior.java`): Reusable Swing panel or dialog within eGPS.
+- **ColorCapture** (`src/egps2/panels/dialog/ColorCapture.java`): Reusable Swing panel or dialog within eGPS.
+- **CustomizeFontEnum** (`src/egps2/panels/graphicpro/CustomizeFontEnum.java`): Reusable Swing panel or dialog within eGPS.
+- **DialogUtil** (`src/egps2/panels/DialogUtil.java`): Reusable Swing panel or dialog within eGPS.
+- **DynGifLabel** (`src/egps2/panels/DynGifLabel.java`): Reusable Swing panel or dialog within eGPS.
+- **EGPSColorChooser** (`src/egps2/panels/dialog/EGPSColorChooser.java`): Reusable Swing panel or dialog within eGPS.
+- **EGPSFileChooser** (`src/egps2/panels/dialog/EGPSFileChooser.java`): Reusable Swing panel or dialog within eGPS.
+- **EGPSFontChooser** (`src/egps2/panels/dialog/EGPSFontChooser.java`): Reusable Swing panel or dialog within eGPS.
+- **EGPSJSpinner** (`src/egps2/panels/dialog/EGPSJSpinner.java`): Reusable Swing panel or dialog within eGPS.
+- **ExternalProgramSettingJPanel** (`src/egps2/panels/pref/ExternalProgramSettingJPanel.java`): Reusable Swing panel or dialog within eGPS.
+- **FontAppearancePanel** (`src/egps2/panels/FontAppearancePanel.java`): Reusable Swing panel or dialog within eGPS.
+- **GradientPanel** (`src/egps2/panels/dialog/GradientPanel.java`): Reusable Swing panel or dialog within eGPS.
+- **GraphicPropertiesPanel** (`src/egps2/panels/graphicpro/GraphicPropertiesPanel.java`): Reusable Swing panel or dialog within eGPS.
+- **GUIPrintStream** (`src/egps2/panels/GUIPrintStream.java`): Reusable Swing panel or dialog within eGPS.
+- **HistoryPanel** (`src/egps2/panels/HistoryPanel.java`): Reusable Swing panel or dialog within eGPS.
+- **HtmlDocumentPanel** (`src/egps2/panels/pref/HtmlDocumentPanel.java`): Reusable Swing panel or dialog within eGPS.
+- **IconSizePrefJPanel** (`src/egps2/panels/pref/IconSizePrefJPanel.java`): Reusable Swing panel or dialog within eGPS.
+- **InformationPanelFactory** (`src/egps2/panels/InformationPanelFactory.java`): Reusable Swing panel or dialog within eGPS.
+- **InstantStatusPanel** (`src/egps2/panels/reusablecom/InstantStatusPanel.java`): Reusable Swing panel or dialog within eGPS.
+- **JIMSendTextPane** (`src/egps2/panels/JIMSendTextPane.java`): Reusable Swing panel or dialog within eGPS.
+- **LanguageSettingPanel** (`src/egps2/panels/pref/LanguageSettingPanel.java`): Reusable Swing panel or dialog within eGPS.
+- **LaunchProperty4ProgramicConfig** (`src/egps2/panels/pref/LaunchProperty4ProgramicConfig.java`): Reusable Swing panel or dialog within eGPS.
+- **LicenseOfEGPSPanel** (`src/egps2/panels/LicenseOfEGPSPanel.java`): Reusable Swing panel or dialog within eGPS.
+- **LookAndFeelPanel** (`src/egps2/panels/pref/LookAndFeelPanel.java`): Reusable Swing panel or dialog within eGPS.
+- **MailUtil** (`src/egps2/panels/bugreporter/MailUtil.java`): Reusable Swing panel or dialog within eGPS.
+- **ModuleActionsPanel** (`src/egps2/panels/pref/ModuleActionsPanel.java`): Reusable Swing panel or dialog within eGPS.
+- **ModuleInspector** (`src/egps2/panels/ModuleInspector.java`): Reusable Swing panel or dialog within eGPS.
+- **ParameterInitialized** (`src/egps2/panels/reusablecom/ParameterInitialized.java`): Reusable Swing panel or dialog within eGPS.
+- **PureStringsDispalyDialog** (`src/egps2/panels/dialog/PureStringsDispalyDialog.java`): Reusable Swing panel or dialog within eGPS.
+- **ReflectDialog** (`src/egps2/panels/ReflectDialog.java`): Reusable Swing panel or dialog within eGPS.
+- **ReflectDialogContorller** (`src/egps2/panels/bugreporter/ReflectDialogContorller.java`): Reusable Swing panel or dialog within eGPS.
+- **ReusableCompoentBuilder** (`src/egps2/panels/reusablecom/ReusableCompoentBuilder.java`): Reusable Swing panel or dialog within eGPS.
+- **StaticsPanel** (`src/egps2/panels/StaticsPanel.java`): Reusable Swing panel or dialog within eGPS.
+- **StdErrConsolePanel** (`src/egps2/panels/StdErrConsolePanel.java`): Reusable Swing panel or dialog within eGPS.
+- **StingArrayDisplayDialog** (`src/egps2/panels/dialog/opendialog/StingArrayDisplayDialog.java`): Reusable Swing panel or dialog within eGPS.
+- **StringDisplayAndChangeDialog** (`src/egps2/panels/dialog/opendialog/StringDisplayAndChangeDialog.java`): Reusable Swing panel or dialog within eGPS.
+- **StringSearchDialog** (`src/egps2/panels/dialog/opendialog/StringSearchDialog.java`): Reusable Swing panel or dialog within eGPS.
+- **SubTextPanelNode** (`src/egps2/panels/SubTextPanelNode.java`): Reusable Swing panel or dialog within eGPS.
+- **SwingDialog** (`src/egps2/panels/dialog/SwingDialog.java`): Reusable Swing panel or dialog within eGPS.
+- **TextAntiAliasPanel** (`src/egps2/panels/pref/TextAntiAliasPanel.java`): Reusable Swing panel or dialog within eGPS.
+
+## egps2/plugin (12 classes)
+- **CustomURLClassLoader** (`src/egps2/plugin/manager/CustomURLClassLoader.java`): Supports the plugin/template system for extending eGPS.
+- **DataImportPanel** (`src/egps2/plugin/fastmodtem/gui/DataImportPanel.java`): Supports the plugin/template system for extending eGPS.
+- **FastBaseTemplate** (`src/egps2/plugin/fastmodtem/FastBaseTemplate.java`): Supports the plugin/template system for extending eGPS.
+- **IndependentModuleLoader** (`src/egps2/plugin/fastmodtem/IndependentModuleLoader.java`): Supports the plugin/template system for extending eGPS.
+- **JarFileUtil** (`src/egps2/plugin/manager/JarFileUtil.java`): Supports the plugin/template system for extending eGPS.
+- **MainFace** (`src/egps2/plugin/fastmodtem/MainFace.java`): Supports the plugin/template system for extending eGPS.
+- **ParametersPanel** (`src/egps2/plugin/fastmodtem/gui/ParametersPanel.java`): Supports the plugin/template system for extending eGPS.
+- **PluginOperation** (`src/egps2/plugin/manager/PluginOperation.java`): Supports the plugin/template system for extending eGPS.
+- **PluginProperty** (`src/egps2/plugin/manager/PluginProperty.java`): Supports the plugin/template system for extending eGPS.
+- **SimpleLeftControlPanel** (`src/egps2/plugin/fastmodtem/gui/SimpleLeftControlPanel.java`): Supports the plugin/template system for extending eGPS.
+- **WorkBanch4XXX** (`src/egps2/plugin/fastmodtem/WorkBanch4XXX.java`): Supports the plugin/template system for extending eGPS.
+- **XXXMainFace** (`src/egps2/plugin/fastmodtem/XXXMainFace.java`): Supports the plugin/template system for extending eGPS.
+
+## egps2/utils (87 classes)
+- **AbstractCanvas** (`src/egps2/utils/prompt/swing/AbstractCanvas.java`): Shared utility logic for eGPS modules and UI.
+- **Animation** (`src/egps2/utils/prompt/swing/Animation.java`): Shared utility logic for eGPS modules and UI.
+- **AnimationDraw** (`src/egps2/utils/prompt/swing/AnimationDraw.java`): Shared utility logic for eGPS modules and UI.
+- **AnimationFrame** (`src/egps2/utils/prompt/swing/AnimationFrame.java`): Shared utility logic for eGPS modules and UI.
+- **BorderUi** (`src/egps2/utils/prompt/swing/BorderUi.java`): Shared utility logic for eGPS modules and UI.
+- **CallBackBehavior** (`src/egps2/utils/common/model/datatransfer/CallBackBehavior.java`): Shared utility logic for eGPS modules and UI.
+- **CheckedNumber** (`src/egps2/utils/common/math/CheckedNumber.java`): Shared utility logic for eGPS modules and UI.
+- **CommandLineTemplate** (`src/egps2/utils/common/util/CommandLineTemplate.java`): Shared utility logic for eGPS modules and UI.
+- **DealProperties** (`src/egps2/utils/common/util/DealProperties.java`): Shared utility logic for eGPS modules and UI.
+- **Decoder4pptx** (`src/egps2/utils/common/util/poi/pptx/Decoder4pptx.java`): Shared utility logic for eGPS modules and UI.
+- **DeffTest** (`src/egps2/utils/common/math/diffSign/DeffTest.java`): Shared utility logic for eGPS modules and UI.
+- **DoubleRanks** (`src/egps2/utils/common/math/DoubleRanks.java`): Shared utility logic for eGPS modules and UI.
+- **DoubleRanksDecreasingOrder** (`src/egps2/utils/common/math/DoubleRanksDecreasingOrder.java`): Shared utility logic for eGPS modules and UI.
+- **EConsoleHandler** (`src/egps2/utils/common/log/EConsoleHandler.java`): Shared utility logic for eGPS modules and UI.
+- **EGPSClipboard** (`src/egps2/utils/common/model/datatransfer/EGPSClipboard.java`): Shared utility logic for eGPS modules and UI.
+- **EGPSFonts** (`src/egps2/utils/common/util/EGPSFonts.java`): Shared utility logic for eGPS modules and UI.
+- **EGPSIconUtil** (`src/egps2/utils/EGPSIconUtil.java`): Shared utility logic for eGPS modules and UI.
+- **EGPSPrintUtilities** (`src/egps2/utils/common/util/EGPSPrintUtilities.java`): Shared utility logic for eGPS modules and UI.
+- **EGPSSelection** (`src/egps2/utils/common/model/datatransfer/EGPSSelection.java`): Shared utility logic for eGPS modules and UI.
+- **EGPSShellIcons** (`src/egps2/utils/common/util/EGPSShellIcons.java`): Shared utility logic for eGPS modules and UI.
+- **EGPSTTest** (`src/egps2/utils/common/math/diffSign/EGPSTTest.java`): Shared utility logic for eGPS modules and UI.
+- **EGPSUndoManager** (`src/egps2/utils/common/manager/EGPSUndoManager.java`): Shared utility logic for eGPS modules and UI.
+- **EGPSWilcoxonSignedRankTest** (`src/egps2/utils/common/math/diffSign/EGPSWilcoxonSignedRankTest.java`): Shared utility logic for eGPS modules and UI.
+- **FileFilterEPS** (`src/egps2/utils/common/model/filefilter/FileFilterEPS.java`): Shared utility logic for eGPS modules and UI.
+- **FileFilterNwk** (`src/egps2/utils/common/model/filefilter/FileFilterNwk.java`): Shared utility logic for eGPS modules and UI.
+- **FileFilterPdf** (`src/egps2/utils/common/model/filefilter/FileFilterPdf.java`): Shared utility logic for eGPS modules and UI.
+- **FileFilterPng** (`src/egps2/utils/common/model/filefilter/FileFilterPng.java`): Shared utility logic for eGPS modules and UI.
+- **FileFilterPPTX** (`src/egps2/utils/common/model/filefilter/FileFilterPPTX.java`): Shared utility logic for eGPS modules and UI.
+- **FileFilterSvg** (`src/egps2/utils/common/model/filefilter/FileFilterSvg.java`): Shared utility logic for eGPS modules and UI.
+- **FileFilterTxt** (`src/egps2/utils/common/model/filefilter/FileFilterTxt.java`): Shared utility logic for eGPS modules and UI.
+- **FileFilterZip** (`src/egps2/utils/common/model/filefilter/FileFilterZip.java`): Shared utility logic for eGPS modules and UI.
+- **FontDTO** (`src/egps2/utils/FontDTO.java`): Shared utility logic for eGPS modules and UI.
+- **FourTuple** (`src/egps2/utils/common/model/datatransfer/FourTuple.java`): Shared utility logic for eGPS modules and UI.
+- **GameGraphics** (`src/egps2/utils/prompt/swing/GameGraphics.java`): Shared utility logic for eGPS modules and UI.
+- **GameSlider** (`src/egps2/utils/prompt/swing/GameSlider.java`): Shared utility logic for eGPS modules and UI.
+- **GameSliderUI** (`src/egps2/utils/prompt/swing/GameSliderUI.java`): Shared utility logic for eGPS modules and UI.
+- **GameStaticComponent** (`src/egps2/utils/prompt/swing/GameStaticComponent.java`): Shared utility logic for eGPS modules and UI.
+- **GeneralMatrixOp** (`src/egps2/utils/common/math/matrix/GeneralMatrixOp.java`): Shared utility logic for eGPS modules and UI.
+- **GifDecoder** (`src/egps2/utils/GifDecoder.java`): Shared utility logic for eGPS modules and UI.
+- **GlassPanelPrompt** (`src/egps2/utils/GlassPanelPrompt.java`): Shared utility logic for eGPS modules and UI.
+- **GraphicsUtils** (`src/egps2/utils/GraphicsUtils.java`): Shared utility logic for eGPS modules and UI.
+- **ImageCheckBox** (`src/egps2/utils/prompt/swing/ImageCheckBox.java`): Shared utility logic for eGPS modules and UI.
+- **IntervalUtil** (`src/egps2/utils/common/util/IntervalUtil.java`): Shared utility logic for eGPS modules and UI.
+- **Label** (`src/egps2/utils/prompt/swing/Label.java`): Shared utility logic for eGPS modules and UI.
+- **LaunchPropertyDTO** (`src/egps2/utils/LaunchPropertyDTO.java`): Shared utility logic for eGPS modules and UI.
+- **LineSparator** (`src/egps2/utils/common/tablelike/LineSparator.java`): Shared utility logic for eGPS modules and UI.
+- **Log2FoldChange** (`src/egps2/utils/common/math/diffSign/Log2FoldChange.java`): Shared utility logic for eGPS modules and UI.
+- **LucidToolTip** (`src/egps2/utils/prompt/swing/LucidToolTip.java`): Shared utility logic for eGPS modules and UI.
+- **MatrixElementUtil** (`src/egps2/utils/common/math/MatrixElementUtil.java`): Shared utility logic for eGPS modules and UI.
+- **MatrixIO** (`src/egps2/utils/common/math/io/MatrixIO.java`): Shared utility logic for eGPS modules and UI.
+- **MatrixTableContentBean** (`src/egps2/utils/common/tablelike/MatrixTableContentBean.java`): Shared utility logic for eGPS modules and UI.
+- **MatrixTablePurpose** (`src/egps2/utils/common/tablelike/MatrixTablePurpose.java`): Shared utility logic for eGPS modules and UI.
+- **MatrixTriangleOp** (`src/egps2/utils/common/math/matrix/MatrixTriangleOp.java`): Shared utility logic for eGPS modules and UI.
+- **MinusRatioMinOfL2FC3** (`src/egps2/utils/common/math/diffSign/MinusRatioMinOfL2FC3.java`): Shared utility logic for eGPS modules and UI.
+- **MinusRatioOfL2FC2** (`src/egps2/utils/common/math/diffSign/MinusRatioOfL2FC2.java`): Shared utility logic for eGPS modules and UI.
+- **OpenFilterCsv** (`src/egps2/utils/common/model/filefilter/OpenFilterCsv.java`): Shared utility logic for eGPS modules and UI.
+- **OpenFilterFasta** (`src/egps2/utils/common/model/filefilter/OpenFilterFasta.java`): Shared utility logic for eGPS modules and UI.
+- **OpenFilterList** (`src/egps2/utils/common/model/filefilter/OpenFilterList.java`): Shared utility logic for eGPS modules and UI.
+- **OpenFilterMaf** (`src/egps2/utils/common/model/filefilter/OpenFilterMaf.java`): Shared utility logic for eGPS modules and UI.
+- **OpenFilterPro** (`src/egps2/utils/common/model/filefilter/OpenFilterPro.java`): Shared utility logic for eGPS modules and UI.
+- **OpenFilterRNAExp** (`src/egps2/utils/common/model/filefilter/OpenFilterRNAExp.java`): Shared utility logic for eGPS modules and UI.
+- **OpenFilterSimu** (`src/egps2/utils/common/model/filefilter/OpenFilterSimu.java`): Shared utility logic for eGPS modules and UI.
+- **OpenFilterTree** (`src/egps2/utils/common/model/filefilter/OpenFilterTree.java`): Shared utility logic for eGPS modules and UI.
+- **OpenFilterTsv** (`src/egps2/utils/common/model/filefilter/OpenFilterTsv.java`): Shared utility logic for eGPS modules and UI.
+- **OpenFilterVcf** (`src/egps2/utils/common/model/filefilter/OpenFilterVcf.java`): Shared utility logic for eGPS modules and UI.
+- **PromptLabel** (`src/egps2/utils/PromptLabel.java`): Shared utility logic for eGPS modules and UI.
+- **RatioOfL2FC** (`src/egps2/utils/common/math/diffSign/RatioOfL2FC.java`): Shared utility logic for eGPS modules and UI.
+- **Result** (`src/egps2/utils/common/model/datatransfer/Result.java`): Shared utility logic for eGPS modules and UI.
+- **RoundLineBorder** (`src/egps2/utils/RoundLineBorder.java`): Shared utility logic for eGPS modules and UI.
+- **SaveFileFilter** (`src/egps2/utils/common/util/SaveFileFilter.java`): Shared utility logic for eGPS modules and UI.
+- **SaveFilterDist** (`src/egps2/utils/common/model/filefilter/SaveFilterDist.java`): Shared utility logic for eGPS modules and UI.
+- **SaveFilterExel** (`src/egps2/utils/common/model/filefilter/SaveFilterExel.java`): Shared utility logic for eGPS modules and UI.
+- **SaveFilterItreeV** (`src/egps2/utils/common/model/filefilter/SaveFilterItreeV.java`): Shared utility logic for eGPS modules and UI.
+- **SaveFilterJpg** (`src/egps2/utils/common/model/filefilter/SaveFilterJpg.java`): Shared utility logic for eGPS modules and UI.
+- **SaveFilterNwk** (`src/egps2/utils/common/model/filefilter/SaveFilterNwk.java`): Shared utility logic for eGPS modules and UI.
+- **SaveFilterSimu** (`src/egps2/utils/common/model/filefilter/SaveFilterSimu.java`): Shared utility logic for eGPS modules and UI.
+- **SaveFilterTiff** (`src/egps2/utils/common/model/filefilter/SaveFilterTiff.java`): Shared utility logic for eGPS modules and UI.
+- **SaveFilterVcf** (`src/egps2/utils/common/model/filefilter/SaveFilterVcf.java`): Shared utility logic for eGPS modules and UI.
+- **SaveFilterVcfGz** (`src/egps2/utils/common/model/filefilter/SaveFilterVcfGz.java`): Shared utility logic for eGPS modules and UI.
+- **SaveUtil** (`src/egps2/utils/common/util/SaveUtil.java`): Shared utility logic for eGPS modules and UI.
+- **SLGraphics** (`src/egps2/utils/common/util/poi/pptx/SLGraphics.java`): Shared utility logic for eGPS modules and UI.
+- **ThreeTuple** (`src/egps2/utils/common/model/datatransfer/ThreeTuple.java`): Shared utility logic for eGPS modules and UI.
+- **TopElementFinder** (`src/egps2/utils/common/util/topkfinder/TopElementFinder.java`): Shared utility logic for eGPS modules and UI.
+- **Tuple** (`src/egps2/utils/common/model/datatransfer/Tuple.java`): Shared utility logic for eGPS modules and UI.
+- **TwoTuple** (`src/egps2/utils/common/model/datatransfer/TwoTuple.java`): Shared utility logic for eGPS modules and UI.
+- **WebReaderUtil** (`src/egps2/utils/common/io/WebReaderUtil.java`): Shared utility logic for eGPS modules and UI.
+- **ZipFilesWriter** (`src/egps2/utils/common/io/ZipFilesWriter.java`): Shared utility logic for eGPS modules and UI.
+
+## test/java (4 classes)
+- **BasicGraphicsUtilsTest** (`src/test/java/egps2/builtin/modules/bonus/modules/BasicGraphicsUtilsTest.java`): Belongs to a built-in eGPS module (loader, panel, or helper).
+- **SendEmail_text** (`src/test/java/egps2/panels/bugreporter/SendEmail_text.java`): Reusable Swing panel or dialog within eGPS.
+- **SendEmailAttachment** (`src/test/java/egps2/panels/bugreporter/SendEmailAttachment.java`): Reusable Swing panel or dialog within eGPS.
+- **SendEmailSMTP** (`src/test/java/egps2/panels/bugreporter/SendEmailSMTP.java`): Reusable Swing panel or dialog within eGPS.

@@ -1,0 +1,77 @@
+# Understanding Core Frame & Application Lifecycle
+更详细列出该类别下的类，含路径与角色说明。
+
+- **AbstractSoftAction** (`src/egps2/frame/AbstractSoftAction.java`): Component within the eGPS desktop application.
+- **Action4Download2update** (`src/egps2/frame/features/Action4Download2update.java`): Component within the eGPS desktop application.
+- **ActionAbout** (`src/egps2/frame/ActionAbout.java`): Component within the eGPS desktop application.
+- **ActionExit** (`src/egps2/frame/ActionExit.java`): Component within the eGPS desktop application.
+- **ActionExportData** (`src/egps2/frame/ActionExportData.java`): Component within the eGPS desktop application.
+- **ActionFaq** (`src/egps2/frame/ActionFaq.java`): Component within the eGPS desktop application.
+- **ActionHelp** (`src/egps2/frame/ActionHelp.java`): Component within the eGPS desktop application.
+- **ActionHistory** (`src/egps2/frame/ActionHistory.java`): Component within the eGPS desktop application.
+- **ActionHomePage** (`src/egps2/frame/ActionHomePage.java`): Component within the eGPS desktop application.
+- **ActionImportData** (`src/egps2/frame/ActionImportData.java`): Component within the eGPS desktop application.
+- **ActionInformation** (`src/egps2/frame/ActionInformation.java`): Component within the eGPS desktop application.
+- **ActionLicenseTerm** (`src/egps2/frame/ActionLicenseTerm.java`): Component within the eGPS desktop application.
+- **ActionPreference** (`src/egps2/frame/ActionPreference.java`): Component within the eGPS desktop application.
+- **ActionReportBugs** (`src/egps2/frame/ActionReportBugs.java`): Component within the eGPS desktop application.
+- **ActionSearch** (`src/egps2/frame/ActionSearch.java`): Component within the eGPS desktop application.
+- **ActionsManager** (`src/egps2/frame/ActionsManager.java`): Central registry/dispatcher for menu and toolbar actions across the app.
+- **ActionStatics** (`src/egps2/frame/ActionStatics.java`): Component within the eGPS desktop application.
+- **ActionStdErrConsole** (`src/egps2/frame/ActionStdErrConsole.java`): Component within the eGPS desktop application.
+- **ActionStop** (`src/egps2/frame/ActionStop.java`): Component within the eGPS desktop application.
+- **AdjustedSoft4HelpInfoStaticsAction** (`src/egps2/frame/AdjustedSoft4HelpInfoStaticsAction.java`): Component within the eGPS desktop application.
+- **AdjustedSoftAction** (`src/egps2/frame/AdjustedSoftAction.java`): Component within the eGPS desktop application.
+- **Authors** (`src/egps2/Authors.java`): Component within the eGPS desktop application.
+- **AutoConfigThePropertiesAction** (`src/egps2/frame/features/AutoConfigThePropertiesAction.java`): Component within the eGPS desktop application.
+- **Bean4eGPSUpdateInfor** (`src/egps2/frame/features/Bean4eGPSUpdateInfor.java`): Component within the eGPS desktop application.
+- **ButtomStatesBar** (`src/egps2/frame/ButtomStatesBar.java`): Component within the eGPS desktop application.
+- **ComplexRectObj** (`src/egps2/frame/gui/interacive/ComplexRectObj.java`): Component within the eGPS desktop application.
+- **ComputationalModuleFace** (`src/egps2/frame/ComputationalModuleFace.java`): Base class or contract for module UI panels; handles lifecycle hooks and tab behaviors.
+- **DataImportPanel_OneTypeMultiFiles** (`src/egps2/frame/gui/comp/DataImportPanel_OneTypeMultiFiles.java`): Component within the eGPS desktop application.
+- **DataImportPanel_OneTypeMultiFiles_WithInputBox** (`src/egps2/frame/gui/comp/DataImportPanel_OneTypeMultiFiles_WithInputBox.java`): Component within the eGPS desktop application.
+- **DataImportPanel_OneTypeOneFile** (`src/egps2/frame/gui/comp/DataImportPanel_OneTypeOneFile.java`): Component within the eGPS desktop application.
+- **DataImportPanel_OneTypeOneFile_WithInputBox** (`src/egps2/frame/gui/comp/DataImportPanel_OneTypeOneFile_WithInputBox.java`): Component within the eGPS desktop application.
+- **DefaultParamsAssignerAndParserHandler4VOICE** (`src/egps2/frame/DefaultParamsAssignerAndParserHandler4VOICE.java`): Component within the eGPS desktop application.
+- **DialogMoreInfoGenerator** (`src/egps2/frame/gui/dialog/DialogMoreInfoGenerator.java`): Component within the eGPS desktop application.
+- **DraggableTabbedPane** (`src/egps2/frame/gui/comp/DraggableTabbedPane.java`): Component within the eGPS desktop application.
+- **EGPS2ServiceLoader** (`src/egps2/frame/features/EGPS2ServiceLoader.java`): Component within the eGPS desktop application.
+- **EGPSCustomTabbedPaneUI** (`src/egps2/frame/gui/EGPSCustomTabbedPaneUI.java`): Component within the eGPS desktop application.
+- **EGPSJTextArea** (`src/egps2/frame/gui/comp/EGPSJTextArea.java`): Component within the eGPS desktop application.
+- **EGPSMainGuiUtil** (`src/egps2/frame/gui/EGPSMainGuiUtil.java`): Component within the eGPS desktop application.
+- **EGPSProperties** (`src/egps2/EGPSProperties.java`): Component within the eGPS desktop application.
+- **EGPSSwingUtil** (`src/egps2/frame/gui/EGPSSwingUtil.java`): Component within the eGPS desktop application.
+- **EGPSTextTransferHandler** (`src/egps2/frame/gui/handler/EGPSTextTransferHandler.java`): Component within the eGPS desktop application.
+- **EGPSVersion** (`src/egps2/frame/features/EGPSVersion.java`): Component within the eGPS desktop application.
+- **GlassPanelAchievement** (`src/egps2/frame/GlassPanelAchievement.java`): Component within the eGPS desktop application.
+- **GlassPanelBusyStates** (`src/egps2/frame/GlassPanelBusyStates.java`): Component within the eGPS desktop application.
+- **GlassPanelGesture** (`src/egps2/frame/GlassPanelGesture.java`): Component within the eGPS desktop application.
+- **GraphicsUtilities** (`src/egps2/frame/gui/comp/toggle/swing/shadow/GraphicsUtilities.java`): Component within the eGPS desktop application.
+- **HintManager** (`src/egps2/frame/HintManager.java`): Component within the eGPS desktop application.
+- **HistoryJTreeDialog** (`src/egps2/frame/html/HistoryJTreeDialog.java`): Component within the eGPS desktop application.
+- **InfiniteProgressPanel** (`src/egps2/frame/gui/comp/InfiniteProgressPanel.java`): Component within the eGPS desktop application.
+- **InstantFillAndLineJPanel** (`src/egps2/frame/InstantFillAndLineJPanel.java`): Component within the eGPS desktop application.
+- **InstantSizeAndPositionJPanel** (`src/egps2/frame/InstantSizeAndPositionJPanel.java`): Component within the eGPS desktop application.
+- **JTextAreaTransferHandler** (`src/egps2/frame/gui/handler/JTextAreaTransferHandler.java`): Component within the eGPS desktop application.
+- **JTextAreaWithDefaultContent_MouseAdapter** (`src/egps2/frame/gui/comp/JTextAreaWithDefaultContent_MouseAdapter.java`): Component within the eGPS desktop application.
+- **Launcher** (`src/egps2/Launcher.java`): Application entry point configuring locale, L&F, and bootstrapping the main frame.
+- **Launcher4Dev** (`src/egps2/Launcher4Dev.java`): Application entry point configuring locale, L&F, and bootstrapping the main frame.
+- **LaunchProperty** (`src/egps2/LaunchProperty.java`): Component within the eGPS desktop application.
+- **MainFrameGestureConfig** (`src/egps2/frame/MainFrameGestureConfig.java`): Main Swing window coordinating tabs, toolbar, menu bar, status bar, and glass panes.
+- **MainFrameProperties** (`src/egps2/frame/MainFrameProperties.java`): Main Swing window coordinating tabs, toolbar, menu bar, status bar, and glass panes.
+- **ModuleFace** (`src/egps2/frame/ModuleFace.java`): Base class or contract for module UI panels; handles lifecycle hooks and tab behaviors.
+- **MyFrame** (`src/egps2/frame/MyFrame.java`): Main Swing window coordinating tabs, toolbar, menu bar, status bar, and glass panes.
+- **MyResourceBundle** (`src/egps2/frame/MyResourceBundle.java`): Custom resource bundle loader handling encoding and lookups for UI assets.
+- **PreferencePanel** (`src/egps2/PreferencePanel.java`): Component within the eGPS desktop application.
+- **RectAdjustMent** (`src/egps2/frame/gui/interacive/RectAdjustMent.java`): Component within the eGPS desktop application.
+- **RectObj** (`src/egps2/frame/gui/interacive/RectObj.java`): Component within the eGPS desktop application.
+- **SearchItem** (`src/egps2/frame/gui/comp/search/SearchItem.java`): Component within the eGPS desktop application.
+- **ShadowRenderer** (`src/egps2/frame/gui/comp/toggle/swing/shadow/ShadowRenderer.java`): Component within the eGPS desktop application.
+- **SimplestWorkBench** (`src/egps2/frame/gui/comp/SimplestWorkBench.java`): Component within the eGPS desktop application.
+- **StringKeySaver** (`src/egps2/frame/gui/StringKeySaver.java`): Component within the eGPS desktop application.
+- **TabbedPaneMouseAdapter** (`src/egps2/frame/TabbedPaneMouseAdapter.java`): Component within the eGPS desktop application.
+- **ToggleAdapter** (`src/egps2/frame/gui/comp/toggle/toggle/ToggleAdapter.java`): Component within the eGPS desktop application.
+- **ToggleButton** (`src/egps2/frame/gui/comp/toggle/toggle/ToggleButton.java`): Component within the eGPS desktop application.
+- **ToggleListener** (`src/egps2/frame/gui/comp/toggle/toggle/ToggleListener.java`): Component within the eGPS desktop application.
+- **UnifiedAccessPoint** (`src/egps2/UnifiedAccessPoint.java`): Component within the eGPS desktop application.
+- **VectorGraphicsEncoder** (`src/egps2/frame/gui/VectorGraphicsEncoder.java`): Component within the eGPS desktop application.

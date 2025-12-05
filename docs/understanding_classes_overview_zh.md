@@ -1,0 +1,457 @@
+# eGPS 主程序类理解清单
+按目录分组列出 `src/` 下的类（不含 `src/egps/` L&F），并给出用途概述。
+
+## com/raven（43 个类）
+- **Action**（`src/com/raven/swing/table/Action.java`）：Raven UI 模板组件，嵌入 eGPS 外壳使用。
+- **Button**（`src/com/raven/swing/Button.java`）：Raven UI 模板组件，嵌入 eGPS 外壳使用。
+- **ButtonBadges**（`src/com/raven/swing/ButtonBadges.java`）：Raven UI 模板组件，嵌入 eGPS 外壳使用。
+- **Card**（`src/com/raven/component/Card.java`）：Raven UI 模板组件，嵌入 eGPS 外壳使用。
+- **DefaultIconCode**（`src/com/raven/swing/icon/DefaultIconCode.java`）：Raven UI 模板组件，嵌入 eGPS 外壳使用。
+- **EventAction**（`src/com/raven/swing/table/EventAction.java`）：Raven UI 模板组件，嵌入 eGPS 外壳使用。
+- **EventMenu**（`src/com/raven/event/EventMenu.java`）：Raven UI 模板组件，嵌入 eGPS 外壳使用。
+- **EventMenuSelected**（`src/com/raven/event/EventMenuSelected.java`）：Raven UI 模板组件，嵌入 eGPS 外壳使用。
+- **EventShowPopupMenu**（`src/com/raven/event/EventShowPopupMenu.java`）：Raven UI 模板组件，嵌入 eGPS 外壳使用。
+- **Form1**（`src/com/raven/form/Form1.java`）：Raven UI 模板组件，嵌入 eGPS 外壳使用。
+- **Form_Home**（`src/com/raven/form/Form_Home.java`）：Raven UI 模板组件，嵌入 eGPS 外壳使用。
+- **GoogleMaterialDesignIcons**（`src/com/raven/swing/icon/GoogleMaterialDesignIcons.java`）：Raven UI 模板组件，嵌入 eGPS 外壳使用。
+- **Header**（`src/com/raven/component/Header.java`）：Raven UI 模板组件，嵌入 eGPS 外壳使用。
+- **IconCode**（`src/com/raven/swing/icon/IconCode.java`）：Raven UI 模板组件，嵌入 eGPS 外壳使用。
+- **IconFont**（`src/com/raven/swing/icon/IconFont.java`）：Raven UI 模板组件，嵌入 eGPS 外壳使用。
+- **IconFontSwing**（`src/com/raven/swing/icon/IconFontSwing.java`）：Raven UI 模板组件，嵌入 eGPS 外壳使用。
+- **ImageAvatar**（`src/com/raven/swing/ImageAvatar.java`）：Raven UI 模板组件，嵌入 eGPS 外壳使用。
+- **IndependentModuleLoader**（`src/com/raven/IndependentModuleLoader.java`）：Raven UI 模板组件，嵌入 eGPS 外壳使用。
+- **Main**（`src/com/raven/main/Main.java`）：Raven UI 模板组件，嵌入 eGPS 外壳使用。
+- **MainFace**（`src/com/raven/MainFace.java`）：Raven UI 模板组件，嵌入 eGPS 外壳使用。
+- **MainForm**（`src/com/raven/form/MainForm.java`）：Raven UI 模板组件，嵌入 eGPS 外壳使用。
+- **Menu**（`src/com/raven/component/Menu.java`）：Raven UI 模板组件，嵌入 eGPS 外壳使用。
+- **MenuAnimation**（`src/com/raven/swing/MenuAnimation.java`）：Raven UI 模板组件，嵌入 eGPS 外壳使用。
+- **MenuButton**（`src/com/raven/swing/MenuButton.java`）：Raven UI 模板组件，嵌入 eGPS 外壳使用。
+- **MenuItem**（`src/com/raven/swing/MenuItem.java`）：Raven UI 模板组件，嵌入 eGPS 外壳使用。
+- **Message**（`src/com/raven/dialog/Message.java`）：Raven UI 模板组件，嵌入 eGPS 外壳使用。
+- **ModelAction**（`src/com/raven/swing/table/ModelAction.java`）：Raven UI 模板组件，嵌入 eGPS 外壳使用。
+- **ModelCard**（`src/com/raven/model/ModelCard.java`）：Raven UI 模板组件，嵌入 eGPS 外壳使用。
+- **ModelMenu**（`src/com/raven/model/ModelMenu.java`）：Raven UI 模板组件，嵌入 eGPS 外壳使用。
+- **ModelNoticeBoard**（`src/com/raven/swing/noticeboard/ModelNoticeBoard.java`）：Raven UI 模板组件，嵌入 eGPS 外壳使用。
+- **ModelProfile**（`src/com/raven/swing/table/ModelProfile.java`）：Raven UI 模板组件，嵌入 eGPS 外壳使用。
+- **ModelStudent**（`src/com/raven/model/ModelStudent.java`）：Raven UI 模板组件，嵌入 eGPS 外壳使用。
+- **ModernScrollBarUI**（`src/com/raven/swing/scrollbar/ModernScrollBarUI.java`）：Raven UI 模板组件，嵌入 eGPS 外壳使用。
+- **NoticeBoard**（`src/com/raven/swing/noticeboard/NoticeBoard.java`）：Raven UI 模板组件，嵌入 eGPS 外壳使用。
+- **PanelPopup**（`src/com/raven/swing/PanelPopup.java`）：Raven UI 模板组件，嵌入 eGPS 外壳使用。
+- **PopupMenu**（`src/com/raven/swing/PopupMenu.java`）：Raven UI 模板组件，嵌入 eGPS 外壳使用。
+- **Profile**（`src/com/raven/component/Profile.java`）：Raven UI 模板组件，嵌入 eGPS 外壳使用。
+- **Profile**（`src/com/raven/swing/table/Profile.java`）：Raven UI 模板组件，嵌入 eGPS 外壳使用。
+- **ProgressBarCustom**（`src/com/raven/swing/ProgressBarCustom.java`）：Raven UI 模板组件，嵌入 eGPS 外壳使用。
+- **ScrollBarCustom**（`src/com/raven/swing/scrollbar/ScrollBarCustom.java`）：Raven UI 模板组件，嵌入 eGPS 外壳使用。
+- **Table**（`src/com/raven/swing/table/Table.java`）：Raven UI 模板组件，嵌入 eGPS 外壳使用。
+- **TableCellAction**（`src/com/raven/swing/table/TableCellAction.java`）：Raven UI 模板组件，嵌入 eGPS 外壳使用。
+- **TableHeader**（`src/com/raven/swing/table/TableHeader.java`）：Raven UI 模板组件，嵌入 eGPS 外壳使用。
+
+## egps2/Authors.java（1 个类）
+- **Authors**（`src/egps2/Authors.java`）：eGPS 桌面应用的组成部分。
+
+## egps2/EGPSProperties.java（1 个类）
+- **EGPSProperties**（`src/egps2/EGPSProperties.java`）：eGPS 桌面应用的组成部分。
+
+## egps2/LaunchProperty.java（1 个类）
+- **LaunchProperty**（`src/egps2/LaunchProperty.java`）：eGPS 桌面应用的组成部分。
+
+## egps2/Launcher.java（1 个类）
+- **Launcher**（`src/egps2/Launcher.java`）：eGPS 桌面应用的组成部分。
+
+## egps2/Launcher4Dev.java（1 个类）
+- **Launcher4Dev**（`src/egps2/Launcher4Dev.java`）：eGPS 桌面应用的组成部分。
+
+## egps2/PreferencePanel.java（1 个类）
+- **PreferencePanel**（`src/egps2/PreferencePanel.java`）：eGPS 桌面应用的组成部分。
+
+## egps2/UnifiedAccessPoint.java（1 个类）
+- **UnifiedAccessPoint**（`src/egps2/UnifiedAccessPoint.java`）：eGPS 桌面应用的组成部分。
+
+## egps2/builtin（148 个类）
+- **AbstractConvert**（`src/egps2/builtin/modules/bonus/modules/convert/interfaces/AbstractConvert.java`）：内置模块（加载器、面板或辅助类）。
+- **AbstractGuiBaseVoiceFeaturedPanel**（`src/egps2/builtin/modules/voice/template/AbstractGuiBaseVoiceFeaturedPanel.java`）：内置模块（加载器、面板或辅助类）。
+- **AbstractParamsAssignerAndParser4VOICE**（`src/egps2/builtin/modules/voice/bean/AbstractParamsAssignerAndParser4VOICE.java`）：内置模块（加载器、面板或辅助类）。
+- **AddedCenterJPanel**（`src/egps2/builtin/modules/bonus/modules/convert/model/AddedCenterJPanel.java`）：内置模块（加载器、面板或辅助类）。
+- **BookmarkDisplayPanel**（`src/egps2/builtin/modules/voice/BookmarkDisplayPanel.java`）：内置模块（加载器、面板或辅助类）。
+- **BookmarkElement**（`src/egps2/builtin/modules/filemanager/BookmarkElement.java`）：内置模块（加载器、面板或辅助类）。
+- **BookMarkNode**（`src/egps2/builtin/modules/voice/BookMarkNode.java`）：内置模块（加载器、面板或辅助类）。
+- **BookmarkOperationPanel**（`src/egps2/builtin/modules/voice/BookmarkOperationPanel.java`）：内置模块（加载器、面板或辅助类）。
+- **BookmarkPanel**（`src/egps2/builtin/modules/filemanager/BookmarkPanel.java`）：内置模块（加载器、面板或辅助类）。
+- **CLI**（`src/egps2/builtin/modules/CLI.java`）：内置模块（加载器、面板或辅助类）。
+- **ColorfulToggleButtons**（`src/egps2/builtin/modules/bonus/modules/colorman/ColorfulToggleButtons.java`）：内置模块（加载器、面板或辅助类）。
+- **CommandLineArgsInterpreter4VOICE**（`src/egps2/builtin/modules/voice/template/CommandLineArgsInterpreter4VOICE.java`）：内置模块（加载器、面板或辅助类）。
+- **CompleteModuleFace4Voice**（`src/egps2/builtin/modules/voice/template/CompleteModuleFace4Voice.java`）：内置模块（加载器、面板或辅助类）。
+- **ComputationalModuleInjector**（`src/egps2/builtin/modules/voice/fastmodvoice/ComputationalModuleInjector.java`）：内置模块（加载器、面板或辅助类）。
+- **ContainerModuleFace4Voice**（`src/egps2/builtin/modules/voice/template/ContainerModuleFace4Voice.java`）：内置模块（加载器、面板或辅助类）。
+- **ConvertEmf**（`src/egps2/builtin/modules/bonus/modules/convert/wholeGemomeAlignment/ConvertEmf.java`）：内置模块（加载器、面板或辅助类）。
+- **ConvertFileMain**（`src/egps2/builtin/modules/bonus/modules/convert/ConvertFileMain.java`）：内置模块（加载器、面板或辅助类）。
+- **ConvertFileStart**（`src/egps2/builtin/modules/bonus/modules/convert/ConvertFileStart.java`）：内置模块（加载器、面板或辅助类）。
+- **ConvertMaf**（`src/egps2/builtin/modules/bonus/modules/convert/wholeGemomeAlignment/ConvertMaf.java`）：内置模块（加载器、面板或辅助类）。
+- **ConvertPhylogeneticFormat**（`src/egps2/builtin/modules/bonus/modules/convert/core/tree/ConvertPhylogeneticFormat.java`）：内置模块（加载器、面板或辅助类）。
+- **ConvertPhylogeneticTree**（`src/egps2/builtin/modules/bonus/modules/convert/core/tree/ConvertPhylogeneticTree.java`）：内置模块（加载器、面板或辅助类）。
+- **ConvertSequenceFormat**（`src/egps2/builtin/modules/bonus/modules/convert/fregmentAlignment/ConvertSequenceFormat.java`）：内置模块（加载器、面板或辅助类）。
+- **ConvertWholeGemomeAlignment**（`src/egps2/builtin/modules/bonus/modules/convert/wholeGemomeAlignment/ConvertWholeGemomeAlignment.java`）：内置模块（加载器、面板或辅助类）。
+- **CtrlPanel**（`src/egps2/builtin/modules/lowtextedi/CtrlPanel.java`）：内置模块（加载器、面板或辅助类）。
+- **DashedSeparator**（`src/egps2/builtin/modules/lowtextedi/DashedSeparator.java`）：内置模块（加载器、面板或辅助类）。
+- **DeleteLineAction**（`src/egps2/builtin/modules/largetextedi/model/DeleteLineAction.java`）：内置模块（加载器、面板或辅助类）。
+- **DemoButtonsOrganizer**（`src/egps2/builtin/modules/gallerymod/DemoButtonsOrganizer.java`）：内置模块（加载器、面板或辅助类）。
+- **DemoViewer**（`src/egps2/builtin/modules/bonus/modules/threedpower/p1/DemoViewer.java`）：内置模块（加载器、面板或辅助类）。
+- **DemoViewer1**（`src/egps2/builtin/modules/bonus/modules/threedpower/p2/DemoViewer1.java`）：内置模块（加载器、面板或辅助类）。
+- **DirNavigatorPanel**（`src/egps2/builtin/modules/filemanager/DirNavigatorPanel.java`）：内置模块（加载器、面板或辅助类）。
+- **DirNavigatorPanelElement**（`src/egps2/builtin/modules/filemanager/DirNavigatorPanelElement.java`）：内置模块（加载器、面板或辅助类）。
+- **DIYToolModuleFace**（`src/egps2/builtin/modules/voice/diytools/DIYToolModuleFace.java`）：内置模块（加载器、面板或辅助类）。
+- **DIYToolSubTabModuleFace**（`src/egps2/builtin/modules/voice/diytools/DIYToolSubTabModuleFace.java`）：内置模块（加载器、面板或辅助类）。
+- **DockableTabModuleFaceOfVoice**（`src/egps2/builtin/modules/voice/fastmodvoice/DockableTabModuleFaceOfVoice.java`）：内置模块（加载器、面板或辅助类）。
+- **DockableTabModuleRunnerCreator**（`src/egps2/builtin/modules/voice/fastmodvoice/DockableTabModuleRunnerCreator.java`）：内置模块（加载器、面板或辅助类）。
+- **Editor**（`src/egps2/builtin/modules/lowtextedi/Editor.java`）：内置模块（加载器、面板或辅助类）。
+- **EditorBufferedReader**（`src/egps2/builtin/modules/largetextedi/io/EditorBufferedReader.java`）：内置模块（加载器、面板或辅助类）。
+- **EditorCaret**（`src/egps2/builtin/modules/largetextedi/model/EditorCaret.java`）：内置模块（加载器、面板或辅助类）。
+- **EditorJDialog**（`src/egps2/builtin/modules/largetextedi/util/EditorJDialog.java`）：内置模块（加载器、面板或辅助类）。
+- **EditorScrollBar**（`src/egps2/builtin/modules/largetextedi/gui/EditorScrollBar.java`）：内置模块（加载器、面板或辅助类）。
+- **EditorWriteFile**（`src/egps2/builtin/modules/largetextedi/io/EditorWriteFile.java`）：内置模块（加载器、面板或辅助类）。
+- **EditScriptState**（`src/egps2/builtin/modules/voice/EditScriptState.java`）：内置模块（加载器、面板或辅助类）。
+- **EGPSOutputFileChooser4TextEditor**（`src/egps2/builtin/modules/largetextedi/gui/EGPSOutputFileChooser4TextEditor.java`）：内置模块（加载器、面板或辅助类）。
+- **EgpsTextPane**（`src/egps2/builtin/modules/largetextedi/gui/EgpsTextPane.java`）：内置模块（加载器、面板或辅助类）。
+- **EgpsTextPanelKeyListener**（`src/egps2/builtin/modules/largetextedi/listener/EgpsTextPanelKeyListener.java`）：内置模块（加载器、面板或辅助类）。
+- **ElegantJTable**（`src/egps2/builtin/modules/itoolmanager/ElegantJTable.java`）：内置模块（加载器、面板或辅助类）。
+- **EventUniformlyProcessor**（`src/egps2/builtin/modules/voice/EventUniformlyProcessor.java`）：内置模块（加载器、面板或辅助类）。
+- **ExitSituation**（`src/egps2/builtin/modules/largetextedi/actions/ExitSituation.java`）：内置模块（加载器、面板或辅助类）。
+- **ExplorerPanel**（`src/egps2/builtin/modules/filemanager/ExplorerPanel.java`）：内置模块（加载器、面板或辅助类）。
+- **ExtendedStyledEditorKit**（`src/egps2/builtin/modules/largetextedi/gui/ExtendedStyledEditorKit.java`）：内置模块（加载器、面板或辅助类）。
+- **FileChooserJButton**（`src/egps2/builtin/modules/bonus/modules/convert/model/FileChooserJButton.java`）：内置模块（加载器、面板或辅助类）。
+- **FileInfoPanel**（`src/egps2/builtin/modules/filemanager/FileInfoPanel.java`）：内置模块（加载器、面板或辅助类）。
+- **FileManagerFileDetailsDialog**（`src/egps2/builtin/modules/filemanager/FileManagerFileDetailsDialog.java`）：内置模块（加载器、面板或辅助类）。
+- **FindAndReplaceDialog**（`src/egps2/builtin/modules/largetextedi/actions/FindAndReplaceDialog.java`）：内置模块（加载器、面板或辅助类）。
+- **FindDialog**（`src/egps2/builtin/modules/lowtextedi/FindDialog.java`）：内置模块（加载器、面板或辅助类）。
+- **FindElementTask**（`src/egps2/builtin/modules/largetextedi/actions/FindElementTask.java`）：内置模块（加载器、面板或辅助类）。
+- **FixationIndex**（`src/egps2/builtin/modules/bonus/modules/fstDemo/FixationIndex.java`）：内置模块（加载器、面板或辅助类）。
+- **FormatJButtonMouseListener**（`src/egps2/builtin/modules/bonus/modules/convert/model/FormatJButtonMouseListener.java`）：内置模块（加载器、面板或辅助类）。
+- **FstCoancestryCoefficient**（`src/egps2/builtin/modules/bonus/modules/fstDemo/FstCoancestryCoefficient.java`）：内置模块（加载器、面板或辅助类）。
+- **FstSNPCommon**（`src/egps2/builtin/modules/bonus/modules/fstDemo/FstSNPCommon.java`）：内置模块（加载器、面板或辅助类）。
+- **GoToLineJDialog**（`src/egps2/builtin/modules/largetextedi/actions/GoToLineJDialog.java`）：内置模块（加载器、面板或辅助类）。
+- **GuiMain**（`src/egps2/builtin/modules/filemanager/GuiMain.java`）：内置模块（加载器、面板或辅助类）。
+- **GuiMain**（`src/egps2/builtin/modules/itoolmanager/GuiMain.java`）：内置模块（加载器、面板或辅助类）。
+- **HistoryNodeTreeRenderer**（`src/egps2/builtin/modules/voice/HistoryNodeTreeRenderer.java`）：内置模块（加载器、面板或辅助类）。
+- **IconObtainer**（`src/egps2/builtin/modules/IconObtainer.java`）：内置模块（加载器、面板或辅助类）。
+- **IModuleElement**（`src/egps2/builtin/modules/itoolmanager/IModuleElement.java`）：内置模块（加载器、面板或辅助类）。
+- **ImportDataInfo**（`src/egps2/builtin/modules/lowtextedi/ImportDataInfo.java`）：内置模块（加载器、面板或辅助类）。
+- **IndependentModuleLoader**（`src/egps2/builtin/modules/bonus/modules/colorman/IndependentModuleLoader.java`）：内置模块（加载器、面板或辅助类）。
+- **IndependentModuleLoader**（`src/egps2/builtin/modules/bonus/modules/computationtest/IndependentModuleLoader.java`）：内置模块（加载器、面板或辅助类）。
+- **IndependentModuleLoader**（`src/egps2/builtin/modules/bonus/modules/mapmaker/IndependentModuleLoader.java`）：内置模块（加载器、面板或辅助类）。
+- **IndependentModuleLoader**（`src/egps2/builtin/modules/bonus/modules/reminder/IndependentModuleLoader.java`）：内置模块（加载器、面板或辅助类）。
+- **IndependentModuleLoader**（`src/egps2/builtin/modules/bonus/modules/schedule/IndependentModuleLoader.java`）：内置模块（加载器、面板或辅助类）。
+- **IndependentModuleLoader**（`src/egps2/builtin/modules/bonus/modules/threedpower/IndependentModuleLoader.java`）：内置模块（加载器、面板或辅助类）。
+- **IndependentModuleLoader**（`src/egps2/builtin/modules/filemanager/IndependentModuleLoader.java`）：内置模块（加载器、面板或辅助类）。
+- **IndependentModuleLoader**（`src/egps2/builtin/modules/gallerymod/IndependentModuleLoader.java`）：内置模块（加载器、面板或辅助类）。
+- **IndependentModuleLoader**（`src/egps2/builtin/modules/itoolmanager/IndependentModuleLoader.java`）：内置模块（加载器、面板或辅助类）。
+- **IndependentModuleLoader**（`src/egps2/builtin/modules/largetextedi/IndependentModuleLoader.java`）：内置模块（加载器、面板或辅助类）。
+- **IndependentModuleLoader**（`src/egps2/builtin/modules/lowtextedi/IndependentModuleLoader.java`）：内置模块（加载器、面板或辅助类）。
+- **InputAreaPanel**（`src/egps2/builtin/modules/voice/InputAreaPanel.java`）：内置模块（加载器、面板或辅助类）。
+- **IntroMain**（`src/egps2/builtin/modules/gallerymod/IntroMain.java`）：内置模块（加载器、面板或辅助类）。
+- **JLabel4NavigatorPanel**（`src/egps2/builtin/modules/filemanager/JLabel4NavigatorPanel.java`）：内置模块（加载器、面板或辅助类）。
+- **LimitQueue**（`src/egps2/builtin/modules/largetextedi/gui/LimitQueue.java`）：内置模块（加载器、面板或辅助类）。
+- **LineNumberHeaderView**（`src/egps2/builtin/modules/largetextedi/gui/LineNumberHeaderView.java`）：内置模块（加载器、面板或辅助类）。
+- **LineObj**（`src/egps2/builtin/modules/largetextedi/model/LineObj.java`）：内置模块（加载器、面板或辅助类）。
+- **LineTerminator**（`src/egps2/builtin/modules/largetextedi/model/LineTerminator.java`）：内置模块（加载器、面板或辅助类）。
+- **ListOfTextEditActions**（`src/egps2/builtin/modules/largetextedi/actions/ListOfTextEditActions.java`）：内置模块（加载器、面板或辅助类）。
+- **Main_FormatCon**（`src/egps2/builtin/modules/bonus/modules/Main_FormatCon.java`）：内置模块（加载器、面板或辅助类）。
+- **Main_FST_Calculator**（`src/egps2/builtin/modules/bonus/modules/Main_FST_Calculator.java`）：内置模块（加载器、面板或辅助类）。
+- **Main_turtle**（`src/egps2/builtin/modules/bonus/modules/Main_turtle.java`）：内置模块（加载器、面板或辅助类）。
+- **MainFace**（`src/egps2/builtin/modules/bonus/modules/colorman/MainFace.java`）：内置模块（加载器、面板或辅助类）。
+- **MainFace**（`src/egps2/builtin/modules/bonus/modules/computationtest/MainFace.java`）：内置模块（加载器、面板或辅助类）。
+- **MainFace**（`src/egps2/builtin/modules/bonus/modules/mapmaker/MainFace.java`）：内置模块（加载器、面板或辅助类）。
+- **MainFace**（`src/egps2/builtin/modules/bonus/modules/reminder/MainFace.java`）：内置模块（加载器、面板或辅助类）。
+- **MainFace**（`src/egps2/builtin/modules/bonus/modules/schedule/MainFace.java`）：内置模块（加载器、面板或辅助类）。
+- **MainFace**（`src/egps2/builtin/modules/bonus/modules/threedpower/MainFace.java`）：内置模块（加载器、面板或辅助类）。
+- **MapDrawer**（`src/egps2/builtin/modules/bonus/modules/mapmaker/MapDrawer.java`）：内置模块（加载器、面板或辅助类）。
+- **MethodsForText2Editor**（`src/egps2/builtin/modules/largetextedi/MethodsForText2Editor.java`）：内置模块（加载器、面板或辅助类）。
+- **MyScheduler**（`src/egps2/builtin/modules/bonus/modules/schedule/MyScheduler.java`）：内置模块（加载器、面板或辅助类）。
+- **NewLinesAction**（`src/egps2/builtin/modules/largetextedi/model/NewLinesAction.java`）：内置模块（加载器、面板或辅助类）。
+- **OneBlockShownContent**（`src/egps2/builtin/modules/largetextedi/model/OneBlockShownContent.java`）：内置模块（加载器、面板或辅助类）。
+- **OpenFilterClustal**（`src/egps2/builtin/modules/bonus/modules/convert/util/io/OpenFilterClustal.java`）：内置模块（加载器、面板或辅助类）。
+- **OpenFilterEmbl**（`src/egps2/builtin/modules/bonus/modules/convert/util/io/OpenFilterEmbl.java`）：内置模块（加载器、面板或辅助类）。
+- **OpenFilterEtree**（`src/egps2/builtin/modules/bonus/modules/convert/util/io/OpenFilterEtree.java`）：内置模块（加载器、面板或辅助类）。
+- **OpenFilterGcgMultiple**（`src/egps2/builtin/modules/bonus/modules/convert/util/io/OpenFilterGcgMultiple.java`）：内置模块（加载器、面板或辅助类）。
+- **OpenFilterGenBank**（`src/egps2/builtin/modules/bonus/modules/convert/util/io/OpenFilterGenBank.java`）：内置模块（加载器、面板或辅助类）。
+- **OpenFilterMega**（`src/egps2/builtin/modules/bonus/modules/convert/util/io/OpenFilterMega.java`）：内置模块（加载器、面板或辅助类）。
+- **OpenFilterNex**（`src/egps2/builtin/modules/bonus/modules/convert/util/io/OpenFilterNex.java`）：内置模块（加载器、面板或辅助类）。
+- **OpenFilterNexml**（`src/egps2/builtin/modules/bonus/modules/convert/util/io/OpenFilterNexml.java`）：内置模块（加载器、面板或辅助类）。
+- **OpenFilterNhx**（`src/egps2/builtin/modules/bonus/modules/convert/util/io/OpenFilterNhx.java`）：内置模块（加载器、面板或辅助类）。
+- **OpenFilterNwk**（`src/egps2/builtin/modules/bonus/modules/convert/util/io/OpenFilterNwk.java`）：内置模块（加载器、面板或辅助类）。
+- **OpenFilterPaml**（`src/egps2/builtin/modules/bonus/modules/convert/util/io/OpenFilterPaml.java`）：内置模块（加载器、面板或辅助类）。
+- **OpenFilterPaup**（`src/egps2/builtin/modules/bonus/modules/convert/util/io/OpenFilterPaup.java`）：内置模块（加载器、面板或辅助类）。
+- **OpenFilterPhylip**（`src/egps2/builtin/modules/bonus/modules/convert/util/io/OpenFilterPhylip.java`）：内置模块（加载器、面板或辅助类）。
+- **OrganizedParameterGetter**（`src/egps2/builtin/modules/voice/fastmodvoice/OrganizedParameterGetter.java`）：内置模块（加载器、面板或辅助类）。
+- **PanelOrganizer**（`src/egps2/builtin/modules/bonus/modules/schedule/PanelOrganizer.java`）：内置模块（加载器、面板或辅助类）。
+- **PluginDataCenter**（`src/egps2/builtin/modules/bonus/modules/convert/util/datacenter/PluginDataCenter.java`）：内置模块（加载器、面板或辅助类）。
+- **PluginDataFormatError**（`src/egps2/builtin/modules/bonus/modules/convert/util/datacenter/PluginDataFormatError.java`）：内置模块（加载器、面板或辅助类）。
+- **PluginFormat**（`src/egps2/builtin/modules/bonus/modules/convert/interfaces/PluginFormat.java`）：内置模块（加载器、面板或辅助类）。
+- **PluginFormatInfo**（`src/egps2/builtin/modules/bonus/modules/convert/interfaces/PluginFormatInfo.java`）：内置模块（加载器、面板或辅助类）。
+- **PropertiesSetter**（`src/egps2/builtin/modules/filemanager/PropertiesSetter.java`）：内置模块（加载器、面板或辅助类）。
+- **ReplaceAllAction**（`src/egps2/builtin/modules/largetextedi/model/ReplaceAllAction.java`）：内置模块（加载器、面板或辅助类）。
+- **ReplaceAllJDialog**（`src/egps2/builtin/modules/largetextedi/actions/ReplaceAllJDialog.java`）：内置模块（加载器、面板或辅助类）。
+- **RevisedLineAction**（`src/egps2/builtin/modules/largetextedi/model/RevisedLineAction.java`）：内置模块（加载器、面板或辅助类）。
+- **RightDemoPanel**（`src/egps2/builtin/modules/gallerymod/RightDemoPanel.java`）：内置模块（加载器、面板或辅助类）。
+- **SelectEditor**（`src/egps2/builtin/modules/largetextedi/model/SelectEditor.java`）：内置模块（加载器、面板或辅助类）。
+- **StorageIO**（`src/egps2/builtin/modules/filemanager/StorageIO.java`）：内置模块（加载器、面板或辅助类）。
+- **SubTabJPanel4Voice**（`src/egps2/builtin/modules/voice/template/SubTabJPanel4Voice.java`）：内置模块（加载器、面板或辅助类）。
+- **SubTabJPanel4VoiceCreator**（`src/egps2/builtin/modules/voice/template/SubTabJPanel4VoiceCreator.java`）：内置模块（加载器、面板或辅助类）。
+- **SubTabJPanel4VoiceInjector**（`src/egps2/builtin/modules/voice/template/SubTabJPanel4VoiceInjector.java`）：内置模块（加载器、面板或辅助类）。
+- **SubTabModule4VoiceInjector**（`src/egps2/builtin/modules/voice/fastmodvoice/SubTabModule4VoiceInjector.java`）：内置模块（加载器、面板或辅助类）。
+- **SubTabModuleRunner**（`src/egps2/builtin/modules/voice/fastmodvoice/SubTabModuleRunner.java`）：内置模块（加载器、面板或辅助类）。
+- **SwingWorkerWithProgressBar**（`src/egps2/builtin/modules/bonus/modules/convert/thread/SwingWorkerWithProgressBar.java`）：内置模块（加载器、面板或辅助类）。
+- **TabModuleFaceOfVoice**（`src/egps2/builtin/modules/voice/fastmodvoice/TabModuleFaceOfVoice.java`）：内置模块（加载器、面板或辅助类）。
+- **TaskPanel**（`src/egps2/builtin/modules/bonus/modules/schedule/TaskPanel.java`）：内置模块（加载器、面板或辅助类）。
+- **TextEditAction**（`src/egps2/builtin/modules/largetextedi/model/TextEditAction.java`）：内置模块（加载器、面板或辅助类）。
+- **TextEditor2D**（`src/egps2/builtin/modules/largetextedi/gui/TextEditor2D.java`）：内置模块（加载器、面板或辅助类）。
+- **TextEditorDataManager**（`src/egps2/builtin/modules/largetextedi/gui/TextEditorDataManager.java`）：内置模块（加载器、面板或辅助类）。
+- **TextEditorMain**（`src/egps2/builtin/modules/largetextedi/TextEditorMain.java`）：内置模块（加载器、面板或辅助类）。
+- **TextEditorViewPort**（`src/egps2/builtin/modules/largetextedi/gui/TextEditorViewPort.java`）：内置模块（加载器、面板或辅助类）。
+- **TextInputDialogWithOKCancel**（`src/egps2/builtin/modules/voice/TextInputDialogWithOKCancel.java`）：内置模块（加载器、面板或辅助类）。
+- **TextViewMainFace**（`src/egps2/builtin/modules/lowtextedi/TextViewMainFace.java`）：内置模块（加载器、面板或辅助类）。
+- **VersatileOpenInputClickAbstractGuiBase**（`src/egps2/builtin/modules/voice/VersatileOpenInputClickAbstractGuiBase.java`）：内置模块（加载器、面板或辅助类）。
+- **VoiceExampleGenerator**（`src/egps2/builtin/modules/voice/bean/VoiceExampleGenerator.java`）：内置模块（加载器、面板或辅助类）。
+- **VoiceParameterHandler4DIYTabModuleFace**（`src/egps2/builtin/modules/voice/fastmodvoice/VoiceParameterHandler4DIYTabModuleFace.java`）：内置模块（加载器、面板或辅助类）。
+- **VoiceParameterHandler4SubTabJPanel4Voice**（`src/egps2/builtin/modules/voice/template/VoiceParameterHandler4SubTabJPanel4Voice.java`）：内置模块（加载器、面板或辅助类）。
+- **VoiceParameterParser**（`src/egps2/builtin/modules/voice/fastmodvoice/VoiceParameterParser.java`）：内置模块（加载器、面板或辅助类）。
+- **VoiceValueParameterBean**（`src/egps2/builtin/modules/voice/bean/VoiceValueParameterBean.java`）：内置模块（加载器、面板或辅助类）。
+- **Voice4DIYTools**（`src/egps2/builtin/modules/voice/diytools/Voice4DIYTools.java`）：内置模块（加载器、面板或辅助类）。
+
+## egps2/frame（67 个类）
+- **AbstractSoftAction**（`src/egps2/frame/AbstractSoftAction.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **Action4Download2update**（`src/egps2/frame/features/Action4Download2update.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **ActionAbout**（`src/egps2/frame/ActionAbout.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **ActionExit**（`src/egps2/frame/ActionExit.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **ActionExportData**（`src/egps2/frame/ActionExportData.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **ActionFaq**（`src/egps2/frame/ActionFaq.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **ActionHelp**（`src/egps2/frame/ActionHelp.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **ActionHistory**（`src/egps2/frame/ActionHistory.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **ActionHomePage**（`src/egps2/frame/ActionHomePage.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **ActionImportData**（`src/egps2/frame/ActionImportData.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **ActionInformation**（`src/egps2/frame/ActionInformation.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **ActionLicenseTerm**（`src/egps2/frame/ActionLicenseTerm.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **ActionPreference**（`src/egps2/frame/ActionPreference.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **ActionReportBugs**（`src/egps2/frame/ActionReportBugs.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **ActionSearch**（`src/egps2/frame/ActionSearch.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **ActionsManager**（`src/egps2/frame/ActionsManager.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **ActionStatics**（`src/egps2/frame/ActionStatics.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **ActionStdErrConsole**（`src/egps2/frame/ActionStdErrConsole.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **ActionStop**（`src/egps2/frame/ActionStop.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **AdjustedSoft4HelpInfoStaticsAction**（`src/egps2/frame/AdjustedSoft4HelpInfoStaticsAction.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **AdjustedSoftAction**（`src/egps2/frame/AdjustedSoftAction.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **AutoConfigThePropertiesAction**（`src/egps2/frame/features/AutoConfigThePropertiesAction.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **Bean4eGPSUpdateInfor**（`src/egps2/frame/features/Bean4eGPSUpdateInfor.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **ButtomStatesBar**（`src/egps2/frame/ButtomStatesBar.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **ComplexRectObj**（`src/egps2/frame/gui/interacive/ComplexRectObj.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **ComputationalModuleFace**（`src/egps2/frame/ComputationalModuleFace.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **DataImportPanel_OneTypeMultiFiles**（`src/egps2/frame/gui/comp/DataImportPanel_OneTypeMultiFiles.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **DataImportPanel_OneTypeMultiFiles_WithInputBox**（`src/egps2/frame/gui/comp/DataImportPanel_OneTypeMultiFiles_WithInputBox.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **DataImportPanel_OneTypeOneFile**（`src/egps2/frame/gui/comp/DataImportPanel_OneTypeOneFile.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **DataImportPanel_OneTypeOneFile_WithInputBox**（`src/egps2/frame/gui/comp/DataImportPanel_OneTypeOneFile_WithInputBox.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **DefaultParamsAssignerAndParserHandler4VOICE**（`src/egps2/frame/DefaultParamsAssignerAndParserHandler4VOICE.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **DialogMoreInfoGenerator**（`src/egps2/frame/gui/dialog/DialogMoreInfoGenerator.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **DraggableTabbedPane**（`src/egps2/frame/gui/comp/DraggableTabbedPane.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **EGPS2ServiceLoader**（`src/egps2/frame/features/EGPS2ServiceLoader.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **EGPSCustomTabbedPaneUI**（`src/egps2/frame/gui/EGPSCustomTabbedPaneUI.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **EGPSJTextArea**（`src/egps2/frame/gui/comp/EGPSJTextArea.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **EGPSMainGuiUtil**（`src/egps2/frame/gui/EGPSMainGuiUtil.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **EGPSSwingUtil**（`src/egps2/frame/gui/EGPSSwingUtil.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **EGPSTextTransferHandler**（`src/egps2/frame/gui/handler/EGPSTextTransferHandler.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **EGPSVersion**（`src/egps2/frame/features/EGPSVersion.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **GlassPanelAchievement**（`src/egps2/frame/GlassPanelAchievement.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **GlassPanelBusyStates**（`src/egps2/frame/GlassPanelBusyStates.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **GlassPanelGesture**（`src/egps2/frame/GlassPanelGesture.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **GraphicsUtilities**（`src/egps2/frame/gui/comp/toggle/swing/shadow/GraphicsUtilities.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **HintManager**（`src/egps2/frame/HintManager.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **HistoryJTreeDialog**（`src/egps2/frame/html/HistoryJTreeDialog.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **InfiniteProgressPanel**（`src/egps2/frame/gui/comp/InfiniteProgressPanel.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **InstantFillAndLineJPanel**（`src/egps2/frame/InstantFillAndLineJPanel.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **InstantSizeAndPositionJPanel**（`src/egps2/frame/InstantSizeAndPositionJPanel.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **JTextAreaTransferHandler**（`src/egps2/frame/gui/handler/JTextAreaTransferHandler.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **JTextAreaWithDefaultContent_MouseAdapter**（`src/egps2/frame/gui/comp/JTextAreaWithDefaultContent_MouseAdapter.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **MainFrameGestureConfig**（`src/egps2/frame/MainFrameGestureConfig.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **MainFrameProperties**（`src/egps2/frame/MainFrameProperties.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **ModuleFace**（`src/egps2/frame/ModuleFace.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **MyFrame**（`src/egps2/frame/MyFrame.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **MyResourceBundle**（`src/egps2/frame/MyResourceBundle.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **RectAdjustMent**（`src/egps2/frame/gui/interacive/RectAdjustMent.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **RectObj**（`src/egps2/frame/gui/interacive/RectObj.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **SearchItem**（`src/egps2/frame/gui/comp/search/SearchItem.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **ShadowRenderer**（`src/egps2/frame/gui/comp/toggle/swing/shadow/ShadowRenderer.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **SimplestWorkBench**（`src/egps2/frame/gui/comp/SimplestWorkBench.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **StringKeySaver**（`src/egps2/frame/gui/StringKeySaver.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **TabbedPaneMouseAdapter**（`src/egps2/frame/TabbedPaneMouseAdapter.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **ToggleAdapter**（`src/egps2/frame/gui/comp/toggle/toggle/ToggleAdapter.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **ToggleButton**（`src/egps2/frame/gui/comp/toggle/toggle/ToggleButton.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **ToggleListener**（`src/egps2/frame/gui/comp/toggle/toggle/ToggleListener.java`）：支撑主窗口、动作调度或标签管理的框架类。
+- **VectorGraphicsEncoder**（`src/egps2/frame/gui/VectorGraphicsEncoder.java`）：支撑主窗口、动作调度或标签管理的框架类。
+
+## egps2/modulei（16 个类）
+- **AdjusterFillAndLine**（`src/egps2/modulei/AdjusterFillAndLine.java`）：模块接口与契约定义。
+- **AdjusterSizeAndPosition**（`src/egps2/modulei/AdjusterSizeAndPosition.java`）：模块接口与契约定义。
+- **BaseInformationImp**（`src/egps2/modulei/BaseInformationImp.java`）：模块接口与契约定义。
+- **Credit**（`src/egps2/modulei/Credit.java`）：模块接口与契约定义。
+- **CreditBean**（`src/egps2/modulei/CreditBean.java`）：模块接口与契约定义。
+- **DataOperator**（`src/egps2/modulei/DataOperator.java`）：模块接口与契约定义。
+- **ICategory**（`src/egps2/modulei/ICategory.java`）：模块接口与契约定义。
+- **IconBean**（`src/egps2/modulei/IconBean.java`）：模块接口与契约定义。
+- **IHelp**（`src/egps2/modulei/IHelp.java`）：模块接口与契约定义。
+- **IInformation**（`src/egps2/modulei/IInformation.java`）：模块接口与契约定义。
+- **IModuleFace**（`src/egps2/modulei/IModuleFace.java`）：模块接口与契约定义。
+- **IModuleLoader**（`src/egps2/modulei/IModuleLoader.java`）：模块接口与契约定义。
+- **IStatistics**（`src/egps2/modulei/IStatistics.java`）：模块接口与契约定义。
+- **IThreadOperator**（`src/egps2/modulei/IThreadOperator.java`）：模块接口与契约定义。
+- **ModuleClassification**（`src/egps2/modulei/ModuleClassification.java`）：模块接口与契约定义。
+- **RunningTask**（`src/egps2/modulei/RunningTask.java`）：模块接口与契约定义。
+
+## egps2/panels（41 个类）
+- **AllocatorPanel**（`src/egps2/panels/dialog/AllocatorPanel.java`）：可复用的 Swing 面板或对话框。
+- **CallBackTransferBehevior**（`src/egps2/panels/dialog/opendialog/CallBackTransferBehevior.java`）：可复用的 Swing 面板或对话框。
+- **ColorCapture**（`src/egps2/panels/dialog/ColorCapture.java`）：可复用的 Swing 面板或对话框。
+- **CustomizeFontEnum**（`src/egps2/panels/graphicpro/CustomizeFontEnum.java`）：可复用的 Swing 面板或对话框。
+- **DialogUtil**（`src/egps2/panels/DialogUtil.java`）：可复用的 Swing 面板或对话框。
+- **DynGifLabel**（`src/egps2/panels/DynGifLabel.java`）：可复用的 Swing 面板或对话框。
+- **EGPSColorChooser**（`src/egps2/panels/dialog/EGPSColorChooser.java`）：可复用的 Swing 面板或对话框。
+- **EGPSFileChooser**（`src/egps2/panels/dialog/EGPSFileChooser.java`）：可复用的 Swing 面板或对话框。
+- **EGPSFontChooser**（`src/egps2/panels/dialog/EGPSFontChooser.java`）：可复用的 Swing 面板或对话框。
+- **EGPSJSpinner**（`src/egps2/panels/dialog/EGPSJSpinner.java`）：可复用的 Swing 面板或对话框。
+- **ExternalProgramSettingJPanel**（`src/egps2/panels/pref/ExternalProgramSettingJPanel.java`）：可复用的 Swing 面板或对话框。
+- **FontAppearancePanel**（`src/egps2/panels/FontAppearancePanel.java`）：可复用的 Swing 面板或对话框。
+- **GradientPanel**（`src/egps2/panels/dialog/GradientPanel.java`）：可复用的 Swing 面板或对话框。
+- **GraphicPropertiesPanel**（`src/egps2/panels/graphicpro/GraphicPropertiesPanel.java`）：可复用的 Swing 面板或对话框。
+- **GUIPrintStream**（`src/egps2/panels/GUIPrintStream.java`）：可复用的 Swing 面板或对话框。
+- **HistoryPanel**（`src/egps2/panels/HistoryPanel.java`）：可复用的 Swing 面板或对话框。
+- **HtmlDocumentPanel**（`src/egps2/panels/pref/HtmlDocumentPanel.java`）：可复用的 Swing 面板或对话框。
+- **IconSizePrefJPanel**（`src/egps2/panels/pref/IconSizePrefJPanel.java`）：可复用的 Swing 面板或对话框。
+- **InformationPanelFactory**（`src/egps2/panels/InformationPanelFactory.java`）：可复用的 Swing 面板或对话框。
+- **InstantStatusPanel**（`src/egps2/panels/reusablecom/InstantStatusPanel.java`）：可复用的 Swing 面板或对话框。
+- **JIMSendTextPane**（`src/egps2/panels/JIMSendTextPane.java`）：可复用的 Swing 面板或对话框。
+- **LanguageSettingPanel**（`src/egps2/panels/pref/LanguageSettingPanel.java`）：可复用的 Swing 面板或对话框。
+- **LaunchProperty4ProgramicConfig**（`src/egps2/panels/pref/LaunchProperty4ProgramicConfig.java`）：可复用的 Swing 面板或对话框。
+- **LicenseOfEGPSPanel**（`src/egps2/panels/LicenseOfEGPSPanel.java`）：可复用的 Swing 面板或对话框。
+- **LookAndFeelPanel**（`src/egps2/panels/pref/LookAndFeelPanel.java`）：可复用的 Swing 面板或对话框。
+- **MailUtil**（`src/egps2/panels/bugreporter/MailUtil.java`）：可复用的 Swing 面板或对话框。
+- **ModuleActionsPanel**（`src/egps2/panels/pref/ModuleActionsPanel.java`）：可复用的 Swing 面板或对话框。
+- **ModuleInspector**（`src/egps2/panels/ModuleInspector.java`）：可复用的 Swing 面板或对话框。
+- **ParameterInitialized**（`src/egps2/panels/reusablecom/ParameterInitialized.java`）：可复用的 Swing 面板或对话框。
+- **PureStringsDispalyDialog**（`src/egps2/panels/dialog/PureStringsDispalyDialog.java`）：可复用的 Swing 面板或对话框。
+- **ReflectDialog**（`src/egps2/panels/ReflectDialog.java`）：可复用的 Swing 面板或对话框。
+- **ReflectDialogContorller**（`src/egps2/panels/bugreporter/ReflectDialogContorller.java`）：可复用的 Swing 面板或对话框。
+- **ReusableCompoentBuilder**（`src/egps2/panels/reusablecom/ReusableCompoentBuilder.java`）：可复用的 Swing 面板或对话框。
+- **StaticsPanel**（`src/egps2/panels/StaticsPanel.java`）：可复用的 Swing 面板或对话框。
+- **StdErrConsolePanel**（`src/egps2/panels/StdErrConsolePanel.java`）：可复用的 Swing 面板或对话框。
+- **StingArrayDisplayDialog**（`src/egps2/panels/dialog/opendialog/StingArrayDisplayDialog.java`）：可复用的 Swing 面板或对话框。
+- **StringDisplayAndChangeDialog**（`src/egps2/panels/dialog/opendialog/StringDisplayAndChangeDialog.java`）：可复用的 Swing 面板或对话框。
+- **StringSearchDialog**（`src/egps2/panels/dialog/opendialog/StringSearchDialog.java`）：可复用的 Swing 面板或对话框。
+- **SubTextPanelNode**（`src/egps2/panels/SubTextPanelNode.java`）：可复用的 Swing 面板或对话框。
+- **SwingDialog**（`src/egps2/panels/dialog/SwingDialog.java`）：可复用的 Swing 面板或对话框。
+- **TextAntiAliasPanel**（`src/egps2/panels/pref/TextAntiAliasPanel.java`）：可复用的 Swing 面板或对话框。
+
+## egps2/plugin（12 个类）
+- **CustomURLClassLoader**（`src/egps2/plugin/manager/CustomURLClassLoader.java`）：插件/模板体系的支持代码。
+- **DataImportPanel**（`src/egps2/plugin/fastmodtem/gui/DataImportPanel.java`）：插件/模板体系的支持代码。
+- **FastBaseTemplate**（`src/egps2/plugin/fastmodtem/FastBaseTemplate.java`）：插件/模板体系的支持代码。
+- **IndependentModuleLoader**（`src/egps2/plugin/fastmodtem/IndependentModuleLoader.java`）：插件/模板体系的支持代码。
+- **JarFileUtil**（`src/egps2/plugin/manager/JarFileUtil.java`）：插件/模板体系的支持代码。
+- **MainFace**（`src/egps2/plugin/fastmodtem/MainFace.java`）：插件/模板体系的支持代码。
+- **ParametersPanel**（`src/egps2/plugin/fastmodtem/gui/ParametersPanel.java`）：插件/模板体系的支持代码。
+- **PluginOperation**（`src/egps2/plugin/manager/PluginOperation.java`）：插件/模板体系的支持代码。
+- **PluginProperty**（`src/egps2/plugin/manager/PluginProperty.java`）：插件/模板体系的支持代码。
+- **SimpleLeftControlPanel**（`src/egps2/plugin/fastmodtem/gui/SimpleLeftControlPanel.java`）：插件/模板体系的支持代码。
+- **WorkBanch4XXX**（`src/egps2/plugin/fastmodtem/WorkBanch4XXX.java`）：插件/模板体系的支持代码。
+- **XXXMainFace**（`src/egps2/plugin/fastmodtem/XXXMainFace.java`）：插件/模板体系的支持代码。
+
+## egps2/utils（87 个类）
+- **AbstractCanvas**（`src/egps2/utils/prompt/swing/AbstractCanvas.java`）：模块和界面共享的工具类。
+- **Animation**（`src/egps2/utils/prompt/swing/Animation.java`）：模块和界面共享的工具类。
+- **AnimationDraw**（`src/egps2/utils/prompt/swing/AnimationDraw.java`）：模块和界面共享的工具类。
+- **AnimationFrame**（`src/egps2/utils/prompt/swing/AnimationFrame.java`）：模块和界面共享的工具类。
+- **BorderUi**（`src/egps2/utils/prompt/swing/BorderUi.java`）：模块和界面共享的工具类。
+- **CallBackBehavior**（`src/egps2/utils/common/model/datatransfer/CallBackBehavior.java`）：模块和界面共享的工具类。
+- **CheckedNumber**（`src/egps2/utils/common/math/CheckedNumber.java`）：模块和界面共享的工具类。
+- **CommandLineTemplate**（`src/egps2/utils/common/util/CommandLineTemplate.java`）：模块和界面共享的工具类。
+- **DealProperties**（`src/egps2/utils/common/util/DealProperties.java`）：模块和界面共享的工具类。
+- **Decoder4pptx**（`src/egps2/utils/common/util/poi/pptx/Decoder4pptx.java`）：模块和界面共享的工具类。
+- **DeffTest**（`src/egps2/utils/common/math/diffSign/DeffTest.java`）：模块和界面共享的工具类。
+- **DoubleRanks**（`src/egps2/utils/common/math/DoubleRanks.java`）：模块和界面共享的工具类。
+- **DoubleRanksDecreasingOrder**（`src/egps2/utils/common/math/DoubleRanksDecreasingOrder.java`）：模块和界面共享的工具类。
+- **EConsoleHandler**（`src/egps2/utils/common/log/EConsoleHandler.java`）：模块和界面共享的工具类。
+- **EGPSClipboard**（`src/egps2/utils/common/model/datatransfer/EGPSClipboard.java`）：模块和界面共享的工具类。
+- **EGPSFonts**（`src/egps2/utils/common/util/EGPSFonts.java`）：模块和界面共享的工具类。
+- **EGPSIconUtil**（`src/egps2/utils/EGPSIconUtil.java`）：模块和界面共享的工具类。
+- **EGPSPrintUtilities**（`src/egps2/utils/common/util/EGPSPrintUtilities.java`）：模块和界面共享的工具类。
+- **EGPSSelection**（`src/egps2/utils/common/model/datatransfer/EGPSSelection.java`）：模块和界面共享的工具类。
+- **EGPSShellIcons**（`src/egps2/utils/common/util/EGPSShellIcons.java`）：模块和界面共享的工具类。
+- **EGPSTTest**（`src/egps2/utils/common/math/diffSign/EGPSTTest.java`）：模块和界面共享的工具类。
+- **EGPSUndoManager**（`src/egps2/utils/common/manager/EGPSUndoManager.java`）：模块和界面共享的工具类。
+- **EGPSWilcoxonSignedRankTest**（`src/egps2/utils/common/math/diffSign/EGPSWilcoxonSignedRankTest.java`）：模块和界面共享的工具类。
+- **FileFilterEPS**（`src/egps2/utils/common/model/filefilter/FileFilterEPS.java`）：模块和界面共享的工具类。
+- **FileFilterNwk**（`src/egps2/utils/common/model/filefilter/FileFilterNwk.java`）：模块和界面共享的工具类。
+- **FileFilterPdf**（`src/egps2/utils/common/model/filefilter/FileFilterPdf.java`）：模块和界面共享的工具类。
+- **FileFilterPng**（`src/egps2/utils/common/model/filefilter/FileFilterPng.java`）：模块和界面共享的工具类。
+- **FileFilterPPTX**（`src/egps2/utils/common/model/filefilter/FileFilterPPTX.java`）：模块和界面共享的工具类。
+- **FileFilterSvg**（`src/egps2/utils/common/model/filefilter/FileFilterSvg.java`）：模块和界面共享的工具类。
+- **FileFilterTxt**（`src/egps2/utils/common/model/filefilter/FileFilterTxt.java`）：模块和界面共享的工具类。
+- **FileFilterZip**（`src/egps2/utils/common/model/filefilter/FileFilterZip.java`）：模块和界面共享的工具类。
+- **FontDTO**（`src/egps2/utils/FontDTO.java`）：模块和界面共享的工具类。
+- **FourTuple**（`src/egps2/utils/common/model/datatransfer/FourTuple.java`）：模块和界面共享的工具类。
+- **GameGraphics**（`src/egps2/utils/prompt/swing/GameGraphics.java`）：模块和界面共享的工具类。
+- **GameSlider**（`src/egps2/utils/prompt/swing/GameSlider.java`）：模块和界面共享的工具类。
+- **GameSliderUI**（`src/egps2/utils/prompt/swing/GameSliderUI.java`）：模块和界面共享的工具类。
+- **GameStaticComponent**（`src/egps2/utils/prompt/swing/GameStaticComponent.java`）：模块和界面共享的工具类。
+- **GeneralMatrixOp**（`src/egps2/utils/common/math/matrix/GeneralMatrixOp.java`）：模块和界面共享的工具类。
+- **GifDecoder**（`src/egps2/utils/GifDecoder.java`）：模块和界面共享的工具类。
+- **GlassPanelPrompt**（`src/egps2/utils/GlassPanelPrompt.java`）：模块和界面共享的工具类。
+- **GraphicsUtils**（`src/egps2/utils/GraphicsUtils.java`）：模块和界面共享的工具类。
+- **ImageCheckBox**（`src/egps2/utils/prompt/swing/ImageCheckBox.java`）：模块和界面共享的工具类。
+- **IntervalUtil**（`src/egps2/utils/common/util/IntervalUtil.java`）：模块和界面共享的工具类。
+- **Label**（`src/egps2/utils/prompt/swing/Label.java`）：模块和界面共享的工具类。
+- **LaunchPropertyDTO**（`src/egps2/utils/LaunchPropertyDTO.java`）：模块和界面共享的工具类。
+- **LineSparator**（`src/egps2/utils/common/tablelike/LineSparator.java`）：模块和界面共享的工具类。
+- **Log2FoldChange**（`src/egps2/utils/common/math/diffSign/Log2FoldChange.java`）：模块和界面共享的工具类。
+- **LucidToolTip**（`src/egps2/utils/prompt/swing/LucidToolTip.java`）：模块和界面共享的工具类。
+- **MatrixElementUtil**（`src/egps2/utils/common/math/MatrixElementUtil.java`）：模块和界面共享的工具类。
+- **MatrixIO**（`src/egps2/utils/common/math/io/MatrixIO.java`）：模块和界面共享的工具类。
+- **MatrixTableContentBean**（`src/egps2/utils/common/tablelike/MatrixTableContentBean.java`）：模块和界面共享的工具类。
+- **MatrixTablePurpose**（`src/egps2/utils/common/tablelike/MatrixTablePurpose.java`）：模块和界面共享的工具类。
+- **MatrixTriangleOp**（`src/egps2/utils/common/math/matrix/MatrixTriangleOp.java`）：模块和界面共享的工具类。
+- **MinusRatioMinOfL2FC3**（`src/egps2/utils/common/math/diffSign/MinusRatioMinOfL2FC3.java`）：模块和界面共享的工具类。
+- **MinusRatioOfL2FC2**（`src/egps2/utils/common/math/diffSign/MinusRatioOfL2FC2.java`）：模块和界面共享的工具类。
+- **OpenFilterCsv**（`src/egps2/utils/common/model/filefilter/OpenFilterCsv.java`）：模块和界面共享的工具类。
+- **OpenFilterFasta**（`src/egps2/utils/common/model/filefilter/OpenFilterFasta.java`）：模块和界面共享的工具类。
+- **OpenFilterList**（`src/egps2/utils/common/model/filefilter/OpenFilterList.java`）：模块和界面共享的工具类。
+- **OpenFilterMaf**（`src/egps2/utils/common/model/filefilter/OpenFilterMaf.java`）：模块和界面共享的工具类。
+- **OpenFilterPro**（`src/egps2/utils/common/model/filefilter/OpenFilterPro.java`）：模块和界面共享的工具类。
+- **OpenFilterRNAExp**（`src/egps2/utils/common/model/filefilter/OpenFilterRNAExp.java`）：模块和界面共享的工具类。
+- **OpenFilterSimu**（`src/egps2/utils/common/model/filefilter/OpenFilterSimu.java`）：模块和界面共享的工具类。
+- **OpenFilterTree**（`src/egps2/utils/common/model/filefilter/OpenFilterTree.java`）：模块和界面共享的工具类。
+- **OpenFilterTsv**（`src/egps2/utils/common/model/filefilter/OpenFilterTsv.java`）：模块和界面共享的工具类。
+- **OpenFilterVcf**（`src/egps2/utils/common/model/filefilter/OpenFilterVcf.java`）：模块和界面共享的工具类。
+- **PromptLabel**（`src/egps2/utils/PromptLabel.java`）：模块和界面共享的工具类。
+- **RatioOfL2FC**（`src/egps2/utils/common/math/diffSign/RatioOfL2FC.java`）：模块和界面共享的工具类。
+- **Result**（`src/egps2/utils/common/model/datatransfer/Result.java`）：模块和界面共享的工具类。
+- **RoundLineBorder**（`src/egps2/utils/RoundLineBorder.java`）：模块和界面共享的工具类。
+- **SaveFileFilter**（`src/egps2/utils/common/util/SaveFileFilter.java`）：模块和界面共享的工具类。
+- **SaveFilterDist**（`src/egps2/utils/common/model/filefilter/SaveFilterDist.java`）：模块和界面共享的工具类。
+- **SaveFilterExel**（`src/egps2/utils/common/model/filefilter/SaveFilterExel.java`）：模块和界面共享的工具类。
+- **SaveFilterItreeV**（`src/egps2/utils/common/model/filefilter/SaveFilterItreeV.java`）：模块和界面共享的工具类。
+- **SaveFilterJpg**（`src/egps2/utils/common/model/filefilter/SaveFilterJpg.java`）：模块和界面共享的工具类。
+- **SaveFilterNwk**（`src/egps2/utils/common/model/filefilter/SaveFilterNwk.java`）：模块和界面共享的工具类。
+- **SaveFilterSimu**（`src/egps2/utils/common/model/filefilter/SaveFilterSimu.java`）：模块和界面共享的工具类。
+- **SaveFilterTiff**（`src/egps2/utils/common/model/filefilter/SaveFilterTiff.java`）：模块和界面共享的工具类。
+- **SaveFilterVcf**（`src/egps2/utils/common/model/filefilter/SaveFilterVcf.java`）：模块和界面共享的工具类。
+- **SaveFilterVcfGz**（`src/egps2/utils/common/model/filefilter/SaveFilterVcfGz.java`）：模块和界面共享的工具类。
+- **SaveUtil**（`src/egps2/utils/common/util/SaveUtil.java`）：模块和界面共享的工具类。
+- **SLGraphics**（`src/egps2/utils/common/util/poi/pptx/SLGraphics.java`）：模块和界面共享的工具类。
+- **ThreeTuple**（`src/egps2/utils/common/model/datatransfer/ThreeTuple.java`）：模块和界面共享的工具类。
+- **TopElementFinder**（`src/egps2/utils/common/util/topkfinder/TopElementFinder.java`）：模块和界面共享的工具类。
+- **Tuple**（`src/egps2/utils/common/model/datatransfer/Tuple.java`）：模块和界面共享的工具类。
+- **TwoTuple**（`src/egps2/utils/common/model/datatransfer/TwoTuple.java`）：模块和界面共享的工具类。
+- **WebReaderUtil**（`src/egps2/utils/common/io/WebReaderUtil.java`）：模块和界面共享的工具类。
+- **ZipFilesWriter**（`src/egps2/utils/common/io/ZipFilesWriter.java`）：模块和界面共享的工具类。
+
+## test/java（4 个类）
+- **BasicGraphicsUtilsTest**（`src/test/java/egps2/builtin/modules/bonus/modules/BasicGraphicsUtilsTest.java`）：内置模块（加载器、面板或辅助类）。
+- **SendEmail_text**（`src/test/java/egps2/panels/bugreporter/SendEmail_text.java`）：可复用的 Swing 面板或对话框。
+- **SendEmailAttachment**（`src/test/java/egps2/panels/bugreporter/SendEmailAttachment.java`）：可复用的 Swing 面板或对话框。
+- **SendEmailSMTP**（`src/test/java/egps2/panels/bugreporter/SendEmailSMTP.java`）：可复用的 Swing 面板或对话框。

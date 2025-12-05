@@ -1,0 +1,145 @@
+# Understanding Utilities, Plugins & UI Templates
+更详细列出该类别下的类，含路径与角色说明。
+
+- **AbstractCanvas** (`src/egps2/utils/prompt/swing/AbstractCanvas.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **Action** (`src/com/raven/swing/table/Action.java`): Raven UI template component embedded in the eGPS shell layout.
+- **Animation** (`src/egps2/utils/prompt/swing/Animation.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **AnimationDraw** (`src/egps2/utils/prompt/swing/AnimationDraw.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **AnimationFrame** (`src/egps2/utils/prompt/swing/AnimationFrame.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **BorderUi** (`src/egps2/utils/prompt/swing/BorderUi.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **Button** (`src/com/raven/swing/Button.java`): Raven UI template component embedded in the eGPS shell layout.
+- **ButtonBadges** (`src/com/raven/swing/ButtonBadges.java`): Raven UI template component embedded in the eGPS shell layout.
+- **CallBackBehavior** (`src/egps2/utils/common/model/datatransfer/CallBackBehavior.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **Card** (`src/com/raven/component/Card.java`): Raven UI template component embedded in the eGPS shell layout.
+- **CheckedNumber** (`src/egps2/utils/common/math/CheckedNumber.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **CommandLineTemplate** (`src/egps2/utils/common/util/CommandLineTemplate.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **CustomURLClassLoader** (`src/egps2/plugin/manager/CustomURLClassLoader.java`): Component within the eGPS desktop application.
+- **DataImportPanel** (`src/egps2/plugin/fastmodtem/gui/DataImportPanel.java`): Component within the eGPS desktop application.
+- **DealProperties** (`src/egps2/utils/common/util/DealProperties.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **Decoder4pptx** (`src/egps2/utils/common/util/poi/pptx/Decoder4pptx.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **DefaultIconCode** (`src/com/raven/swing/icon/DefaultIconCode.java`): Raven UI template component embedded in the eGPS shell layout.
+- **DeffTest** (`src/egps2/utils/common/math/diffSign/DeffTest.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **DoubleRanks** (`src/egps2/utils/common/math/DoubleRanks.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **DoubleRanksDecreasingOrder** (`src/egps2/utils/common/math/DoubleRanksDecreasingOrder.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **EConsoleHandler** (`src/egps2/utils/common/log/EConsoleHandler.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **EGPSClipboard** (`src/egps2/utils/common/model/datatransfer/EGPSClipboard.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **EGPSFonts** (`src/egps2/utils/common/util/EGPSFonts.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **EGPSIconUtil** (`src/egps2/utils/EGPSIconUtil.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **EGPSPrintUtilities** (`src/egps2/utils/common/util/EGPSPrintUtilities.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **EGPSSelection** (`src/egps2/utils/common/model/datatransfer/EGPSSelection.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **EGPSShellIcons** (`src/egps2/utils/common/util/EGPSShellIcons.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **EGPSTTest** (`src/egps2/utils/common/math/diffSign/EGPSTTest.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **EGPSUndoManager** (`src/egps2/utils/common/manager/EGPSUndoManager.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **EGPSWilcoxonSignedRankTest** (`src/egps2/utils/common/math/diffSign/EGPSWilcoxonSignedRankTest.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **EventAction** (`src/com/raven/swing/table/EventAction.java`): Raven UI template component embedded in the eGPS shell layout.
+- **EventMenu** (`src/com/raven/event/EventMenu.java`): Raven UI template component embedded in the eGPS shell layout.
+- **EventMenuSelected** (`src/com/raven/event/EventMenuSelected.java`): Raven UI template component embedded in the eGPS shell layout.
+- **EventShowPopupMenu** (`src/com/raven/event/EventShowPopupMenu.java`): Raven UI template component embedded in the eGPS shell layout.
+- **FastBaseTemplate** (`src/egps2/plugin/fastmodtem/FastBaseTemplate.java`): Component within the eGPS desktop application.
+- **FileFilterEPS** (`src/egps2/utils/common/model/filefilter/FileFilterEPS.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **FileFilterNwk** (`src/egps2/utils/common/model/filefilter/FileFilterNwk.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **FileFilterPdf** (`src/egps2/utils/common/model/filefilter/FileFilterPdf.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **FileFilterPng** (`src/egps2/utils/common/model/filefilter/FileFilterPng.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **FileFilterPPTX** (`src/egps2/utils/common/model/filefilter/FileFilterPPTX.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **FileFilterSvg** (`src/egps2/utils/common/model/filefilter/FileFilterSvg.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **FileFilterTxt** (`src/egps2/utils/common/model/filefilter/FileFilterTxt.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **FileFilterZip** (`src/egps2/utils/common/model/filefilter/FileFilterZip.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **FontDTO** (`src/egps2/utils/FontDTO.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **Form1** (`src/com/raven/form/Form1.java`): Raven UI template component embedded in the eGPS shell layout.
+- **Form_Home** (`src/com/raven/form/Form_Home.java`): Raven UI template component embedded in the eGPS shell layout.
+- **FourTuple** (`src/egps2/utils/common/model/datatransfer/FourTuple.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **GameGraphics** (`src/egps2/utils/prompt/swing/GameGraphics.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **GameSlider** (`src/egps2/utils/prompt/swing/GameSlider.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **GameSliderUI** (`src/egps2/utils/prompt/swing/GameSliderUI.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **GameStaticComponent** (`src/egps2/utils/prompt/swing/GameStaticComponent.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **GeneralMatrixOp** (`src/egps2/utils/common/math/matrix/GeneralMatrixOp.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **GifDecoder** (`src/egps2/utils/GifDecoder.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **GlassPanelPrompt** (`src/egps2/utils/GlassPanelPrompt.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **GoogleMaterialDesignIcons** (`src/com/raven/swing/icon/GoogleMaterialDesignIcons.java`): Raven UI template component embedded in the eGPS shell layout.
+- **GraphicsUtils** (`src/egps2/utils/GraphicsUtils.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **Header** (`src/com/raven/component/Header.java`): Raven UI template component embedded in the eGPS shell layout.
+- **IconCode** (`src/com/raven/swing/icon/IconCode.java`): Raven UI template component embedded in the eGPS shell layout.
+- **IconFont** (`src/com/raven/swing/icon/IconFont.java`): Raven UI template component embedded in the eGPS shell layout.
+- **IconFontSwing** (`src/com/raven/swing/icon/IconFontSwing.java`): Raven UI template component embedded in the eGPS shell layout.
+- **ImageAvatar** (`src/com/raven/swing/ImageAvatar.java`): Raven UI template component embedded in the eGPS shell layout.
+- **ImageCheckBox** (`src/egps2/utils/prompt/swing/ImageCheckBox.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **IndependentModuleLoader** (`src/com/raven/IndependentModuleLoader.java`): Module loader; registers tab metadata and returns ModuleFace instances.
+- **IndependentModuleLoader** (`src/egps2/plugin/fastmodtem/IndependentModuleLoader.java`): Module loader; registers tab metadata and returns ModuleFace instances.
+- **IntervalUtil** (`src/egps2/utils/common/util/IntervalUtil.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **JarFileUtil** (`src/egps2/plugin/manager/JarFileUtil.java`): Component within the eGPS desktop application.
+- **Label** (`src/egps2/utils/prompt/swing/Label.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **LaunchPropertyDTO** (`src/egps2/utils/LaunchPropertyDTO.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **LineSparator** (`src/egps2/utils/common/tablelike/LineSparator.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **Log2FoldChange** (`src/egps2/utils/common/math/diffSign/Log2FoldChange.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **LucidToolTip** (`src/egps2/utils/prompt/swing/LucidToolTip.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **Main** (`src/com/raven/main/Main.java`): Raven UI template component embedded in the eGPS shell layout.
+- **MainFace** (`src/com/raven/MainFace.java`): Raven UI template component embedded in the eGPS shell layout.
+- **MainFace** (`src/egps2/plugin/fastmodtem/MainFace.java`): Component within the eGPS desktop application.
+- **MainForm** (`src/com/raven/form/MainForm.java`): Raven UI template component embedded in the eGPS shell layout.
+- **MatrixElementUtil** (`src/egps2/utils/common/math/MatrixElementUtil.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **MatrixIO** (`src/egps2/utils/common/math/io/MatrixIO.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **MatrixTableContentBean** (`src/egps2/utils/common/tablelike/MatrixTableContentBean.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **MatrixTablePurpose** (`src/egps2/utils/common/tablelike/MatrixTablePurpose.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **MatrixTriangleOp** (`src/egps2/utils/common/math/matrix/MatrixTriangleOp.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **Menu** (`src/com/raven/component/Menu.java`): Raven UI template component embedded in the eGPS shell layout.
+- **MenuAnimation** (`src/com/raven/swing/MenuAnimation.java`): Raven UI template component embedded in the eGPS shell layout.
+- **MenuButton** (`src/com/raven/swing/MenuButton.java`): Raven UI template component embedded in the eGPS shell layout.
+- **MenuItem** (`src/com/raven/swing/MenuItem.java`): Raven UI template component embedded in the eGPS shell layout.
+- **Message** (`src/com/raven/dialog/Message.java`): Raven UI template component embedded in the eGPS shell layout.
+- **MinusRatioMinOfL2FC3** (`src/egps2/utils/common/math/diffSign/MinusRatioMinOfL2FC3.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **MinusRatioOfL2FC2** (`src/egps2/utils/common/math/diffSign/MinusRatioOfL2FC2.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **ModelAction** (`src/com/raven/swing/table/ModelAction.java`): Raven UI template component embedded in the eGPS shell layout.
+- **ModelCard** (`src/com/raven/model/ModelCard.java`): Raven UI template component embedded in the eGPS shell layout.
+- **ModelMenu** (`src/com/raven/model/ModelMenu.java`): Raven UI template component embedded in the eGPS shell layout.
+- **ModelNoticeBoard** (`src/com/raven/swing/noticeboard/ModelNoticeBoard.java`): Raven UI template component embedded in the eGPS shell layout.
+- **ModelProfile** (`src/com/raven/swing/table/ModelProfile.java`): Raven UI template component embedded in the eGPS shell layout.
+- **ModelStudent** (`src/com/raven/model/ModelStudent.java`): Raven UI template component embedded in the eGPS shell layout.
+- **ModernScrollBarUI** (`src/com/raven/swing/scrollbar/ModernScrollBarUI.java`): Raven UI template component embedded in the eGPS shell layout.
+- **NoticeBoard** (`src/com/raven/swing/noticeboard/NoticeBoard.java`): Raven UI template component embedded in the eGPS shell layout.
+- **OpenFilterCsv** (`src/egps2/utils/common/model/filefilter/OpenFilterCsv.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **OpenFilterFasta** (`src/egps2/utils/common/model/filefilter/OpenFilterFasta.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **OpenFilterList** (`src/egps2/utils/common/model/filefilter/OpenFilterList.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **OpenFilterMaf** (`src/egps2/utils/common/model/filefilter/OpenFilterMaf.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **OpenFilterPro** (`src/egps2/utils/common/model/filefilter/OpenFilterPro.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **OpenFilterRNAExp** (`src/egps2/utils/common/model/filefilter/OpenFilterRNAExp.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **OpenFilterSimu** (`src/egps2/utils/common/model/filefilter/OpenFilterSimu.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **OpenFilterTree** (`src/egps2/utils/common/model/filefilter/OpenFilterTree.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **OpenFilterTsv** (`src/egps2/utils/common/model/filefilter/OpenFilterTsv.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **OpenFilterVcf** (`src/egps2/utils/common/model/filefilter/OpenFilterVcf.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **PanelPopup** (`src/com/raven/swing/PanelPopup.java`): Raven UI template component embedded in the eGPS shell layout.
+- **ParametersPanel** (`src/egps2/plugin/fastmodtem/gui/ParametersPanel.java`): Component within the eGPS desktop application.
+- **PluginOperation** (`src/egps2/plugin/manager/PluginOperation.java`): Supports plugin discovery/loading or fast module templates for external extensions.
+- **PluginProperty** (`src/egps2/plugin/manager/PluginProperty.java`): Supports plugin discovery/loading or fast module templates for external extensions.
+- **PopupMenu** (`src/com/raven/swing/PopupMenu.java`): Raven UI template component embedded in the eGPS shell layout.
+- **Profile** (`src/com/raven/component/Profile.java`): Raven UI template component embedded in the eGPS shell layout.
+- **Profile** (`src/com/raven/swing/table/Profile.java`): Raven UI template component embedded in the eGPS shell layout.
+- **ProgressBarCustom** (`src/com/raven/swing/ProgressBarCustom.java`): Raven UI template component embedded in the eGPS shell layout.
+- **PromptLabel** (`src/egps2/utils/PromptLabel.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **RatioOfL2FC** (`src/egps2/utils/common/math/diffSign/RatioOfL2FC.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **Result** (`src/egps2/utils/common/model/datatransfer/Result.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **RoundLineBorder** (`src/egps2/utils/RoundLineBorder.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **SaveFileFilter** (`src/egps2/utils/common/util/SaveFileFilter.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **SaveFilterDist** (`src/egps2/utils/common/model/filefilter/SaveFilterDist.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **SaveFilterExel** (`src/egps2/utils/common/model/filefilter/SaveFilterExel.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **SaveFilterItreeV** (`src/egps2/utils/common/model/filefilter/SaveFilterItreeV.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **SaveFilterJpg** (`src/egps2/utils/common/model/filefilter/SaveFilterJpg.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **SaveFilterNwk** (`src/egps2/utils/common/model/filefilter/SaveFilterNwk.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **SaveFilterSimu** (`src/egps2/utils/common/model/filefilter/SaveFilterSimu.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **SaveFilterTiff** (`src/egps2/utils/common/model/filefilter/SaveFilterTiff.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **SaveFilterVcf** (`src/egps2/utils/common/model/filefilter/SaveFilterVcf.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **SaveFilterVcfGz** (`src/egps2/utils/common/model/filefilter/SaveFilterVcfGz.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **SaveUtil** (`src/egps2/utils/common/util/SaveUtil.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **ScrollBarCustom** (`src/com/raven/swing/scrollbar/ScrollBarCustom.java`): Raven UI template component embedded in the eGPS shell layout.
+- **SimpleLeftControlPanel** (`src/egps2/plugin/fastmodtem/gui/SimpleLeftControlPanel.java`): Component within the eGPS desktop application.
+- **SLGraphics** (`src/egps2/utils/common/util/poi/pptx/SLGraphics.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **Table** (`src/com/raven/swing/table/Table.java`): Raven UI template component embedded in the eGPS shell layout.
+- **TableCellAction** (`src/com/raven/swing/table/TableCellAction.java`): Raven UI template component embedded in the eGPS shell layout.
+- **TableHeader** (`src/com/raven/swing/table/TableHeader.java`): Raven UI template component embedded in the eGPS shell layout.
+- **ThreeTuple** (`src/egps2/utils/common/model/datatransfer/ThreeTuple.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **TopElementFinder** (`src/egps2/utils/common/util/topkfinder/TopElementFinder.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **Tuple** (`src/egps2/utils/common/model/datatransfer/Tuple.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **TwoTuple** (`src/egps2/utils/common/model/datatransfer/TwoTuple.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **WebReaderUtil** (`src/egps2/utils/common/io/WebReaderUtil.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
+- **WorkBanch4XXX** (`src/egps2/plugin/fastmodtem/WorkBanch4XXX.java`): Component within the eGPS desktop application.
+- **XXXMainFace** (`src/egps2/plugin/fastmodtem/XXXMainFace.java`): Component within the eGPS desktop application.
+- **ZipFilesWriter** (`src/egps2/utils/common/io/ZipFilesWriter.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).

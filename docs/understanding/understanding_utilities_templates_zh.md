@@ -1,0 +1,145 @@
+# 工具类、插件与界面模板理解
+本节详细列出该类别的类、所在路径和职责描述。
+
+- **AbstractCanvas**（`src/egps2/utils/prompt/swing/AbstractCanvas.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **Action**（`src/com/raven/swing/table/Action.java`）：Raven UI 模板组件，嵌入 eGPS 外壳的界面。
+- **Animation**（`src/egps2/utils/prompt/swing/Animation.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **AnimationDraw**（`src/egps2/utils/prompt/swing/AnimationDraw.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **AnimationFrame**（`src/egps2/utils/prompt/swing/AnimationFrame.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **BorderUi**（`src/egps2/utils/prompt/swing/BorderUi.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **Button**（`src/com/raven/swing/Button.java`）：Raven UI 模板组件，嵌入 eGPS 外壳的界面。
+- **ButtonBadges**（`src/com/raven/swing/ButtonBadges.java`）：Raven UI 模板组件，嵌入 eGPS 外壳的界面。
+- **CallBackBehavior**（`src/egps2/utils/common/model/datatransfer/CallBackBehavior.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **Card**（`src/com/raven/component/Card.java`）：Raven UI 模板组件，嵌入 eGPS 外壳的界面。
+- **CheckedNumber**（`src/egps2/utils/common/math/CheckedNumber.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **CommandLineTemplate**（`src/egps2/utils/common/util/CommandLineTemplate.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **CustomURLClassLoader**（`src/egps2/plugin/manager/CustomURLClassLoader.java`）：eGPS 桌面应用的组成部分。
+- **DataImportPanel**（`src/egps2/plugin/fastmodtem/gui/DataImportPanel.java`）：eGPS 桌面应用的组成部分。
+- **DealProperties**（`src/egps2/utils/common/util/DealProperties.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **Decoder4pptx**（`src/egps2/utils/common/util/poi/pptx/Decoder4pptx.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **DefaultIconCode**（`src/com/raven/swing/icon/DefaultIconCode.java`）：Raven UI 模板组件，嵌入 eGPS 外壳的界面。
+- **DeffTest**（`src/egps2/utils/common/math/diffSign/DeffTest.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **DoubleRanks**（`src/egps2/utils/common/math/DoubleRanks.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **DoubleRanksDecreasingOrder**（`src/egps2/utils/common/math/DoubleRanksDecreasingOrder.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **EConsoleHandler**（`src/egps2/utils/common/log/EConsoleHandler.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **EGPSClipboard**（`src/egps2/utils/common/model/datatransfer/EGPSClipboard.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **EGPSFonts**（`src/egps2/utils/common/util/EGPSFonts.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **EGPSIconUtil**（`src/egps2/utils/EGPSIconUtil.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **EGPSPrintUtilities**（`src/egps2/utils/common/util/EGPSPrintUtilities.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **EGPSSelection**（`src/egps2/utils/common/model/datatransfer/EGPSSelection.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **EGPSShellIcons**（`src/egps2/utils/common/util/EGPSShellIcons.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **EGPSTTest**（`src/egps2/utils/common/math/diffSign/EGPSTTest.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **EGPSUndoManager**（`src/egps2/utils/common/manager/EGPSUndoManager.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **EGPSWilcoxonSignedRankTest**（`src/egps2/utils/common/math/diffSign/EGPSWilcoxonSignedRankTest.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **EventAction**（`src/com/raven/swing/table/EventAction.java`）：Raven UI 模板组件，嵌入 eGPS 外壳的界面。
+- **EventMenu**（`src/com/raven/event/EventMenu.java`）：Raven UI 模板组件，嵌入 eGPS 外壳的界面。
+- **EventMenuSelected**（`src/com/raven/event/EventMenuSelected.java`）：Raven UI 模板组件，嵌入 eGPS 外壳的界面。
+- **EventShowPopupMenu**（`src/com/raven/event/EventShowPopupMenu.java`）：Raven UI 模板组件，嵌入 eGPS 外壳的界面。
+- **FastBaseTemplate**（`src/egps2/plugin/fastmodtem/FastBaseTemplate.java`）：eGPS 桌面应用的组成部分。
+- **FileFilterEPS**（`src/egps2/utils/common/model/filefilter/FileFilterEPS.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **FileFilterNwk**（`src/egps2/utils/common/model/filefilter/FileFilterNwk.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **FileFilterPdf**（`src/egps2/utils/common/model/filefilter/FileFilterPdf.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **FileFilterPng**（`src/egps2/utils/common/model/filefilter/FileFilterPng.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **FileFilterPPTX**（`src/egps2/utils/common/model/filefilter/FileFilterPPTX.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **FileFilterSvg**（`src/egps2/utils/common/model/filefilter/FileFilterSvg.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **FileFilterTxt**（`src/egps2/utils/common/model/filefilter/FileFilterTxt.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **FileFilterZip**（`src/egps2/utils/common/model/filefilter/FileFilterZip.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **FontDTO**（`src/egps2/utils/FontDTO.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **Form1**（`src/com/raven/form/Form1.java`）：Raven UI 模板组件，嵌入 eGPS 外壳的界面。
+- **Form_Home**（`src/com/raven/form/Form_Home.java`）：Raven UI 模板组件，嵌入 eGPS 外壳的界面。
+- **FourTuple**（`src/egps2/utils/common/model/datatransfer/FourTuple.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **GameGraphics**（`src/egps2/utils/prompt/swing/GameGraphics.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **GameSlider**（`src/egps2/utils/prompt/swing/GameSlider.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **GameSliderUI**（`src/egps2/utils/prompt/swing/GameSliderUI.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **GameStaticComponent**（`src/egps2/utils/prompt/swing/GameStaticComponent.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **GeneralMatrixOp**（`src/egps2/utils/common/math/matrix/GeneralMatrixOp.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **GifDecoder**（`src/egps2/utils/GifDecoder.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **GlassPanelPrompt**（`src/egps2/utils/GlassPanelPrompt.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **GoogleMaterialDesignIcons**（`src/com/raven/swing/icon/GoogleMaterialDesignIcons.java`）：Raven UI 模板组件，嵌入 eGPS 外壳的界面。
+- **GraphicsUtils**（`src/egps2/utils/GraphicsUtils.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **Header**（`src/com/raven/component/Header.java`）：Raven UI 模板组件，嵌入 eGPS 外壳的界面。
+- **IconCode**（`src/com/raven/swing/icon/IconCode.java`）：Raven UI 模板组件，嵌入 eGPS 外壳的界面。
+- **IconFont**（`src/com/raven/swing/icon/IconFont.java`）：Raven UI 模板组件，嵌入 eGPS 外壳的界面。
+- **IconFontSwing**（`src/com/raven/swing/icon/IconFontSwing.java`）：Raven UI 模板组件，嵌入 eGPS 外壳的界面。
+- **ImageAvatar**（`src/com/raven/swing/ImageAvatar.java`）：Raven UI 模板组件，嵌入 eGPS 外壳的界面。
+- **ImageCheckBox**（`src/egps2/utils/prompt/swing/ImageCheckBox.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **IndependentModuleLoader**（`src/com/raven/IndependentModuleLoader.java`）：模块加载器；注册标签元信息并返回 ModuleFace 实例。
+- **IndependentModuleLoader**（`src/egps2/plugin/fastmodtem/IndependentModuleLoader.java`）：模块加载器；注册标签元信息并返回 ModuleFace 实例。
+- **IntervalUtil**（`src/egps2/utils/common/util/IntervalUtil.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **JarFileUtil**（`src/egps2/plugin/manager/JarFileUtil.java`）：eGPS 桌面应用的组成部分。
+- **Label**（`src/egps2/utils/prompt/swing/Label.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **LaunchPropertyDTO**（`src/egps2/utils/LaunchPropertyDTO.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **LineSparator**（`src/egps2/utils/common/tablelike/LineSparator.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **Log2FoldChange**（`src/egps2/utils/common/math/diffSign/Log2FoldChange.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **LucidToolTip**（`src/egps2/utils/prompt/swing/LucidToolTip.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **Main**（`src/com/raven/main/Main.java`）：Raven UI 模板组件，嵌入 eGPS 外壳的界面。
+- **MainFace**（`src/com/raven/MainFace.java`）：Raven UI 模板组件，嵌入 eGPS 外壳的界面。
+- **MainFace**（`src/egps2/plugin/fastmodtem/MainFace.java`）：eGPS 桌面应用的组成部分。
+- **MainForm**（`src/com/raven/form/MainForm.java`）：Raven UI 模板组件，嵌入 eGPS 外壳的界面。
+- **MatrixElementUtil**（`src/egps2/utils/common/math/MatrixElementUtil.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **MatrixIO**（`src/egps2/utils/common/math/io/MatrixIO.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **MatrixTableContentBean**（`src/egps2/utils/common/tablelike/MatrixTableContentBean.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **MatrixTablePurpose**（`src/egps2/utils/common/tablelike/MatrixTablePurpose.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **MatrixTriangleOp**（`src/egps2/utils/common/math/matrix/MatrixTriangleOp.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **Menu**（`src/com/raven/component/Menu.java`）：Raven UI 模板组件，嵌入 eGPS 外壳的界面。
+- **MenuAnimation**（`src/com/raven/swing/MenuAnimation.java`）：Raven UI 模板组件，嵌入 eGPS 外壳的界面。
+- **MenuButton**（`src/com/raven/swing/MenuButton.java`）：Raven UI 模板组件，嵌入 eGPS 外壳的界面。
+- **MenuItem**（`src/com/raven/swing/MenuItem.java`）：Raven UI 模板组件，嵌入 eGPS 外壳的界面。
+- **Message**（`src/com/raven/dialog/Message.java`）：Raven UI 模板组件，嵌入 eGPS 外壳的界面。
+- **MinusRatioMinOfL2FC3**（`src/egps2/utils/common/math/diffSign/MinusRatioMinOfL2FC3.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **MinusRatioOfL2FC2**（`src/egps2/utils/common/math/diffSign/MinusRatioOfL2FC2.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **ModelAction**（`src/com/raven/swing/table/ModelAction.java`）：Raven UI 模板组件，嵌入 eGPS 外壳的界面。
+- **ModelCard**（`src/com/raven/model/ModelCard.java`）：Raven UI 模板组件，嵌入 eGPS 外壳的界面。
+- **ModelMenu**（`src/com/raven/model/ModelMenu.java`）：Raven UI 模板组件，嵌入 eGPS 外壳的界面。
+- **ModelNoticeBoard**（`src/com/raven/swing/noticeboard/ModelNoticeBoard.java`）：Raven UI 模板组件，嵌入 eGPS 外壳的界面。
+- **ModelProfile**（`src/com/raven/swing/table/ModelProfile.java`）：Raven UI 模板组件，嵌入 eGPS 外壳的界面。
+- **ModelStudent**（`src/com/raven/model/ModelStudent.java`）：Raven UI 模板组件，嵌入 eGPS 外壳的界面。
+- **ModernScrollBarUI**（`src/com/raven/swing/scrollbar/ModernScrollBarUI.java`）：Raven UI 模板组件，嵌入 eGPS 外壳的界面。
+- **NoticeBoard**（`src/com/raven/swing/noticeboard/NoticeBoard.java`）：Raven UI 模板组件，嵌入 eGPS 外壳的界面。
+- **OpenFilterCsv**（`src/egps2/utils/common/model/filefilter/OpenFilterCsv.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **OpenFilterFasta**（`src/egps2/utils/common/model/filefilter/OpenFilterFasta.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **OpenFilterList**（`src/egps2/utils/common/model/filefilter/OpenFilterList.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **OpenFilterMaf**（`src/egps2/utils/common/model/filefilter/OpenFilterMaf.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **OpenFilterPro**（`src/egps2/utils/common/model/filefilter/OpenFilterPro.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **OpenFilterRNAExp**（`src/egps2/utils/common/model/filefilter/OpenFilterRNAExp.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **OpenFilterSimu**（`src/egps2/utils/common/model/filefilter/OpenFilterSimu.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **OpenFilterTree**（`src/egps2/utils/common/model/filefilter/OpenFilterTree.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **OpenFilterTsv**（`src/egps2/utils/common/model/filefilter/OpenFilterTsv.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **OpenFilterVcf**（`src/egps2/utils/common/model/filefilter/OpenFilterVcf.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **PanelPopup**（`src/com/raven/swing/PanelPopup.java`）：Raven UI 模板组件，嵌入 eGPS 外壳的界面。
+- **ParametersPanel**（`src/egps2/plugin/fastmodtem/gui/ParametersPanel.java`）：eGPS 桌面应用的组成部分。
+- **PluginOperation**（`src/egps2/plugin/manager/PluginOperation.java`）：支持插件发现/加载或快速模块模板的扩展代码。
+- **PluginProperty**（`src/egps2/plugin/manager/PluginProperty.java`）：支持插件发现/加载或快速模块模板的扩展代码。
+- **PopupMenu**（`src/com/raven/swing/PopupMenu.java`）：Raven UI 模板组件，嵌入 eGPS 外壳的界面。
+- **Profile**（`src/com/raven/component/Profile.java`）：Raven UI 模板组件，嵌入 eGPS 外壳的界面。
+- **Profile**（`src/com/raven/swing/table/Profile.java`）：Raven UI 模板组件，嵌入 eGPS 外壳的界面。
+- **ProgressBarCustom**（`src/com/raven/swing/ProgressBarCustom.java`）：Raven UI 模板组件，嵌入 eGPS 外壳的界面。
+- **PromptLabel**（`src/egps2/utils/PromptLabel.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **RatioOfL2FC**（`src/egps2/utils/common/math/diffSign/RatioOfL2FC.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **Result**（`src/egps2/utils/common/model/datatransfer/Result.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **RoundLineBorder**（`src/egps2/utils/RoundLineBorder.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **SaveFileFilter**（`src/egps2/utils/common/util/SaveFileFilter.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **SaveFilterDist**（`src/egps2/utils/common/model/filefilter/SaveFilterDist.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **SaveFilterExel**（`src/egps2/utils/common/model/filefilter/SaveFilterExel.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **SaveFilterItreeV**（`src/egps2/utils/common/model/filefilter/SaveFilterItreeV.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **SaveFilterJpg**（`src/egps2/utils/common/model/filefilter/SaveFilterJpg.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **SaveFilterNwk**（`src/egps2/utils/common/model/filefilter/SaveFilterNwk.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **SaveFilterSimu**（`src/egps2/utils/common/model/filefilter/SaveFilterSimu.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **SaveFilterTiff**（`src/egps2/utils/common/model/filefilter/SaveFilterTiff.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **SaveFilterVcf**（`src/egps2/utils/common/model/filefilter/SaveFilterVcf.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **SaveFilterVcfGz**（`src/egps2/utils/common/model/filefilter/SaveFilterVcfGz.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **SaveUtil**（`src/egps2/utils/common/util/SaveUtil.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **ScrollBarCustom**（`src/com/raven/swing/scrollbar/ScrollBarCustom.java`）：Raven UI 模板组件，嵌入 eGPS 外壳的界面。
+- **SimpleLeftControlPanel**（`src/egps2/plugin/fastmodtem/gui/SimpleLeftControlPanel.java`）：eGPS 桌面应用的组成部分。
+- **SLGraphics**（`src/egps2/utils/common/util/poi/pptx/SLGraphics.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **Table**（`src/com/raven/swing/table/Table.java`）：Raven UI 模板组件，嵌入 eGPS 外壳的界面。
+- **TableCellAction**（`src/com/raven/swing/table/TableCellAction.java`）：Raven UI 模板组件，嵌入 eGPS 外壳的界面。
+- **TableHeader**（`src/com/raven/swing/table/TableHeader.java`）：Raven UI 模板组件，嵌入 eGPS 外壳的界面。
+- **ThreeTuple**（`src/egps2/utils/common/model/datatransfer/ThreeTuple.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **TopElementFinder**（`src/egps2/utils/common/util/topkfinder/TopElementFinder.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **Tuple**（`src/egps2/utils/common/model/datatransfer/Tuple.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **TwoTuple**（`src/egps2/utils/common/model/datatransfer/TwoTuple.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **WebReaderUtil**（`src/egps2/utils/common/io/WebReaderUtil.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。
+- **WorkBanch4XXX**（`src/egps2/plugin/fastmodtem/WorkBanch4XXX.java`）：eGPS 桌面应用的组成部分。
+- **XXXMainFace**（`src/egps2/plugin/fastmodtem/XXXMainFace.java`）：eGPS 桌面应用的组成部分。
+- **ZipFilesWriter**（`src/egps2/utils/common/io/ZipFilesWriter.java`）：跨模块使用的工具/辅助类（数学、IO、图形、DTO、过滤器、提示等）。

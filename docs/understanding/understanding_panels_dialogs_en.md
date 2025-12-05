@@ -1,0 +1,47 @@
+# Understanding Shared Panels & Dialogs
+更详细列出该类别下的类，含路径与角色说明。
+
+- **AllocatorPanel** (`src/egps2/panels/dialog/AllocatorPanel.java`): Reusable Swing panel/dialog component shared by modules.
+- **CallBackTransferBehevior** (`src/egps2/panels/dialog/opendialog/CallBackTransferBehevior.java`): Reusable Swing panel/dialog component shared by modules.
+- **ColorCapture** (`src/egps2/panels/dialog/ColorCapture.java`): Reusable Swing panel/dialog component shared by modules.
+- **CustomizeFontEnum** (`src/egps2/panels/graphicpro/CustomizeFontEnum.java`): Reusable Swing panel/dialog component shared by modules.
+- **DialogUtil** (`src/egps2/panels/DialogUtil.java`): Reusable Swing panel/dialog component shared by modules.
+- **DynGifLabel** (`src/egps2/panels/DynGifLabel.java`): Reusable Swing panel/dialog component shared by modules.
+- **EGPSColorChooser** (`src/egps2/panels/dialog/EGPSColorChooser.java`): Reusable Swing panel/dialog component shared by modules.
+- **EGPSFileChooser** (`src/egps2/panels/dialog/EGPSFileChooser.java`): Reusable Swing panel/dialog component shared by modules.
+- **EGPSFontChooser** (`src/egps2/panels/dialog/EGPSFontChooser.java`): Reusable Swing panel/dialog component shared by modules.
+- **EGPSJSpinner** (`src/egps2/panels/dialog/EGPSJSpinner.java`): Reusable Swing panel/dialog component shared by modules.
+- **ExternalProgramSettingJPanel** (`src/egps2/panels/pref/ExternalProgramSettingJPanel.java`): Reusable Swing panel/dialog component shared by modules.
+- **FontAppearancePanel** (`src/egps2/panels/FontAppearancePanel.java`): Reusable Swing panel/dialog component shared by modules.
+- **GradientPanel** (`src/egps2/panels/dialog/GradientPanel.java`): Reusable Swing panel/dialog component shared by modules.
+- **GraphicPropertiesPanel** (`src/egps2/panels/graphicpro/GraphicPropertiesPanel.java`): Reusable Swing panel/dialog component shared by modules.
+- **GUIPrintStream** (`src/egps2/panels/GUIPrintStream.java`): Reusable Swing panel/dialog component shared by modules.
+- **HistoryPanel** (`src/egps2/panels/HistoryPanel.java`): Reusable Swing panel/dialog component shared by modules.
+- **HtmlDocumentPanel** (`src/egps2/panels/pref/HtmlDocumentPanel.java`): Reusable Swing panel/dialog component shared by modules.
+- **IconSizePrefJPanel** (`src/egps2/panels/pref/IconSizePrefJPanel.java`): Reusable Swing panel/dialog component shared by modules.
+- **InformationPanelFactory** (`src/egps2/panels/InformationPanelFactory.java`): Reusable Swing panel/dialog component shared by modules.
+- **InstantStatusPanel** (`src/egps2/panels/reusablecom/InstantStatusPanel.java`): Reusable Swing panel/dialog component shared by modules.
+- **JIMSendTextPane** (`src/egps2/panels/JIMSendTextPane.java`): Reusable Swing panel/dialog component shared by modules.
+- **LanguageSettingPanel** (`src/egps2/panels/pref/LanguageSettingPanel.java`): Reusable Swing panel/dialog component shared by modules.
+- **LaunchProperty4ProgramicConfig** (`src/egps2/panels/pref/LaunchProperty4ProgramicConfig.java`): Reusable Swing panel/dialog component shared by modules.
+- **LicenseOfEGPSPanel** (`src/egps2/panels/LicenseOfEGPSPanel.java`): Reusable Swing panel/dialog component shared by modules.
+- **LookAndFeelPanel** (`src/egps2/panels/pref/LookAndFeelPanel.java`): Reusable Swing panel/dialog component shared by modules.
+- **MailUtil** (`src/egps2/panels/bugreporter/MailUtil.java`): Reusable Swing panel/dialog component shared by modules.
+- **ModuleActionsPanel** (`src/egps2/panels/pref/ModuleActionsPanel.java`): Reusable Swing panel/dialog component shared by modules.
+- **ModuleInspector** (`src/egps2/panels/ModuleInspector.java`): Reusable Swing panel/dialog component shared by modules.
+- **ParameterInitialized** (`src/egps2/panels/reusablecom/ParameterInitialized.java`): Reusable Swing panel/dialog component shared by modules.
+- **PureStringsDispalyDialog** (`src/egps2/panels/dialog/PureStringsDispalyDialog.java`): Reusable Swing panel/dialog component shared by modules.
+- **ReflectDialog** (`src/egps2/panels/ReflectDialog.java`): Reusable Swing panel/dialog component shared by modules.
+- **ReflectDialogContorller** (`src/egps2/panels/bugreporter/ReflectDialogContorller.java`): Reusable Swing panel/dialog component shared by modules.
+- **ReusableCompoentBuilder** (`src/egps2/panels/reusablecom/ReusableCompoentBuilder.java`): Reusable Swing panel/dialog component shared by modules.
+- **SendEmail_text** (`src/test/java/egps2/panels/bugreporter/SendEmail_text.java`): Reusable Swing panel/dialog component shared by modules.
+- **SendEmailAttachment** (`src/test/java/egps2/panels/bugreporter/SendEmailAttachment.java`): Reusable Swing panel/dialog component shared by modules.
+- **SendEmailSMTP** (`src/test/java/egps2/panels/bugreporter/SendEmailSMTP.java`): Reusable Swing panel/dialog component shared by modules.
+- **StaticsPanel** (`src/egps2/panels/StaticsPanel.java`): Reusable Swing panel/dialog component shared by modules.
+- **StdErrConsolePanel** (`src/egps2/panels/StdErrConsolePanel.java`): Reusable Swing panel/dialog component shared by modules.
+- **StingArrayDisplayDialog** (`src/egps2/panels/dialog/opendialog/StingArrayDisplayDialog.java`): Reusable Swing panel/dialog component shared by modules.
+- **StringDisplayAndChangeDialog** (`src/egps2/panels/dialog/opendialog/StringDisplayAndChangeDialog.java`): Reusable Swing panel/dialog component shared by modules.
+- **StringSearchDialog** (`src/egps2/panels/dialog/opendialog/StringSearchDialog.java`): Reusable Swing panel/dialog component shared by modules.
+- **SubTextPanelNode** (`src/egps2/panels/SubTextPanelNode.java`): Reusable Swing panel/dialog component shared by modules.
+- **SwingDialog** (`src/egps2/panels/dialog/SwingDialog.java`): Reusable Swing panel/dialog component shared by modules.
+- **TextAntiAliasPanel** (`src/egps2/panels/pref/TextAntiAliasPanel.java`): Reusable Swing panel/dialog component shared by modules.

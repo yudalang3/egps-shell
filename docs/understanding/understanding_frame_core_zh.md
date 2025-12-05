@@ -1,0 +1,77 @@
+# 核心框架与应用生命周期理解
+本节详细列出该类别的类、所在路径和职责描述。
+
+- **AbstractSoftAction**（`src/egps2/frame/AbstractSoftAction.java`）：eGPS 桌面应用的组成部分。
+- **Action4Download2update**（`src/egps2/frame/features/Action4Download2update.java`）：eGPS 桌面应用的组成部分。
+- **ActionAbout**（`src/egps2/frame/ActionAbout.java`）：eGPS 桌面应用的组成部分。
+- **ActionExit**（`src/egps2/frame/ActionExit.java`）：eGPS 桌面应用的组成部分。
+- **ActionExportData**（`src/egps2/frame/ActionExportData.java`）：eGPS 桌面应用的组成部分。
+- **ActionFaq**（`src/egps2/frame/ActionFaq.java`）：eGPS 桌面应用的组成部分。
+- **ActionHelp**（`src/egps2/frame/ActionHelp.java`）：eGPS 桌面应用的组成部分。
+- **ActionHistory**（`src/egps2/frame/ActionHistory.java`）：eGPS 桌面应用的组成部分。
+- **ActionHomePage**（`src/egps2/frame/ActionHomePage.java`）：eGPS 桌面应用的组成部分。
+- **ActionImportData**（`src/egps2/frame/ActionImportData.java`）：eGPS 桌面应用的组成部分。
+- **ActionInformation**（`src/egps2/frame/ActionInformation.java`）：eGPS 桌面应用的组成部分。
+- **ActionLicenseTerm**（`src/egps2/frame/ActionLicenseTerm.java`）：eGPS 桌面应用的组成部分。
+- **ActionPreference**（`src/egps2/frame/ActionPreference.java`）：eGPS 桌面应用的组成部分。
+- **ActionReportBugs**（`src/egps2/frame/ActionReportBugs.java`）：eGPS 桌面应用的组成部分。
+- **ActionSearch**（`src/egps2/frame/ActionSearch.java`）：eGPS 桌面应用的组成部分。
+- **ActionsManager**（`src/egps2/frame/ActionsManager.java`）：菜单与工具栏动作的中心注册与分发器。
+- **ActionStatics**（`src/egps2/frame/ActionStatics.java`）：eGPS 桌面应用的组成部分。
+- **ActionStdErrConsole**（`src/egps2/frame/ActionStdErrConsole.java`）：eGPS 桌面应用的组成部分。
+- **ActionStop**（`src/egps2/frame/ActionStop.java`）：eGPS 桌面应用的组成部分。
+- **AdjustedSoft4HelpInfoStaticsAction**（`src/egps2/frame/AdjustedSoft4HelpInfoStaticsAction.java`）：eGPS 桌面应用的组成部分。
+- **AdjustedSoftAction**（`src/egps2/frame/AdjustedSoftAction.java`）：eGPS 桌面应用的组成部分。
+- **Authors**（`src/egps2/Authors.java`）：eGPS 桌面应用的组成部分。
+- **AutoConfigThePropertiesAction**（`src/egps2/frame/features/AutoConfigThePropertiesAction.java`）：eGPS 桌面应用的组成部分。
+- **Bean4eGPSUpdateInfor**（`src/egps2/frame/features/Bean4eGPSUpdateInfor.java`）：eGPS 桌面应用的组成部分。
+- **ButtomStatesBar**（`src/egps2/frame/ButtomStatesBar.java`）：eGPS 桌面应用的组成部分。
+- **ComplexRectObj**（`src/egps2/frame/gui/interacive/ComplexRectObj.java`）：eGPS 桌面应用的组成部分。
+- **ComputationalModuleFace**（`src/egps2/frame/ComputationalModuleFace.java`）：模块 UI 面板的基类/契约，负责生命周期钩子与标签行为。
+- **DataImportPanel_OneTypeMultiFiles**（`src/egps2/frame/gui/comp/DataImportPanel_OneTypeMultiFiles.java`）：eGPS 桌面应用的组成部分。
+- **DataImportPanel_OneTypeMultiFiles_WithInputBox**（`src/egps2/frame/gui/comp/DataImportPanel_OneTypeMultiFiles_WithInputBox.java`）：eGPS 桌面应用的组成部分。
+- **DataImportPanel_OneTypeOneFile**（`src/egps2/frame/gui/comp/DataImportPanel_OneTypeOneFile.java`）：eGPS 桌面应用的组成部分。
+- **DataImportPanel_OneTypeOneFile_WithInputBox**（`src/egps2/frame/gui/comp/DataImportPanel_OneTypeOneFile_WithInputBox.java`）：eGPS 桌面应用的组成部分。
+- **DefaultParamsAssignerAndParserHandler4VOICE**（`src/egps2/frame/DefaultParamsAssignerAndParserHandler4VOICE.java`）：eGPS 桌面应用的组成部分。
+- **DialogMoreInfoGenerator**（`src/egps2/frame/gui/dialog/DialogMoreInfoGenerator.java`）：eGPS 桌面应用的组成部分。
+- **DraggableTabbedPane**（`src/egps2/frame/gui/comp/DraggableTabbedPane.java`）：eGPS 桌面应用的组成部分。
+- **EGPS2ServiceLoader**（`src/egps2/frame/features/EGPS2ServiceLoader.java`）：eGPS 桌面应用的组成部分。
+- **EGPSCustomTabbedPaneUI**（`src/egps2/frame/gui/EGPSCustomTabbedPaneUI.java`）：eGPS 桌面应用的组成部分。
+- **EGPSJTextArea**（`src/egps2/frame/gui/comp/EGPSJTextArea.java`）：eGPS 桌面应用的组成部分。
+- **EGPSMainGuiUtil**（`src/egps2/frame/gui/EGPSMainGuiUtil.java`）：eGPS 桌面应用的组成部分。
+- **EGPSProperties**（`src/egps2/EGPSProperties.java`）：eGPS 桌面应用的组成部分。
+- **EGPSSwingUtil**（`src/egps2/frame/gui/EGPSSwingUtil.java`）：eGPS 桌面应用的组成部分。
+- **EGPSTextTransferHandler**（`src/egps2/frame/gui/handler/EGPSTextTransferHandler.java`）：eGPS 桌面应用的组成部分。
+- **EGPSVersion**（`src/egps2/frame/features/EGPSVersion.java`）：eGPS 桌面应用的组成部分。
+- **GlassPanelAchievement**（`src/egps2/frame/GlassPanelAchievement.java`）：eGPS 桌面应用的组成部分。
+- **GlassPanelBusyStates**（`src/egps2/frame/GlassPanelBusyStates.java`）：eGPS 桌面应用的组成部分。
+- **GlassPanelGesture**（`src/egps2/frame/GlassPanelGesture.java`）：eGPS 桌面应用的组成部分。
+- **GraphicsUtilities**（`src/egps2/frame/gui/comp/toggle/swing/shadow/GraphicsUtilities.java`）：eGPS 桌面应用的组成部分。
+- **HintManager**（`src/egps2/frame/HintManager.java`）：eGPS 桌面应用的组成部分。
+- **HistoryJTreeDialog**（`src/egps2/frame/html/HistoryJTreeDialog.java`）：eGPS 桌面应用的组成部分。
+- **InfiniteProgressPanel**（`src/egps2/frame/gui/comp/InfiniteProgressPanel.java`）：eGPS 桌面应用的组成部分。
+- **InstantFillAndLineJPanel**（`src/egps2/frame/InstantFillAndLineJPanel.java`）：eGPS 桌面应用的组成部分。
+- **InstantSizeAndPositionJPanel**（`src/egps2/frame/InstantSizeAndPositionJPanel.java`）：eGPS 桌面应用的组成部分。
+- **JTextAreaTransferHandler**（`src/egps2/frame/gui/handler/JTextAreaTransferHandler.java`）：eGPS 桌面应用的组成部分。
+- **JTextAreaWithDefaultContent_MouseAdapter**（`src/egps2/frame/gui/comp/JTextAreaWithDefaultContent_MouseAdapter.java`）：eGPS 桌面应用的组成部分。
+- **Launcher**（`src/egps2/Launcher.java`）：应用入口，配置语言/L&F 并启动主框架窗口。
+- **Launcher4Dev**（`src/egps2/Launcher4Dev.java`）：应用入口，配置语言/L&F 并启动主框架窗口。
+- **LaunchProperty**（`src/egps2/LaunchProperty.java`）：eGPS 桌面应用的组成部分。
+- **MainFrameGestureConfig**（`src/egps2/frame/MainFrameGestureConfig.java`）：主 Swing 窗口，协调标签、工具栏、菜单栏、状态栏与玻璃面板。
+- **MainFrameProperties**（`src/egps2/frame/MainFrameProperties.java`）：主 Swing 窗口，协调标签、工具栏、菜单栏、状态栏与玻璃面板。
+- **ModuleFace**（`src/egps2/frame/ModuleFace.java`）：模块 UI 面板的基类/契约，负责生命周期钩子与标签行为。
+- **MyFrame**（`src/egps2/frame/MyFrame.java`）：主 Swing 窗口，协调标签、工具栏、菜单栏、状态栏与玻璃面板。
+- **MyResourceBundle**（`src/egps2/frame/MyResourceBundle.java`）：自定义资源加载器，处理编码并查找 UI 资源。
+- **PreferencePanel**（`src/egps2/PreferencePanel.java`）：eGPS 桌面应用的组成部分。
+- **RectAdjustMent**（`src/egps2/frame/gui/interacive/RectAdjustMent.java`）：eGPS 桌面应用的组成部分。
+- **RectObj**（`src/egps2/frame/gui/interacive/RectObj.java`）：eGPS 桌面应用的组成部分。
+- **SearchItem**（`src/egps2/frame/gui/comp/search/SearchItem.java`）：eGPS 桌面应用的组成部分。
+- **ShadowRenderer**（`src/egps2/frame/gui/comp/toggle/swing/shadow/ShadowRenderer.java`）：eGPS 桌面应用的组成部分。
+- **SimplestWorkBench**（`src/egps2/frame/gui/comp/SimplestWorkBench.java`）：eGPS 桌面应用的组成部分。
+- **StringKeySaver**（`src/egps2/frame/gui/StringKeySaver.java`）：eGPS 桌面应用的组成部分。
+- **TabbedPaneMouseAdapter**（`src/egps2/frame/TabbedPaneMouseAdapter.java`）：eGPS 桌面应用的组成部分。
+- **ToggleAdapter**（`src/egps2/frame/gui/comp/toggle/toggle/ToggleAdapter.java`）：eGPS 桌面应用的组成部分。
+- **ToggleButton**（`src/egps2/frame/gui/comp/toggle/toggle/ToggleButton.java`）：eGPS 桌面应用的组成部分。
+- **ToggleListener**（`src/egps2/frame/gui/comp/toggle/toggle/ToggleListener.java`）：eGPS 桌面应用的组成部分。
+- **UnifiedAccessPoint**（`src/egps2/UnifiedAccessPoint.java`）：eGPS 桌面应用的组成部分。
+- **VectorGraphicsEncoder**（`src/egps2/frame/gui/VectorGraphicsEncoder.java`）：eGPS 桌面应用的组成部分。
