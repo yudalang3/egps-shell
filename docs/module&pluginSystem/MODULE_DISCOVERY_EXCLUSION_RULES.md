@@ -10,6 +10,12 @@
 
 The `ModuleDiscoveryService` automatically scans the classpath to discover all classes implementing `IModuleLoader`. However, not all implementations should be treated as standalone modules. This document describes the exclusion rules that filter out non-module classes.
 
+## Module taxonomy (developer view)
+- Any class implementing `IModuleSignature` is a module. GUI loaders (`IModuleLoader` extends `IModuleSignature`) are modules too; modules can be CLI or GUI.
+- GUI modules are grouped as **Mainframe core modules** (fixed core), **iTools/independent tools** (built-in tools), and **plug-in modules** (external JARs). Mainframe core + iTools are the **built-in** set.
+- ModuleInspector and Module Gallery can load all GUI module categories.
+- Menu mapping: Mainframe core menu (core modules), iTools menu (independent tools), Plug-ins menu (plugin modules).
+
 ---
 
 ## Exclusion Rules

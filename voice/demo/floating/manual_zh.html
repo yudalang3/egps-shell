@@ -1,0 +1,225 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+    <title>生物信息学可视化应用</title>
+
+</head>
+<body>
+
+<blockquote>
+
+    <h1>生物信息学可视化应用</h1>
+    <p>这是一个基于Java
+        Swing的生物信息学数据可视化应用程序，提供多种数据可视化功能。每个可视化功能都作为独立的JInternalFrame，可以自由拖动和排列。</p>
+
+    <h2>功能特性</h2>
+
+    <h3>1. 多序列比对可视化 (MultipleSequenceAlignmentPanel)</h3>
+    <ul>
+        <li>显示DNA/蛋白质序列的比对结果</li>
+        <li>相同列用颜色标识（保守位点）</li>
+        <li>支持核苷酸颜色编码：
+            <ul>
+                <li>A: 红色</li>
+                <li>T: 绿色</li>
+                <li>C: 蓝色</li>
+                <li>G: 黄色</li>
+                <li>间隙(-): 灰色</li>
+            </ul>
+        </li>
+        <li>显示保守性指示器（*标记）</li>
+    </ul>
+
+    <h3>2. MA图可视化 (MAPlotPanel)</h3>
+    <ul>
+        <li>用于基因表达数据的对比分析</li>
+        <li>M轴：log2 fold change（差异倍数）</li>
+        <li>A轴：平均表达量</li>
+        <li>颜色编码：
+            <ul>
+                <li>红点：显著上调基因</li>
+                <li>蓝点：显著下调基因</li>
+                <li>灰点：无显著差异基因</li>
+            </ul>
+        </li>
+        <li>显示显著性阈值线</li>
+    </ul>
+
+    <h3>3. 热图可视化 (HeatmapPanel)</h3>
+    <ul>
+        <li>显示基因表达或其他数值数据的热图</li>
+        <li>颜色范围：蓝色（低值）→ 白色（中值）→ 红色（高值）</li>
+        <li>支持鼠标悬停显示详细数值</li>
+        <li>包含颜色标尺和数值范围</li>
+        <li>行列标签显示</li>
+    </ul>
+
+    <h3>4. 图像显示 (ImageDisplayPanel)</h3>
+    <ul>
+        <li>支持多种图片格式（JPG, PNG, GIF, BMP）</li>
+        <li>图片缩放功能（放大、缩小、重置）</li>
+        <li>滚动查看大图片</li>
+        <li>文件选择对话框</li>
+        <li>状态信息显示</li>
+    </ul>
+
+    <h2>应用架构</h2>
+    <h3>主要类文件</h3>
+    <ol>
+        <li><b>BioinformaticsApp.java</b> - 主应用程序类
+            <ul>
+                <li>创建主窗口和桌面面板</li>
+                <li>管理多个独立的JInternalFrame</li>
+                <li>提供菜单栏和窗口管理功能</li>
+            </ul>
+        </li>
+        <li><b>MSAInternalFrame.java</b> - 多序列比对内部框架
+            <ul>
+                <li>独立的可拖动窗口</li>
+                <li>包含工具栏和操作按钮</li>
+                <li>封装多序列比对面板</li>
+            </ul>
+        </li>
+        <li><b>MAPlotInternalFrame.java</b> - MA图内部框架
+            <ul>
+                <li>独立的可拖动窗口</li>
+                <li>包含数据刷新和设置功能</li>
+                <li>封装MA图面板</li>
+            </ul>
+        </li>
+        <li><b>HeatmapInternalFrame.java</b> - 热图内部框架
+            <ul>
+                <li>独立的可拖动窗口</li>
+                <li>包含聚类和颜色设置功能</li>
+                <li>封装热图面板</li>
+            </ul>
+        </li>
+        <li><b>ImageInternalFrame.java</b> - 图像显示内部框架
+            <ul>
+                <li>独立的可拖动窗口</li>
+                <li>包含图像处理工具栏</li>
+                <li>封装图像显示面板</li>
+            </ul>
+        </li>
+        <li><b>MultipleSequenceAlignmentPanel.java</b> - 多序列比对面板
+            <ul>
+                <li>序列对齐可视化</li>
+                <li>保守性分析</li>
+                <li>颜色编码显示</li>
+            </ul>
+        </li>
+        <li><b>MAPlotPanel.java</b> - MA图面板
+            <ul>
+                <li>基因表达差异分析</li>
+                <li>散点图绘制</li>
+                <li>统计显著性标识</li>
+            </ul>
+        </li>
+        <li><b>HeatmapPanel.java</b> - 热图面板
+            <ul>
+                <li>矩阵数据可视化</li>
+                <li>交互式数据探索</li>
+                <li>颜色映射</li>
+            </ul>
+        </li>
+        <li><b>ImageDisplayPanel.java</b> - 图像显示面板
+            <ul>
+                <li>图片加载和显示</li>
+                <li>缩放和导航功能</li>
+                <li>文件管理</li>
+            </ul>
+        </li>
+    </ol>
+
+    <h2>示例图片来源</h2>
+    <p>应用中的示例图片是通过代码动态生成的，位于 <code>ImageDisplayPanel.java</code> 的 <code>loadSampleImage()</code>
+        方法中（第211-250行）。该方法使用Java的 <code>BufferedImage</code> 和 <code>Graphics2D</code> API创建一个包含以下元素的示例图片：
+    </p>
+    <ul>
+        <li>蓝色到红色的渐变背景</li>
+        <li>白色圆形轮廓</li>
+        <li>黄色圆点（模拟眼睛）</li>
+        <li>黑色弧线（模拟嘴巴）</li>
+        <li>"示例图片"文字</li>
+    </ul>
+    <p>这样设计的好处是不依赖外部图片文件，应用可以独立运行并展示图像显示功能。</p>
+
+    <h2>使用方法</h2>
+    <h3>编译和运行</h3>
+    <pre><code># 编译所有Java文件
+javac *.java
+
+# 运行应用程序
+java BioinformaticsApp
+</code></pre>
+
+    <h3>操作步骤</h3>
+    <ol>
+        <li><b>启动应用</b>：运行BioinformaticsApp类</li>
+        <li><b>显示所有窗口</b>：点击菜单栏的"文件" → "导入数据"，会同时显示四个独立的内部框架</li>
+        <li><b>单独打开窗口</b>：使用"窗口"菜单可以单独打开特定的可视化窗口</li>
+        <li><b>窗口操作</b>：
+            <ul>
+                <li>每个内部框架都可以独立拖动、调整大小</li>
+                <li>可以最小化、最大化或关闭窗口</li>
+                <li>窗口会自动排列成2x2网格</li>
+            </ul>
+        </li>
+        <li><b>交互操作</b>：
+            <ul>
+                <li>热图：鼠标悬停查看数值</li>
+                <li>图像面板：使用缩放按钮或加载自定义图片</li>
+                <li>每个窗口都有专门的工具栏</li>
+                <li>所有面板都支持滚动查看</li>
+            </ul>
+        </li>
+    </ol>
+
+    <h2>设计特点</h2>
+    <h3>模块化设计</h3>
+    <ul>
+        <li>每个可视化功能独立封装为单独的JInternalFrame</li>
+        <li>每个框架包含专门的工具栏和操作按钮</li>
+        <li>便于扩展和维护</li>
+        <li>支持应用迁移和重用</li>
+    </ul>
+
+    <h3>灵活的窗口管理</h3>
+    <ul>
+        <li>每个可视化组件都是独立的JInternalFrame</li>
+        <li>支持自由拖动、调整大小、最小化/最大化</li>
+        <li>可以单独打开或批量显示</li>
+        <li>自动排列功能提供整齐的布局</li>
+    </ul>
+
+    <h3>用户体验</h3>
+    <ul>
+        <li>直观的图形界面</li>
+        <li>丰富的交互功能</li>
+        <li>清晰的视觉反馈</li>
+        <li>详细的状态信息</li>
+    </ul>
+
+    <h2>扩展建议</h2>
+    <ol>
+        <li><b>数据导入</b>：添加真实数据文件的读取功能</li>
+        <li><b>导出功能</b>：支持图片和数据的导出</li>
+        <li><b>参数调整</b>：提供可视化参数的用户界面</li>
+        <li><b>更多图表</b>：添加其他生物信息学常用的可视化类型</li>
+        <li><b>数据处理</b>：集成数据预处理和分析功能</li>
+    </ol>
+
+    <h2>技术要求</h2>
+    <ul>
+        <li>Java 8 或更高版本</li>
+        <li>Swing GUI框架</li>
+        <li>标准Java类库（无需额外依赖）</li>
+    </ul>
+
+    <h2>许可证</h2>
+    <p>本项目仅供学习和研究使用。</p>
+    <h2>更多阅读资源</h2>
+    <p>https://www.yuque.com/u21499046/egpsdoc/zgs8hmxf2kybi7ey</p>
+</blockquote>
+</body>
+</html>

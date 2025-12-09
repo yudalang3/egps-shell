@@ -194,8 +194,12 @@ public class SystemInfoTool extends FastBaseTemplate {
 
     @Override
     public int[] getCategory() {
-        // 工具类, 通用, 简单, 无依赖
-        return new int[]{0, 0, 0, 0};
+        return ModuleClassification.getOneModuleClassification(
+            ModuleClassification.BYFUNCTIONALITY_SIMPLE_TOOLS_INDEX,
+            ModuleClassification.BYAPPLICATION_COMMON_MODULE_INDEX,
+            ModuleClassification.BYCOMPLEXITY_LEVEL_1_INDEX,
+            ModuleClassification.BYDEPENDENCY_ONLY_EMPLOY_CONTAINER
+        );
     }
 }
 ```

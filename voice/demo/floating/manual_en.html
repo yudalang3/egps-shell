@@ -1,0 +1,224 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+    <title>Bioinformatics Visualization Application</title>
+</head>
+<body>
+<blockquote>
+    <h1>Bioinformatics Visualization Application</h1>
+    <p>This is a Java Swing-based application for visualizing bioinformatics data, offering various data visualization
+        features. Each visualization function is implemented as a separate JInternalFrame, which can be freely dragged
+        and arranged.</p>
+
+    <h2>Features</h2>
+
+    <h3>1. Multiple Sequence Alignment Visualization (MultipleSequenceAlignmentPanel)</h3>
+    <ul>
+        <li>Displays the alignment results of DNA/protein sequences.</li>
+        <li>Columns with identical residues are highlighted (conserved sites).</li>
+        <li>Supports nucleotide color coding:
+            <ul>
+                <li>A: Red</li>
+                <li>T: Green</li>
+                <li>C: Blue</li>
+                <li>G: Yellow</li>
+                <li>Gap (-): Gray</li>
+            </ul>
+        </li>
+        <li>Displays a conservation indicator (*).</li>
+    </ul>
+
+    <h3>2. MA Plot Visualization (MAPlotPanel)</h3>
+    <ul>
+        <li>Used for comparative analysis of gene expression data.</li>
+        <li>M-axis: log2 fold change.</li>
+        <li>A-axis: Average expression level.</li>
+        <li>Color coding:
+            <ul>
+                <li>Red dots: Significantly up-regulated genes.</li>
+                <li>Blue dots: Significantly down-regulated genes.</li>
+                <li>Gray dots: Genes with no significant difference.</li>
+            </ul>
+        </li>
+        <li>Displays significance threshold lines.</li>
+    </ul>
+
+    <h3>3. Heatmap Visualization (HeatmapPanel)</h3>
+    <ul>
+        <li>Displays a heatmap of gene expression or other numerical data.</li>
+        <li>Color range: Blue (low values) → White (medium values) → Red (high values).</li>
+        <li>Supports mouse hover to display detailed values.</li>
+        <li>Includes a color scale and value range.</li>
+        <li>Row and column labels are displayed.</li>
+    </ul>
+
+    <h3>4. Image Display (ImageDisplayPanel)</h3>
+    <ul>
+        <li>Supports various image formats (JPG, PNG, GIF, BMP).</li>
+        <li>Image scaling functions (zoom in, zoom out, reset).</li>
+        <li>Scroll to view large images.</li>
+        <li>File selection dialog.</li>
+        <li>Status information display.</li>
+    </ul>
+
+    <h2>Application Architecture</h2>
+    <h3>Main Class Files</h3>
+    <ol>
+        <li><b>BioinformaticsApp.java</b> - Main application class
+            <ul>
+                <li>Creates the main window and desktop pane.</li>
+                <li>Manages multiple independent JInternalFrames.</li>
+                <li>Provides a menu bar and window management functions.</li>
+            </ul>
+        </li>
+        <li><b>MSAInternalFrame.java</b> - Multiple Sequence Alignment internal frame
+            <ul>
+                <li>A separate, draggable window.</li>
+                <li>Contains a toolbar and action buttons.</li>
+                <li>Encapsulates the multiple sequence alignment panel.</li>
+            </ul>
+        </li>
+        <li><b>MAPlotInternalFrame.java</b> - MA Plot internal frame
+            <ul>
+                <li>A separate, draggable window.</li>
+                <li>Includes data refresh and settings functions.</li>
+                <li>Encapsulates the MA plot panel.</li>
+            </ul>
+        </li>
+        <li><b>HeatmapInternalFrame.java</b> - Heatmap internal frame
+            <ul>
+                <li>A separate, draggable window.</li>
+                <li>Includes clustering and color settings functions.</li>
+                <li>Encapsulates the heatmap panel.</li>
+            </ul>
+        </li>
+        <li><b>ImageInternalFrame.java</b> - Image Display internal frame
+            <ul>
+                <li>A separate, draggable window.</li>
+                <li>Contains an image processing toolbar.</li>
+                <li>Encapsulates the image display panel.</li>
+            </ul>
+        </li>
+        <li><b>MultipleSequenceAlignmentPanel.java</b> - Multiple Sequence Alignment panel
+            <ul>
+                <li>Sequence alignment visualization.</li>
+                <li>Conservation analysis.</li>
+                <li>Color-coded display.</li>
+            </ul>
+        </li>
+        <li><b>MAPlotPanel.java</b> - MA Plot panel
+            <ul>
+                <li>Gene expression difference analysis.</li>
+                <li>Scatter plot drawing.</li>
+                <li>Statistical significance indicators.</li>
+            </ul>
+        </li>
+        <li><b>HeatmapPanel.java</b> - Heatmap panel
+            <ul>
+                <li>Matrix data visualization.</li>
+                <li>Interactive data exploration.</li>
+                <li>Color mapping.</li>
+            </ul>
+        </li>
+        <li><b>ImageDisplayPanel.java</b> - Image Display panel
+            <ul>
+                <li>Image loading and display.</li>
+                <li>Zooming and navigation functions.</li>
+                <li>File management.</li>
+            </ul>
+        </li>
+    </ol>
+
+    <h2>Sample Image Source</h2>
+    <p>The sample image in the application is dynamically generated by code in the <code>loadSampleImage()</code> method
+        of <code>ImageDisplayPanel.java</code> (lines 211-250). This method uses Java's <code>BufferedImage</code> and
+        <code>Graphics2D</code> APIs to create a sample image containing the following elements:</p>
+    <ul>
+        <li>A blue to red gradient background.</li>
+        <li>A white circular outline.</li>
+        <li>Yellow dots (simulating eyes).</li>
+        <li>A black arc (simulating a mouth).</li>
+        <li>The text "Sample Image".</li>
+    </ul>
+    <p>The advantage of this design is that it does not depend on external image files, allowing the application to run
+        independently and demonstrate its image display capabilities.</p>
+
+    <h2>How to Use</h2>
+    <h3>Compile and Run</h3>
+    <pre><code># Compile all Java files
+javac *.java
+
+# Run the application
+java BioinformaticsApp
+</code></pre>
+
+    <h3>Operating Steps</h3>
+    <ol>
+        <li><b>Start the application</b>: Run the BioinformaticsApp class.</li>
+        <li><b>Show all windows</b>: Click "File" → "Import Data" in the menu bar to display four independent internal
+            frames simultaneously.
+        </li>
+        <li><b>Open a single window</b>: Use the "Window" menu to open a specific visualization window.</li>
+        <li><b>Window operations</b>:
+            <ul>
+                <li>Each internal frame can be independently dragged and resized.</li>
+                <li>Windows can be minimized, maximized, or closed.</li>
+                <li>Windows are automatically arranged in a 2x2 grid.</li>
+            </ul>
+        </li>
+        <li><b>Interactive operations</b>:
+            <ul>
+                <li>Heatmap: Hover over to view numerical values.</li>
+                <li>Image Panel: Use the zoom buttons or load a custom image.</li>
+                <li>Each window has a dedicated toolbar.</li>
+                <li>All panels support scrolling.</li>
+            </ul>
+        </li>
+    </ol>
+
+    <h2>Design Features</h2>
+    <h3>Modular Design</h3>
+    <ul>
+        <li>Each visualization feature is encapsulated in a separate JInternalFrame.</li>
+        <li>Each frame includes a dedicated toolbar and action buttons.</li>
+        <li>Easy to extend and maintain.</li>
+        <li>Supports application migration and reuse.</li>
+    </ul>
+
+    <h3>Flexible Window Management</h3>
+    <ul>
+        <li>Each visualization component is an independent JInternalFrame.</li>
+        <li>Supports free dragging, resizing, minimizing/maximizing.</li>
+        <li>Can be opened individually or in batches.</li>
+        <li>Automatic arrangement provides a neat layout.</li>
+    </ul>
+
+    <h3>User Experience</h3>
+    <ul>
+        <li>Intuitive graphical interface.</li>
+        <li>Rich interactive features.</li>
+        <li>Clear visual feedback.</li>
+        <li>Detailed status information.</li>
+    </ul>
+
+    <h2>Extension Suggestions</h2>
+    <ol>
+        <li><b>Data Import</b>: Add functionality to read real data files.</li>
+        <li><b>Export Functionality</b>: Support exporting images and data.</li>
+        <li><b>Parameter Adjustment</b>: Provide a user interface for adjusting visualization parameters.</li>
+        <li><b>More Charts</b>: Add other commonly used visualization types in bioinformatics.</li>
+        <li><b>Data Processing</b>: Integrate data preprocessing and analysis functions.</li>
+    </ol>
+
+    <h2>Technical Requirements</h2>
+    <ul>
+        <li>Java 8 or higher.</li>
+        <li>Swing GUI framework.</li>
+        <li>Standard Java libraries (no additional dependencies required).</li>
+    </ul>
+
+    <h2>License</h2>
+    <p>This project is for learning and research purposes only.</p>
+</blockquote>
+</body>
+</html>

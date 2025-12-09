@@ -76,8 +76,16 @@ cp plug_dist/*.jar dependency-egps/
 
 ### 步骤 4: 启动 eGPS
 
+For MacOS/Linux:
+
 ```bash
-java -cp "./out/production/egps-main.gui:dependency-egps/*" egps2.Launcher
+java -cp "out/production/egps-main.gui:dependency-egps/*" -Xmx12g @eGPS.args egps2.Launcher
+```
+
+For Windows:
+
+```bash
+java -cp "out/production/egps-main.gui;dependency-egps/*" -Xmx12g '@eGPS.args' egps2.Launcher
 ```
 
 ### 步骤 5: 查看你的插件
@@ -117,7 +125,12 @@ public class FastBasePlugin extends FastBaseTemplate {
 
     @Override
     public int[] getCategory() {
-        return new int[]{0, 0, 0, 0};  // 分类
+        return ModuleClassification.getOneModuleClassification(
+            ModuleClassification.BYFUNCTIONALITY_SIMPLE_TOOLS_INDEX,
+            ModuleClassification.BYAPPLICATION_COMMON_MODULE_INDEX,
+            ModuleClassification.BYCOMPLEXITY_LEVEL_1_INDEX,
+            ModuleClassification.BYDEPENDENCY_ONLY_EMPLOY_CONTAINER
+        );  // 分类
     }
 }
 ```
@@ -203,15 +216,16 @@ public String getShortDescription() {
 ```java
 @Override
 public int[] getCategory() {
-    // 格式: [功能类型, 应用领域, 复杂度, 依赖性]
-    return new int[]{
-        0,  // 功能: 0=工具, 1=分析, 2=可视化
-        0,  // 应用: 0=通用, 1=生信, 2=统计
-        0,  // 复杂度: 0=简单, 1=中等, 2=复杂
-        0   // 依赖: 0=无依赖, 1=有外部依赖
-    };
+    return ModuleClassification.getOneModuleClassification(
+        ModuleClassification.BYFUNCTIONALITY_SIMPLE_TOOLS_INDEX,   // 功能类型
+        ModuleClassification.BYAPPLICATION_COMMON_MODULE_INDEX,    // 应用领域
+        ModuleClassification.BYCOMPLEXITY_LEVEL_1_INDEX,           // 复杂度
+        ModuleClassification.BYDEPENDENCY_ONLY_EMPLOY_CONTAINER    // 依赖性
+    );
 }
 ```
+
+> 分类请统一使用 `ModuleClassification.getOneModuleClassification(...)` 组合四个维度的常量。
 
 ### 添加功能按钮
 

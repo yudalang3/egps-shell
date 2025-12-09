@@ -1,6 +1,14 @@
 # Understanding Module Interfaces & Contracts
 更详细列出该类别下的类，含路径与角色说明。
 
+- ## Module definition (developer view)
+  - Any class implementing `IModuleSignature` is considered a module. `IModuleLoader` extends `IModuleSignature`, so GUI loaders are modules too.
+  - Modules can be CLI-only or GUI modules.
+  - GUI modules fall into three buckets: **Mainframe core modules** (fixed modules provided by the main frame), **iTools/independent tools** (built-in tools), and **plug-in modules** (external JARs).
+  - Mainframe core + iTools together are treated as **built-in modules**.
+  - `ModuleInspector` and Module Gallery can load all GUI module types.
+  - Menu mapping: Mainframe core menu for core modules, iTools menu for independent tools, Plug-ins menu for plugin modules (GUI coverage for all three).
+
 - **AdjusterFillAndLine** (`src/egps2/modulei/AdjusterFillAndLine.java`): Component within the eGPS desktop application.
 - **AdjusterSizeAndPosition** (`src/egps2/modulei/AdjusterSizeAndPosition.java`): Component within the eGPS desktop application.
 - **BaseInformationImp** (`src/egps2/modulei/BaseInformationImp.java`): Component within the eGPS desktop application.

@@ -102,6 +102,8 @@ class DirectPluginPanel extends ModuleFace {
 - 快速原型开发
 - 学习和演示
 
+> 分类请使用 `ModuleClassification.getOneModuleClassification(...)` 并从功能/应用/复杂度/依赖四个维度选择常量，避免直接手写 `{0,0,0,0}`。
+
 **示例**:
 ```java
 public class MySimplePlugin extends FastBaseTemplate {
@@ -118,7 +120,14 @@ public class MySimplePlugin extends FastBaseTemplate {
     public String getShortDescription() { return "Simple plugin"; }
 
     @Override
-    public int[] getCategory() { return new int[]{0,0,0,0}; }
+    public int[] getCategory() {
+        return ModuleClassification.getOneModuleClassification(
+            ModuleClassification.BYFUNCTIONALITY_SIMPLE_TOOLS_INDEX,
+            ModuleClassification.BYAPPLICATION_COMMON_MODULE_INDEX,
+            ModuleClassification.BYCOMPLEXITY_LEVEL_1_INDEX,
+            ModuleClassification.BYDEPENDENCY_ONLY_EMPLOY_CONTAINER
+        );
+    }
 }
 ```
 
@@ -162,7 +171,14 @@ public class MyComplexPlugin implements IModuleLoader {
     public String getShortDescription() { return "Complex plugin"; }
 
     @Override
-    public int[] getCategory() { return new int[]{0,0,0,0}; }
+    public int[] getCategory() {
+        return ModuleClassification.getOneModuleClassification(
+            ModuleClassification.BYFUNCTIONALITY_SIMPLE_TOOLS_INDEX,
+            ModuleClassification.BYAPPLICATION_COMMON_MODULE_INDEX,
+            ModuleClassification.BYCOMPLEXITY_LEVEL_1_INDEX,
+            ModuleClassification.BYDEPENDENCY_ONLY_EMPLOY_CONTAINER
+        );
+    }
 
     @Override
     public IconBean getIcon() { return null; }

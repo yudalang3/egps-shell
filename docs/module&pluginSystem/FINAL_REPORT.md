@@ -89,7 +89,12 @@ public class MyPlugin extends FastBaseTemplate {
 
     @Override
     public int[] getCategory() {
-        return new int[]{0, 0, 0, 0};
+        return ModuleClassification.getOneModuleClassification(
+            ModuleClassification.BYFUNCTIONALITY_SIMPLE_TOOLS_INDEX,
+            ModuleClassification.BYAPPLICATION_COMMON_MODULE_INDEX,
+            ModuleClassification.BYCOMPLEXITY_LEVEL_1_INDEX,
+            ModuleClassification.BYDEPENDENCY_ONLY_EMPLOY_CONTAINER
+        );
     }
 }
 ```
@@ -99,6 +104,7 @@ public class MyPlugin extends FastBaseTemplate {
 - ✅ 快速开发
 - ✅ 自动继承 ModuleFace
 - ✅ 适合工具型插件
+> 分类值请使用 `egps2.modulei.ModuleClassification` 提供的常量组合，不要手写 `{0,0,0,0}`。
 
 ### 方式 2: 直接实现 IModuleLoader（推荐用于复杂插件）
 
@@ -334,7 +340,12 @@ public class MySimplePlugin extends FastBaseTemplate {
 
     @Override
     public int[] getCategory() {
-        return new int[]{0, 0, 0, 0};
+        return ModuleClassification.getOneModuleClassification(
+            ModuleClassification.BYFUNCTIONALITY_SIMPLE_TOOLS_INDEX,
+            ModuleClassification.BYAPPLICATION_COMMON_MODULE_INDEX,
+            ModuleClassification.BYCOMPLEXITY_LEVEL_1_INDEX,
+            ModuleClassification.BYDEPENDENCY_ONLY_EMPLOY_CONTAINER
+        );
     }
 }
 ```

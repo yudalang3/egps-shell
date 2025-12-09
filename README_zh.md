@@ -22,15 +22,17 @@ Windows、macOS 和 Linux 的预构建版本已在 Releases 发布。下载相�
 面向 Windows 用户：
 
 ```shell
-java -cp "out/production/egps-main.gui;dependency-egps/*" -Xmx12g '@eGPS.args' egps2.Launcher4Dev
+#java -cp "out/production/egps-main.gui;dependency-egps/*" -Xmx12g '@eGPS.args' egps2.Launcher4Dev
+java -cp "out/production/egps-main.gui;dependency-egps/*" -Xmx12g '@eGPS.args' egps2.Launcher
 ```
 
 面向 macOS/Linux 用户：
 
 ```shell
-java -cp "out/production/egps-main.gui:dependency-egps/*" -Xmx12g @eGPS.args egps2.Launcher4Dev
+#java -cp "out/production/egps-main.gui:dependency-egps/*" -Xmx12g @eGPS.args egps2.Launcher4Dev
+java -cp "out/production/egps-main.gui:dependency-egps/*" -Xmx12g @eGPS.args egps2.Launcher
 ```
 
 ## 说明
 
-详细配置请参考 eGPS-base 文档。
+详细配置请参考 eGPS-base 文档，位于docs目录。

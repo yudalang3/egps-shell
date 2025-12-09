@@ -4,6 +4,12 @@
 
 Starting with eGPS v2.1, the plugin system has been fully integrated with the Module Gallery. **Plugins and built-in modules now have equal status** and are both automatically discovered and displayed in the Module Gallery interface.
 
+### Module taxonomy (developer view)
+- Any class implementing `IModuleSignature` is a module; GUI loaders (`IModuleLoader` extends `IModuleSignature`) are modules too. Modules can be CLI or GUI.
+- GUI modules have three buckets: **Mainframe core modules** (fixed core features), **iTools/independent tools** (built-in tools), and **plug-in modules** (external JARs). Mainframe core + iTools are the **built-in** set.
+- ModuleInspector and Module Gallery load all three GUI module buckets.
+- Menu mapping: Mainframe core menu (core modules), iTools menu (independent tools), Plug-ins menu (plugin modules).
+
 ## What Changed
 
 ### Before v2.1
@@ -114,8 +120,12 @@ public class MyPluginLoader implements IModuleLoader {
 
     @Override
     public int[] getCategory() {
-        // Define module category
-        return new int[]{0, 1, 2, 3};
+        return ModuleClassification.getOneModuleClassification(
+            ModuleClassification.BYFUNCTIONALITY_SIMPLE_TOOLS_INDEX,
+            ModuleClassification.BYAPPLICATION_COMMON_MODULE_INDEX,
+            ModuleClassification.BYCOMPLEXITY_LEVEL_2_INDEX,
+            ModuleClassification.BYDEPENDENCY_COMPUTATIONAL_MECHANISM_EMPLOYED
+        );
     }
 }
 ```
@@ -160,7 +170,12 @@ public class MySimplePlugin extends FastBaseTemplate {
 
     @Override
     public int[] getCategory() {
-        return new int[]{0, 0, 0, 0}; // Utility, General, Simple, No Deps
+        return ModuleClassification.getOneModuleClassification(
+            ModuleClassification.BYFUNCTIONALITY_SIMPLE_TOOLS_INDEX,
+            ModuleClassification.BYAPPLICATION_COMMON_MODULE_INDEX,
+            ModuleClassification.BYCOMPLEXITY_LEVEL_1_INDEX,
+            ModuleClassification.BYDEPENDENCY_ONLY_EMPLOY_CONTAINER
+        );
     }
 }
 ```
@@ -176,6 +191,8 @@ public class MySimplePlugin extends FastBaseTemplate {
 - ❌ **In shell/classpath**: Excluded (treated as template)
 
 This allows `FastBaseTemplate` to be used as a template in the shell while enabling plugin developers to extend it for actual plugin modules.
+
+> Use `ModuleClassification.getOneModuleClassification(...)` with the four dimension constants; avoid manually creating `new int[]{...}`.
 
 ### Creating a Plugin
 

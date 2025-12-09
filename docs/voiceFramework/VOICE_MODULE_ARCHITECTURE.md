@@ -2,10 +2,10 @@
 
 **VOICE** = **V**ersatile **O**pen **I**nput **C**lick **E**xecute
 
-A comprehensive framework for rapidly developing parameter-driven GUI modules in eGPS.
+A comprehensive framework for rapidly developing parameter-driven GUI modules in eGPS from version 2.1.
 
-**Version**: 2.1
-**Last Updated**: 2025-12-04
+**Version**: 2.1.0
+**Last Updated**: 2025-12-09
 **Package**: `egps2.builtin.modules.voice`
 
 ---
@@ -144,16 +144,31 @@ public class MyFloatingTool extends AbstractGuiBaseVoiceFeaturedPanel {
 
     @Override
     protected void setParameter(AbstractParamsAssignerAndParser4VOICE mapProducer) {
-        // Define parameters
-        mapProducer.addKeyValueEntryBean("input", "/path/to/file", "Input file path");
-        mapProducer.addKeyValueEntryBean("output", "/path/to/output", "Output directory");
+        mapProducer.addKeyValueEntryBean("%1","Alignment file for evolution","");
+        mapProducer.addKeyValueEntryBean("input.msa.fasta",
+                EGPSProperties.PROPERTIES_DIR + "/path/to/test.fa",
+                "The multiple sequence alignment file\n#Actually, it is simulated by self");
+
+        mapProducer.addKeyValueEntryBean("%2","Expression files","");
+        mapProducer.addKeyValueEntryBean("input.expression.tpm",
+                EGPSProperties.PROPERTIES_DIR + "/path/to/floatingVoice/exp.tpm",
+                "The normalized tmp fasta file\n#Actually, it is simulated by self");
+
+        mapProducer.addKeyValueEntryBean("%3","Molecular interaction files","");
+        mapProducer.addKeyValueEntryBean("input.mol.picture",
+                EGPSProperties.PROPERTIES_DIR + "/path/to/mol.mechanism.pptx",
+                "The power point file of the molecular mechanism\n#Please download the test data, first.\n#While this is demo, just click button.");
     }
 
     @Override
-    protected void execute(OrganizedParameterGetter params) throws Exception {
+    protected void execute(OrganizedParameterGetter o) throws Exception {
         // Your business logic
-        String input = params.getValue("input");
-        String output = params.getValue("output");
+        String fasta_path = o.getSimplifiedString("input.msa.fasta");
+        Optional<List<String>> lists = o.getComplicatedValues("input.expression.tpm");
+        boolean has_fast = o.getSimplifiedBool("has.msa.fasta");
+        double dispersion = o.getSimplifiedDouble("model.dispersion");
+        int number = o.getSimplifiedInt("model.gene.number");
+        String simplifiedStringWithDefault = o.getSimplifiedStringWithDefault("model.differentialRatio");
         // ... process data
     }
 }
@@ -168,7 +183,7 @@ public class MyFloatingTool extends AbstractGuiBaseVoiceFeaturedPanel {
 - Embedded as a tab in the main window
 - Includes bottom console for output
 - Full integration with eGPS module system
-- Implements `IModuleLoader` (self-contained)
+- Implements `IModuleLoader` and `ModuleFace` (self-contained)
 
 **When to Use**:
 - Complex computational modules
@@ -176,27 +191,42 @@ public class MyFloatingTool extends AbstractGuiBaseVoiceFeaturedPanel {
 - Modules that need to be part of the main workflow
 
 **Implementation**:
+
+
+
 ```java
 public class MyHandytoolModule extends TabModuleFaceOfVoice {
 
-    @Override
-    protected void initializeGraphics(JPanel mainPanel) {
-        initializeTheVoiceTools();
-        // Add VOICE panel to your layout
-        mainPanel.add(voiceTools.getPanel(), BorderLayout.CENTER);
-    }
-
+    /**
+     * Define parameters for the handy tool module
+     * @param mapProducer The parameter designer used to define input parameters
+     */
     @Override
     protected void setParameter(AbstractParamsAssignerAndParser4VOICE mapProducer) {
-        // Define parameters
-        mapProducer.addKeyValueEntryBean("algorithm", "default", "Algorithm type");
+        mapProducer.addKeyValueEntryBean("input.tsv.path", EXAMPLE_PATH, "The tsv file include header line.");
+        mapProducer.addKeyValueEntryBean("x.variable", "X", "The x variable values");
+        mapProducer.addKeyValueEntryBean("y.variable", "Y", "The y variable values");
+        mapProducer.addKeyValueEntryBean("output.tsv.path", "", "Optional file, default is to the console");
+        mapProducer.addKeyValueEntryBean("values.to.predict", "1,2,3", "x values to predict, split with ','. Leave blank if none or delete");
+
     }
 
+    /**
+     * Execute the handy tool functionality
+     * Performs linear regression analysis on the provided data
+     * @param o The organized parameter getter containing user inputs
+     * @throws Exception If there is an error during execution
+     */
     @Override
-    protected void startRun() throws Exception {
-        OrganizedParameterGetter params = mapProducer.getParameterParser()
-            .getOrganizedParameterGetter(voiceTools.getCurrentInput());
-        // Your logic
+    protected void execute(OrganizedParameterGetter o) throws Exception {
+        String inputFile = o.getSimplifiedString("input.tsv.path");
+        String xVariable = o.getSimplifiedString("x.variable");
+        String yVariable = o.getSimplifiedString("y.variable");
+
+        String outputPath = o.getSimplifiedStringWithDefault("output.tsv.path");
+
+        // Your logic here
+        setText4Console(results); // This is how to output to the console
     }
 
     @Override
@@ -206,7 +236,14 @@ public class MyHandytoolModule extends TabModuleFaceOfVoice {
     public String getShortDescription() { return "A handy tool"; }
 
     @Override
-    public int[] getCategory() { /* classification */ }
+    public int[] getCategory() {
+        return ModuleClassification.getOneModuleClassification(
+            ModuleClassification.BYFUNCTIONALITY_SIMPLE_TOOLS_INDEX,
+            ModuleClassification.BYAPPLICATION_GENOMICS_INDEX,
+            ModuleClassification.BYCOMPLEXITY_LEVEL_1_INDEX,
+            ModuleClassification.BYDEPENDENCY_ONLY_EMPLOY_CONTAINER
+        );
+    }
 }
 ```
 
@@ -216,7 +253,7 @@ public class MyHandytoolModule extends TabModuleFaceOfVoice {
 **Location**: `egps2.builtin.modules.voice.fastmodvoice.DockableTabModuleFaceOfVoice`
 
 **Characteristics**:
-- Nested as a sub-tab within another module
+- Nested as a `sub-tab` within another module
 - Shares console with parent module
 - Lightweight (borrows infrastructure from parent)
 - Ideal for tool collections
@@ -230,28 +267,56 @@ public class MyHandytoolModule extends TabModuleFaceOfVoice {
 ```java
 public class MyDockableSubTab extends DockableTabModuleFaceOfVoice {
 
-    public MyDockableSubTab(ComputationalModuleFace parentModule) {
-        super(parentModule);
+    /**
+     * Constructor for the SimpleAlignmentSimulator module
+     * @param cmf The computational module face
+     */
+    public SimpleAlignmentSimulator(ComputationalModuleFace cmf) {
+        super(cmf);
+    }
+
+    /**
+     * Define parameters for the alignment simulation
+     * @param designer The parameter designer used to define input parameters
+     */
+    @Override
+    protected void setParameter(AbstractParamsAssignerAndParser4VOICE designer) {
+        designer.addKeyValueEntryBean("num.sequence","5", "Total number of sequence to output, including the reference.");
+        // Input like this
+    }
+
+    /**
+     * Execute the alignment simulation process
+     * @param o The organized parameter getter containing user inputs
+     * @throws Exception If simulation fails
+     */
+    @Override
+    protected void execute(OrganizedParameterGetter o) throws Exception {
+        String fileName = o.getSimplifiedString("output.file.path");
+        String refSequence = o.getSimplifiedString("ref.sequence");
+        int numSequence = o.getSimplifiedInt("num.sequence");
+        boolean includeIndel = o.getSimplifiedBool("include.indel");
+
+        // Set default mutation probabilities
+        double subProb = 0.02;  // Substitution probability
+        double insProb = 0.02;  // Insertion probability
+        double delProb = 0.02;  // Deletion probability
+
+        // Your logic here
+
+        // Report completion to console
+        setText4Console(Arrays.asList("Finished writing file: " + fileName,
+                "Mutation log written to: " + logPath));
     }
 
     @Override
-    protected void initializeGraphics(JPanel mainPanel) {
-        initializeTheVoiceTools();
-        mainPanel.add(voiceTools.getPanel());
+    public String getShortDescription() {
+        return "Simulate the short length multiple sequence alignment for demo";
     }
-
     @Override
-    protected void setParameter(AbstractParamsAssignerAndParser4VOICE mapProducer) {
-        // Define parameters
+    public String getTabName() {
+        return "2.Simple alignment Simulator";
     }
-
-    @Override
-    protected void startRun() throws Exception {
-        // Your logic
-    }
-
-    @Override
-    public String getTabName() { return "Sub Tool"; }
 }
 ```
 
@@ -487,91 +552,7 @@ File getValueAsFile(String key);
 | Need console output? | Yes → Standalone module? | Yes → Handytools |
 | Need console output? | Yes → Part of another module? | Yes → Dockable |
 
-### Step 2: Create Your Class
 
-**Example: Simple File Converter (Floating)**
-
-```java
-package com.myproject.tools;
-
-import egps2.builtin.modules.voice.template.AbstractGuiBaseVoiceFeaturedPanel;
-import egps2.builtin.modules.voice.bean.AbstractParamsAssignerAndParser4VOICE;
-import egps2.builtin.modules.voice.fastmodvoice.OrganizedParameterGetter;
-
-public class FileConverter extends AbstractGuiBaseVoiceFeaturedPanel {
-
-    @Override
-    protected void setParameter(AbstractParamsAssignerAndParser4VOICE mapProducer) {
-        // Define parameters with examples and tooltips
-        mapProducer.addKeyValueEntryBean(
-            "inputFile",
-            "/path/to/input.txt",
-            "Path to the input file"
-        );
-        mapProducer.addKeyValueEntryBean(
-            "outputFormat",
-            "CSV",
-            "Output format: CSV, TSV, or JSON"
-        );
-        mapProducer.addKeyValueEntryBean(
-            "outputFile",
-            "/path/to/output.csv",
-            "Path to save converted file"
-        );
-    }
-
-    @Override
-    protected void execute(OrganizedParameterGetter params) throws Exception {
-        // Get parsed parameters
-        String inputPath = params.getValue("inputFile");
-        String format = params.getValue("outputFormat");
-        String outputPath = params.getValue("outputFile");
-
-        // Your business logic
-        File inputFile = new File(inputPath);
-        if (!inputFile.exists()) {
-            throw new Exception("Input file not found: " + inputPath);
-        }
-
-        // Convert file...
-        convertFile(inputFile, format, new File(outputPath));
-
-        // Show success message
-        JOptionPane.showMessageDialog(null, "Conversion successful!");
-    }
-
-    @Override
-    protected String getPersistingStorageString4Voice() {
-        // Unique identifier for saving bookmarks
-        return "fileconverter.bookmarks";
-    }
-
-    private void convertFile(File input, String format, File output) {
-        // Your conversion logic here
-    }
-}
-```
-
-### Step 3: Launch Your Module
-
-**For Floating modules**:
-```java
-SwingUtilities.invokeLater(() -> {
-    FileConverter converter = new FileConverter();
-    converter.run();  // Shows the dialog
-});
-```
-
-**For Tab modules**: Implement `IModuleLoader` and register with eGPS module system.
-
-### Step 4: Test
-
-1. Run your module
-2. Observe the example text in the input area
-3. Modify parameters
-4. Click Execute
-5. Save a bookmark preset
-6. Try loading the preset
 
 ---
 
@@ -582,29 +563,68 @@ SwingUtilities.invokeLater(() -> {
 Provide multiple numbered examples for users:
 
 ```java
+    /**
+ * Get the number of examples provided by this module
+ * @return The number of examples (4)
+ */
 @Override
 protected int getNumberOfExamples() {
-    return 3;  // Will show #Example1, #Example2, #Example3
+    return 4;
 }
 
+/**
+ * Get the example text for the current example index
+ * @return The example text as a string
+ */
 @Override
-protected void setParameter(AbstractParamsAssignerAndParser4VOICE mapProducer) {
-    // Use VoiceExampleGenerator.generateMultipleExampleMarker(exampleNumber)
-    mapProducer.addKeyValueEntryBean(
-        "#Example1",
-        "",
-        "Basic usage example"
-    );
-    mapProducer.addKeyValueEntryBean("input", "/data/sample1.txt", "");
+protected String getExampleText() {
+    String str = null;
+    String firstExample = """
+            ### For module: Handy tool for biologist # See the right label for help.
+            # The tsv file include header line.
+            $input.tsv.path=%s
+            
+            # The x variable values
+            $x.variable=X
+            
+            # The y variable values
+            $y.variable=Y
+            
+            """.formatted(EXAMPLE_PATH);
+    if (exampleIndex == 0) {
+        str = firstExample;
+    } else if (exampleIndex == 1) {
+        str = firstExample + """
+                # x values to predict, split with ','. Leave blank if none or delete
+                $values.to.predict=1,2,3
+                """;
+    } else if (exampleIndex == 2) {
+        str = firstExample + """
+                # Optional file, default is to the console
+                $output.tsv.path=
+                
+                # x values to predict, split with ','. Leave blank if none or delete
+                $values.to.predict=1,2,3
+                """;
+    } else if (exampleIndex == 3) {
+        String outputPath = EGPSProperties.PROPERTIES_DIR + "/bioData/example/regression/regression.results.tsv";
+        str = firstExample + """
+                # Optional file, default is to the console
+                $output.tsv.path=%s
+                
+                # x values to predict, split with ','. Leave blank if none or delete
+                $values.to.predict=1,2,3
+                """.formatted(outputPath);
+        return str;
+    }
+    exampleIndex++;
 
-    mapProducer.addKeyValueEntryBean(
-        "#Example2",
-        "",
-        "Advanced usage example"
-    );
-    mapProducer.addKeyValueEntryBean("input", "/data/sample2.txt", "");
-    mapProducer.addKeyValueEntryBean("advanced", "true", "");
+    if (exampleIndex > 3) {
+        exampleIndex = 0;
+    }
+    return str;
 }
+
 ```
 
 ### 2. Parameter Categories
@@ -630,25 +650,7 @@ protected void setParameter(AbstractParamsAssignerAndParser4VOICE mapProducer) {
 }
 ```
 
-### 3. Custom Widgets
-
-Inject custom GUI components into the VOICE dialog:
-
-```java
-@Override
-protected void execute(String inputs) throws Exception {
-    // Add a custom widget
-    JButton customButton = new JButton("Browse Files");
-    customButton.addActionListener(e -> {
-        // File chooser logic
-    });
-    addWidget(customButton, "File Browser", 150);  // width=150px
-}
-```
-
-Widgets appear to the right of the main input area.
-
-### 4. CLI Support
+### 3. CLI Support
 
 Make your VOICE module executable from command line:
 
@@ -671,216 +673,7 @@ public class MyModule extends TabModuleFaceOfVoice implements SubTabModuleRunner
 java -cp "..." egps2.builtin.modules.CLI com.myproject.MyModule params.txt
 ```
 
-### 5. Module Signature Integration
 
-If your module implements `IModuleSignature`, VOICE can include signature in examples:
-
-```java
-public class MyModule extends TabModuleFaceOfVoice implements IModuleSignature {
-
-    @Override
-    public String getSignature() {
-        return "MyModule v1.2.0 - Author: John Doe";
-    }
-
-    // Example text will automatically include:
-    // # Generated by: MyModule v1.2.0 - Author: John Doe
-    // # Date: 2025-12-04
-}
-```
-
-### 6. Validation
-
-Add custom validation before execution:
-
-```java
-@Override
-protected void execute(OrganizedParameterGetter params) throws Exception {
-    // Validate parameters
-    String input = params.getValue("inputFile");
-    if (input == null || input.isEmpty()) {
-        throw new IllegalArgumentException("Input file is required");
-    }
-
-    File file = new File(input);
-    if (!file.exists()) {
-        throw new FileNotFoundException("File not found: " + input);
-    }
-
-    // Proceed with execution
-    processFile(file);
-}
-```
-
-Exceptions are caught by the framework and displayed to the user.
-
----
-
-## Best Practices
-
-### Parameter Naming
-
-✅ **DO**:
-- Use descriptive, self-explanatory names: `inputFile`, `outputDirectory`, `algorithmType`
-- Use camelCase for consistency
-- Provide clear example values that demonstrate expected format
-
-❌ **DON'T**:
-- Use cryptic abbreviations: `inF`, `outD`, `alg`
-- Use spaces in keys (parser may handle it, but avoid)
-
-### Example Text Quality
-
-✅ **DO**:
-- Provide realistic example values users can copy/modify
-- Include comments explaining non-obvious parameters
-- Show multiple examples for different use cases
-
-❌ **DON'T**:
-- Leave examples empty or with placeholder text like "TODO"
-- Omit parameter descriptions
-
-### Error Handling
-
-✅ **DO**:
-```java
-@Override
-protected void execute(OrganizedParameterGetter params) throws Exception {
-    try {
-        // Business logic
-    } catch (IOException e) {
-        throw new Exception("Failed to read file: " + e.getMessage(), e);
-    }
-}
-```
-
-❌ **DON'T**:
-```java
-@Override
-protected void execute(OrganizedParameterGetter params) {
-    try {
-        // Business logic
-    } catch (Exception e) {
-        e.printStackTrace();  // Silent failure, user sees nothing
-    }
-}
-```
-
-### Bookmark Storage Key
-
-✅ **DO**:
-- Use a unique, stable identifier: `"mymodule.toolname.bookmarks"`
-- Include module namespace to avoid collisions
-
-❌ **DON'T**:
-- Use generic names: `"bookmarks"`, `"data"`
-- Change the key between versions (breaks bookmark persistence)
-
-### Threading
-
-✅ **DO**:
-- Execute long-running tasks in background threads
-- Update GUI on EDT using `SwingUtilities.invokeLater()`
-
-```java
-@Override
-protected void execute(OrganizedParameterGetter params) throws Exception {
-    CompletableFuture.runAsync(() -> {
-        // Long computation
-        String result = performHeavyCalculation();
-
-        SwingUtilities.invokeLater(() -> {
-            // Update GUI with result
-        });
-    });
-}
-```
-
-❌ **DON'T**:
-- Block the EDT with long computations
-- Update Swing components from background threads
-
-### Parameter Defaults
-
-✅ **DO**:
-- Provide sensible defaults in example text
-- Use `getValueAsInt(key, defaultValue)` for optional parameters
-
-❌ **DON'T**:
-- Assume all parameters are always provided
-- Crash on missing optional parameters
-
----
-
-## Migration from Old Code
-
-If you have modules using deprecated VOICE classes, migrate as follows:
-
-### Old DIYTools → New Handytools
-
-**Before** (deprecated):
-```java
-public class OldModule extends DIYToolModuleFace { ... }
-```
-
-**After**:
-```java
-public class NewModule extends TabModuleFaceOfVoice { ... }
-```
-
-**Changes**:
-- Rename `setParameterMap()` → `setParameter()`
-- Rename `getParserMapBean()` → Access via `mapProducer.requiredParams`
-- Update parameter access: `map.get(key)` → `params.getValue(key)`
-
-### Old Template → New Template
-
-**Before** (deprecated):
-```java
-public class OldTool extends CompleteModuleFace4Voice { ... }
-```
-
-**After**:
-```java
-public class NewTool extends AbstractGuiBaseVoiceFeaturedPanel { ... }
-```
-
-**Changes**:
-- Same method names (mostly compatible)
-- Update imports from `voice.template` package
-
----
-
-## Troubleshooting
-
-### Issue: Dialog doesn't show
-
-**Cause**: Not calling `run()` on EDT.
-
-**Solution**:
-```java
-SwingUtilities.invokeLater(() -> myModule.run());
-```
-
-### Issue: Parameters not parsed correctly
-
-**Cause**: Incorrect input format (missing `:` or `=`).
-
-**Solution**: Validate input format matches `key: value` or `key=value`.
-
-### Issue: Bookmarks not saving
-
-**Cause**: Invalid storage key or permission issues.
-
-**Solution**:
-- Check `getPersistingStorageString4Voice()` returns unique key
-- Verify `~/.egps/` directory is writable
-
-### Issue: Execute button doesn't work
-
-**Cause**: Exception thrown in `execute()` without proper handling.
-
-**Solution**: Check console for stack traces. Ensure exceptions propagate to framework.
 
 ---
 
@@ -902,6 +695,18 @@ Study these real-world VOICE modules:
 
 ---
 
+## Q & A
+
+1. **Q**: Is Custom Widgets supported?
+
+**A**: It can be done, but it's not recommended. Thinking for why you need the `VOICE` framework, Custom Widgets can be down by 
+get rid of the VOICE framework. And write from the scratch.
+
+2. **Q**:  What application can be built with VOICE?
+
+**A**: Any application that requires parameter-driven modules can be built with VOICE.
+
+
 ## Changelog
 
 ### v2.1 (2025-12-04)
@@ -909,15 +714,7 @@ Study these real-world VOICE modules:
 - **Cleaned**: Package structure now contains only 19 core classes
 - **Improved**: Code organization and clarity
 - **No Breaking Changes**: All active frameworks still supported
-
-### v2.0
-- Introduced `fastmodvoice` framework
-- Added `TabModuleFaceOfVoice` and `DockableTabModuleFaceOfVoice`
-- Deprecated old DIYTools and template classes
-
-### v1.x
-- Initial VOICE framework
-- Original template classes
+- **Important: Do not support old un-mature API**
 
 ---
 

@@ -115,7 +115,12 @@ public class MyPluginLoader extends FastBaseTemplate {
 
     @Override
     public int[] getCategory() {
-        return new int[]{0, 0, 0, 0}; // Utility, General, Simple, No Deps
+        return ModuleClassification.getOneModuleClassification(
+            ModuleClassification.BYFUNCTIONALITY_SIMPLE_TOOLS_INDEX,
+            ModuleClassification.BYAPPLICATION_COMMON_MODULE_INDEX,
+            ModuleClassification.BYCOMPLEXITY_LEVEL_1_INDEX,
+            ModuleClassification.BYDEPENDENCY_ONLY_EMPLOY_CONTAINER
+        ); // 功能/应用/复杂度/依赖
     }
 }
 ```

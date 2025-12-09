@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title></title>
+</head>
+<body>
+
+<blockquote>
+	<h3>Problem to solve:</h3>
+	<p>A module that demonstrates handy tools for biologists through dockable panel functionality.</p>
+
+	<h3>Key features:</h3>
+	<p>1. Demonstrates the usage habits of the VOICE software operation mechanism, with built-in module wizard.</p>
+	<p>2. Provides multiple bioinformatics analysis tools, including:</p>
+	<ul>
+		<li>Large text generator - Generates large text files for testing</li>
+		<li>Simple alignment simulator - Simulates sequence alignments</li>
+		<li>Simple expression producer - Generates expression data</li>
+		<li>Group-wise statistical test - Performs statistical tests between groups</li>
+		<li>Advanced group-wise test - Advanced statistical analysis between groups</li>
+		<li>Biological pathway enrichment - Pathway enrichment analysis</li>
+	</ul>
+
+	<h3>Detailed Module Descriptions:</h3>
+	<h4>1. Large text generator</h4>
+	<ul>
+		<li>Parameters:</li>
+		<ul>
+			<li>output.file.path: Output file location (e.g., 10GB_fastq.txt)</li>
+			<li>file.GiB.size: Size of the generated file in GiB (note this is not GB)</li>
+		</ul>
+		<li>Description: Generates large text files of specified size for testing and data processing simulations.</li>
+	</ul>
+
+	<h4>2. Simple alignment simulator</h4>
+	<ul>
+		<li>Parameters:</li>
+		<ul>
+			<li>ref.sequence: Reference DNA sequence</li>
+			<li>num.sequence: Total number of sequences to output, including the reference</li>
+			<li>include.indel: Whether to include insertions/deletions (INDELs)</li>
+			<li>output.file.path: Output file path</li>
+		</ul>
+		<li>Description: Simulates sequence alignments, generating sequence files with mutation characteristics.</li>
+	</ul>
+
+	<h4>3. Simple expression producer</h4>
+	<ul>
+		<li>Parameters:</li>
+		<ul>
+			<li>meta.info.type.number: Number of condition types (2 for control/treatment, 3 for ctrl/depletion/rescue)</li>
+			<li>meta.info.label: Condition labels separated by semicolons</li>
+			<li>output.file.path: Output file path</li>
+			<li>model.gene.number: Total number of genes</li>
+			<li>model.differentialRatio: Ratio of differentially expressed genes</li>
+			<li>model.baseMean: Base expression mean</li>
+			<li>model.dispersion: Dispersion parameter</li>
+			<li>model.foldChangeMin: Minimum fold change</li>
+			<li>model.foldChangeMax: Maximum fold change</li>
+		</ul>
+		<li>Description: Generates simulated gene expression data for differential expression analysis.</li>
+	</ul>
+
+	<h4>4. Group-wise statistical test</h4>
+	<ul>
+		<li>Parameters:</li>
+		<ul>
+			<li>input.expression.tsv: Input expression profile TSV file</li>
+			<li>condition.or.group.1: Sample names of the first condition or group</li>
+			<li>condition.or.group.2: Sample names of the second condition or group</li>
+			<li>analysis.method.name: Analysis method name</li>
+			<li>output.result.tsv: Output result file path</li>
+		</ul>
+		<li>Description: Performs statistical tests between groups to identify significantly differentially expressed genes.</li>
+	</ul>
+
+	<h4>5. Advanced group-wise test</h4>
+	<ul>
+		<li>Parameters:</li>
+		<ul>
+			<li>input.expression.tsv: Input expression profile TSV file</li>
+			<li>condition.or.group.1: Sample names of the first condition or group</li>
+			<li>condition.or.group.2: Sample names of the second condition or group</li>
+		</ul>
+		<li>Description: Performs advanced group-wise statistical tests using multiple methods (e.g., limma, DESeq2, and EdgeR) for differential expression analysis.</li>
+	</ul>
+
+	<h4>6. Biological pathway enrichment</h4>
+	<ul>
+		<li>Parameters:</li>
+		<ul>
+			<li>input.geneset.gmt: Input GMT format gene sets</li>
+			<li>input.significant.result.tsv: Input significant gene result file</li>
+			<li>symbol.col.name: Gene symbol column name</li>
+			<li>significant.col.name: Column name with p-values</li>
+			<li>output.file.path: Output file path</li>
+			<li>p.value.cutoff: P-value threshold</li>
+		</ul>
+		<li>Description: Calculates pathway enrichment results for genes using classical methods such as Fisher's exact test (ORA) and GSEA.</li>
+	</ul>
+
+	<h3>Quick start:</h3>
+	<p>All operations are intuitive and easy to understand. Please follow the graphical user interface instructions.</p>
+	<p>Notes:</p>
+	<p>1: Users can click the example button (compass) to view various examples.</p>
+	<p>2: All parameter descriptions are in the # starting comment lines of the script content.</p>
+	<p>3: Modules are organized in tabs for easy switching between different functions.</p>
+	<h3>More tutorials and help:</h3>
+	<p>You can view the following URL to get more module information:<br>https://www.yuque.com/u21499046/egpsdoc/hpgm3zenc7eg1wyt</p>
+
+</blockquote>
+
+</body>
+</html>

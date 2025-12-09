@@ -5,6 +5,12 @@
 > 本教程将引导你从零开始学习如何为 eGPS 开发自定义模块和插件。
 > 无论你是想快速创建一个简单工具，还是开发复杂的分析模块，这里都有完整的指导。
 
+## 模块定义（开发者视角）
+- 任何实现 `IModuleSignature` 的类都是一个模块；`IModuleLoader` 继承了 `IModuleSignature`，因此 GUI 加载器也是模块。模块可以是命令行或 GUI 模块。
+- GUI 模块分三类：**Mainframe core modules**（主框架核心、固定模块）、**iTools/independent tools**（内置独立工具；与核心一起构成 built-in 模块）、**plug-in modules**（外部插件 JAR）。
+- `ModuleInspector` 和 Module Gallery 都能加载以上三类 GUI 模块。
+- 菜单对应：Mainframe core 菜单（核心模块）、iTools 菜单（独立工具）、Plug-ins 菜单（插件模块）。
+
 ---
 
 ## 📚 教程目录
@@ -312,7 +318,14 @@ public class MyTool extends FastBaseTemplate {
 
     public String getTabName() { return "我的工具"; }
     public String getShortDescription() { return "简单工具"; }
-    public int[] getCategory() { return new int[]{0,0,0,0}; }
+    public int[] getCategory() {
+        return ModuleClassification.getOneModuleClassification(
+            ModuleClassification.BYFUNCTIONALITY_SIMPLE_TOOLS_INDEX,
+            ModuleClassification.BYAPPLICATION_COMMON_MODULE_INDEX,
+            ModuleClassification.BYCOMPLEXITY_LEVEL_1_INDEX,
+            ModuleClassification.BYDEPENDENCY_ONLY_EMPLOY_CONTAINER
+        );
+    }
 }
 ```
 

@@ -68,11 +68,11 @@ public interface IModuleLoader {
      */
     ModuleFace getFace();
 
-    /**
-     * 获取模块的分类信息
-     * [功能类型, 应用领域, 复杂度, 依赖性]
-     */
-    int[] getCategory();
+/**
+ * 获取模块的分类信息
+ * [功能类型, 应用领域, 复杂度, 依赖性]
+ */
+int[] getCategory();
 
     /**
      * 获取模块图标（可选）
@@ -87,9 +87,11 @@ public interface IModuleLoader {
     /**
      * 获取中文文档（可选）
      */
-    JPanel getChineseDocument();
+JPanel getChineseDocument();
 }
 ```
+
+> 分类数组请通过 `ModuleClassification.getOneModuleClassification(...)` 使用四个维度的常量生成，避免手动 new 数组。
 
 ### 2. 基类：ModuleFace
 

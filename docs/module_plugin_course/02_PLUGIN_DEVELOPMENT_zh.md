@@ -164,13 +164,12 @@ public class MySimplePlugin extends FastBaseTemplate {
 
     @Override
     public int[] getCategory() {
-        // [功能类型, 应用领域, 复杂度, 依赖性]
-        return new int[]{
-            0,  // 0=工具
-            0,  // 0=通用
-            0,  // 0=简单
-            0   // 0=无依赖
-        };
+        return ModuleClassification.getOneModuleClassification(
+            ModuleClassification.BYFUNCTIONALITY_SIMPLE_TOOLS_INDEX,   // 功能类型
+            ModuleClassification.BYAPPLICATION_COMMON_MODULE_INDEX,    // 应用领域
+            ModuleClassification.BYCOMPLEXITY_LEVEL_1_INDEX,           // 复杂度
+            ModuleClassification.BYDEPENDENCY_ONLY_EMPLOY_CONTAINER    // 依赖性
+        );
     }
 }
 ```
@@ -312,13 +311,12 @@ public class MyComplexPlugin implements IModuleLoader {
 
     @Override
     public int[] getCategory() {
-        // [功能类型, 应用领域, 复杂度, 依赖性]
-        return new int[]{
-            1,  // 1=分析
-            1,  // 1=生物信息
-            1,  // 1=中等复杂度
-            0   // 0=无外部依赖
-        };
+        return ModuleClassification.getOneModuleClassification(
+            ModuleClassification.BYFUNCTIONALITY_PROFESSIONAL_COMPUTATION_INDEX,  // 功能类型
+            ModuleClassification.BYAPPLICATION_GENOMICS_INDEX,                    // 应用领域
+            ModuleClassification.BYCOMPLEXITY_LEVEL_3_INDEX,                      // 复杂度
+            ModuleClassification.BYDEPENDENCY_ONLY_EMPLOY_CONTAINER               // 依赖性
+        );
     }
 
     @Override
