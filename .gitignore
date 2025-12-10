@@ -11,6 +11,7 @@
 .mtj.tmp/
 
 # Package Files #
+# dependency-egps/ will ignore because all is jar files
 *.jar
 *.war
 *.nar

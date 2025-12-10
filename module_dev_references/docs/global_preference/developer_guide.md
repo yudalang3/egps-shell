@@ -737,9 +737,9 @@ public class MyModuleFace extends ModuleFace {
 
 ## 📚 进一步阅读
 
-- [全局字体系统规划文档](./global_preference.plan.md)
-- [全局字体系统实施总结](./implementation_summary.md)
-- [文件变更清单](./file_changes.md)
+- [全局字体系统规划文档](global_preference.plan.md)
+- [全局字体系统实施总结](implementation_summary.md)
+- [文件变更清单](file_changes.md)
 - [eGPS模块开发指南](../module_plugin_course/)
 
 ---

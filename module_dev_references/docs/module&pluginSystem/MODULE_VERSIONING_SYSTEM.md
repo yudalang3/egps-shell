@@ -256,5 +256,5 @@ public ModuleDependency[] getDependencies() {
 ## See Also
 
 - [Module Discovery System](./itoolmanager_module_discovery_design.md)
-- [Plugin Integration Guide](./PLUGIN_INTEGRATION.md)
+- [Plugin Integration Guide](PLUGIN_INTEGRATION.md)
 - [Developer Guide](../global_preference/developer_guide.md)

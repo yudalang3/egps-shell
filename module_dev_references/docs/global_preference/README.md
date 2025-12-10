@@ -165,4 +165,4 @@ Appearance
 
 ---
 
-**推荐**：模块/插件开发者请先阅读 [developer_guide.md](./developer_guide.md) 了解如何正确使用全局字体系统。
+**推荐**：模块/插件开发者请先阅读 [developer_guide.md](developer_guide.md) 了解如何正确使用全局字体系统。

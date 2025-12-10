@@ -1,0 +1,18 @@
+# Arguments to support JIDE on Java 21
+--add-exports java.desktop/com.sun.java.swing.plaf.windows=ALL-UNNAMED
+--add-exports java.desktop/sun.swing=ALL-UNNAMED
+--add-exports java.desktop/sun.awt.windows=ALL-UNNAMED
+--add-exports java.desktop/sun.awt.image=ALL-UNNAMED
+--add-exports java.desktop/sun.awt.shell=ALL-UNNAMED
+--add-opens java.desktop/java.awt=ALL-UNNAMED
+--add-opens java.desktop/java.awt.color=ALL-UNNAMED
+--add-opens java.desktop/javax.swing=ALL-UNNAMED
+--add-opens java.base/java.lang=ALL-UNNAMED
+--add-opens java.base/java.util=ALL-UNNAMED
+--add-opens java.base/java.text=ALL-UNNAMED
+--add-opens java.base/java.math=ALL-UNNAMED
+--add-opens jdk.management/com.sun.management.internal=ALL-UNNAMED
+--add-opens java.xml/com.sun.org.apache.xml.internal.serialize=ALL-UNNAMED
+
+# Disable a JAXB optimization that causes illegal access exceptions on Java 11 
+-Dcom.sun.xml.bind.v2.bytecode.ClassTailor.noOptimize
