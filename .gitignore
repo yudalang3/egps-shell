@@ -37,3 +37,4 @@ replay_pid*
 #
 
 deploy/
+package_egps_shell.sh
