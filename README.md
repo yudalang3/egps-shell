@@ -2,7 +2,7 @@
 
 [English](README.md) | [中文](README_zh.md)
 
-![eGPS-shell Screenshot](snapshot/ScreenShot_2025-12-13_171628_725.png)
+![eGPS-shell Screenshot](https://github.com/yudalang3/egps-shell/blob/main/snapshot/ScreenShot_2025-12-13_171628_725.png?raw=true)
 
 A GUI main framework (shell) for eGPS 2.1, built on eGPS-base.
 
