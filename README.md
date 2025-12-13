@@ -1,4 +1,9 @@
 # egps-shell
+
+[English](README.md) | [中文](README_zh.md)
+
+![eGPS-shell Screenshot](snapshot/ScreenShot_2025-12-13_171628_725.png)
+
 A GUI main framework (shell) for eGPS 2.1, built on eGPS-base.
 
 # Manuals

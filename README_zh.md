@@ -1,4 +1,9 @@
 # egps-shell
+
+[English](README.md) | [中文](README_zh.md)
+
+![eGPS-shell 截图](snapshot/ScreenShot_2025-12-13_171628_725.png)
+
 面向 eGPS 2.1 的图形界面主框架（壳），基于 eGPS-base 构建。
 
 # 手册
