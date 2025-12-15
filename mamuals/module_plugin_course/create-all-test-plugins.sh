@@ -125,7 +125,18 @@ public class FastBasePlugin extends FastBaseTemplate {
 
     @Override
     public int[] getCategory() {
-        return new int[]{0, 0, 0, 0}; // 工具类, 通用, 简单, 无依赖
+        int[] ret = egps2.modulei.ModuleClassification.getOneModuleClassification(
+                egps2.modulei.ModuleClassification.BYFUNCTIONALITY_SIMPLE_TOOLS_INDEX,
+                egps2.modulei.ModuleClassification.BYAPPLICATION_GENOMICS_INDEX,
+                egps2.modulei.ModuleClassification.BYCOMPLEXITY_LEVEL_1_INDEX,
+                egps2.modulei.ModuleClassification.BYDEPENDENCY_ONLY_EMPLOY_CONTAINER
+        );
+        return ret;
+    }
+
+    @Override
+    public egps2.modulei.ModuleVersion getVersion() {
+        return new egps2.modulei.ModuleVersion(1, 0, 0);
     }
 }
 EOF
@@ -218,7 +229,18 @@ public class DirectPlugin implements IModuleLoader {
 
     @Override
     public int[] getCategory() {
-        return new int[]{1, 1, 0, 0}; // 分析类, 生物信息, 简单, 无依赖
+        int[] ret = egps2.modulei.ModuleClassification.getOneModuleClassification(
+                egps2.modulei.ModuleClassification.BYFUNCTIONALITY_SIMPLE_TOOLS_INDEX,
+                egps2.modulei.ModuleClassification.BYAPPLICATION_GENOMICS_INDEX,
+                egps2.modulei.ModuleClassification.BYCOMPLEXITY_LEVEL_1_INDEX,
+                egps2.modulei.ModuleClassification.BYDEPENDENCY_ONLY_EMPLOY_CONTAINER
+        );
+        return ret;
+    }
+
+    @Override
+    public egps2.modulei.ModuleVersion getVersion() {
+        return new egps2.modulei.ModuleVersion(1, 0, 0);
     }
 
     @Override
@@ -395,7 +417,18 @@ public class SimpleCalculator implements IModuleLoader {
 
     @Override
     public int[] getCategory() {
-        return new int[]{0, 0, 0, 0}; // Tool, General, Simple, No dependencies
+        int[] ret = egps2.modulei.ModuleClassification.getOneModuleClassification(
+                egps2.modulei.ModuleClassification.BYFUNCTIONALITY_SIMPLE_TOOLS_INDEX,
+                egps2.modulei.ModuleClassification.BYAPPLICATION_GENOMICS_INDEX,
+                egps2.modulei.ModuleClassification.BYCOMPLEXITY_LEVEL_1_INDEX,
+                egps2.modulei.ModuleClassification.BYDEPENDENCY_ONLY_EMPLOY_CONTAINER
+        );
+        return ret;
+    }
+
+    @Override
+    public egps2.modulei.ModuleVersion getVersion() {
+        return new egps2.modulei.ModuleVersion(1, 0, 0);
     }
 
     @Override
@@ -777,7 +810,18 @@ public class ClipboardPaste implements IModuleLoader {
 
     @Override
     public int[] getCategory() {
-        return new int[]{0, 0, 0, 0}; // Tool, General, Simple, No dependencies
+        int[] ret = egps2.modulei.ModuleClassification.getOneModuleClassification(
+                egps2.modulei.ModuleClassification.BYFUNCTIONALITY_SIMPLE_TOOLS_INDEX,
+                egps2.modulei.ModuleClassification.BYAPPLICATION_GENOMICS_INDEX,
+                egps2.modulei.ModuleClassification.BYCOMPLEXITY_LEVEL_1_INDEX,
+                egps2.modulei.ModuleClassification.BYDEPENDENCY_ONLY_EMPLOY_CONTAINER
+        );
+        return ret;
+    }
+
+    @Override
+    public egps2.modulei.ModuleVersion getVersion() {
+        return new egps2.modulei.ModuleVersion(1, 0, 0);
     }
 
     @Override
