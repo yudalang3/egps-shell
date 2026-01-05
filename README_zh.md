@@ -4,6 +4,8 @@
 
 ![eGPS-shell 截图](https://github.com/yudalang3/egps-shell/blob/main/snapshot/ScreenShot_2025-12-13_171628_725.png?raw=true)
 
+如果您想要一个egps-base, egps-shell和egps-pathway.evol.browser 捆绑在一起的版本，请访问 https://github.com/yudalang3/eGPS2.1
+
 面向 eGPS 2.1 的图形界面主框架（壳），基于 eGPS-base 构建。
 
 # 手册

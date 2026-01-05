@@ -4,6 +4,8 @@
 
 ![eGPS-shell Screenshot](https://github.com/yudalang3/egps-shell/blob/main/snapshot/ScreenShot_2025-12-13_171628_725.png?raw=true)
 
+If you would like a bundled version that includes egps-base, egps-shell, and egps-pathway.evol.browser, please visit: https://github.com/yudalang3/eGPS2.1
+
 A GUI main framework (shell) for eGPS 2.1, built on eGPS-base.
 
 # Manuals
