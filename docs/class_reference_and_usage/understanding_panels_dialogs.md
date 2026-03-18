@@ -1,5 +1,5 @@
 # Understanding Shared Panels & Dialogs
-更详细列出该类别下的类，含路径与角色说明。
+This document lists the classes in this area in more detail, with their paths and roles.
 
 - **AllocatorPanel** (`src/egps2/panels/dialog/AllocatorPanel.java`): Reusable Swing panel/dialog component shared by modules.
 - **CallBackTransferBehevior** (`src/egps2/panels/dialog/opendialog/CallBackTransferBehevior.java`): Reusable Swing panel/dialog component shared by modules.

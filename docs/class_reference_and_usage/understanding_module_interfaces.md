@@ -1,5 +1,5 @@
 # Understanding Module Interfaces & Contracts
-更详细列出该类别下的类，含路径与角色说明。
+This document lists the classes in this area in more detail, with their paths and roles.
 
 - ## Module definition (developer view)
   - Any class implementing `IModuleSignature` is considered a module. `IModuleLoader` extends `IModuleSignature`, so GUI loaders are modules too.

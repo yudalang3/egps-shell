@@ -1,5 +1,5 @@
 # Understanding Utilities, Plugins & UI Templates
-更详细列出该类别下的类，含路径与角色说明。
+This document lists the classes in this area in more detail, with their paths and roles.
 
 - **AbstractCanvas** (`src/egps2/utils/prompt/swing/AbstractCanvas.java`): Utility/helper class used across modules (math, IO, graphics, DTOs, filters, prompts).
 - **Action** (`src/com/raven/swing/table/Action.java`): Raven UI template component embedded in the eGPS shell layout.

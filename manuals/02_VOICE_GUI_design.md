@@ -2,7 +2,7 @@
 
 This document focuses on the GUI-side implementation of VOICE. Using `AbstractGuiBaseVoiceFeaturedPanel` as the typical entry, it explains the shared GUI base `VersatileOpenInputClickAbstractGuiBase`, the three main subpanels (Bookmark / Input / Operation), and the current execution logic behind them.
 
-Related document: `manuals/01VOICE_architecture.md`
+Related document: `manuals/01_VOICE_architecture.md`
 
 The goal here is practical clarity: how the GUI actually boots, how events are routed, how state changes, and especially how bookmark nodes are created, linked, and persisted.
 

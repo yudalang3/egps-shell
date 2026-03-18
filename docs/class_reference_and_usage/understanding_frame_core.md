@@ -1,5 +1,5 @@
 # Understanding Core Frame & Application Lifecycle
-更详细列出该类别下的类，含路径与角色说明。
+This document lists the classes in this area in more detail, with their paths and roles.
 
 - **AbstractSoftAction** (`src/egps2/frame/AbstractSoftAction.java`): Component within the eGPS desktop application.
 - **Action4Download2update** (`src/egps2/frame/features/Action4Download2update.java`): Component within the eGPS desktop application.

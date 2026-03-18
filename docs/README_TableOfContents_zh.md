@@ -79,7 +79,7 @@
 3. `docs/module&pluginSystem/module_discovery_exclusion_rules.md`
 4. `docs/voiceFramework/VOICE_MODULE_ARCHITECTURE.md`
 5. `docs/voiceFramework/VOICE-GUI.md`
-6. `manuals/00Readme.md`
+6. `manuals/00Readme_zh.md`
 7. `manuals/module_plugin_course/README_zh.md`
 
 ## 文档中反复引用的运行时约定

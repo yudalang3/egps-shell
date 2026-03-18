@@ -1,6 +1,8 @@
 # eGPS 2.1: Modular Design and Development Practice
 
-> Welcome to the eGPS module manual.  
+**Welcome to the eGPS module manual.** It includes the software's design ideas and the development tutorials built around them.
+
+>
 > This tutorial explains the design ideas behind the software, the evolution of the framework, and the practical path for building custom modules and plugins.
 
 This document starts from the problem the framework is trying to solve, then walks through the shift from eGPS 1 to eGPS 2, and from 2.0 to 2.1.

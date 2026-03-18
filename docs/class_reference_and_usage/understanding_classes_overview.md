@@ -1,5 +1,5 @@
 # Understanding eGPS Main GUI Classes
-本文件汇总 `src/` 下的类（已排除 `src/egps/` 的 L&F 代码），按目录分组给出用途简述。
+This file inventories the classes under `src/` (excluding the `src/egps/` look-and-feel code) and summarizes them by directory.
 
 ## com/raven (43 classes)
 - **Action** (`src/com/raven/swing/table/Action.java`): Raven UI template component used inside the eGPS shell.

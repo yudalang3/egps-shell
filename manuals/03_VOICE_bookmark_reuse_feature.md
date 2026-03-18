@@ -6,7 +6,7 @@
 
 Related documents:
 
-- `manuals/01VOICE_architecture.md`
+- `manuals/01_VOICE_architecture.md`
 - `manuals/02_VOICE_GUI_design.md`
 
 ---

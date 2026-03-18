@@ -5,7 +5,7 @@
 **适用范围**：仅适用于**浮动窗模式**（`AbstractGuiBaseVoiceFeaturedPanel` 及其子类）
 
 **相关文档**：
-- `mamuals/01VOICE_architecture.md`
+- `manuals/01_VOICE_architecture.md`
 - `mamuals/02_VOICE_GUI_design.md`
 
 ---

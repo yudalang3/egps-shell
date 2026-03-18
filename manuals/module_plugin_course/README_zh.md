@@ -6,10 +6,35 @@
 > 无论你是想快速创建一个简单工具，还是开发复杂的分析模块，这里都有完整的指导。
 
 ## 模块定义（开发者视角）
-- 任何实现 `IModuleSignature` 的类都是一个模块；`IModuleLoader` 继承了 `IModuleSignature`，因此 GUI 加载器也是模块。模块可以是命令行或 GUI 模块。
-- GUI 模块分三类：**Mainframe core modules**（主框架核心、固定模块）、**iTools/independent tools**（内置独立工具；与核心一起构成 built-in 模块）、**plug-in modules**（外部插件 JAR）。
+
+- 任何实现 `IModuleSignature` 接口的类都是一个模块；`IModuleLoader` 继承了 `IModuleSignature`，因此 GUI 加载器也是模块。模块可以是命令行（CLI）的，也可以是图形界面（GUI）的。
+- GUI 模块分三类：**Mainframe core modules**（主框架核心、固定模块）、**iTools/independent tools**（内置独立工具；与核心一起构成 built-in 模块）、**plug-in modules**（外部插件 JAR）。所以模块简单地讲有 built-in 和 plug-in 两种。
 - `ModuleInspector` 可以跟踪以上三类 GUI 模块；Module Gallery 展示的是其中当前 active loader set 里的模块。
 - 菜单对应：Mainframe core 菜单（核心模块）、iTools 菜单（独立工具）、Plug-ins 菜单（插件模块）。
+
+```mermaid
+flowchart TD
+    A["Module"]
+    B["built-in modules"]
+    C["plug-in modules"]
+    D["Mainframe core modules"]
+    E["iTools modules"]
+
+    A --> B
+    A --> C
+    B --> D
+    B --> E
+
+    classDef root fill:#1f4b99,color:#ffffff,stroke:#16386f,stroke-width:2px;
+    classDef builtin fill:#dbeafe,color:#1e3a8a,stroke:#60a5fa,stroke-width:1.5px;
+    classDef plugin fill:#dcfce7,color:#166534,stroke:#4ade80,stroke-width:1.5px;
+    classDef child fill:#f8fafc,color:#334155,stroke:#94a3b8,stroke-width:1px;
+
+    class A root;
+    class B builtin;
+    class C plugin;
+    class D,E child;
+```
 
 ---
 
@@ -20,12 +45,14 @@
 **适合人群**：所有开发者
 
 **学习内容**：
+
 - 5 分钟创建你的第一个模块
 - 使用自动化脚本快速生成插件
-- 理解 Plugin 和 Built-in 两种部署方式
+- 理解 Plug-in 和 Built-in 两种部署方式
 - 安装和测试插件
 
 **亮点**：
+
 - ✅ 一键生成示例插件
 - ✅ 立即看到效果
 - ✅ 理解核心概念
@@ -39,6 +66,7 @@
 **适合人群**：希望开发外部扩展的开发者
 
 **学习内容**：
+
 - 两种插件开发方式详解
   - 方式 1：继承 `FastBaseTemplate`（简单快速）
   - 方式 2：实现 `IModuleLoader`（灵活强大）
@@ -47,6 +75,7 @@
 - 进阶技巧和最佳实践
 
 **示例项目**：
+
 - 文本处理工具（FastBaseTemplate）
 - 数据分析工具（IModuleLoader）
 
@@ -59,17 +88,20 @@
 **适合人群**：希望开发核心功能的开发者
 
 **学习内容**：
-- Built-in 与 Plugin 的关系
+
+- Built-in 与 Plug-in 的关系
 - 如何将插件转为内置模块
 - 内置模块的优势和适用场景
 - 两种模式的自由转换
 
 **核心概念**：
+
 - **本质相同**：代码和 JAR 结构完全一样
 - **位置决定**：存放位置决定展示方式
 - **可以互换**：一个命令即可转换
 
 **示例项目**：
+
 - 系统信息工具
 
 **时间**：20-30 分钟
@@ -81,6 +113,7 @@
 **适合人群**：希望深入理解系统的开发者
 
 **学习内容**：
+
 - eGPS 模块系统架构
 - `IModuleLoader` 接口设计
 - `ModuleFace` 基类详解
@@ -91,6 +124,7 @@
 - 扩展点和自定义开发
 
 **适合场景**：
+
 - 需要定制模块加载机制
 - 开发复杂的插件系统
 - 贡献代码到 eGPS 核心
@@ -104,6 +138,7 @@
 **适合人群**：所有插件开发者
 
 **学习内容**：
+
 - `eGPS2.plugin.properties` 配置文件格式详解
 - 所有配置项的详细说明（必需/可选）
 - 配置项格式要求和示例
@@ -111,6 +146,7 @@
 - 最佳实践和配置模板
 
 **核心配置项**：
+
 - ✅ `launchClass` - 启动类（必需）
 - ✅ `dependentJars` - 依赖库（按需）
 - ℹ️ `pluginName` / `version` / `author` / `description` - 可作为补充元数据书写，但当前加载器不依赖这些字段
@@ -126,6 +162,7 @@
 **位置**：`docs/module_plugin_course/create-all-test-plugins.sh`
 
 **功能**：
+
 - 一键生成 4 个功能完整的示例插件
 - 自动编译、打包
 - 输出到 `plug_dist` 目录
@@ -144,6 +181,7 @@ ls plug_dist/
 ```
 
 **生成内容**：
+
 - `fastbase-plugin.jar` - 继承 FastBaseTemplate 的简单示例
 - `direct-plugin.jar` - 实现 IModuleLoader 的复杂示例
 - `calculator-plugin.jar` - 实用计算器（含中英文文档）
@@ -208,13 +246,14 @@ ls plug_dist/
 
 根据你的需求选择：
 
-| 需求 | 阅读章节 | 时间 |
-|------|----------|------|
+
+| 需求                 | 阅读章节        | 时间    |
+| -------------------- | --------------- | ------- |
 | **快速创建简单工具** | 01 + 02 (方式1) | 30 分钟 |
-| **开发复杂插件** | 01 + 02 (方式2) | 90 分钟 |
-| **了解部署方式** | 01 + 03 | 40 分钟 |
-| **贡献核心代码** | 全部 | 3 小时 |
-| **定制加载机制** | 04 + 源码 | 2 小时 |
+| **开发复杂插件**     | 01 + 02 (方式2) | 90 分钟 |
+| **了解部署方式**     | 01 + 03         | 40 分钟 |
+| **贡献核心代码**     | 全部            | 3 小时  |
+| **定制加载机制**     | 04 + 源码       | 2 小时  |
 
 ---
 
@@ -260,6 +299,7 @@ ls plug_dist/
 ```
 
 **关键点**：
+
 - ✅ 可以复用同一套模块代码与接口
 - ✅ 同一个 JAR 往往可以在两种部署方式之间转换
 - ⚠️ 进入壳层的运行路径并不完全相同
@@ -279,6 +319,7 @@ Module Gallery:
 ```
 
 **作用**：
+
 - 快速识别外部插件
 - 区分内置模块和外部扩展
 - 用户友好的视觉提示
@@ -293,6 +334,7 @@ dependency-egps/my-plugin.jar         ← Built-in
 ```
 
 **系统行为**：
+
 1. ✅ 优先使用 classpath (dependency-egps) 版本
 2. ⚠️ 控制台输出警告信息
 3. 📋 弹出警告对话框提示用户
@@ -392,22 +434,23 @@ bash docs/module_plugin_course/create-all-test-plugins.sh
 **生成的插件**：
 
 1. **fastbase-plugin.jar** - FastBaseTemplate 简单示例
+
    - 代码量：约 70 行
    - 特点：最简单的实现方式
    - 适合：快速开发工具型插件
-
 2. **direct-plugin.jar** - IModuleLoader 复杂示例
+
    - 代码量：约 200 行
    - 特点：架构清晰，Loader/Panel 分离
    - 适合：大型复杂插件
-
 3. **calculator-plugin.jar** - 实用计算器 ⭐
+
    - 代码量：约 400 行
    - 功能：基本算术运算、键盘支持、错误处理
    - 文档：完整的中英文 HTML 文档
    - 适合：学习如何实现实用工具
-
 4. **clipboardpaste-plugin.jar** - 路径转换工具 ⭐
+
    - 代码量：约 500 行
    - 功能：Windows ↔ WSL 路径转换、剪贴板集成
    - 文档：完整的中英文 HTML 文档
@@ -416,6 +459,7 @@ bash docs/module_plugin_course/create-all-test-plugins.sh
 ### 内置模块示例
 
 参考源码：
+
 - 文件管理器：`src/egps2/builtin/modules/filemanager/`
 - 模块画廊：`src/egps2/builtin/modules/gallerymod/`
 - 文本编辑器：`src/egps2/builtin/modules/largetextedi/`
@@ -427,25 +471,27 @@ bash docs/module_plugin_course/create-all-test-plugins.sh
 ### IDE
 
 - **IntelliJ IDEA**（推荐）
+
   - 优秀的 Java 支持
   - 内置 Maven/Gradle
   - 强大的重构功能
-
 - **Eclipse**
+
   - 免费开源
   - 丰富的插件生态
 
 ### 构建工具
 
 - **手动脚本**（本教程使用）
+
   - 简单直接
   - 易于理解
-
 - **Maven**（可选）
+
   - 依赖管理
   - 标准化构建
-
 - **Gradle**（可选）
+
   - 灵活强大
   - Groovy/Kotlin DSL
 
@@ -455,14 +501,12 @@ bash docs/module_plugin_course/create-all-test-plugins.sh
 
 ### eGPS 核心文档
 
-- [CLAUDE.md](../../CLAUDE.md) - 项目整体说明
-- [module&pluginSystem/](../module&pluginSystem/) - 模块系统技术文档
-- [understanding/](../understanding/) - 架构理解文档
+- 请查阅`docs`目录
 
 ### 源码参考
 
 - 核心接口：`src/egps2/modulei/IModuleLoader.java`
-- 基础类：`src/egps2/frame/ModuleFace.java`
+- 基础类： `src/egps2/frame/ModuleFace.java`
 - 快速模板：`src/egps2/plugin/fastmodtem/FastBaseTemplate.java`
 - 模块发现：`src/egps2/frame/features/ModuleDiscoveryService.java`
 - 配置读取：`src/egps2/plugin/manager/PluginProperty.java`
@@ -484,6 +528,7 @@ bash docs/module_plugin_course/create-all-test-plugins.sh
 ### 常见问题
 
 查看各教程文档的"常见问题"部分：
+
 - [01 - 快速开始 FAQ](01_QUICK_START_zh.md#常见问题)
 - [02 - 插件开发 FAQ](02_PLUGIN_DEVELOPMENT_zh.md#常见问题)
 - [03 - 内置模块 FAQ](03_BUILTIN_DEVELOPMENT_zh.md#常见问题)
@@ -562,28 +607,5 @@ java -cp "./out/production/egps-main.gui:dependency-egps/*" egps2.Launcher
 
 - **教程版本**：1.0
 - **eGPS 版本**：2.1+
-- **最后更新**：2025-12-05
+- **最后更新**：2026-03-18
 - **作者**：eGPS Dev Team
-
----
-
-## 📝 更新日志
-
-### 2025-12-05 - v1.0
-- ✅ 完整的教程体系
-- ✅ 自动化脚本工具
-- ✅ 详细的示例代码
-- ✅ 架构原理说明
-
----
-
-## 🚀 开始学习
-
-准备好了吗？让我们从[快速开始](01_QUICK_START_zh.md)开始吧！
-
-祝你学习愉快！ 🎉
-
----
-
-**eGPS Dev Team**
-2025-12-05

@@ -5,10 +5,34 @@
 
 ## Module definition (developer view)
 
-- Any class implementing `IModuleSignature` is considered a module. Since `IModuleLoader` extends `IModuleSignature`, GUI loaders are modules too.
-- GUI modules currently fall into three groups: **Mainframe core modules**, **iTools / independent tools**, and **plugin modules** shipped as external JARs.
+- Any class implementing `IModuleSignature` is considered a module. Since `IModuleLoader` extends `IModuleSignature`, GUI loaders are modules too. A module can be a command-line (CLI) module or a graphical (GUI) module.
+- GUI modules currently fall into three groups: **Mainframe core modules**, **iTools / independent tools**, and **plug-in modules** shipped as external JARs. In simpler terms, modules are divided into built-in and plug-in deployment types.
 - `ModuleInspector` can track all three groups; Module Gallery shows the current active loader set among them.
 - Menu mapping is currently: Mainframe core menu for core modules, iTools menu for independent tools, and Plugins menu for plugin modules.
+
+```mermaid
+flowchart TD
+    A["Module"]
+    B["built-in modules"]
+    C["plug-in modules"]
+    D["Mainframe core modules"]
+    E["iTools modules"]
+
+    A --> B
+    A --> C
+    B --> D
+    B --> E
+
+    classDef root fill:#1f4b99,color:#ffffff,stroke:#16386f,stroke-width:2px;
+    classDef builtin fill:#dbeafe,color:#1e3a8a,stroke:#60a5fa,stroke-width:1.5px;
+    classDef plugin fill:#dcfce7,color:#166534,stroke:#4ade80,stroke-width:1.5px;
+    classDef child fill:#f8fafc,color:#334155,stroke:#94a3b8,stroke-width:1px;
+
+    class A root;
+    class B builtin;
+    class C plugin;
+    class D,E child;
+```
 
 ---
 
@@ -22,7 +46,7 @@ Main outcomes:
 
 - create a first module in minutes
 - use the automation script to generate example plugins
-- understand Plugin vs Built-in deployment
+- understand Plug-in vs Built-in deployment
 - install and test a plugin
 
 ### 02. Plugin Development (Plugin mode)
@@ -42,7 +66,7 @@ Best for developers who want modules to ship with the application.
 
 Main topics:
 
-- relation between Built-in and Plugin deployment
+- relation between Built-in and Plug-in deployment
 - when the same module code can be reused
 - runtime differences between the two deployment modes
 - practical conversion between them

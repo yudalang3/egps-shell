@@ -2,7 +2,7 @@
 
 本文档聚焦 **VOICE 的 GUI 侧实现**：以 `AbstractGuiBaseVoiceFeaturedPanel` 为典型入口，梳理其背后共用的 GUI 基类 `VersatileOpenInputClickAbstractGuiBase` 及其三个子面板（Bookmark / Input / Operation）的现有设计与执行逻辑。
 
-- 关联文档：`mamuals/01VOICE_architecture.md`（VOICE 分层与三种集成形态的概览）
+- 关联文档：`manuals/01_VOICE_architecture.md`（VOICE 分层与三种集成形态的概览）
 - 目标：把“现在到底怎么跑起来、事件怎么串起来、状态怎么变化”讲清楚，尤其是 **书签树节点如何被创建/绑定/持久化** 的机制。
 
 ---
