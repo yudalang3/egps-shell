@@ -1,79 +1,129 @@
-# egps-shell
+# egps-main
 
 [English](README.md) | [中文](README_zh.md)
 
-![eGPS-shell Screenshot](https://github.com/yudalang3/egps-shell/blob/main/snapshot/ScreenShot_2025-12-13_171628_725.png?raw=true)
+![egps-shell Screenshot](https://github.com/yudalang3/egps-shell/blob/main/snapshot/ScreenShot_2025-12-13_171628_725.png?raw=true)
 
-If you would like a bundled version that includes egps-base, egps-shell, and egps-pathway.evol.browser, please visit: https://github.com/yudalang3/eGPS2.1
+`egps-main` is the closed-source code repository for `egps-shell`. `egps-shell` is the GUI shell base of eGPS, used to host desktop modules. The main external-facing documentation lives in `docs/` and `manuals/`.
 
-A GUI main framework (shell) for eGPS 2.1, built on eGPS-base.
-
-# Manuals
-
-Please check the `module_dev_references/docs` directory for the eGPS-shell documentation references.
+If you need a bundled distribution that includes `egps-base`, `egps-shell`, and `egps-pathway.evol.browser`, visit: https://github.com/yudalang3/egps-pathway.evol.browser
 
 ## Overview
 
-egps-shell is the primary GUI host for eGPS software—the base scaffold. Although the GUI main framework is closed-source, all users can use it free of charge.
+- `egps-main` is the maintained source project.
+- `egps-shell` is the GUI shell and baseline runtime described by the public docs.
+- `egps2` is the main Java package namespace used by the current codebase.
+- The application is Swing-based and supports modular loading, plugin integration, and VOICE-based workflows.
 
-## Downloads
+## Documentation Map
 
-Prebuilt packages for Windows, macOS, and Linux are available under Releases. Download the package for your platform and run it directly.
+- `README.md` / `README_zh.md`: repository entry for `egps-main`
+- `docs/`: reference documentation for `egps-shell`
+- `manuals/`: tutorials and practical guides for `egps-shell`
+- `manuals/module_plugin_course/`: focused material for module and plugin development
 
-To keep iteration fast, the JRE runtime is not bundled for now. Please install a JRE yourself. You can use any Java runtime such as OpenJDK, Oracle JDK, AdoptOpenJDK, Zulu, or Microsoft JDK.
+## Runtime Configuration
 
-Some handy links to get a Java runtime quickly:
+`egps-shell` mainly uses the following runtime locations and conventions:
 
-- [Integrated downloads for users in mainland China](https://www.injdk.cn/)
-- [AdoptOpenJDK](https://adoptopenjdk.net/releases.html)
-- [Microsoft JDK](https://learn.microsoft.com/en-us/java/openjdk/install)
+- User configuration directory: `~/.egps2/config`
+- Module loading configuration: `~/.egps2/config/egps2.loading.module.config.txt`
+- Plugin directory: `~/.egps2/config/plugin/`
+- Recommended runtime argument file: `@eGPS.args` (`eGPS.args` is a text file; `@eGPS.args` is the Java command-line syntax for reading that file and applying its contents as runtime arguments)
 
-## Usage
+`@eGPS.args` contains the `--add-exports` and `--add-opens` options required by the current Java runtime setup, so it should be included in normal launches.
 
-1. Build a plugin JAR from `src/test.plugin` using your preferred Java build tool.
-2. Copy that JAR to the plugin directory specified by the eGPS configuration.
-3. Launch egps-shell; the plugin is detected and loaded at startup.
+## Build From Source
 
-For Windows users:
+This repository is typically developed in IntelliJ IDEA with JDK 25. Dependencies are mainly managed through `dependency-egps/*`.
+It is a basic Java project and does not use Maven or Gradle as the build workflow, which keeps it straightforward for direct local use.
 
-```shell
-# java -cp "out/production/egps-main.gui;dependency-egps/*" -Xmx12g '@eGPS.args' egps2.Launcher4Dev
-java -cp "dependency-egps/*" -Xmx12g '@eGPS.args' egps2.Launcher
+On macOS/Linux, a minimal manual compilation command looks like this:
+
+```sh
+javac -d ./out/production/egps-main.gui -cp "dependency-egps/*" $(find src -name "*.java")
 ```
 
-For macOS/Linux users:
+After compilation, class files should be located in `out/production/egps-main.gui`. The repository's `build_jar_and_move.sh` can package the shell JAR and copy it into a local deployment directory, but it is mainly intended for the maintainer's own local environment.
 
-```shell
-# java -cp "out/production/egps-main.gui:dependency-egps/*" -Xmx12g @eGPS.args egps2.Launcher4Dev
-java -cp "dependency-egps/*" -Xmx12g @eGPS.args egps2.Launcher
+## Run From Source
+
+At runtime, you need both the compiled classes and the dependency JARs.
+
+For Windows:
+
+```sh
+java -cp "out/production/egps-main.gui;dependency-egps/*" -Xmx12g @eGPS.args egps2.Launcher
+java -cp "out/production/egps-main.gui;dependency-egps/*" -Xmx12g @eGPS.args egps2.Launcher4Dev
+java -cp "out/production/egps-main.gui;dependency-egps/*" -Xmx12g @eGPS.args egps2.Launcher com.example.YourModuleLoader
 ```
+
+For macOS/Linux:
+
+```sh
+java -cp "out/production/egps-main.gui:dependency-egps/*" -Xmx12g @eGPS.args egps2.Launcher
+java -cp "out/production/egps-main.gui:dependency-egps/*" -Xmx12g @eGPS.args egps2.Launcher4Dev
+java -cp "out/production/egps-main.gui:dependency-egps/*" -Xmx12g @eGPS.args egps2.Launcher com.example.YourModuleLoader
+```
+
+The third command launches a specific module directly by passing the fully qualified loader class name.
+
+## VOICE CLI
+
+If the module is VOICE-based and exposes `SubTabModuleRunner`, you can use `egps2.builtin.modules.CLI`. The first argument is the module class name, and the second argument is a configuration file in the same format used by the VOICE GUI.
+
+Example on macOS/Linux:
+
+```sh
+java -cp "out/production/egps-main.gui:dependency-egps/*" @eGPS.args egps2.builtin.modules.CLI your.package.YourRunner path/to/config.txt
+```
+
+On Windows, use `;` instead of `:` in the classpath.
 
 ## Notes
 
-For detailed configuration, see the eGPS-base documentation in the docs directory.
+- `docs/` and `manuals/` form the public-facing documentation set for `egps-shell`.
+- This README stays repository-focused; deeper product and framework explanations belong in those two directories.
 
-# AI-assistant prompts
+## AI-Assisted Development
 
-## Case study 1
+We support and encourage users to develop their own tools on top of the eGPS 2.1 platform. Swing as a Java GUI framework rose in the 1990s; while it is no longer evolving with many new features, it remains stable and is still a practical development option.
 
-Build a module from scratch using the official VOICE framework:
+### Case 1: Create a new VOICE-based module
 
-```shell
-I am developing an eGPS module and need the main framework's VOICE capability. The official sample code is in ./module_dev_references/voice and the documentation is under ./module_dev_references/docs/. Focus on VOICE_MODULE_ARCHITECTURE.md and the module_plugin_course directory.
+```text
+I am developing a new eGPS module in `egps-main` and want to use the `egps-shell` VOICE framework.
+Please study:
+- `docs/voiceFramework/VOICE_MODULE_ARCHITECTURE.md`
+- `docs/voiceFramework/VOICE-GUI.md`
+- `manuals/module_plugin_course/`
 
-The module name is abcdefg, the module description is abcdefg, the module version is 1.0.0, and the author is xyz.
+The module name is abcdefg.
+The module description is abcdefg.
+The version is 1.0.0.
+The author is xyz.
 The primary function is abcdefg.
+
+Please implement it in the appropriate VOICE style and wire up the relevant entry points.
 ```
 
-## Case study 2
+### Case 2: Refactor an existing module into VOICE style
 
-Refactor an existing module:
+```text
+I am refactoring an existing eGPS module in `egps-main`.
+Please use the `egps-shell` VOICE framework and study:
+- `docs/voiceFramework/VOICE_MODULE_ARCHITECTURE.md`
+- `docs/voiceFramework/VOICE-GUI.md`
+- `manuals/module_plugin_course/`
 
-```shell
-I am refactoring an eGPS module named xxxxxx by author xxx. I need to use the main framework's VOICE capability. The official sample code is in ./module_dev_references/voice and the documentation is under ./module_dev_references/docs/. Focus on VOICE_MODULE_ARCHITECTURE.md and the module_plugin_course directory.
+The module name is xxxxxx.
+The author is xxx.
 
-Please convert it to the dockable/floating/handytools style in the VOICE framework.
-Assume we are using the floating style: all entry parameters are String and all return values are String. Path parameters must use the path. prefix, such as path.input.file.
+Please convert it to the dockable, floating, or handytools style.
+Assume we are targeting the floating style:
+- all input parameters are `String`
+- all return values are `String`
+- path parameters use the `path.` prefix, such as `path.input.file`
 
-Also help me wire up the CLI so I can run it from the command line.
+Also help wire up the CLI so the module can run from the command line.
 ```
