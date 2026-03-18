@@ -67,7 +67,34 @@ Use this style when loader and panel responsibilities should be clearly separate
 
 ### Custom icons
 
-Plugins can supply icons so they integrate more naturally with the shell UI.
+To use a custom icon, implement `getIcon()` in the loader class, which is the plugin's main class. The method should return an `IconBean`.
+
+You also need to import `egps2.modulei.IconBean` at the top of the file.
+
+```java
+import egps2.modulei.IconBean;
+```
+
+`getIcon()` is an abstract method, so the plugin main class should implement it with `@Override`.
+
+```java
+@Override
+public IconBean getIcon() {
+    // Read the icon from inside the plugin JAR
+    InputStream is = getClass().getResourceAsStream("/icons/my-icon.png");
+    if (is == null) {
+        // Add a null check to avoid later NPEs
+        throw new RuntimeException("Icon resource not found!");
+    }
+    // Create the IconBean first, then populate it through setter methods
+    IconBean icon = new IconBean();
+    icon.setInputStream(is); // pass the InputStream as the icon content
+    icon.setSVG(false); // set true for SVG, false for PNG
+    return icon;
+}
+```
+
+Remember to place the icon file at `build/icons/my-icon.png`.
 
 ### Third-party dependencies
 

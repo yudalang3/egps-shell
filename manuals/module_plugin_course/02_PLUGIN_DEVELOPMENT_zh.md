@@ -584,15 +584,32 @@ javac -d $BUILD_DIR \
 
 ### 1. 使用自定义图标
 
+自定义图标需要在Loader接口类（即插件主类）中实现 `getIcon()` 接口，在这个接口中需要返回一个 `IconBean` 类型的对象。
+
+为此，还需要在文件头引入 `egps2.modulei.IconBean` 。
+
+```
+import egps2.modulei.IconBean;
+```
+
+`getIcon()` 是一个抽象方法，在插件主类中实现时需要加上 `@Override` 修饰词。
+
 ```java
 @Override
 public IconBean getIcon() {
     // 从插件 JAR 内部读取图标
     InputStream is = getClass().getResourceAsStream("/icons/my-icon.png");
-    return new IconBean(is, false); // false 表示 PNG 格式
+    if (is == null) {
+        // 建议加空指针检查，避免后续 NPE
+        throw new RuntimeException("Icon resource not found!");
+    }
+    // 创建一个IconBean()对象。这一对象不支持在创建时传参，参数传递依赖于后续的方法调用
+    IconBean icon = new IconBean();
+    icon.setInputStream(is); // 传入InputStream对象，作为icon内容
+    icon.setSVG(false); // 如果icon是一个SVG文件，此处设置为true；如果是PNG，则设置为false
+    return icon;
 }
 ```
-
 记得将图标文件放到 `build/icons/my-icon.png`。
 
 ### 2. 添加第三方依赖
