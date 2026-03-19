@@ -49,4 +49,4 @@ Parent module loader
 另见：
 
 - `module_discovery_exclusion_rules.md` / `module_discovery_exclusion_rules_zh.md`
-- `../voiceFramework/VOICE_MODULE_ARCHITECTURE.md` / `../voiceFramework/VOICE_MODULE_ARCHITECTURE_zh.md`
+- `../../manuals/01_VOICE_architecture.md` / `../../manuals/01_VOICE_architecture_zh.md`

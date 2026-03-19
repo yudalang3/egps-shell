@@ -32,8 +32,6 @@
 - `docs/module&pluginSystem/module_discovery_exclusion_rules.md`：说明当前模块发现过滤规则。
 - `docs/module&pluginSystem/module_discovery_subtab_exclusion.md`：说明为什么 VOICE 的 SubTab 不作为普通独立模块发现。
 - `docs/module&pluginSystem/module_versioning_system.md`：说明当前模块版本契约与 `ModuleVersion` 用法。
-- `docs/voiceFramework/VOICE_MODULE_ARCHITECTURE.md`：说明当前 VOICE 框架分层与接入方式。
-- `docs/voiceFramework/VOICE-GUI.md`：说明当前 VOICE 图形界面的设计意图和交互模型。
 - `docs/itoolsManager/itoolmanager_module_discovery_statement.md`：说明当前 ITools Manager 的模块发现与状态建模机制。
 
 ### 子系统与专题说明
@@ -77,8 +75,8 @@
 1. `docs/launchSystem/understanding_how_main.gui_launched.md`
 2. `docs/module&pluginSystem/plugin_integration.md`
 3. `docs/module&pluginSystem/module_discovery_exclusion_rules.md`
-4. `docs/voiceFramework/VOICE_MODULE_ARCHITECTURE.md`
-5. `docs/voiceFramework/VOICE-GUI.md`
+4. `manuals/01_VOICE_architecture_zh.md`
+5. `manuals/02_VOICE_GUI_design_zh.md`
 6. `manuals/00Readme_zh.md`
 7. `manuals/module_plugin_course/README_zh.md`
 

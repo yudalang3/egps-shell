@@ -59,4 +59,4 @@
 - `module_discovery_subtab_exclusion.md` / `module_discovery_subtab_exclusion_zh.md`
 - `plugin_integration.md` / `plugin_integration_zh.md`
 - `plugin_types_statement.md` / `plugin_types_statement_zh.md`
-- `../voiceFramework/VOICE_MODULE_ARCHITECTURE.md` / `../voiceFramework/VOICE_MODULE_ARCHITECTURE_zh.md`
+- `../../manuals/01_VOICE_architecture.md` / `../../manuals/01_VOICE_architecture_zh.md`

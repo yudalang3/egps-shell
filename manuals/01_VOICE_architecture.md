@@ -35,6 +35,16 @@ VOICE can be understood as four layers:
 3. **parameter layer**: turns text parameters into structured values
 4. **execution layer**: your own analysis or processing logic
 
+### Main implementation pieces
+
+The current implementation is centered around a few recurring groups of classes:
+
+- **base GUI layer**: classes such as `VersatileOpenInputClickAbstractGuiBase` and `InputAreaPanel` provide the shared input-area behavior and common UI shell
+- **bookmark and state layer**: classes such as `BookmarkDisplayPanel`, `BookmarkOperationPanel`, `BookMarkNode`, and `EditScriptState` manage saved examples, linked-bookmark behavior, and editing state
+- **event-processing layer**: `EventUniformlyProcessor` coordinates the common interaction flow across the subpanels
+- **parameter layer**: classes under `bean/` and `template/` handle parameter modeling, parsing, assignment, and example generation
+- **fast VOICE tab layer**: classes under `fastmodvoice/`, including `TabModuleFaceOfVoice` and `DockableTabModuleFaceOfVoice`, support tabbed and dockable VOICE modules
+
 ### Standard layout
 
 A typical VOICE module exposes:
@@ -64,6 +74,17 @@ Typical workflow examples include:
 
 - comparative-genomics pipelines with several related steps
 - transcriptomics workflows combining differential-expression analysis and enrichment analysis
+
+### Why dockable SubTabs are handled differently
+
+SubTabs under `DockableTabModuleFaceOfVoice` are internal parts of one parent VOICE module.
+
+Because of that:
+
+- they participate in VOICE composition and workflow organization
+- they are not treated as standalone modules by ordinary module discovery
+
+This is why the module-discovery documents have special exclusion rules for VOICE SubTabs.
 
 ---
 

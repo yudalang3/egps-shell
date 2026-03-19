@@ -32,8 +32,6 @@ Use this writing pattern throughout the directory:
 - `docs/module&pluginSystem/module_discovery_exclusion_rules.md`: explains the current module-discovery filter rules.
 - `docs/module&pluginSystem/module_discovery_subtab_exclusion.md`: explains why VOICE SubTabs are excluded from ordinary module discovery.
 - `docs/module&pluginSystem/module_versioning_system.md`: explains the current module version contract and `ModuleVersion` usage.
-- `docs/voiceFramework/VOICE_MODULE_ARCHITECTURE.md`: explains the current VOICE framework layers and integration patterns.
-- `docs/voiceFramework/VOICE-GUI.md`: explains the current VOICE GUI design intent and interaction model.
 - `docs/itoolsManager/itoolmanager_module_discovery_statement.md`: explains the current ITools Manager discovery and status-tracking mechanism.
 
 ### Subsystem and topic guides
@@ -77,8 +75,8 @@ If you are new to the reference docs, a practical order is:
 1. `docs/launchSystem/understanding_how_main.gui_launched.md`
 2. `docs/module&pluginSystem/plugin_integration.md`
 3. `docs/module&pluginSystem/module_discovery_exclusion_rules.md`
-4. `docs/voiceFramework/VOICE_MODULE_ARCHITECTURE.md`
-5. `docs/voiceFramework/VOICE-GUI.md`
+4. `manuals/01_VOICE_architecture.md`
+5. `manuals/02_VOICE_GUI_design.md`
 6. `manuals/00Readme.md`
 7. `manuals/module_plugin_course/README.md`
 

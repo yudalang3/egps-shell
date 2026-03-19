@@ -51,4 +51,4 @@ This rule is one part of the broader discovery filter set.
 See:
 
 - `module_discovery_exclusion_rules.md`
-- `../voiceFramework/VOICE_MODULE_ARCHITECTURE.md`
+- `../../manuals/01_VOICE_architecture.md`

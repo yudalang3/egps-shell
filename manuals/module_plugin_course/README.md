@@ -176,7 +176,8 @@ Built-in examples can be studied directly under `src/egps2/builtin/modules/`.
 ### Core reference docs
 
 - `docs/module&pluginSystem/`
-- `docs/voiceFramework/`
+- `manuals/01_VOICE_architecture.md`
+- `manuals/02_VOICE_GUI_design.md`
 - `docs/class_reference_and_usage/`
 
 ### Source references

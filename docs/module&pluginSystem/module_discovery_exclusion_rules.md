@@ -59,4 +59,4 @@ This is duplicate resolution, not an exclusion rule in the ordinary filter chain
 - `module_discovery_subtab_exclusion.md`
 - `plugin_integration.md`
 - `plugin_types_statement.md`
-- `../voiceFramework/VOICE_MODULE_ARCHITECTURE.md`
+- `../../manuals/01_VOICE_architecture.md`
