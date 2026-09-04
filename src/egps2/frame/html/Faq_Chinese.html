@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>eGPS 全局字体系统 - 常见问题</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<blockquote>
+
+<h2><font color="#2c3e50">全局字体系统 - 常见问题解答</font></h2>
+
+<p><b>版本：</b>1.0 | <b>最后更新：</b>2025年12月7日</p>
+
+<hr>
+
+<h3><font color="#34495e">基础问题</font></h3>
+
+<p><b><font color="#2980b9">问题1：什么是全局字体系统？</font></b></p>
+<blockquote>
+<p><b>答：</b>全局字体系统是eGPS v2.1.0引入的一个综合字体管理框架，允许用户自定义整个应用程序中所有UI组件的字体。它提供了27种不同的字体类型，分为7个类别。</p>
+</blockquote>
+
+<p><b><font color="#2980b9">问题2：我可以自定义多少种字体类型？</font></b></p>
+<blockquote>
+<p><b>答：</b>您可以自定义27种不同的字体类型：</p>
+<ul>
+    <li><b>模块字体 (3种)</b>：模块标题、模块内容、文档</li>
+    <li><b>对话框字体 (3种)</b>：对话框标题、对话框内容、对话框按钮</li>
+    <li><b>基础组件字体 (3种)</b>：标签、按钮、复选框</li>
+    <li><b>输入组件字体 (3种)</b>：文本框、文本区域、下拉框</li>
+    <li><b>数据展示字体 (4种)</b>：表格、表格表头、列表、树形控件</li>
+    <li><b>工具组件字体 (2种)</b>：工具提示、工具栏</li>
+    <li><b>菜单字体 (2种)</b>：一级菜单、二级菜单</li>
+    <li><b>标签页字体 (2种)</b>：选中的标签页、未选中的标签页</li>
+    <li><b>其他字体 (5种)</b>：进度条、滑块、微调器、滚动面板等</li>
+</ul>
+</blockquote>
+
+<p><b><font color="#2980b9">问题3：在哪里可以找到字体设置？</font></b></p>
+<blockquote>
+<p><b>答：</b>导航至 <b>File → Preference → Appearance</b>。您会看到按类别组织的8个不同的字体设置面板。</p>
+</blockquote>
+
+<hr>
+
+<h3><font color="#34495e">自定义问题</font></h3>
+
+<p><b><font color="#2980b9">问题4：我的字体更改会立即生效吗？</font></b></p>
+<blockquote>
+<p><b>答：</b>是的，当您在"Preference"对话框中点击<b>Apply</b>按钮时，所有字体会立即在整个应用程序中更新。</p>
+</blockquote>
+
+<p><b><font color="#2980b9">问题5：为什么TextArea默认使用等宽字体？</font></b></p>
+<blockquote>
+<p><b>答：</b>TextArea组件主要用于代码编辑和日志查看，等宽字体能提供更好的可读性和对齐效果。如果需要，您可以在Preference中更改。</p>
+</blockquote>
+
+<hr>
+
+<h3><font color="#34495e">技术问题</font></h3>
+
+<p><b><font color="#2980b9">问题6：重启eGPS后，我的字体设置会保留吗？</font></b></p>
+<blockquote>
+<p><b>答：</b>是的，当您点击Apply或OK时，所有字体设置都会自动保存到<code>~/.egps/json/defaultGlobalProperties.json</code>。</p>
+</blockquote>
+
+<p><b><font color="#2980b9">问题7：如果我选择的字体在另一台电脑上不可用会怎样？</font></b></p>
+<blockquote>
+<p><b>答：</b>Java的字体系统会自动替换为相似的可用字体。建议使用广泛可用的字体，如Microsoft YaHei UI、Arial或SimSun以获得最佳兼容性。</p>
+</blockquote>
+
+<hr>
+
+<h3><font color="#34495e">开发者问题</font></h3>
+
+<p><b><font color="#2980b9">问题8：我正在开发模块，如何使用全局字体？</font></b></p>
+<blockquote>
+<p><b>答：</b>通过LaunchProperty类访问字体：</p>
+<pre>
+import egps2.UnifiedAccessPoint;
+import egps2.LaunchProperty;
+
+LaunchProperty lp = UnifiedAccessPoint.getLaunchProperty();
+JLabel label = new JLabel("你好");
+label.setFont(lp.getLabelFont());
+</pre>
+<p><b>详细指导请参见：</b><code>docs/global_preference/how_to_use_global_preference.md</code></p>
+</blockquote>
+
+<p><b><font color="#2980b9">问题9：我需要手动为所有组件设置字体吗？</font></b></p>
+<blockquote>
+<p><b>答：</b>不需要！标准Swing组件会通过UIManager自动使用全局字体。您只需要在以下情况下手动设置字体：</p>
+<ul>
+    <li>创建自定义组件</li>
+    <li>针对特定用例覆盖默认字体</li>
+    <li>使用Graphics直接绘制文本</li>
+</ul>
+</blockquote>
+
+<p><b><font color="#2980b9">问题10：我的模块标题应该使用哪个字体？</font></b></p>
+<blockquote>
+<p><b>答：</b>使用语义化的字体选择：</p>
+<ul>
+    <li><b>模块标题：</b><code>getDefaultTitleFont()</code></li>
+    <li><b>模块内容：</b><code>getDefaultFont()</code></li>
+    <li><b>对话框标题：</b><code>getDialogTitleFont()</code></li>
+    <li><b>数据表格：</b><code>getTableFont()</code></li>
+    <li><b>代码/日志：</b><code>getTextAreaFont()</code>（等宽）</li>
+</ul>
+</blockquote>
+
+<hr>
+
+<h3><font color="#34495e">故障排除</font></h3>
+
+<p><b><font color="#2980b9">问题11：更改设置后，某些对话框仍显示错误的字体，为什么？</font></b></p>
+<blockquote>
+<p><b>答：</b>这可能是由于：</p>
+<ol>
+    <li><b>缓存的组件：</b>尝试重启eGPS</li>
+    <li><b>硬编码字体：</b>某些模块可能使用硬编码字体（请报告为bug）</li>
+    <li><b>第三方库：</b>外部库可能不遵循UIManager设置</li>
+</ol>
+</blockquote>
+
+<p><b><font color="#2980b9">问题12：我可以导出/导入字体设置吗？</font></b></p>
+<blockquote>
+<p><b>答：</b>可以，间接方式。您的字体设置存储在<code>~/.egps/json/defaultGlobalProperties.json</code>中。您可以：</p>
+<ul>
+    <li>复制此文件以备份设置</li>
+    <li>与同事共享以保持UI一致</li>
+    <li>通过替换文件并重启eGPS来恢复设置</li>
+</ul>
+<p><b>注意：</b>在手动编辑此文件之前，请确保eGPS已关闭。</p>
+</blockquote>
+
+<hr>
+
+<h3><font color="#34495e">文档</font></h3>
+
+<p><b><font color="#2980b9">问题13：在哪里可以找到更详细的文档？</font></b></p>
+<blockquote>
+<p><b>答：</b>完整的文档位于<code>docs/global_preference/</code>目录中：</p>
+<ul>
+    <li><code>README.md</code> - 专题入口与阅读顺序</li>
+    <li><code>how_to_use_global_preference.md</code> - 模块与插件如何使用当前全局偏好系统</li>
+    <li><code>global_font_system_design.md</code> - 当前设计目标与边界</li>
+    <li><code>global_font_system_statement.md</code> - 当前系统行为说明</li>
+    <li><code>global_font_system_code_map.md</code> - 相关代码位置与维护提示</li>
+</ul>
+</blockquote>
+
+<hr>
+
+<table border="0" width="100%" bgcolor="#ecf0f1" cellpadding="10">
+<tr>
+<td>
+<p><b>获取更多信息：</b>访问 <a href="https://www.yuque.com/u21499046/egpsdoc">https://www.yuque.com/u21499046/egpsdoc</a></p>
+<p><b>文档版本：</b>1.0 | <b>eGPS版本：</b>2.1.0+</p>
+</td>
+</tr>
+</table>
+
+</blockquote>
+
+</body>
+</html>

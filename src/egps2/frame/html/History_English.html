@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>eGPS Global Font System - Development History</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<blockquote>
+
+<h2><font color="#2c3e50">Global Font System - Development History</font></h2>
+
+<p><b>Project:</b> eGPS Global Font Customization System<br>
+<b>Version:</b> 1.1<br>
+<b>Status:</b> Completed<br>
+<b>Last Updated:</b> December 7, 2025</p>
+
+<hr>
+
+<h3><font color="#34495e">Project Statistics</font></h3>
+
+<table border="1" cellpadding="5" bgcolor="#ecf0f1" width="100%">
+<tr>
+<td><b>Font Types</b></td><td>27</td>
+<td><b>UIManager Keys</b></td><td>40+</td>
+</tr>
+<tr>
+<td><b>Modified Files</b></td><td>8</td>
+<td><b>New Panel Classes</b></td><td>4</td>
+</tr>
+<tr>
+<td><b>Lines of Code</b></td><td>800+</td>
+<td><b>Documentation</b></td><td>76KB</td>
+</tr>
+</table>
+
+<hr>
+
+<h3><font color="#34495e">Development Timeline</font></h3>
+
+<p><b><font color="#2980b9">● Phase 1: Requirements Analysis & Design Work</font></b><br>
+<font color="#7f8c8d"><i>December 7, 2025 - Morning</i></font></p>
+<blockquote>
+<ul>
+<li><b>Problem:</b> Inconsistent fonts across eGPS panels</li>
+<li><b>Analysis:</b> Reviewed 7 existing fonts, found only 4 UIManager keys set</li>
+<li><b>Design:</b> Drafted the design note that later became the current boundary document for this topic</li>
+</ul>
+</blockquote>
+
+<p><b><font color="#2980b9">● Phase 2: Core Implementation</font></b><br>
+<font color="#7f8c8d"><i>December 7, 2025 - Midday</i></font></p>
+<blockquote>
+<p><b>Stage 1: Core Font Extension</b></p>
+<ul>
+<li>Modified LaunchProperty.java: Added 20 Font fields, 40 getters/setters</li>
+<li>Modified LaunchPropertyDTO.java: Added 20 FontDTO fields for JSON</li>
+</ul>
+
+<p><b>Stage 2: UIManager Integration</b></p>
+<ul>
+<li>Created applyFontsToUIManager() method (118 lines)</li>
+<li>Mapped 40+ UIManager keys for all Swing components</li>
+<li>Integrated into Launcher.java startup sequence</li>
+</ul>
+
+<p><b>Stage 3: Settings Interface</b></p>
+<ul>
+<li>Created 4 new font panel classes (DialogFontPanel, ComponentFontPanel, etc.)</li>
+<li>Modified PreferencePanel.java to integrate new panels</li>
+<li>Added real-time UI refresh with SwingUtilities.updateComponentTreeUI()</li>
+</ul>
+</blockquote>
+
+<p><b><font color="#2980b9">● Phase 3: Compilation & Testing</font></b><br>
+<font color="#7f8c8d"><i>December 7, 2025 - Afternoon</i></font></p>
+<blockquote>
+<ul>
+<li>Fixed classpath ordering issues</li>
+<li>Added missing imports (UIManager, SwingUtilities)</li>
+<li>All files compiled successfully</li>
+</ul>
+</blockquote>
+
+<p><b><font color="#2980b9">● Phase 4: Documentation</font></b><br>
+<font color="#7f8c8d"><i>December 7, 2025 - Evening</i></font></p>
+<blockquote>
+<ul>
+<li>Created comprehensive documentation suite (76.5KB total)</li>
+<li>Files: README.md, global_font_system_design.md, global_font_system_statement.md, global_font_system_code_map.md</li>
+<li>These topic documents now describe the current system, its boundaries, and related code locations</li>
+<li>Documented all 27 font types with usage guidelines</li>
+</ul>
+</blockquote>
+
+<p><b><font color="#2980b9">● Phase 5: Refinement & Developer Documentation</font></b><br>
+<font color="#7f8c8d"><i>December 7, 2025 - Late Evening</i></font></p>
+<blockquote>
+<ul>
+<li>Removed backward compatibility code (~50 lines)</li>
+<li>Moved documentation to docs/global_preference/</li>
+<li>Created how_to_use_global_preference.md as the current usage guide for modules and plugins</li>
+</ul>
+</blockquote>
+
+<p><b><font color="#2980b9">● Phase 6: Help Menu Integration</font></b><br>
+<font color="#7f8c8d"><i>December 7, 2025 - Night</i></font></p>
+<blockquote>
+<ul>
+<li>Created bilingual FAQ files (English and Chinese)</li>
+<li>Created bilingual History files (English and Chinese)</li>
+<li>Integrated 4 menu items into Help menu</li>
+</ul>
+</blockquote>
+
+<hr>
+
+<h3><font color="#34495e">Key Achievements</font></h3>
+
+<ul>
+<li><b>Comprehensive Coverage:</b> 27 font types covering all major Swing components</li>
+<li><b>Seamless Integration:</b> 40+ UIManager keys ensure automatic font application</li>
+<li><b>Real-time Updates:</b> Font changes apply immediately without restart</li>
+<li><b>Type Safety:</b> All fonts stored as Font objects, serialized via FontDTO</li>
+<li><b>Developer Friendly:</b> Complete API documentation and usage guide</li>
+<li><b>Well Documented:</b> 76.5KB of comprehensive documentation</li>
+</ul>
+
+<hr>
+
+<h3><font color="#34495e">Technical Highlights</font></h3>
+
+<ul>
+<li><b>Architecture:</b> Three-layer design (LaunchProperty → UIManager → Components)</li>
+<li><b>Persistence:</b> JSON-based configuration via LaunchPropertyDTO</li>
+<li><b>Performance:</b> Singleton pattern, cached font references</li>
+<li><b>UI Refresh:</b> Smart component tree update mechanism</li>
+<li><b>Font Fallback:</b> Prioritized list (Microsoft YaHei UI → Arial → SimSun)</li>
+</ul>
+
+<hr>
+
+<h3><font color="#34495e">Deliverables</font></h3>
+
+<table border="1" cellpadding="5" width="100%">
+<tr bgcolor="#ecf0f1">
+<th>Category</th><th>File</th><th>Size</th><th>Description</th>
+</tr>
+<tr>
+<td rowspan="4"><b>Core Code</b></td>
+<td>LaunchProperty.java</td><td>+400 LOC</td><td>20 new fonts</td>
+</tr>
+<tr>
+<td>LaunchPropertyDTO.java</td><td>+100 LOC</td><td>JSON serialization</td>
+</tr>
+<tr>
+<td>Launcher.java</td><td>+5 LOC</td><td>Font integration</td>
+</tr>
+<tr>
+<td>PreferencePanel.java</td><td>+80 LOC</td><td>4 new panels</td>
+</tr>
+<tr>
+<td rowspan="4"><b>UI Panels</b></td>
+<td>DialogFontPanel.java</td><td>66 LOC</td><td>Dialog fonts</td>
+</tr>
+<tr>
+<td>ComponentFontPanel.java</td><td>65 LOC</td><td>Component fonts</td>
+</tr>
+<tr>
+<td>InputFontPanel.java</td><td>68 LOC</td><td>Input fonts</td>
+</tr>
+<tr>
+<td>DataDisplayFontPanel.java</td><td>72 LOC</td><td>Data fonts</td>
+</tr>
+<tr>
+<td rowspan="5"><b>Documentation</b></td>
+<td>README.md</td><td>4.5KB</td><td>Overview</td>
+</tr>
+<tr>
+<td>how_to_use_global_preference.md</td><td>Usage guide</td><td>Current module/plugin usage guide</td>
+</tr>
+<tr>
+<td>global_font_system_design.md</td><td>35KB</td><td>Design and boundaries</td>
+</tr>
+<tr>
+<td>global_font_system_statement.md</td><td>25KB</td><td>Current behavior</td>
+</tr>
+<tr>
+<td>global_font_system_code_map.md</td><td>20KB</td><td>Code locations</td>
+</tr>
+</table>
+
+<hr>
+
+<table border="0" width="100%" bgcolor="#ecf0f1" cellpadding="10">
+<tr>
+<td>
+<p><b>Project Status:</b> Completed<br>
+<b>Completion Date:</b> December 7, 2025<br>
+<b>Total Development Time:</b> ~8 hours<br>
+<b>Version:</b> 1.1 (Refined)</p>
+<p><i>For technical details, see complete documentation in docs/global_preference/</i></p>
+</td>
+</tr>
+</table>
+
+</blockquote>
+
+</body>
+</html>

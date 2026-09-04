@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>The updates of eGPS</title>
+</head>
+
+<body>
+
+	<blockquote>
+
+		<h3>Small changes of eGPS 2.0.1</h3>
+
+		<ul>
+			<li>2.0.1.1
+				在eGPS2的线程控制中添加两个新方法actionBeforeStare和actionAfterFinished。 <small>2024/03/02</small>
+			</li>
+			<li>2.0.1.2 修复计算模块停止按钮按下之后，再一次启动的时候显示不完全的问题。 <small>2024/03/02</small></li>
+			<li>2.0.1.3 重构计算类的执行逻辑。 <small>2024/03/02</small></li>
+			<li>2.0.1.4 很多提示字符串放入 frame.pro文件。 <small>2024/03/02</small></li>
+			<li>2.0.1.5 发现这个 Busy panel和promot好像同时不可行，但是反而这是一件好事。 <small>2024/03/02</small></li>
+			<li>2.0.1.6 解决Text editor的ComputationalModule，之后产生的promot问题 <small>2024/03/02</small></li>
+			<li>2.0.1.7 解决Text editor一些Dialog显示的问题。 <small>2024/03/02</small></li>
+			<li>2.0.1.8 发现Text editor无法处理一行太长的情况，软件会卡死，先记录这个问题。 <small>2024/03/02</small></li>
+			<li>2.0.1.9 调整一下EGPSFileChooser。 <small>2024/03/02</small></li>
+			<li>2.0.1.10 开始整理eGPS1的模块，要进行迁移操作了。 <small>2024/03/02</small></li>
+			<li>2.0.1.11 先迁移大约19个模块。 <small>2024/03/02</small></li>
+			<li>2.0.1.12 更改ModuleFace中 Help 接口的两个实现，默认用
+				manual_en.html和manual_zh.html两个文件。 <small>2024/03/02</small>
+			</li>
+			<li>2.0.1.13 为voice编写一定的使用说明，详见 About -> History。 <small>2024/03/03</small></li>
+			<li>2.0.1.14 为voice新增数据用户编码数据的导入与导出，用户可以方便地进行数据保存。 <small>2024/03/03</small></li>
+			<li>2.0.1.15 为Multi-sequence struct模块，实现voice方法。 <small>2024/03/04</small></li>
+			<li>2.0.1.16 注释一些方法。 <small>2024/03/04</small></li>
+			<li>2.0.1.17 修复加载模块之后Tab不显示Icon的问题。(不过默认的ICON有点大，是24x24的，还是有几乎用
+				JSVG这样的库吧，用svg就可以任意缩放了。) <small>2024/03/04</small>
+			</li>
+			<li>2.0.1.18 voice默认应该是 auto save to bookmark when
+				execute，否则执行之后想找回原来的过程就没了。 <small>2024/03/04</small>
+			</li>
+			<li>2.0.1.19
+				修复为防止用户在点击更新按钮之后，再次点击，新增setVisiable操作。（之前实现过，但是发现没有放在执行操作之前） <small>2024/03/05</small>
+			</li>
+			<li>2.0.1.20 测试是否成功。 <small>2024/03/05</small></li>
+			<li>2.0.1.21 未成功，再次修改之后成功。 <small>2024/03/05</small></li>
+			<li>2.0.1.22 精修voice的默认记录功能 <small>2024/03/06</small></li>
+			<li>2.0.1.23 移除JRE8 191中一些无用的jar，感觉这些根本没用。 <small>2024/03/06</small></li>
+			<li>2.0.1.24 引入Jsvg 1.2.0库，因为它可以加载svg。完成svg的准备工作，可实现调节大小的Icon. <small>2024/03/07</small></li>
+			<li>2.0.1.25 用户可以设置软件Tab的ICON。当前有两种Icon，第一个默认的Icon size，还有一个是Tab
+				Icon size。 <small>2024/03/11</small>
+			</li>
+			<li>2.0.1.26 替换introPanel的
+				持久化保存实现方式，用就JsonBean的方式，不用系统提供的方式。Preference方式在Windows中老是提示一个警告，用这种方式可以去除警告。
+				<small>2024/03/11</small>
+			</li>
+			<li>2.0.1.27 Pref面板的Show
+				configuration，弹出面板要去除无意义参数。例如width,locationX等这些。 <small>2024/03/12</small>
+			</li>
+			<li>2.0.1.28 自功更新功能优化，添加 minimum_version，并自动提示。 <small>2024/03/12</small></li>
+			<li>2.0.1.29 限制了IconBean的InputStream。 <small>2024/03/12</small></li>
+			<li>2.0.1.30 测试更新机制。 <small>2024/03/12</small></li>
+			<li>2.0.1.31 测试下载免安装版更新机制。 <small>2024/03/12</small></li>
+			<li>2.0.1.32 调整提示字符串。 <small>2024/03/12</small></li>
+			<li>2.0.1.33 测试调整的提示字符串。 <small>2024/03/12</small></li>
+			<li>2.0.1.34 发现字符串命名有问题，修复。 <small>2024/03/12</small></li>
+			<li>2.0.1.35 Intro模块调整 Module
+				Gallery字符的位置。对模块的分类方式执行记录功能，也就是可以持久化保存用的功能。 <small>2024/03/13</small>
+			</li>
+			<li>2.0.1.36
+				发现我们的ToggleButton太丑了，引入两个美观的可重复使用组件：ToggleButton和SteelCheckBox <small>2024/03/14</small>
+			</li>
+			<li>2.0.1.37 移除，LAF中关于ToggleButton的改动 <small>2024/03/14</small></li>
+			<li>2.0.1.38 记录MTV模块控制面板折叠，位置等功能。 <small>2024/03/14</small></li>
+			<li>2.0.1.39 去掉一些无用的icon。 <small>2024/03/14</small></li>
+			<li>2.0.1.40 将一些jpg/png转为svg。 <small>2024/03/14</small></li>
+			<li>2.0.1.41 将一些模块自己的Icon放到自己代码的包中 <small>2024/03/14</small></li>
+			<li>2.0.1.42 改装MTV的icon，后面要把voice移植进去了 <small>2024/03/14</small></li>
+			<li>2.0.1.43
+				引入一个人MigLayout库，这个库使得排列按钮特别方便。在奖励模块中放入一个有人用现代化界面做的一个dashboard。 <small>2024/03/15</small>
+			</li>
+			<li>2.0.1.44 完成Modern TV的图形界面搭建工作，后面就专心写内核。 <small>2024/03/15</small></li>
+			<li>2.0.1.45 为Modern TV添加一些按钮效果，例如可以显示数字的按钮效果。 <small>2024/03/15</small></li>
+			<li>2.0.1.46 理解了Swing图形委托的机制，去掉BE框架的一些类。 <small>2024/03/16</small></li>
+			<li>2.0.1.47 为MTV写一些GUI的特性。 <small>2024/03/16</small></li>
+			<li>2.0.1.48 迁移下载按钮的位置。 <small>2024/03/16</small></li>
+			<li>2.0.1.49 voice添加 Example按钮。 <small>2024/03/17</small></li>
+			<li>2.0.1.50 Mutation
+				Presenter添加voice数据输入，但是还没完善，因为voice有很多的Example。 <small>2024/03/17</small>
+			</li>
+			<li>2.0.1.51 在Help工具栏按钮中，实现记录Bounds的功能；并添加按钮，用户是否要记录。太好用了。 <small>2024/03/18</small></li>
+			<li>2.0.1.52 完成MTV的数据输入，仍然需要加入大量参数。 <small>2024/03/19</small></li>
+			<li>2.0.1.53 为voice新增Ctrl + Z和 Ctrl + Y操作。 <small>2024/03/20</small></li>
+			<li>2.0.1.54
+				新增一个focus按钮，这样voice的输入面板就可以放大聚焦了。有空可以把这JTextArea通用一些，我发现这个需求蛮多的。 <small>2024/03/20</small>
+			</li>
+			<li>2.0.1.55 更换 word wrap图标，这个更加易懂一些。 <small>2024/03/20</small></li>
+			<li>2.0.1.56 点击Bookmark 应该自动把“Auto save bookmark”这个按钮禁用掉。 <small>2024/03/22</small></li>
+			<li>2.0.1.57 为JTree可点击的Node设置“可点击”的手势。 <small>2024/03/22</small></li>
+			<li>2.0.1.58 生成EGSPJTextArea，这个改装了JTextArea，使其变得更加通用。 <small>2024/03/22</small></li>
+			<li>2.0.1.59 测试minimum required version,有些问题，修复该问题。 <small>2024/03/22</small></li>
+			<li>2.0.1.60 为Alignment提供数据输入面板。 <small>2024/03/22</small></li>
+			<li>2.0.1.61 调整voice的布局，重新选用JTaskPanelContainer <small>2024/03/22</small></li>
+			<li>2.0.1.62 为voice承载的Dialog，提供大小记录的功能。 <small>2024/03/22</small></li>
+			<li>2.0.1.63 修正voice的布局问题。 <small>2024/03/22</small></li>
+			<li>2.0.1.64 完成Alignment view的数据输入面板。 <small>2024/03/23</small></li>
+			<li>2.0.1.65 完成Heatmap的数据输入面板。 <small>2024/03/23</small></li>
+			<li>2.0.1.66 再次修正voice布局问题，上面数据输入部分不用JTaskPanel了换用JXTitlePanel。
+				<small>2024/03/23</small>
+			</li>
+			<li>2.0.1.67 完成桑基图的数据输入面板。 <small>2024/03/23</small></li>
+			<li>2.0.1.68 使时间不可估计的计算能够显示字符串。 <small>2024/03/23</small></li>
+			<li>2.0.1.69 修复GlassPanel中计算任务遮盖不准确的问题。 <small>2024/03/23</small></li>
+			<li>2.0.1.70 修复更新按钮的提示字符串位置不准确的问题。 <small>2024/03/23</small></li>
+			<li>2.0.1.71 重新更改VennPlot模块的数据输入方式。 <small>2024/03/23</small></li>
+			<li>2.0.1.72 重新更改PLL模块的控制面板，先该图形界面。 <small>2024/03/23</small></li>
+			<li>2.0.1.73 重新更改MAPlot模块的数据输入方式。 <small>2024/03/23</small></li>
+			<li>2.0.1.74 完成对所有大型可视化模块数据输入方式的改装。去除Gene
+				Browser和GeneFamily的Pathway comp. <small>2024/03/23</small>
+			</li>
+			<li>2.0.1.75
+				新增一种模块分类的方式：Dependency，它根据模块对eGPS主框架的依赖程度进行分类。从最独立之依赖eGPS容器的OnlyEmployContainer到全特性依赖
+				<small>2024/03/24</small>
+			</li>
+			<li>2.0.1.76 新增全局属性。auto click
+				import，如果用户选择这个选项，那么对于可以导入的模块，用户在打开的时候会自动开启。 <small>2024/03/24</small>
+			</li>
+			<li>2.0.1.77 利用可重用组件 Instant states，可以快速修改颜色和字体。 <small>2024/03/24</small></li>
+			<li>2.0.1.78 Small volume text editor，控制面板重新处理一下，使其更加美观。 <small>2024/03/24</small></li>
+			<li>2.0.1.79 将PLL模块的功能实现。 <small>2024/03/24</small></li>
+			<li>2.0.1.80 将全局属性 auto click import 默认设置为true。 <small>2024/03/24</small></li>
+			<li>2.0.1.81 思考之后根据eGPS2的特性，将Dependency暂时分为下面几类：Only employ
+				container, Remainder invoked module, Mainframe feedback invoked,
+				Computational mechanism employed, Cross module referenced, Full
+				features invoked <small>2024/03/24</small>
+			</li>
+			<li>2.0.1.82 模块Venn plot和Sankey plot调整控制面板的边框，使其更加美观。 <small>2024/03/24</small></li>
+			<li>2.0.1.83 改装完善 Instant states这个面板，可通用。 <small>2024/03/24</small></li>
+			<li>2.0.1.84 完善Small volume text editor模块控制面板的功能。 <small>2024/03/24</small></li>
+			<li>2.0.1.85 根据新的模块分类方式Dependency进行模块分类，一次性弄不完，先做一部分。 <small>2024/03/24</small></li>
+			<li>2.0.1.86 更改Dependency的模块分类名称，这个名称会反复迭代，先不写了。先整理第一个类，最独立的类。 <small>2024/03/24</small></li>
+			<li>2.0.1.87 完成Histogram模块的voice改装。 <small>2024/03/24</small></li>
+			<li>2.0.1.88 修复low volume text editor没有滚动条的问题。 <small>2024/03/24</small></li>
+			<li>2.0.1.89 修复EGPS file chooser无法设置自定义字体的问题。 <small>2024/03/24</small></li>
+			<li>2.0.1.90
+				实现自动化模块分类的类型增加的通用代码，下次增加一种新的分类即可重新排布。首先将Histogram模块放入。 <small>2024/03/24</small>
+			</li>
+			<li>2.0.1.91 Datetime calculator模块分类完善一下。 <small>2024/03/25</small></li>
+			<li>2.0.1.92 模块分类标准By complexity重新命名，涉及模块太多，需逐步完善。 <small>2024/03/25</small></li>
+			<li>2.0.1.93 通用的注释说明中更改颜色的设置方式，除了可以通过rgba字符串之外还能通过 十六进制的方式设置。实际解析的时候要注意支持(EGPSColors类已改。)。 <small>2024/03/25</small></li>
+			<li>2.0.1.94 原来的简单模版 Workbench 字体接入 MainFrame的字体。 <small>2024/03/25</small></li>
+			<li>2.0.1.95 受到原来的开发模块Workbench启发，voice中的子类型CSRM: Convenient scripted runner module，需要在下面加一个Console。具体的成品要等到我需要得到NWK叶子的需求来做一个原形，出来。 <small>2024/03/25</small></li>
+			<li>2.0.1.96 发现voice书签处右键点击的bug，如果通过按住Ctrl键多选之后，再右键点击，在界面上会去掉多选的选项，而且点击删除，只会删除当前选中的结果。待修复。 <small>2024/03/25</small></li>
+			<li>2.0.1.97 为提升开发效率，dev模式启动后，在各个模块的 “加载按钮”tooltip会加上模块的类名。在Module gallery可以看到效果。 <small>2024/03/25</small></li>
+			<li>2.0.1.98 调试CSRM模块，使其更加美观。 <small>2024/03/25</small></li>
+			<li>2.0.1.99 调整Module galery中字体，用titleFont。但是调整之后发现界面看上去不协调，换回原来的设置。 <small>2024/03/27</small></li>
+			<li>2.0.1.100 为Datetime calculator模块编写使用手册；同时完善Features属性。 <small>2024/03/27</small></li>
+		</ul>
+
+	</blockquote>
+</body>
+
+</html>

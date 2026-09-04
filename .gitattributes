@@ -1,0 +1,32 @@
+# =========================
+# 统一换行符
+# =========================
+* text=auto eol=lf
+
+# =========================
+# 常见文本文件
+# =========================
+*.java text
+*.xml text
+*.properties text
+*.md text
+*.yml text
+*.gradle text
+*.gitignore text
+
+# =========================
+# 二进制文件（禁止 diff）
+# =========================
+*.class binary
+*.jar binary
+*.war binary
+*.zip binary
+*.png binary
+*.jpg binary
+*.ico binary
+
+# =========================
+# GitHub 语言统计忽略
+# =========================
+docs/* linguist-documentation
+

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>The updates of eGPS</title>
+</head>
+
+<body>
+
+	<blockquote>
+
+		<h3>Small changes of eGPS 2.0.0</h3>
+
+		<ul>
+			<li>2.0.0.1
+				韦恩图新增一种数据输入方式，即用户可以自己加入一个字符串槽。热图将默认美观的参数脚本放入，令用户直观感受到美感。</li>
+			<li>2.0.0.2 更改 gene browser和gene struct的
+				Icon；修复slf4j+log4j2的一个问题，原因是 biojava的日志依赖要排除干净</li>
+			<li>2.0.0.3 复杂可视化模块的导出功能启用，未开发完成的还没加入</li>
+			<li>2.0.0.4 将closeTab函数在ModuleFace中完成，里面加了记录的功能</li>
+			<li>2.0.0.5 将Eheatmap中的左边部分调宽，去掉其中一个JPanel的Border。</li>
+			<li>2.0.0.6 新增通用组件 Instant status Panel，桑基图和韦恩图已经实现。</li>
+			<li>2.0.0.7 将搜索按钮放到最显眼的位置，将原来的那些插件作为奖励模块。</li>
+			<li>2.0.0.8 将Statics面板的数字排序问题修复。</li>
+			<li>2.0.0.9 完善Tips of day的内容。(需要写的太多了，还是没做好)</li>
+			<li>2.0.0.10 修复一些Dialog中JtextField和JTextArea无法直接粘贴的问题。</li>
+			<li>2.0.0.11 gene brower模块导入数据重新加载 View。</li>
+			<li>2.0.0.12 gene
+				brower模块需要导入单个基因，查看其结构域，但是之前设计的时候是DNA和蛋白质混在一起的，这些东西都剔除一下，只考虑DNA或者蛋白质。</li>
+			<li>2.0.0.13 设置默认好看的配色方案，见类EGPSColors。</li>
+			<li>2.0.0.14 修复sequence struct view domain不一致问题。</li>
+			<li>2.0.0.15 为sequence struct view 添加俗名的操作。</li>
+			<li>2.0.0.16 花费了大约8小时制作了一个Data import
+				JTree(暂名为DataImportHandler)，用户能够以书签的形式保存自己的输入文件，使用户可以方便地查看内容。</li>
+			<li>2.0.0.17 Quick hitogram 模块内置一个测试数据集，使其可以直接载入。</li>
+			<li>2.0.0.18 Gene browser中的Pfam domain还是先放到
+				domain一栏中，这里空出来不放东西（我暂时不知道可以放什么）。</li>
+			<li>2.0.0.19 将Gene browser等模块的Tab可以重命名，为Gene browser写注释。</li>
+			<li>2.0.0.20 为 DataImportHandler 提供鼠标双击的支持。</li>
+			<li>2.0.0.21 开始将 DataImportHandler泛化，使其成为一个通用的组件。</li>
+			<li>2.0.0.22 将geneBrowser的结构域优化显示, 感觉用
+				boxlayout更加合适，进过尝试还是直接用原来的JIDESplitPanel好了，可以通过设置偏好高度来调整。</li>
+			<li>2.0.0.23 改造PhylogeneticTreePanel，去掉 PaintingPanel它不要直接依赖
+				controller，那么如何与其它组件互动呢？。</li>
+			<li>2.0.0.24 将geneBrowser，sequence struct 和 geneFamily 都设置
+				sequenceNameTranlationPath。</li>
+			<li>2.0.0.25 制作 Modern tree view 的一个 Creative mode 模式，做好图形界面。</li>
+			<li>2.0.0.26 将可视化经常要用的 BlankArea
+				封装成一个类，里面附带一些快捷计算的方法，发挥面向对象编程的优势。</li>
+			<li>2.0.0.27 将 BlankArea 右侧的默认留白缩小；修正下面的坐标尺问题。</li>
+			<li>2.0.0.28 完成 Creative mode模式，开始创建右键点击鼠标按钮。</li>
+			<li>2.0.0.29 完成总共 8个右键点击按钮的功能。</li>
+			<li>2.0.0.30 新增导出功能，导出的进化树以一种 human readable的形式存储。</li>
+			<li>2.0.0.31
+				还是要回过来拥抱JAVA，R的生态系统很大，一般想想的功能都能找到R包。但是R天生有两个短板，大数据可视化麻烦、交互式麻烦，比如Shiny不能右键弹出菜单（当然不排除有人去加这种功能，不过要等）</li>
+			<li>2.0.0.32 修复 Alignment view 模块中，一开始载入面板时，显式不全的问题。</li>
+			<li>2.0.0.33 modern tree view 模块
+				新增导入按钮的功能。直接导入一棵进化树。（如果后面有精力可以把import dialog修复好）</li>
+			<li>2.0.0.34 modern tree view 模块放大和鼠标按住滚动的功能写好了</li>
+			<li>2.0.0.35 modern tree view 模块开启新增的 Tooltips</li>
+			<li>2.0.0.36 完善 InformationPanelFactory, 使其作为一个加载html页面的便捷 util类</li>
+			<li>2.0.0.37 新增自动软件更新功能，不过一些工业级别的判定还未加上去。例如判断Jar文件下载是否完全等。</li>
+			<li>2.0.0.38 探索快捷计算文件哈希值的方式，从而判定用户下载的更新包是否完整。</li>
+			<li>2.0.0.39 指定软件更新的协议，也就是指定网上更新的协议。比如必须要有version号，File hash值</li>
+			<li>2.0.0.40
+				更新EGPS主框架的Gesture机制：支持不设置提示语，提示语边框可以上下左右自己设置，提示语相对于按钮的位置可以自己设置。这个Gesture方框可以设置大小。</li>
+			<li>2.0.0.41 使在线更新的功能完全运转,在线获取文件为：asserts/egps_version.json。 <small>2024/02/25</small></li>
+			<li>2.0.0.42 检查是否需要更新软件的时候，新增不能联网的判定，此时在控制台报出问题，图形界面不受影响。 <small>2024/02/25</small></li>
+			<li>2.0.0.43 精简测试代码。 <small>2024/02/25</small></li>
+			<li>2.0.0.44 将SaveUtil类中的报错路径功能实现方式更改，不依赖于Preference类。 <small>2024/02/25</small></li>
+			<li>2.0.0.45 将ImageIcon找不到文件路径的bug修复。 <small>2024/02/25</small></li>
+			<li>2.0.0.46 用户导出pptx格式文件的时候，会自动根据JPanel的尺寸调整ppt的尺寸。 <small>2024/02/25</small></li>
+			<li>2.0.0.47 临时测试网站更新最终版的绿色免安装版软件。 <small>2024/02/25</small></li>
+			<li>2.0.0.48 新增判定当用户第一次打开软件，不应该让其更新。 <small>2024/02/25</small></li>
+			<li>2.0.0.49 新增判定当软件在开发时，不应该让其更新。 <small>2024/02/25</small></li>
+			<li>2.0.0.50 修复2.0.0.46新特性带来的一个文件找不到bug。 <small>2024/02/25</small></li>
+			<li>2.0.0.51 一般<em>Windows</em>操作系统的解压工具是zip，所以也提供zip安装版本。 <small>2024/02/27</small></li>
+			<li>2.0.0.52 修复软件<em>Hint</em>提示操作时，产生的信息显示不全问题。 <small>2024/02/27</small></li>
+			<li>2.0.0.53 调整第一次启动软件时的提示操作，使其展示更加美观。 <small>2024/02/27</small></li>
+			<li>2.0.0.54 全局设置中，新增显示开启软件的提示操作。 <small>2024/02/27</small></li>
+			<li>2.0.0.55 更改更新按钮的提示语句。 <small>2024/02/27</small></li>
+			<li>2.0.0.56 用户在Pref设置了恢复出厂设置后，会关闭Pref dialog。 <small>2024/02/27</small></li>
+			<li>2.0.0.57 更改软件启动后收尾的一些操作执行的线程，不放在EDT里面。这样没有网络的时候就不会卡顿。 <small>2024/02/27</small></li>
+			<li>2.0.0.58 再次修复这个不联网启动时间很长的问题。 <small>2024/02/28</small></li>
+			<li>2.0.0.59 启动时间还是比较长，调整需要更新的过程。 <small>2024/02/28</small></li>
+			<li>2.0.0.60 用户点击Update按钮之后应该设置这个按钮不可用，这样可以防止，用户再次点击。 <small>2024/02/28</small></li>
+			<li>2.0.0.61 Gene browser模块从简单可视化转为复杂可视化。 <small>2024/02/28</small></li>
+			<li>2.0.0.62
+				JAVA的Swing应用在高清屏幕上显示的字体很小。通过添加JVM启动参数尝试解决这个问题。发现很多效果不理想，用户可以自行在启动脚本中设置-Dsun.java2d.uiScale=2.0
+				<small>2024/02/28</small>
+			</li>
+			<li>2.0.0.63 将 Remainder 模块移入奖励模块，该模块不需要用户启动次数即可使用。 <small>2024/02/28</small></li>
+			<li>2.0.0.64 将 ColorMan 模块移入奖励模块，该模块不需要用户启动次数即可使用。 <small>2024/02/28</small></li>
+			<li>2.0.0.65 将 Report bugs 模块Dialog尺寸放大。 <small>2024/02/28</small></li>
+			<li>2.0.0.66 抽象出voice框架的两个成员方法。 <small>2024/02/28</small></li>
+			<li>2.0.0.67 完成voice的框架，现在只差拖拽和右上角的wrap line按钮。 <small>2024/02/28</small></li>
+			<li>2.0.0.68 将一些软件需要使用的字符串放入frame.pro。 <small>2024/02/29</small></li>
+			<li>2.0.0.69 将voice框架的右上角放入 wrap line按钮。 <small>2024/02/29</small></li>
+			<li>2.0.0.70 voice框架，实现用户拖拽输入文件。 <small>2024/02/29</small></li>
+			<li>2.0.0.71 更新机制出现新问题，由于jar_file移动导致类找不到。 <small>2024/02/29</small></li>
+			<li>2.0.0.72 更新机制问题修复，尝试修复出现类找不到的问题1。 <small>2024/02/29</small></li>
+			<li>2.0.0.73 更新机制问题修复，尝试修复出现类找不到的问题1，续。 <small>2024/02/29</small></li>
+			<li>2.0.0.74 更新机制问题修复，尝试修复出现类找不到的问题1，继续。 <small>2024/02/29</small></li>
+			<li>2.0.0.75 完成对更新机制问题的修复。 <small>2024/02/29</small></li>
+			<li>2.0.0.76 测试更新机制对文件的校验。 <small>2024/02/29</small></li>
+			<li>2.0.0.77 测试更新机制对文件的校验。接受文件。 <small>2024/02/29</small></li>
+			<li>2.0.0.78 测试更新机制对文件的校验。接受文件。 <small>2024/02/29</small></li>
+			<li>2.0.0.79 测试更新机制对文件的校验。接受文件。 <small>2024/02/29</small></li>
+			<li>2.0.0.80 文件校验机制暂时关闭，因为简单的算法不靠谱，像CRC32复杂一点的算法太费时。 <small>2024/02/29</small></li>
+			<li>2.0.0.81 更改voice类的一些文字。 <small>2024/02/29</small></li>
+			<li>2.0.0.82 Dialog中的所有文字改成英文。 <small>2024/03/01</small></li>
+			<li>2.0.0.83 改装voice，使得这个模块可以实现CSRM的功能，现在已经可以用FGCM功能了。 <small>2024/03/01</small></li>
+			<li>2.0.0.84 解决提示框中，有中文出现的问题。 <small>2024/03/01</small></li>
+			<li>2.0.0.85
+				学习Swing图形界面资源管理的机制，尝试理解UIManger的所有属性，发现这也是处理参数爆炸的一种手段。 <small>2024/03/01</small>
+			</li>
+			<li>2.0.0.86 调试启动有点慢的问题。 <small>2024/03/01</small></li>
+			<li>2.0.0.87 更改提示字符串，因为无论如何都会更新版本。 <small>2024/03/01</small></li>
+			<li>2.0.0.88 在About中新增FAQ。 <small>2024/03/01</small></li>
+			<li>2.0.0.89 完善Faq。 <small>2024/03/01</small></li>
+			<li>2.0.0.90 修改Pathway Illu模块的一些显式问题，新增导出功能。 <small>2024/03/01</small></li>
+			<li>2.0.0.91 对于EGPSParameterParser类新增直接得到Font与Color实例的方法。 <small>2024/03/01</small></li>
+			<li>2.0.0.92 随着历史记录的增多，改善History面板的显式方式，新增Tree style，也就是说history按钮就相当于是一个模块了。 <small>2024/03/01</small></li>
+			<li>2.0.0.93 将所有记录状态的路径都放到cofig/json目录中，相当于是用户使用的痕迹，后面打包的时候回都应该消除。 <small>2024/03/01</small></li>
+			<li>2.0.0.94 三特性(下面也都简称为三特性): help,statistics和summary中的summary切换成可变，因为这个summary的编写需要有很多文字上的积累。 <small>2024/03/01</small></li>
+			<li>2.0.0.95 将Graphic illustration 改为English manual，Text改为Chinese manual。因为这里的Grahic illustration可以被放入到manual中。 <small>2024/03/01</small></li>
+			<li>2.0.0.96 将Computational test这个测试模块放入奖励菜单。 <small>2024/03/02</small></li>
+			<li>2.0.0.97 调整图形界面一些不是为了JDK8设置的一大堆代码，我们不需要考虑兼容性，只要JAVA8就行。 <small>2024/03/02</small></li>
+			<li>2.0.0.98 三特性在 intro模块中处理好。 <small>2024/03/02</small></li>
+			<li>2.0.0.99 完善history按钮，对应的软件软件开发解释说明，从版本1到版本2的变更记录。 <small>2024/03/02</small></li>
+			<li>2.0.0.100 将 Large text editor从 eGPS1一直到eGPS2。 <small>2024/03/02</small></li>
+		</ul>
+
+	</blockquote>
+</body>
+
+</html>

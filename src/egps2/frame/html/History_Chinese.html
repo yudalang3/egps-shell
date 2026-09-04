@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>eGPS 全局字体系统 - 开发历史</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<blockquote>
+
+<h2><font color="#2c3e50">全局字体系统 - 开发历史</font></h2>
+
+<p><b>项目：</b>eGPS 全局字体自定义系统<br>
+<b>版本：</b>1.1<br>
+<b>状态：</b>已完成<br>
+<b>最后更新：</b>2025年12月7日</p>
+
+<hr>
+
+<h3><font color="#34495e">项目统计</font></h3>
+
+<table border="1" cellpadding="5" bgcolor="#ecf0f1" width="100%">
+<tr>
+<td><b>字体类型</b></td><td>27</td>
+<td><b>UIManager键</b></td><td>40+</td>
+</tr>
+<tr>
+<td><b>修改文件数</b></td><td>8</td>
+<td><b>新增面板类</b></td><td>4</td>
+</tr>
+<tr>
+<td><b>代码行数</b></td><td>800+</td>
+<td><b>文档大小</b></td><td>76KB</td>
+</tr>
+</table>
+
+<hr>
+
+<h3><font color="#34495e">开发时间线</font></h3>
+
+<p><b><font color="#2980b9">● 阶段1：需求分析与规划</font></b><br>
+<font color="#7f8c8d"><i>2025年12月7日 上午</i></font></p>
+<blockquote>
+<ul>
+<li><b>问题：</b>eGPS面板中字体不一致</li>
+<li><b>分析：</b>审查了7种现有字体，发现只设置了4个UIManager键</li>
+<li><b>规划：</b>创建35KB规划文档，提出20种新字体类型</li>
+</ul>
+</blockquote>
+
+<p><b><font color="#2980b9">● 阶段2：核心实现</font></b><br>
+<font color="#7f8c8d"><i>2025年12月7日 中午</i></font></p>
+<blockquote>
+<p><b>第一阶段：核心字体扩展</b></p>
+<ul>
+<li>修改 LaunchProperty.java：添加20个Font字段，40个getter/setter</li>
+<li>修改 LaunchPropertyDTO.java：添加20个FontDTO字段用于JSON</li>
+</ul>
+
+<p><b>第二阶段：UIManager集成</b></p>
+<ul>
+<li>创建 applyFontsToUIManager() 方法（118行）</li>
+<li>映射40+个UIManager键到所有Swing组件</li>
+<li>集成到 Launcher.java 启动序列</li>
+</ul>
+
+<p><b>第三阶段：设置界面</b></p>
+<ul>
+<li>创建4个新字体面板类（DialogFontPanel、ComponentFontPanel等）</li>
+<li>修改 PreferencePanel.java 以集成新面板</li>
+<li>使用 SwingUtilities.updateComponentTreeUI() 添加实时UI刷新</li>
+</ul>
+</blockquote>
+
+<p><b><font color="#2980b9">● 阶段3：编译与测试</font></b><br>
+<font color="#7f8c8d"><i>2025年12月7日 下午</i></font></p>
+<blockquote>
+<ul>
+<li>修复classpath排序问题</li>
+<li>添加缺失的导入（UIManager、SwingUtilities）</li>
+<li>所有文件编译成功</li>
+</ul>
+</blockquote>
+
+<p><b><font color="#2980b9">● 阶段4：文档编写</font></b><br>
+<font color="#7f8c8d"><i>2025年12月7日 傍晚</i></font></p>
+<blockquote>
+<ul>
+<li>创建综合文档套件（总计76.5KB）</li>
+<li>文件：README.md、global_font_system_design.md、global_font_system_statement.md、global_font_system_code_map.md</li>
+<li>这些专题文档现在描述的是当前系统、当前边界和相关代码位置</li>
+<li>记录所有27种字体类型及使用指南</li>
+</ul>
+</blockquote>
+
+<p><b><font color="#2980b9">● 阶段5：优化与开发者文档</font></b><br>
+<font color="#7f8c8d"><i>2025年12月7日 晚上</i></font></p>
+<blockquote>
+<ul>
+<li>移除向后兼容代码（约50行）</li>
+<li>将文档移至 docs/global_preference/</li>
+<li>创建 how_to_use_global_preference.md，作为模块与插件当前使用说明</li>
+</ul>
+</blockquote>
+
+<p><b><font color="#2980b9">● 阶段6：帮助菜单集成</font></b><br>
+<font color="#7f8c8d"><i>2025年12月7日 深夜</i></font></p>
+<blockquote>
+<ul>
+<li>创建双语FAQ文件（英文和中文）</li>
+<li>创建双语History文件（英文和中文）</li>
+<li>将4个菜单项集成到Help菜单</li>
+</ul>
+</blockquote>
+
+<hr>
+
+<h3><font color="#34495e">主要成就</font></h3>
+
+<ul>
+<li><b>全面覆盖：</b>27种字体类型涵盖所有主要Swing组件</li>
+<li><b>无缝集成：</b>40+个UIManager键确保自动应用字体</li>
+<li><b>实时更新：</b>字体更改立即生效，无需重启</li>
+<li><b>类型安全：</b>所有字体存储为Font对象，通过FontDTO序列化</li>
+<li><b>开发者友好：</b>完整的API文档和使用指南</li>
+<li><b>文档完善：</b>76.5KB综合文档</li>
+</ul>
+
+<hr>
+
+<h3><font color="#34495e">技术亮点</font></h3>
+
+<ul>
+<li><b>架构：</b>三层设计（LaunchProperty → UIManager → Components）</li>
+<li><b>持久化：</b>通过LaunchPropertyDTO实现基于JSON的配置</li>
+<li><b>性能：</b>单例模式，字体引用缓存</li>
+<li><b>UI刷新：</b>智能组件树更新机制</li>
+<li><b>字体回退：</b>优先级列表（Microsoft YaHei UI → Arial → SimSun）</li>
+</ul>
+
+<hr>
+
+<h3><font color="#34495e">交付成果</font></h3>
+
+<table border="1" cellpadding="5" width="100%">
+<tr bgcolor="#ecf0f1">
+<th>类别</th><th>文件</th><th>大小</th><th>描述</th>
+</tr>
+<tr>
+<td rowspan="4"><b>核心代码</b></td>
+<td>LaunchProperty.java</td><td>+400行</td><td>20个新字体</td>
+</tr>
+<tr>
+<td>LaunchPropertyDTO.java</td><td>+100行</td><td>JSON序列化</td>
+</tr>
+<tr>
+<td>Launcher.java</td><td>+5行</td><td>字体集成</td>
+</tr>
+<tr>
+<td>PreferencePanel.java</td><td>+80行</td><td>4个新面板</td>
+</tr>
+<tr>
+<td rowspan="4"><b>UI面板</b></td>
+<td>DialogFontPanel.java</td><td>66行</td><td>对话框字体</td>
+</tr>
+<tr>
+<td>ComponentFontPanel.java</td><td>65行</td><td>组件字体</td>
+</tr>
+<tr>
+<td>InputFontPanel.java</td><td>68行</td><td>输入字体</td>
+</tr>
+<tr>
+<td>DataDisplayFontPanel.java</td><td>72行</td><td>数据字体</td>
+</tr>
+<tr>
+<td rowspan="5"><b>文档</b></td>
+<td>README.md</td><td>4.5KB</td><td>概述</td>
+</tr>
+<tr>
+<td>how_to_use_global_preference.md</td><td>使用说明</td><td>当前模块/插件使用说明</td>
+</tr>
+<tr>
+<td>global_font_system_design.md</td><td>35KB</td><td>设计与边界</td>
+</tr>
+<tr>
+<td>global_font_system_statement.md</td><td>25KB</td><td>当前行为</td>
+</tr>
+<tr>
+<td>global_font_system_code_map.md</td><td>20KB</td><td>代码位置</td>
+</tr>
+</table>
+
+<hr>
+
+<table border="0" width="100%" bgcolor="#ecf0f1" cellpadding="10">
+<tr>
+<td>
+<p><b>项目状态：</b>已完成<br>
+<b>完成日期：</b>2025年12月7日<br>
+<b>总开发时间：</b>约8小时<br>
+<b>版本：</b>1.1（优化版）</p>
+<p><i>技术细节请参见 docs/global_preference/ 中的完整文档</i></p>
+</td>
+</tr>
+</table>
+
+</blockquote>
+
+</body>
+</html>

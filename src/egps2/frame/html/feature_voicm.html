@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>The updates of eGPS</title>
+</head>
+
+<body>
+
+	<blockquote>
+	
+		<p>最新的文档，详见：https://www.yuque.com/u21499046/egpsdoc/ttrxkedmluog0w8e</p>
+
+		<h3>什么是voice（What is voice）:</h3>
+
+		<p>voice全称是 Versatile open input click
+			module，是一个通用数据输入与运行框架，包含输入与运行两大功能。</p>
+		<p>
+			Versatile open input click module. 也可以理解为一个类似脚本化运行的框架，设计原则为“打开-输入-点击”。<br>通过GUI使用时，它类似于小工具模块。它的开发与使用非常方便，可从资源管理器拖拽输入参数。包括两种类型CSRM与FGCM.<br>CSRM:
+			Convenient scripted runner
+			module。这类模块点击运行之后在运行完成时会提示程序已经完成，最后结果会存放于用户指定的位置。 <br>FGCM:
+			Followed with GUI-change
+			module。在CSRM的基础上，该模块不仅会执行相应的功能，还会在运行结束之后图形界面发生相应的变化。 <br>
+		</p>
+
+		<p>这个机制的主要功能是导入数据，并且执行运行命令。</p>
+
+		<h3>voice的优点（The advantage of voice）:</h3>
+
+		<p>该框架不但能够让开发者提高效率，而且用户一定使用之后，就会很快学会这个软件运行机制。</p>
+		<p>用户只要简单拖拽文件即可得到结果。所有参数的解释都在注释语句中。</p>
+		<p>该设计体现了命令行使用，脚本化使用和GUI实现的各个优点。</p>
+
+		<h3>如何使用voice（How to use voice）:</h3>
+
+		<p>推荐以用户友好型的Key-Value表格作为用户输入的方式。此时仅需继承MapProducer4voice这个类，往里面加入Key-Value对Entry，即可将所需参数都加入。接着调用ExampleGenerator类，生成配置文件字符串。待用户完成参数输入之后，再次使用ExampleGenerator这个类的getMap方法获得用户输入的参数。</p>
+		<p>
+			这个模块主要的类是 VersatileOpenInputClickAbstruct，为了使用这个功能，用户可以直接继承这个类。<br>调用doUserImportAction()
+			方法即可弹出用户输入面板。<br>也可以直接使用这个面板。调用getImportDataDialog()方法可以得到一个JComponent实例。
+		</p>
+
+		<p>
+			有两个方法是必须要实现的：getExampleText()方法返回示例数据；覆写 execute(List
+			<String> inputs) 方法以提供具体要执行的动作。。 
+		</p>
+
+		<h3>voice 参数命名的具体规则:</h3>
+		<p>一些基础设定与eGPS主框架相同，这些说明可以在
+			EGPSProperties.getSpecificationHeader() 方法中可以得到解释。下面是规范的细则：</p>
+		<ol>
+			<li>Lines start with '#' is annotation, start with '$' is
+				parameter.'#'开始的是注释行，'$'开始的是参数注释行。</li>
+			<li>For table-like data, each column is separated with tab key. 对于所有表格样数据都使用tab键分隔。</li>
+			<li>Blank line will be ignored. 输入的空行会被跳过。</li>
+			<li>Creates a color with red, green, blue, and alpha values in
+				the range (0 - 255). E.g 0,0,0,255. Or employ the hex-string, like
+				#FF0AFF, #FFFFFFFF. 支持以两者方式来设置颜色：（1）直接用逗号分隔（红，绿，蓝，透明度），取值范围为（0-255）。（2）#开头，并用16进制来编码</li>
+			<li>Creates a font with name, style and size values. Style can
+				be PLAIN(0), BOLD(1), ITALIC(2), or BOLD+ITALIC(3). E.g Arial,0,12</li>
+			<li>参数名称$作为起始字符串之后，选项的连接符用.，例如import file这个参数将写成 $import.file</li>
+		</ol>
+
+	</blockquote>
+</body>
+
+</html>

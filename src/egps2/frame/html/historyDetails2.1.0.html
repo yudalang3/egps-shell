@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="UTF-8">
+<head>
+<meta charset="UTF-8">
+<title>The updates of eGPS</title>
+</head>
+
+<body>
+
+	<blockquote>
+
+		<h3>Small changes of eGPS 2.1.0</h3>
+
+		<ul>
+			<li>2.1.0.0 实现一个全新的架构：调整Maven的项目，现在切分为四个层级：1.计算类 2.主框架GUI 3.一类2的功能模块 4.应用模块。 <small>2025/02/24</small></li>
+			<li>2.1.0.1 重构VOICE 模块，实现交互式友好的界面。 <small>2025/02/24</small></li>
+		    <li>2.1.0.2 MTV一个Bug: 搜索的"Find"按钮行为不符合预期，经过多次调试，已修复。 <small>2025/06/1</small></li>
+		    <li>2.1.0.3 Low volume text editor，不错任何改动还是会出现关闭的提示，已修复。 <small>2025/06/2</small></li>
+		    <li>2.1.0.4 Mainframe core加上全局快捷键。 <small>2025/06/5</small></li>
+		    <li>2.1.0.5 Low volume text editor新建一个等款字体的按钮。 <small>2025/06/7</small></li>
+		    <li>2.1.0.6 Low volume text editor，模块打开就处于focus状态。 <small>2025/06/12</small></li>
+		    <li>2.1.0.7 要准备开始重构eGPS的模块格局。 <small>2025/06/12</small></li>
+		    <li>2.1.0.8 最重要的二维图形的计算类迁移至ydl.lab.util中 <small>2025/06/13</small></li>
+		    <li>2.1.0.9 模块不能载入就显示错误信息。 <small>2025/06/13</small></li>
+		    <li>2.1.0.10 The Resource manger 模块记录选择的tab <small>2025/06/13</small></li>
+		    <li>2.1.0.11 Low volume text editor 保存之后再关闭不会提示要保存。 <small>2025/06/18</small></li>
+
+		    <li>2.1.0.12 VOICE-GUI: Bookmark display panel 添加 Delete all按钮。 <small>2025/06/19</small></li>
+		    <li>2.1.0.13 VOICE-GUI: Bookmark display panel 整理书签栏目，一定有两个目录Examples和Default，Examples存放默认的example-1。 <small>2025/06/19</small></li>
+		    <li>2.1.0.14 VOICE-GUI: Bookmark display panel 重新设计一些Icon，添加手势。 <small>2025/06/19</small></li>
+		    <li>2.1.0.15 VOICE-GUI: 设计一个新的类别 LinkedMarkbook node。 <small>2025/06/19</small></li>
+		    <li>2.1.0.16 VOICE-GUI: 设计并实现 比较复杂的交互式逻辑。 <small>2025/06/19</small></li>
+		    <li>2.1.0.17 VOICE-GUI: 修复一个重要的认知错误，GUI重点：去掉了连个Ratio button。 <small>2025/06/19</small></li>
+		    <li>2.1.0.18 DEMO-floating 实现一些指导使用的手势。 <small>2025/06/19</small></li>
+		    <li>2.1.0.19 Help action添加Check for update 按钮。 <small>2025/06/19</small></li>
+		    <li>2.1.0.20 The Resource manger 整个模块的功能都完成，要全面测试。 <small>2025/06/19</small></li>
+		    <li>2.1.0.21 后面同意管理界面上出现的字符串，全部使用 ResourceBound管理。 <small>2025/06/19</small></li>
+
+			<li>2.1.0.22 完成模块 ITools manger，用户可以自主配置加载的模块。 <small>2025/06/20</small></li>
+			<li>2.1.0.23 奖励模块Color man添加 Toggle button的 DEMO。 <small>2025/06/20</small></li>
+			<li>2.1.0.24 VOICE demo: Dockable的子模块添加参数 file.byte.size。 <small>2025/06/20</small></li>
+			<li>2.1.0.25 The Resource manger 模块 在切换的时候更新面板。 <small>2025/06/20</small></li>
+			<li>2.1.0.26 The Resource manger 模块 新增用默认的浏览器打开的功能。 <small>2025/06/20</small></li>
+			<li>2.1.0.27 发现记录模块使用次数不能用Tab name，因为显然编辑器的Tab name是名字。 <small>2025/06/20</small></li>
+			<li>2.1.0.28 发现VOICE-GUI 设置%参数区域的一个Bug。原来是作为Hash的key，它一直被覆盖了 <small>2025/06/21</small></li>
+			<li>2.1.0.29 新增一个统一的输出模块，放在yu.lab.utils <small>2025/06/21</small></li>
+			<li>2.1.0.30 VOICE demo:floating 模块打开之后空荡荡，添加split面板 <small>2025/06/22</small></li>
+			<li>2.1.0.31 小文本编辑器添加按钮的tooltip <small>2025/06/22</small></li>
+			<li>2.1.0.32 VOICE-GUI 修复一些问题，并改动一些界面。 <small>2025/06/22</small></li>
+			<li>2.1.0.33 VOICE-GUI 去掉bookmark可以拖放的功能。 <small>2025/06/22</small></li>
+			<li>2.1.0.34 大文本编辑器卡主问题，优化一些线程的调用方式 <small>2025/06/26</small></li>
+			<li>2.1.0.35 修复EHeatmap加载错误的问题 <small>2025/06/27</small></li>
+			<li>2.1.0.36 软件eGPS 2.1开源 <small>2025/07/24</small></li>
+			<li>2.1.0.37 软件去除奖励模块的 help和statics按钮的支持 <small>2025/07/24</small></li>
+			<li>2.1.0.38 为奖励模块编写教程 <small>2025/07/24</small></li>
+			<li>2.1.0.39 为Mainframe core模块（所有模块）编写教程 <small>2025/07/24</small></li>
+			<li>2.1.0.40 整理eGPS依赖的所有第三方库（希望是最后一次整理，后面不再添加功能） <small>2025/07/25</small></li>
+			<li>2.1.0.41 DEMO: floating 示例模块载入 pptx绘制矢量图 <small>2025/07/25</small></li>
+			<li>2.1.0.42 修复VOICE-GUI中的Duplicate按钮复制的标签名称没有复制的问题 <small>2025/08/14</small></li>
+			<li>2.1.0.43 完善全局设置（Global preference）以字体为主 <small>2025/12/07</small></li>
+			<li>2.1.0.44 把菜单栏中的About所有页面都中英文配好 <small>2025/08/14</small></li>
+
+			<li>2.1.0.45 Preference: 当用户点击过某个设置页面，本次运行中再次打开 Preference 对话框时自动停留在上次访问页面（不做持久化，重启后回到第一个页面）。 <small>2025/12/17</small></li>
+			<li>2.1.0.46 Preference-Storage: TestDataDirPanel 使用 MigLayout 重构，调整 Restore defaults 按钮与 Browse... 右对齐，并优化 TextField 与 Browse... 的留白。 <small>2025/12/17</small></li>
+			<li>2.1.0.47 Build: 增加 plan.md 文档，给出 javac -Xlint:unchecked 的定位方式与分批修复策略。 <small>2025/12/17</small></li>
+			<li>2.1.0.48 Build: 按计划修复 A/B 批次的 unchecked warnings（泛型化/去除不安全强转），将 -Xlint:unchecked 警告数量显著降低；剩余反射 LNF 相关告警留待后续处理。 <small>2025/12/17</small></li>
+
+			<li>2.1.0.49 Docs: Add manuals/02_VOICE_GUI_design.md to document VOICE GUI mechanisms (bookmark creation/binding/persistence) with Mermaid diagrams. <small>2025/12/17</small></li>
+			<li>2.1.0.50 VOICE-GUI: Simplify busy cursor handling in VersatileOpenInputClickAbstractGuiBase.run() by using dialog glass pane + EDT dispatch (instead of recursive cursor updates). <small>2025/12/17</small></li>
+
+			<li>2.1.0.51 Docs: 恢复 historyDetails2.1.0.html 文件（从 UTF-8 编码错误导致的乱码中恢复）。 <small>2025/12/17</small></li>
+			<li>2.1.0.52 Code Review: 基于 02_VOICE_GUI_design.md 进行代码审查，创建 todo.md 文档记录发现的 5 个线程安全问题（1个严重、2个中等、2个设计改进）。 <small>2025/12/17</small></li>
+			<li>2.1.0.53 VOICE-GUI: 修复 linkedBookMarkNode 字段线程安全问题 - 使用 AtomicReference&lt;BookMarkNode&gt; 替代普通字段，所有访问通过原子操作，clearLinkedBookmarkNode() 使用 getAndSet(null) 并确保 UI 更新在 EDT 上执行。 <small>2025/12/17</small></li>
+			<li>2.1.0.54 VOICE-GUI: 修复 EventUniformlyProcessor.actionWhenUserExecute() 原子性问题 - 使用局部变量快照避免 check-then-act 竞态条件，添加注释说明，清理冗余注释代码。 <small>2025/12/17</small></li>
+			<li>2.1.0.55 VOICE-GUI: 修复 alreadyHasOneImportDialog 静态变量线程安全问题 - 使用 AtomicBoolean 替代 boolean，使用 compareAndSet(false, true) 实现原子性检查并设置，添加异常处理确保初始化失败时重置标志。 <small>2025/12/17</small></li>
+			<li>2.1.0.56 VOICE-GUI: 改进 VersatileOpenInputClickAbstractGuiBase.run() 异常处理 - 添加 busyStateSet 标志追踪状态设置，统一异常日志记录，处理 e.getMessage() 为 null 的情况。 <small>2025/12/17</small></li>
+			<li>2.1.0.57 VOICE-GUI: 清理注释代码 - 删除 VersatileOpenInputClickAbstractGuiBase 中废弃的 createLinkedBookmarkByInputAreaText() 注释方法，删除 BookmarkDisplayPanel 中调试用的 System.out.println() 注释代码，提升代码可读性。 <small>2025/12/17</small></li>
+			<li>2.1.0.58 Docs: 创建 VOICE_FIXES_SUMMARY.md 文档，总结所有线程安全修复（5个问题已全部修复），包含技术细节、测试建议、经验教训和后续建议。 <small>2025/12/17</small></li>
+			<li>2.1.0.59 VOICE-GUI: 修复 InputAreaPanel 中 "Trigger focus mode" 按钮的光标位置问题 - 点击按钮打开焦点模式对话框后，光标现在定位到文本开头而不是结尾，提升用户体验。 <small>2025/12/17</small></li>
+
+			<li>2.1.0.60 Docs: 创建 mamuals/03_VOICE_bookmark_reuse_feature.md 设计文档，记录书签复用功能的完整设计（混合匹配策略：名称+内容哈希），包含技术挑战、实现方案、9个测试用例和边界情况处理。 <small>2025/12/17</small></li>
+			<li>2.1.0.61 VOICE-GUI: 实现书签复用功能（会话级记忆）- VersatileOpenInputClickAbstractGuiBase 添加 lastUsedBookmarkName 和 lastUsedBookmarkContentHash 字段及访问器，对话框标题显示复用状态（"Import: Enter with Previous Bookmark" 或 "Import: Create New Bookmark"）。 <small>2025/12/17</small></li>
+			<li>2.1.0.62 VOICE-GUI: EventUniformlyProcessor.actionWhenUserExecute() 在执行时保存书签标识（名称+内容哈希）用于下次复用；produceInitialBookmark() 实现混合策略查找并自动复用上次书签（第二次及以后打开时）。 <small>2025/12/17</small></li>
+			<li>2.1.0.63 VOICE-GUI: BookmarkDisplayPanel 添加混合策略查找方法 - findBookmarkNode() 优先精确匹配（名称+内容哈希），降级为名称匹配；findAllByNameRecursive() 递归收集所有同名节点，解决同名书签冲突问题。 <small>2025/12/17</small></li>
+
+			<li>2.1.0.64 VOICE-GUI: 修复 BookmarkOperationPanel 中 Name 字段联动问题 - 点击书签节点时，EventUniformlyProcessor 现在会调用 updateJTextFieldContent() 更新 Name 字段显示书签名称（修复了 action4singleLeftClick2anotherBookmark() 和 linkedButtonChanged() 中的三处遗漏）。 <small>2025/12/17</small></li>
+
+			<li>2.1.0.65 Mainframe: 重构"启动最后打开的模块"功能 - 创建 ActionLaunchLastModule 类，将快捷键处理从 MyFrame.registerGlobalKeyboardShortcuts() 迁移到 Action 中（使用 ACCELERATOR_KEY 属性）；在 Options 菜单中添加 "Launch Last Module" 菜单项（位于 Preference 旁边）；使用 InputEvent.CTRL_DOWN_MASK 替代已弃用的 Toolkit.getMenuShortcutKeyMask() API，符合现代 Java 标准。 <small>2025/12/22</small></li>
+
+			<li>2.1.0.66 Mainframe: 软件标题从 "eGPS" 改为全称 "evolutionary Genotype-Phenotype Systems (eGPS)"；同时在 About 页面添加全称说明。 <small>2025/12/29</small></li>
+			<li>2.1.0.67 Alignment View 模块增强导出功能 <small>2026/1/6</small></li>
+			<li>2.1.0.68 打包上传github。 <small>2026/1/7</small></li>
+			<li>2.1.69 修复 《现代化进化树》点了这个按钮之后，进化树的可视化模块没反应。 <small>2026/1/7</small></li>
+			<li>2.1.70 《现代化进化树》读取格式精准报错以及添加完整的格式说明文档。 <small>2026/1/8</small></li>
+			<li>2.1.71 进化树导出最后添加;同时添加《modernization of evolutionary tree》的格式说明文档，代码新增更多的格式错误提示。 <small>2026/1/8</small></li>
+			<li>2.1.71 增强 VOICE-GUI 界面的很多功能，一些布局的局部调整，使新用户容易上手。 <small>2026/1/9</small></li>
+			<li>2.1.72 通路进化浏览器新增进化树和分析面板的双向交互功能。 <small>2026/1/9</small></li>
+			<li>2.1.73 Alignment View，在导出 PDF 时可以指定每行显示的碱基数量，而不是固定按 A4 页面宽度自动计算，用户可以自己设置宽度。 <small>2026/1/9</small></li>
+			<li>2.1.74 Alignment View，修复一个小细节：当Font改变后，id和右边的序列没对齐。 <small>2026/1/9</small></li>
+			<li>2.1.75 PEB支持Excel 导入。 <small>2026/1/9</small></li>
+			<li>2.1.76 Alignment View，VOICE输入完善 <small>2026/1/9</small></li>
+			<li>2.1.77 新增 egps-SeqTools 套件，包含众多序列处理的模块. <small>2026/1/14</small></li>
+			<li>2.1.78 通路进化浏览器套件新增一些旧的模块，这些模块对进化分析非常偶用. <small>2026/1/14</small></li>
+			<li>2.1.79 清除egps-SeqTools 套件的一些异常警告. <small>2026/1/14</small></li>
+			<li>2.1.80 更新egps-SeqTools 套件的的manualxx.html（全部）. <small>2026/1/14</small></li>
+			<li>2.1.81 新增 egps-mutationPre 模块. <small>2026/1/14</small></li>
+			<li>2.1.82 新增 egps-sanky-plot 模块. <small>2026/1/14</small></li>
+			<li>2.1.83 新增 egps-venn-plot 模块. 因为两个模块循环依赖，所以组成egps-sanky-venn模块 <small>2026/1/14</small></li>
+			<li>2.1.84 新增 egps-heatmap 模块. <small>2026/1/14</small></li>
+			<li>2.1.85 新增 egps-chorddiagram 模块. <small>2026/1/14</small></li>
+			<li>2.1.86 为开发者提供一个集成模块下载地址：https://github.com/yudalang3/eGPS_v2.1. （该库适合做分析验证）<small>2026/1/14</small></li>
+			<li>2.1.87 为终端用户提供一个集成模块下载地址：https://github.com/yudalang3/egps-pathway.evol.browser <small>2026/2/17</small></li>
+			<li>2.1.88 egps-base模块重新更改README <small>2026/3/17</small></li>
+			<li>2.1.89 Fasta文件的命令行工具更新 <small>2026/3/17</small></li>
+			<li>2.1.90 同源基因搜索后处理的长脚本更新 <small>2026/3/17</small></li>
+			<li>2.1.91 增加fasta文件的统计量 <small>2026/3/17</small></li>
+			<li>2.1.92 重新编写egps-base使用手册的文档 <small>2026/3/17</small></li>
+			<li>2.1.93 整理egps-main.gui项目，更新README <small>2026/3/17</small></li>
+			<li>2.1.94 重新编写egps-main.gui使用手册的文档。 <small>2026/3/17</small></li>
+			<li>2.1.95 ITools Manager：用户修改模块加载表格后，关闭模块时会先询问是否保存，再决定退出。 <small>2026/3/21</small></li>
+			<li>2.1.96 ITools Manager：保存模块加载表格后，同一次运行中重新打开该模块也会立即显示最新的已保存状态，不再继续读取旧缓存。 <small>2026/3/21</small></li>
+			<li>2.1.97 新增开发者使用的skills，这个在Windows上用codex开发，egps-module-dev-evo。 <small>2026/3/21</small></li>
+
+		</ul>
+
+	</blockquote>
+</body>
+
+</html>

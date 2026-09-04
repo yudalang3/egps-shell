@@ -1,0 +1,26 @@
+# eGPS2 Module Loading Configuration
+# Auto-generated on: Thu Dec 04 21:01:32 CST 2025
+# Format: <FullClassName>\t<true|false>
+# Lines starting with # are comments
+#
+# Module.path    whether.load?
+
+egps2.builtin.modules.largetextedi.IndependentModuleLoader	true
+egps2.builtin.modules.lowtextedi.IndependentModuleLoader	true
+egps2.builtin.modules.filemanager.IndependentModuleLoader	true
+# [NEW] Module discovered
+demo.handytools.HandyToolExampleMain	true
+# [NEW] Module discovered
+egps2.builtin.modules.gallerymod.IndependentModuleLoader	true
+# [NEW] Module discovered
+demo.dockable.IndependentModuleLoader	true
+# [NEW] Module discovered
+egps2.builtin.modules.itoolmanager.IndependentModuleLoader	true
+# [NEW] Module discovered
+demo.floating.IndependentModuleLoader	true
+
+# === Statistics ===
+# Available: 3
+# Newly discovered: 5
+# Unavailable (commented out): 0
+# Total tracked: 8

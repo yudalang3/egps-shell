@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>The updates of eGPS</title>
+</head>
+
+<body>
+
+	<blockquote>
+
+		<h3>Small changes of eGPS 2.0.4</h3>
+
+		<ul>
+			<li>2.0.4.1 新增模块 Homologous gene identification。 <small>2024/09/14</small></li>
+			<li>2.0.4.2 新增模块 Table-like text curation。 <small>2024/09/14</small></li>
+			<li>2.0.4.3 发现一个Win10用户看不到界面的问题。去除GUI加速的参数（后发现该参数对一些Win10操作系统的版本才会导致问题的发生，有些版本没有这个问题。）。 <small>2024/09/14</small></li>
+			<li>2.0.4.4 模块 Table-like text curation ，新增子模块 Two Table Comparator <small>2024/09/15</small></li>
+			<li>2.0.4.5 模块 Table-like text curation ，新增子模块 Two Column Text Comparator <small>2024/09/16</small></li>
+			<li>2.0.4.6 新增模块 GEO Supplementary File Processor <small>2024/09/20</small></li>
+			<li>2.0.4.7 模块 Table-like text curation ，新增子模块 Filtering Rows According To Another table <small>2024/09/24</small></li>
+			<li>2.0.4.8 为一些框架设计的类和接口添加注释。 <small>2024/09/25</small></li>
+			<li>2.0.4.9 重新设计与实现基于VOICE运行机制的操作平台类模块聚合器。后面直接用TabModuleFaceOfVoice和SubTabModuleFaceOfVoice两个类即可 <small>2024/09/25</small></li>
+			<li>2.0.4.10 重新设计与实现基于VOICE运行机制的VersatileOpenInputClickAbstract类，现在推荐使用AbstractVoiceFeaturedPanel。 <small>2024/09/26</small></li>
+			<li>2.0.4.11 完成模块Analyse homogeneous with species tree，它包含四个主模块。 <small>2024/09/29</small></li>
+			<li>2.0.4.12 修改VOICE 运行机制，使其更符合用户使用习惯。去掉参数输入面板的超长提示符，用户可以在?处查看Tooltip。 <small>2024/09/29</small></li>
+			<li>2.0.4.13 将原来依赖的Oracle JDK 8u191替换成OpenJDK 8u422；去除htsJDK库，软件打包之后的体积从123MB降低到116.4MB。 <small>2024/10/10</small></li>
+			<li>2.0.4.14 临时修复导出PPTX格式文件，字符串不能旋转的问题。 <small>2024/10/10</small></li>
+			<li>2.0.4.15 Modern Tree View 模块调整 Zoom in this node功能的灵敏性。 <small>2024/10/17</small></li>
+			<li>2.0.4.16 Table-like text curation 模块中的子模块修改保证输出的顺序和输入的一致。 <small>2024/10/17</small></li>
+			<li>2.0.4.17 Table-like text curation 模块中的子模块Extract target rows，修改符合条件行的判定规则，增加控制台的输出信息。 <small>2024/10/17</small></li>
+			<li>2.0.4.18 修改GUI外观，只有当OS时苹果的时候才修饰菜单栏。 <small>2024/10/21</small></li>
+			<li>2.0.4.19 VOICE机制运行参数导出的时候，默认的名字是 runEGPS_*.txt。 <small>2024/10/22</small></li>
+			<li>2.0.4.20 MTV模块设置按住Ctrl键拖拽时候可以多选节点，默认是移动节点。 <small>2024/10/22</small></li>
+			<li>2.0.4.21 MTV模块当用户鼠标经过节点时，出现操作提示语。 <small>2024/10/23</small></li>
+			<li>2.0.4.22 VOICE机制，现在支持三个字符标记：@提示哪个模块；%参数大类；^高级语句声明。 <small>2024/10/23</small></li>
+			<li>2.0.4.23 新增模块操作平台模块 GFF3 operator <small>2024/11/15</small></li>
+			<li>2.0.4.24 新增模块操作平台模块 Theoretical target genes with motif <small>2024/11/15</small></li>
+			<li>2.0.4.25 新增Voice模块便捷实用接口SubTabModuleRunner与构造工厂SubTabModuleRunnerCreator。 <small>2024/11/18</small></li>
+			<li>2.0.4.26 产生小工具模型Voice，命令行运行启动方式，启动类为egps.module.voice.CLI。 <small>2024/11/18</small></li>
+			<li>2.0.4.27 完成子模块“4. Batch running extract gene upstream and obtain sequences”。 <small>2024/11/18</small></li>
+			<li>2.0.4.28 完成子模块“Genome fasta glimmpse”，该模块位于Fasta Tools。 <small>2024/11/18</small></li>
+			<li>2.0.4.29 更新子模块“Batch running extract gene upstream and obtain sequences” <small>2024/11/20</small></li>
+			<li>2.0.4.30 插件的类加载机制完善，打破双亲委派机制，类加载器优先加载插件依赖的jar文件。 <small>2024/11/20</small></li>
+			<li>2.0.4.31 为Voice模块开发模型构建一套完整的快捷API。 <small>2024/11/21</small></li>
+			<li>2.0.4.32 将History按钮更改为 History Chinese。 <small>2024/11/23</small></li>
+			<li>2.0.4.33 更改原来包路径，从冗长的路径改为egps2。 <small>2024/11/23</small></li>
+			<li>2.0.4.34 编写简单可视化的使用说明书。 <small>2024/11/26</small></li>
+			<li>2.0.4.35 调整类路径之后，重新调整内置插件。 <small>2024/11/26</small></li>
+			<li>2.0.4.36 允许用户自己配置喜欢的模块，方法配置 config/egps2.loadding.module.config.txt 文件即可 <small>2024/11/26</small></li>
+			<li>2.0.4.37 完成除了小工具，操作平台类和大型复杂可视化模块的GUI使用手册的校正 <small>2024/11/26</small></li>
+			<li>2.0.4.38 完成小工具，操作平台类模块的GUI使用手册的校正 <small>2024/11/27</small></li>
+			<li>2.0.4.39 完成模块的GUI使用手册的校正 <small>2024/11/27</small></li>
+			<li>2.0.4.40 去除未完成的模块，将其移入test目录 <small>2024/11/28</small></li>
+			<li>2.0.4.41 MTV模块的搜索面板的按钮，处理逻辑完善 <small>2024/12/4</small></li>
+			<li>2.0.4.42 MTV模块的创造者模式进行更改，使用updatePhylogeneticTreePanel，而不是updata4fitFrame <small>2024/12/4</small></li>
+			<li>2.0.4.43 Tree node info collector 模块的导出使用前序遍历。 <small>2024/12/4</small></li>
+			<li>2.0.4.44 Tree with barplot 模块绘制的叶子顺序和实际的bar顺序不同。bug修复。 <small>2024/12/4</small></li>
+			<li>2.0.4.45 把EvolNodeUtil中的 getLeaves方法从默认的by stack就是层度优先遍历，改成recursive是深度优先遍历。 <small>2024/12/5</small></li>
+			<li>2.0.4.46 Help处的图标完成，但仍然需要一定的修改。 <small>2024/12/6</small></li>
+			<li>2.0.4.47 R4eGPS需要额外处理一些问题：1.发现启动的路径不是eGPS软件路径了。 <small>2024/12/6</small></li>
+			<li>2.0.4.48 R4eGPS需要额外处理一些问题：2.关闭eGPS导致R session奔溃。 <small>2024/12/6</small></li>
+			<li>2.0.4.49 为了方便程序调试，使用log4j记录一些断点信息 <small>2024/12/11</small></li>
+			<li>2.0.4.50 R语言环境中启动eGPS还是不要加载插件了，就先算了。先简单处理，有人要用再来加上。 <small>2024/12/11</small></li>
+			<li>2.0.4.51 完善命令行开发的一些规则与约定，详见 https://www.yuque.com/u21499046/egpsdoc/pk1upil2go9tqn6n。 <small>2024/12/12</small></li>
+			<li>2.0.4.52 重新完善已有的命令行启动类。 <small>2024/12/12</small></li>
+			<li>2.0.4.53 更改R包中的一些名称，修复bugs <small>2024/12/12</small></li>
+			<li>2.0.4.54 上传新的R包 0.1.3 <small>2024/12/12</small></li>
+			<li>2.0.4.55 所有的config都移动到 User.Home目录下，（Windows下好像是我的文档）这样就可以解决这个不同路径下启动的问题了，因为R语言中启动，用户的工作目录不在eGPS软件所在目录。只需要第一次安装的时候挪动就好了。这样还有一个好处，你下新的软件版本，VOICE的参数设置，还有其它设置都在，否则我们现在的架构，很多用户配置就没了。 <small>2024/12/13</small></li>
+			<li>2.0.4.56 更改第一次软件启动的判定规则。 <small>2024/12/13</small></li>
+			<li>2.0.4.57 移除MAFFT软件，用户可以在集成仓库进行下载。 <small>2024/12/13</small></li>
+			<li>2.0.4.58 添加外部掉包软件的配置器。 <small>2024/12/13</small></li>
+			<li>2.0.4.59 完成外包软件的机制。 <small>2024/12/13</small></li>
+			<li>2.0.4.60 将示例文件的路径都替换。 <small>2024/12/13</small></li>
+			<li>2.0.4.61 修复字段导出的一个问题，Font默认导出为Json的东西太多了。 <small>2024/12/13</small></li>
+			<li>2.0.4.62 为Font编写FontDTO类，解决在Ubuntu中无法得到Font，用JSON转换的问题。 <small>2024/12/14</small></li>
+			<li>2.0.4.63 修复PILL模块，组件的字体未收到全局字体调控的问题。 <small>2024/12/16</small></li>
+			<li>2.0.4.64 PILL模块，新增导入pptx格式矢量图文件的功能。该功能可以通用。 <small>2024/12/16</small></li>
+			<li>2.0.4.65 全局设置抗锯齿选项，用户可以自动调整抗锯齿的配置。 <small>2024/12/16</small></li>
+			<li>2.0.4.66 通路进化浏览器实现基本界面。 <small>2024/12/18</small></li>
+			<li>2.0.4.67 通路进化浏览器实现分析面板。 <small>2024/12/18</small></li>
+			<li>2.0.4.68 通路进化浏览器实现分析面板中三个主要展示的面板，通路详情、通路统计状况、通路进化选择压力。 <small>2024/12/18</small></li>
+			<li>2.0.4.69 鼠标右键运行repaint,以防止显式没有渐变的问题。 <small>2024/12/18</small></li>
+			<li>2.0.4.70 为通路进化浏览器模块设计并实现基础的导入数据格式。 <small>2024/12/18</small></li>
+			<li>2.0.4.71 进化树通用模块新增基于Stack数据结构解析进化树的优化方法，增加的是示例类。现在暂时没时间优化。 <small>2024/12/18</small></li>
+			<li>2.0.4.72 Gene Browser, Gene Family Browser, MTV and Pathway family browser四个模块，用新的参数框架。 <small>2024/12/18</small></li>
+			<li>2.0.4.73 Pathway family browser编写导入数据的处理方法。 <small>2024/12/19</small></li>
+			<li>2.0.4.74 Pathway family browser将Gene对应的Grobs对象用 List来装Shape，因为有很多的场景需要多个元素，例如一个蛋白质进行了位置转移则会产生两个Grobs。 <small>2024/12/19</small></li>
+			<li>2.0.4.75 Pathway family browser重新调整绘制示意图 pptx的元素。 <small>2024/12/19</small></li>
+			<li>2.0.4.76 Pathway family browser 编写使用手册。 <small>2024/12/19</small></li>
+			<li>2.0.4.77 设计Chord diagram interaction模块的草图，并实现基本框架。 <small>2024/12/19</small></li>
+			<li>2.0.4.78 实现Chord diagram interaction模块的绘制 <small>2024/12/19</small></li>
+			<li>2.0.4.79 实现Chord diagram interaction模块的鼠标左键单击出现tooltip交互功能。 <small>2024/12/19</small></li>
+			<li>2.0.4.80 实现Chord diagram interaction模块的VOICE数据输入的功能。 <small>2024/12/20</small></li>
+			<li>2.0.4.81 为Chord diagram模块提供示例数据，注意这里只是示例数据。 <small>2024/12/20</small></li>
+			<li>2.0.4.82 Chord diagram模块暂时告一段落。 <small>2024/12/20</small></li>
+			<li>2.0.4.83 更新软件图册 <small>2024/12/20</small></li>
+			<li>2.0.4.84 Help菜单栏使用新的图标 <small>2024/12/20</small></li>
+			<li>2.0.4.85 修正Mutation presenter模块的问题 <small>2024/12/20</small></li>
+			<li>2.0.4.86 在进化树数据结构与操作树模块中，使用Stack数据结构来解析，该算法能够在阅读一遍字符的情况下就生成进化树。但是现在还没有接入整个Pipeline <small>2024/12/21</small></li>
+			<li>2.0.4.87 测试这个算法，从而形成新的可用的算法。但是未完全测试，现在名称为TreeDecoderWithStack，还没有接到任何pipeline，有需求再用。 <small>2024/12/21</small></li>
+			<li>2.0.4.88 新增模块 File manager, eGPS已经形成了有机的整体。 <small>2024/12/21</small></li>
+			<li>2.0.4.89 新增模块 File manager, 完成交互功能。 <small>2024/12/21</small></li>
+			<li>2.0.4.90 新增模块 File manager, 完成功能的调整。 <small>2024/12/23</small></li>
+			<li>2.0.4.91 调整 Module Searcher的外观。 <small>2024/12/24</small></li>
+			<li>2.0.4.92 整理已有的100多个模块，将重要的信息都填写完毕。 <small>2024/12/24</small></li>
+			<li>2.0.4.93 将R4eGPS开源在 github上。 <small>2024/12/25</small></li>
+			<li>2.0.4.94 全局设置中新增“语言”的选项，默认是英文。导航模块进行变更，当用户选择中文时才是现在的样貌。 <small>2024/12/25</small></li>
+			<li>2.0.4.95 变更导航模块的栏目名称。 <small>2024/12/25</small></li>
+			<li>2.0.4.96 模块Analyse homogeneous with species tree可视化功能增强 <small>2025/01/01</small></li>
+			<li>2.0.4.97 脚本化工具 FastSingleTreeVisualizer 增加鼠标交互的功能: 放大和缩小 <small>2025/01/02</small></li>
+			<li>2.0.4.98 将eGPS 2.0改用Java21.0.5版本来编译和启动，这样用Java写脚本分析数据的时候就可以用更加友好的方式使用了。 <small>2025/01/02</small></li>
+			<li>2.0.4.99 R4eGPS::evoltre_getNodeNames()函数变动，支持更加方便的获取方法 <small>2025/01/03</small></li>
+			<li>2.0.4.100 尝试调整MTV模块的放大功能，使进化树在角落的部分可以放置在中央，但是发现Swing底层的限制。 <small>2025/01/14</small></li>
+		</ul>
+
+	</blockquote>
+</body>
+
+</html>

@@ -4,7 +4,7 @@
 
 ![egps-shell Screenshot](https://github.com/yudalang3/egps-shell/blob/main/snapshot/ScreenShot_2025-12-13_171628_725.png?raw=true)
 
-`egps-main` is the closed-source code repository for `egps-shell`. `egps-shell` is the GUI shell base of eGPS, used to host desktop modules. The main external-facing documentation lives in `docs/` and `manuals/`.
+`egps-shell` is a fully open-source software product that provides the GUI shell framework for hosting eGPS desktop modules. This repository contains its main framework source code, maintained as the `egps-main` project, under the Apache License 2.0; see [LICENSE](LICENSE). Reference documentation and development tutorials are available in `docs/` and `manuals/`.
 
 If you need a bundled distribution that includes `egps-base`, `egps-shell`, and `egps-pathway.evol.browser`, visit: https://github.com/yudalang3/egps-pathway.evol.browser
 
@@ -94,8 +94,8 @@ We support and encourage users to develop their own tools on top of the eGPS 2.1
 ```text
 I am developing a new eGPS module in `egps-main` and want to use the `egps-shell` VOICE framework.
 Please study:
-- `docs/voiceFramework/VOICE_MODULE_ARCHITECTURE.md`
-- `docs/voiceFramework/VOICE-GUI.md`
+- `manuals/01_VOICE_architecture.md`
+- `manuals/02_VOICE_GUI_design.md`
 - `manuals/module_plugin_course/`
 
 The module name is abcdefg.
@@ -112,8 +112,8 @@ Please implement it in the appropriate VOICE style and wire up the relevant entr
 ```text
 I am refactoring an existing eGPS module in `egps-main`.
 Please use the `egps-shell` VOICE framework and study:
-- `docs/voiceFramework/VOICE_MODULE_ARCHITECTURE.md`
-- `docs/voiceFramework/VOICE-GUI.md`
+- `manuals/01_VOICE_architecture.md`
+- `manuals/02_VOICE_GUI_design.md`
 - `manuals/module_plugin_course/`
 
 The module name is xxxxxx.

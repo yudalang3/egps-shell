@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>eGPS Global Font System - FAQ</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<blockquote>
+
+<h2><font color="#2c3e50">Global Font System - Frequently Asked Questions</font></h2>
+
+<p><b>Version:</b> 1.0 | <b>Last Updated:</b> December 7, 2025</p>
+
+<hr>
+
+<h3><font color="#34495e">General Questions</font></h3>
+
+<p><b><font color="#2980b9">Q1: What is the Global Font System?</font></b></p>
+<blockquote>
+<p><b>A:</b> The Global Font System is a comprehensive font management framework introduced in eGPS v2.1.0 that allows users to customize fonts for all UI components throughout the application. It provides 27 different font types categorized into 7 groups.</p>
+</blockquote>
+
+<p><b><font color="#2980b9">Q2: How many font types can I customize?</font></b></p>
+<blockquote>
+<p><b>A:</b> You can customize 27 different font types:</p>
+<ul>
+    <li><b>Module Fonts (3)</b>: Module Title, Module Content, Document</li>
+    <li><b>Dialog Fonts (3)</b>: Dialog Title, Dialog Content, Dialog Button</li>
+    <li><b>Component Fonts (3)</b>: Label, Button, CheckBox</li>
+    <li><b>Input Fonts (3)</b>: TextField, TextArea, ComboBox</li>
+    <li><b>Data Display Fonts (4)</b>: Table, Table Header, List, Tree</li>
+    <li><b>Tool Fonts (2)</b>: ToolTip, ToolBar</li>
+    <li><b>Menu Fonts (2)</b>: First Level Menu, Second Level Menu</li>
+    <li><b>Tab Fonts (2)</b>: Selected Tab, Unselected Tab</li>
+    <li><b>Other Fonts (5)</b>: ProgressBar, Slider, Spinner, ScrollPane, etc.</li>
+</ul>
+</blockquote>
+
+<p><b><font color="#2980b9">Q3: Where can I find the font settings?</font></b></p>
+<blockquote>
+<p><b>A:</b> Navigate to <b>File → Preference → Appearance</b>. You'll find 8 different font setting panels organized by category.</p>
+</blockquote>
+
+<hr>
+
+<h3><font color="#34495e">Customization Questions</font></h3>
+
+<p><b><font color="#2980b9">Q4: Do my font changes apply immediately?</font></b></p>
+<blockquote>
+<p><b>A:</b> Yes, when you click the <b>Apply</b> button in the Preference dialog, all fonts are updated immediately across the entire application.</p>
+</blockquote>
+
+<p><b><font color="#2980b9">Q5: Why does TextArea use a monospaced font by default?</font></b></p>
+<blockquote>
+<p><b>A:</b> TextArea components are designed for code editing and log viewing, where monospaced fonts provide better readability and alignment. You can change this in Preference if needed.</p>
+</blockquote>
+
+<hr>
+
+<h3><font color="#34495e">Technical Questions</font></h3>
+
+<p><b><font color="#2980b9">Q6: Will my font settings persist after restarting eGPS?</font></b></p>
+<blockquote>
+<p><b>A:</b> Yes, all font settings are automatically saved to <code>~/.egps/json/defaultGlobalProperties.json</code> when you click Apply or OK.</p>
+</blockquote>
+
+<p><b><font color="#2980b9">Q7: What happens if my selected font is not available on another computer?</font></b></p>
+<blockquote>
+<p><b>A:</b> Java's font system will automatically substitute a similar available font. Use widely available fonts like Microsoft YaHei UI, Arial, or SimSun for best compatibility.</p>
+</blockquote>
+
+<hr>
+
+<h3><font color="#34495e">Developer Questions</font></h3>
+
+<p><b><font color="#2980b9">Q8: How do I use global fonts in my module?</font></b></p>
+<blockquote>
+<p><b>A:</b> Access fonts through the LaunchProperty class:</p>
+<pre>
+import egps2.UnifiedAccessPoint;
+import egps2.LaunchProperty;
+
+LaunchProperty lp = UnifiedAccessPoint.getLaunchProperty();
+JLabel label = new JLabel("Hello");
+label.setFont(lp.getLabelFont());
+</pre>
+<p><b>For detailed guidance:</b> See <code>docs/global_preference/how_to_use_global_preference.md</code></p>
+</blockquote>
+
+<p><b><font color="#2980b9">Q9: Do I need to manually set fonts for all components?</font></b></p>
+<blockquote>
+<p><b>A:</b> No! Standard Swing components automatically use global fonts via UIManager. You only need to manually set fonts when:</p>
+<ul>
+    <li>Creating custom components</li>
+    <li>Overriding default fonts for specific use cases</li>
+    <li>Drawing text directly using Graphics</li>
+</ul>
+</blockquote>
+
+<p><b><font color="#2980b9">Q10: Which font should I use for my module's title?</font></b></p>
+<blockquote>
+<p><b>A:</b> Use semantic font selection:</p>
+<ul>
+    <li><b>Module titles:</b> <code>getDefaultTitleFont()</code></li>
+    <li><b>Module content:</b> <code>getDefaultFont()</code></li>
+    <li><b>Dialog titles:</b> <code>getDialogTitleFont()</code></li>
+    <li><b>Data tables:</b> <code>getTableFont()</code></li>
+    <li><b>Code/logs:</b> <code>getTextAreaFont()</code> (monospaced)</li>
+</ul>
+</blockquote>
+
+<hr>
+
+<h3><font color="#34495e">Troubleshooting</font></h3>
+
+<p><b><font color="#2980b9">Q11: Some dialogs still show wrong fonts. Why?</font></b></p>
+<blockquote>
+<p><b>A:</b> This can happen if:</p>
+<ol>
+    <li><b>Cached components:</b> Try restarting eGPS</li>
+    <li><b>Hardcoded fonts:</b> Some modules may use hardcoded fonts (please report as bug)</li>
+    <li><b>Third-party libraries:</b> External libraries may not respect UIManager settings</li>
+</ol>
+</blockquote>
+
+<p><b><font color="#2980b9">Q12: Can I export/import my font settings?</font></b></p>
+<blockquote>
+<p><b>A:</b> Yes, indirectly. Your settings are stored in <code>~/.egps/json/defaultGlobalProperties.json</code>. You can:</p>
+<ul>
+    <li>Copy this file to backup your settings</li>
+    <li>Share it with colleagues for consistent UI</li>
+    <li>Restore it by replacing the file and restarting eGPS</li>
+</ul>
+<p><b>Note:</b> Make sure eGPS is closed before manually editing this file.</p>
+</blockquote>
+
+<hr>
+
+<h3><font color="#34495e">Documentation</font></h3>
+
+<p><b><font color="#2980b9">Q13: Where can I find more detailed documentation?</font></b></p>
+<blockquote>
+<p><b>A:</b> Comprehensive documentation is available in <code>docs/global_preference/</code>:</p>
+<ul>
+    <li><code>README.md</code> - Topic entry and reading order</li>
+    <li><code>how_to_use_global_preference.md</code> - How modules and plugins use the current global preference system</li>
+    <li><code>global_font_system_design.md</code> - Current design goals and boundaries</li>
+    <li><code>global_font_system_statement.md</code> - Current system behavior</li>
+    <li><code>global_font_system_code_map.md</code> - Related code locations and maintenance notes</li>
+</ul>
+</blockquote>
+
+<hr>
+
+<table border="0" width="100%" bgcolor="#ecf0f1" cellpadding="10">
+<tr>
+<td>
+<p><b>For more information:</b> Visit <a href="https://www.yuque.com/u21499046/egpsdoc">https://www.yuque.com/u21499046/egpsdoc</a></p>
+<p><b>Document Version:</b> 1.0 | <b>eGPS Version:</b> 2.1.0+</p>
+</td>
+</tr>
+</table>
+
+</blockquote>
+
+</body>
+</html>

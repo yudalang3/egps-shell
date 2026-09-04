@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>The updates of eGPS</title>
+</head>
+
+<body>
+
+	<blockquote>
+
+		<h3>Small changes of eGPS 2.0.2</h3>
+
+		<ul>
+			<li>2.0.2.1
+				Datetime calculator模块新增yyyy-MM格式的日期计算功能。 <small>2024/03/27</small>
+			</li>
+			<li>2.0.2.2 这里对JFrame尝试修复它闪动的问题，做一个总结，后面不要再探究了。我观察到JFrame好像本身没有用双缓存，所以拉伸会有闪烁感觉。不知道怎么处理。后面不要花时间了。 <small>2024/03/29</small></li>
+			<li>2.0.2.3 历史记录的按钮，先去掉舒展的功能，现在会提示该功能还未完成。 <small>2024/03/29</small></li>
+			<li>2.0.2.4 JButton的UI设置也不要去变动了，现在这样就好了，不要花费时间了。 <small>2024/03/31</small></li>
+			<li>2.0.2.5 修复voice JTree鼠标单机的问题。 <small>2024/03/31</small></li>
+			<li>2.0.2.6 规范软件包主jar的名称。 <small>2024/03/31</small></li>
+			<li>2.0.2.7 编写插件开发手册。 <small>2024/03/31</small></li>
+			<li>2.0.2.8 变更IHelp接口的名称。 <small>2024/03/31</small></li>
+			<li>2.0.2.9 voice框架再次被调用的时候，不会重复出现一个新面板，而是聚焦于原来已经打开的对话框。 <small>2024/03/31</small></li>
+			<li>2.0.2.10 完成eGPS2插件机制，大部分沿用eGPS1的设计。 <small>2024/03/31</small></li>
+			<li>2.0.2.11 开始整理模块，先从Module gallery开始。 <small>2024/04/01</small></li>
+			<li>2.0.2.12 修改主界面的中英文说明。 <small>2024/04/01</small></li>
+			<li>2.0.2.13 对模块进行分类，有些模块的说明还要完善，后面根据eGPS 1.0的使用手册进行完善。 <small>2024/04/01</small></li>
+			<li>2.0.2.14 编写一个GetIModuleLoaderPath类，用于生成实现了IModuleLoader的子类。 <small>2024/04/01</small></li>
+			<li>2.0.2.15 发现voice模块一个bug，已经修复。 <small>2024/04/02</small></li>
+			<li>2.0.2.16 整理进化树建树的一些模块。 <small>2024/04/02</small></li>
+			<li>2.0.2.17 调整MSA到进化距离计算参数设置的按钮。 <small>2024/04/02</small></li>
+			<li>2.0.2.18 完成各种到进化距离的计算，用起来很方便。 <small>2024/04/02</small></li>
+			<li>2.0.2.19 默认字体改成有次序的字体集，现在发现还是微软雅黑比较美观。这个字体集合见DefaultFont <small>2024/04/03</small></li>
+			<li>2.0.2.20 修改IModuleLoader的的载入顺序，发现更改了图片的布局之后，视觉效果就变了。 <small>2024/04/03</small></li>
+			<li>2.0.2.21 修改主界面的字体，这其实是一个bug，因为主界面很多按钮没有接入新的全局字体设置。 <small>2024/04/03</small></li>
+			<li>2.0.2.22 全局设置中，新增一个 Help document font选项。 <small>2024/04/03</small></li>
+			<li>2.0.2.23 底部状态面板的字体和focus改变。 <small>2024/04/03</small></li>
+			<li>2.0.2.24 修复默认字体的问题。 <small>2024/04/03</small></li>
+			<li>2.0.2.25 发现voice的按钮没有接入全局字体，修复之。另外，添加了 Evol. dist. view模块的features一栏。 <small>2024/04/07</small></li>
+			<li>2.0.2.26 需要指定voice参数命名的规则，例如用什么注释，用什么作为参数分隔符。 <small>2024/04/07</small></li>
+			<li>2.0.2.27 新增通过Key-Value对读入数据的类，位于voice包下。 <small>2024/04/07</small></li>
+			<li>2.0.2.28 voice数据输入框又出现不支持中文的问题。解决方法很简单，直接改字体即可，修改成支持中文的字体。 <small>2024/04/08</small></li>
+			<li>2.0.2.29 修复voice多选之后鼠标右键点击，无法同时更改的问题，例如Flag。 <small>2024/04/08</small></li>
+			<li>2.0.2.30 新增voice参数命名规范，详见Help -> voice features。 <small>2024/04/08</small></li>
+			<li>2.0.2.31 新增Tree leaf info collector这个模块的Features说明。 <small>2024/04/08</small></li>
+			<li>2.0.2.32 完善Tree leaf info collector这个模块的使用手册。同时为其新增命令行使用的功能。 <small>2024/04/08</small></li>
+			<li>2.0.2.33 新增Extract text by regex 模块，包括使用手册和命令行使用的功能。 <small>2024/04/08</small></li>
+			<li>2.0.2.34 修正Extract text by regex 模块数据输入的小问题。 <small>2024/04/09</small></li>
+			<li>2.0.2.35 Tree leaf info collector这个模块新增导出内节点信息的功能。 <small>2024/04/09</small></li>
+			<li>2.0.2.36 完成Modern tree view模块的放缩功能，可以在layout面板中指定是高度放缩或者宽度放缩。 <small>2024/04/10</small></li>
+			<li>2.0.2.37 未导入数据时，Modern tree view会提示应该导入数据。 <small>2024/04/10</small></li>
+			<li>2.0.2.38 启用Modern tree view模块布局转换的功能，现在主流的进化树布局已经都能使用。 <small>2024/04/10</small></li>
+			<li>2.0.2.39 将数据输入时，上下左右的留白空间的设置参数放入Modern tree view模块。默认解析的功能先放入 <small>2024/04/10</small></li>
+			<li>2.0.2.40 Modern tree view模块，新增输入留白的功能。 <small>2024/04/10</small></li>
+			<li>2.0.2.41 新增功能：voice如果是从书签点过来的，那么点击执行按钮之后应该更新书签的内容，这个功能不能和auto save混淆。 <small>2024/04/10</small></li>
+			<li>2.0.2.42 MTV模块的Line thinckness 和 node size，调整一下，支持左右鼠标键。左键是全部子节点，右键是叶子。 <small>2024/04/10</small></li>
+			<li>2.0.2.43 MTV模块新增叶子节点的名称右对齐功能。 <small>2024/04/11</small></li>
+			<li>2.0.2.44 创建并完成Tree with barplot 模块基本框架。 <small>2024/04/11</small></li>
+			<li>2.0.2.45 完成Tree with barplot 模块直接黑白颜色的构图。 <small>2024/04/11</small></li>
+			<li>2.0.2.46 完成Tree with barplot 模块颜色调整的功能。 <small>2024/04/11</small></li>
+			<li>2.0.2.47 完成Tree with barplot 模块构图分配的功能，即调整两个图片绘制的功能。 <small>2024/04/11</small></li>
+			<li>2.0.2.48 完成Tree with barplot 模块bar plot数据绘制功能。 <small>2024/04/11</small></li>
+			<li>2.0.2.49 将Histogram模块的参数输入方式改为KeyValue的形式。 <small>2024/04/11</small></li>
+			<li>2.0.2.50 voice模块的数据导入的解析类API进行调整。 <small>2024/04/11</small></li>
+			<li>2.0.2.51 MTV模块启用右键点击并弹出菜单栏的功能。 <small>2024/04/11</small></li>
+			<li>2.0.2.52 MTV模块的矩形布局添加坐标轴刻度线可以反着绘制的功能，其他布局暂时没变动。 <small>2024/04/12</small></li>
+			<li>2.0.2.53 Tree with barplot 模块有多处需要设置字体，这里先用两种字体，叶子名称用一个，其它各种label用一个。避免过早进入参数爆炸。 <small>2024/04/12</small></li>
+			<li>2.0.2.54 Tree with barplot 模块完成数据输入功能。 <small>2024/04/15</small></li>
+			<li>2.0.2.55 Tree with barplot 模块支持命令行的方式运行。 <small>2024/04/15</small></li>
+			<li>2.0.2.56 Tree with barplot 使用手册编写完成。 <small>2024/04/15</small></li>
+			<li>2.0.2.57 Tree with barplot 模块调整输入参数。 <small>2024/04/15</small></li>
+			<li>2.0.2.58 调整全局模块搜素框的边框颜色。 <small>2024/04/16</small></li>
+			<li>2.0.2.59 撤销原来的History button按钮，改成Graphics Properties按钮。 <small>2024/04/16</small></li>
+			<li>2.0.2.60 完成Graphics Properties基本的布局，现在已经启用。 <small>2024/04/16</small></li>
+			<li>2.0.2.61 为Graphics Properties实现模块级别接口。 <small>2024/04/16</small></li>
+			<li>2.0.2.62 重新整理eGPS的主要特性，将之前写的一些不能归结为主要特性的条目放入Tip of day功能中。现在总共有15条。 <small>2024/04/17</small></li>
+			<li>2.0.2.63 修改history面板中从eGPS 1.0 -> eGPS 2.0的主要特性。 <small>2024/04/17</small></li>
+			<li>2.0.2.64 完成Alignment trimmer的改装。 <small>2024/04/17</small></li>
+			<li>2.0.2.65 完成Quick reference-based aligner的改装。要特别注意：因为调用了MAFFT软件，而该软件运行需要放置于英文路径下。 <small>2024/04/17</small></li>
+			<li>2.0.2.66 去掉框架的 auto import 功能，这个不实用。 <small>2024/04/18</small></li>
+			<li>2.0.2.67 发现ModuleFace中会持有ModuleLoader的引用，这样会导致GC不能回收GUI，在模块退出之后去掉这个引用。 <small>2024/04/18</small></li>
+			<li>2.0.2.68 为工具栏上按钮的Tooltip都加上快捷键的使用说明，例如打开就是Ctrl + O 这和一般的软件是一样的。 <small>2024/04/18</small></li>
+			<li>2.0.2.69 为工具栏上按钮的Tooltip都加上快捷键的使用说明，注意一些小技巧的差别。 <small>2024/04/18</small></li>
+			<li>2.0.2.70 先将Gene browser模块移出复杂大型可视化类别，等后面花时间做一个icon。将circos plot先去除了，因为这个一点都没有开发过，这模块的名称还要改一下，我打算还是先实现和弦图吧。 <small>2024/04/18</small></li>
+			<li>2.0.2.71 模块Alignment view将voice改装成Key-Value键值对的形式。 <small>2024/04/18</small></li>
+			<li>2.0.2.72 模块Alignment view的绘制启用高质量的绘制方式。 <small>2024/04/18</small></li>
+			<li>2.0.2.73 模块Alignment view的绘制启用高质量的绘制方式。 <small>2024/04/18</small></li>
+			<li>2.0.2.74 模块Alignment view启用右侧的图形元素精细调整功能。 <small>2024/04/18</small></li>
+			<li>2.0.2.75 模块Alignment view完成帮助页面的修改。 <small>2024/04/18</small></li>
+			<li>2.0.2.76 模块Alignment view完成主要特征的记录功能。 <small>2024/04/18</small></li>
+			<li>2.0.2.77 模块Large text editor启用右侧的图形元素精细调整功能。发现原来的接口缺少设置功能，重新调整。 <small>2024/04/18</small></li>
+			<li>2.0.2.78 模块Alignment view完成软件运行的信息收集工作。 <small>2024/04/18</small></li>
+			<li>2.0.2.79 模块Alignment view的导出功能加强并修复导出问题。PPTX格式有些微调。 <small>2024/04/18</small></li>
+			<li>2.0.2.80 模块Sanky plot使用手册完善，启用右侧的图形元素精细调整功能。同时去除Instant Panel <small>2024/04/18</small></li>
+			<li>2.0.2.81 模块Sanky plot完善 Statics和Information按钮的功能。 <small>2024/04/18</small></li>
+			<li>2.0.2.82 完成模块MA plot更新所需的（1）数据导入，（2）右侧的图形元素精细调整功能，（3）帮助信息和统计按钮。 <small>2024/04/20</small></li>
+			<li>2.0.2.83* 完成模块Modern tree view主要参数的录入过程（该过程不可能一蹴而就，要跟随用户）。 <small>2024/04/21-26</small></li>
+			<li>2.0.2.84 开始认为这个模块Features的设计理念有些偏颇，模块暴露的必须要实现的方法越少越好，而且记录用户实现的步骤也是越少越好。 <small>2024/04/21</small></li>
+			<li>2.0.2.85 完成模块MTV更新所需的（1）数据导入，（2）右侧的图形元素精细调整功能，（3）帮助信息和统计按钮。 <small>2024/04/20</small></li>
+			<li>2.0.2.86 完善voice输入内容处?的提示信息。 <small>2024/04/22</small></li>
+			<li>2.0.2.87 完善Venn plot模块一些提示、设置等等，为传统韦恩图添加 auto size按钮。 <small>2024/04/22</small></li>
+			<li>2.0.2.88 完善Multi-seqs struct view模块将其利用主框架的功能。 <small>2024/04/22</small></li>
+			<li>2.0.2.89 完善Gene browser模块将其利用主框架的功能。 <small>2024/04/23</small></li>
+			<li>2.0.2.90 新增主框架将多Tab快速关闭的功能。 <small>2024/04/23</small></li>
+			<li>2.0.2.91 去掉Gene family模块无用的控制面板，去掉一些无用的Tracks。 <small>2024/04/23</small></li>
+			<li>2.0.2.92 完善Gene family模块将其利用主框架的功能。 <small>2024/04/23</small></li>
+			<li>2.0.2.93 完善 EHeatmap 模块将其利用主框架的功能。 <small>2024/04/24</small></li>
+			<li>2.0.2.94 EHeatmap 模块调整一些界面的美观程度。 <small>2024/04/24</small></li>
+			<li>2.0.2.95 修复EHeatmap 模块众多不合理之处。 <small>2024/04/25</small></li>
+			<li>2.0.2.96 Error dialog新增复制关闭按钮，修复不能输入的Bug. <small>2024/04/25</small></li>
+			<li>2.0.2.97 Report bug dialog字体调整，完成转发邮件功能。交互式按钮的功能重新梳理并实现 <small>2024/04/25</small></li>
+			<li>2.0.2.98 EHeatmap 模块参数设置前加上$符号。 <small>2024/04/26</small></li>
+			<li>2.0.2.99 完成模块Local blast wrapper的基础实现，后面跟用户的需求或者自己的需求逐步增加模块。 <small>2024/04/27</small></li>
+			<li>2.0.2.100 针对展示在用户面前的主要大型可视化模块，花费时间准备了主要的测试数据，做好模块的展示工作。 <small>2024/04/27</small></li>
+			<li>2.0.2.101 将构建进化树的Pipline重新组织，生成各种新的模块。 <small>2024/04/30</small></li>
+			<li>2.0.2.102 将计算进化距离的Pipline重新组织，生成各种新的模块。 <small>2024/04/30</small></li>
+			<li>2.0.2.103 组织好Fasta dumper。 <small>2024/04/30</small></li>
+			<li>2.0.2.104 去除原来很多设计不合理，而且非常占用内存的Tree View模块。去掉低端使用xml的代码，但是还是不行，有一个是有嵌套实现的，比较麻烦。 <small>2024/04/30</small></li>
+			<li>2.0.2.105 开启2.0.1新篇章。去除一些不完善的模块，等有用户需求的时候或者用户有需求的时候开放。<br>再次核对一遍模块的Help是否有问题；核对模块的分类，是否大类都有相应的模块分别。 <small>2024/04/30</small></li>
+		</ul>
+
+	</blockquote>
+</body>
+
+</html>

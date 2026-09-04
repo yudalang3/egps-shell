@@ -4,7 +4,7 @@
 
 ![egps-shell 截图](https://github.com/yudalang3/egps-shell/blob/main/snapshot/ScreenShot_2025-12-13_171628_725.png?raw=true)
 
-`egps-main` 是 `egps-shell` 的闭源代码仓库。`egps-shell` 是 eGPS 的 GUI 壳底座，用来承载桌面模块；面向外部的说明文档主要放在 `docs/` 和 `manuals/` 中。
+`egps-shell` 是一个完全开源的软件产品，为 eGPS 提供承载桌面模块的 GUI 壳框架。本仓库包含其主框架源代码（工程名为 `egps-main`），采用 Apache License 2.0 开源许可证，详见 [LICENSE](LICENSE)。参考文档和开发教程位于 `docs/` 和 `manuals/`。
 
 如果你需要一个包含 `egps-base`、`egps-shell` 和 `egps-pathway.evol.browser` 的打包版本，请访问：https://github.com/yudalang3/egps-pathway.evol.browser
 
@@ -94,8 +94,8 @@ java -cp "out/production/egps-main.gui:dependency-egps/*" @eGPS.args egps2.built
 ```text
 我正在 `egps-main` 中开发一个新的 eGPS 模块，希望使用 `egps-shell` 的 VOICE 框架。
 请先阅读：
-- `docs/voiceFramework/VOICE_MODULE_ARCHITECTURE.md`
-- `docs/voiceFramework/VOICE-GUI.md`
+- `manuals/01_VOICE_architecture_zh.md`
+- `manuals/02_VOICE_GUI_design_zh.md`
 - `manuals/module_plugin_course/`
 
 模块名称是 abcdefg。
@@ -112,8 +112,8 @@ java -cp "out/production/egps-main.gui:dependency-egps/*" @eGPS.args egps2.built
 ```text
 我正在 `egps-main` 中重构一个现有的 eGPS 模块。
 请使用 `egps-shell` 的 VOICE 框架，并先阅读：
-- `docs/voiceFramework/VOICE_MODULE_ARCHITECTURE.md`
-- `docs/voiceFramework/VOICE-GUI.md`
+- `manuals/01_VOICE_architecture_zh.md`
+- `manuals/02_VOICE_GUI_design_zh.md`
 - `manuals/module_plugin_course/`
 
 模块名称是 xxxxxx。

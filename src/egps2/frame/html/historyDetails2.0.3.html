@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>The updates of eGPS</title>
+</head>
+
+<body>
+
+	<blockquote>
+
+		<h3>Small changes of eGPS 2.0.3</h3>
+
+		<ul>
+			<li>2.0.3.1 去除不完善模块。 <small>2024/05/01</small></li>
+			<li>2.0.3.2 Pathway illuminator模块新增KEGG网站上下载的KGML文件解析功能。 <small>2024/05/14</small></li>
+			<li>2.0.3.3 新增Direct sequence mapping模块，可以直接对短序列查找目标位置以生成BED文件。 <small>2024/05/14</small></li>
+			<li>2.0.3.4 新增Sequence logo模块。 <small>2024/05/14</small></li>
+			<li>2.0.3.5 新增Robinson-Foulds Metric的计算，用于快速进行两棵进化树的比较，可以使用类RobinsonFouldsMetricCalculator。 <small>2024/05/14</small></li>
+			<li>2.0.3.6 工具栏新增二级菜单。 <small>2024/05/20</small></li>
+			<li>2.0.3.7 修复通用保存功能中就算关闭对话框也显示成功输出的提示。 <small>2024/05/20</small></li>
+			<li>2.0.3.8 修复https://www.yuque.com/u21499046/egpsdoc/gy5rppqanauapk7g，提到的bugs。 <small>2024/05/23</small></li>
+			<li>2.0.3.9 Modern Tree view 模块，鼠标滚轮缩小问题修复。 <small>2024/05/24</small></li>
+			<li>2.0.3.10 Modern Tree view 模块，左上角刻度尺一直显示为0的问题修复。 <small>2024/05/24</small></li>
+			<li>2.0.3.11 voice框架新增右键导出功能。 <small>2024/05/25</small></li>
+			<li>2.0.3.12 Modern Tree view 模块，完成搜索功能按钮。 <small>2024/05/25</small></li>
+			<li>2.0.3.13 Modern Tree view 模块，完成更改颜色按钮。 <small>2024/05/25</small></li>
+			<li>2.0.3.14 Modern Tree view 模块，完成更改Statement字体按钮。 <small>2024/05/25</small></li>
+			<li>2.0.3.15 Modern Tree view 模块，完成更改Axis字体按钮。 <small>2024/05/25</small></li>
+			<li>2.0.3.16 Modern Tree view 模块，完成更改Axis字体按钮。 <small>2024/05/25</small></li>
+			<li>2.0.3.17 Modern Tree view 模块，支持个性化显示界面名称。鼠标右键树节点后新增Display node name选项，voice参数面板node.visual.config.path参数新增displayName列名。 <small>2024/05/27</small></li>
+			<li>2.0.3.18 Modern Tree view 模块，支持个性化显示界面名称。voice参数面板node.visual.config.path文件中的内容若以#开头则被忽略。 <small>2024/05/27</small></li>
+			<li>2.0.3.19 Modern Tree view 模块，因icon直观性的表达，更换ladderize up和down的实现。 <small>2024/05/30</small></li>
+			<li>2.0.3.20 控制台报错“libpng warning: iCCP: known incorrect sRGB profile 警告，问题解决”。 <small>2024/06/02</small></li>
+			<li>2.0.3.21 Modern Tree view 模块，暂时不支持大规模数据的可视化。 <small>2024/06/03</small></li>
+			<li>2.0.3.22 重新设计与实现gBrowser和gFamily模块下面一部分浏览器的输入参数。 <small>2024/06/04</small></li>
+			<li>2.0.3.23 修复自动更新机制的一个问题，有可能软件版本超过网上的最新版本，顾判断是否下载要考虑版本。 <small>2024/06/04</small></li>
+			<li>2.0.3.24 修复voice运行脚本书签不能及时保存的问题，现在的技术方案是用户每进行一个操作就报错一下。移除原来退出才保存。 <small>2024/06/05</small></li>
+			<li>2.0.3.25 修复苹果电脑中，点击导出按钮卡着的问题。 <small>2024/06/05</small></li>
+			<li>2.0.3.26 新增DIYTools模块， File greper。 <small>2024/06/05</small></li>
+			<li>2.0.3.27 File greper 模块新增对压缩文件的支持，当用户提供的文件以gz/zip/xz/bz2结尾的时候会根据相应的程序进行解压。 <small>2024/06/06</small></li>
+			<li>2.0.3.28 新增DIYTools模块， CDS to protein。实现输入代表cds格式fasta序列到蛋白质序列的翻译。 <small>2024/06/06</small></li>
+			<li>2.0.3.29 发现voice框架在使用的时候，点击执行按钮后生成的书签会和上一个一样，也就是相当于克隆了一个。修复该问题。新增使用的说明tooltip。 <small>2024/06/06</small></li>
+			<li>2.0.3.30 在LocalBlastWrapper模块中，新增blatp工具。 <small>2024/06/07</small></li>
+			<li>2.0.3.31 新增DIYTools模块， Ambiguous Nucl to concrete模块，快速转换含有模糊碱基的序列。 <small>2024/06/08</small></li>
+			<li>2.0.3.32 新增DIYTools模块， Sample counts merger模块，快速合并featureCounts软件之后得到的结果。 <small>2024/06/24</small></li>
+			<li>2.0.3.33 Sample counts merger模块，修复一些浮点数运算的差异。 <small>2024/06/29</small></li>
+			<li>2.0.3.34 Venn plot模块，修复一个数据导入的识别过程中下标越界的小问题。 <small>2024/07/11</small></li>
+			<li>2.0.3.35 Modern tree viewer模块，修复内节点右击后的annotation功能没有反应. <small>2024/07/15</small></li>
+			<li>2.0.3.36 Direct sequence mapping模块，修复输出多余信息的bug。 <small>2024/07/18</small></li>
+			<li>2.0.3.37 Fasta dumper模块，修复1-base 到 0-base的问题。 <small>2024/07/19</small></li>
+			<li>2.0.3.38 Fasta dumper模块，新增根据序列名部分序列匹配的序列提取功能。暂时仅支持命令行使用，启动类为edu.sinh.beauty.unisoft.module.fastadumper.extractpartial.CLI与edu.sinh.beauty.unisoft.module.fastadumper.extractmatch.CLI。 <small>2024/07/23</small></li>
+			<li>2.0.3.39 新增命令行的Fasta tools模块，新增重命名的功能，启动类为edu.sinh.beauty.unisoft.module.fastatools.rename.CLI。 <small>2024/07/23</small></li>
+			<li>2.0.3.40 新增命令行的Hmmer tools模块，将后续输出的tblout.txt文件转换成tsv格式文件，启动类为
+				edu.sinh.beauty.unisoft.module.hmmer.totsv.CLI 。 <small>2024/07/23</small></li>
+			<li>2.0.3.41 在进化树操作的核心类中，将NodeUtil去掉，统一用EvolNodeUtil。 <small>2024/07/25</small></li>
+			<li>2.0.3.42 Modern Tree view 模块，修复导出为txt文本时，内节点无法导出名字的bug。 <small>2024/07/26</small></li>
+			<li>2.0.3.43 Fasta dumper 模块，新增R包API4R类 <small>2024/08/11</small></li>
+			<li>2.0.3.44 完善基于简约法推断祖先状态的流程，新增可视化查看的功能 <small>2024/08/14</small></li>
+			<li>2.0.3.45 Direct sequence mapping模块用+-符号表示正负链 <small>2024/08/14</small></li>
+			<li>2.0.3.46 软件eGPS提供了edu.sinh.beauty.unisoft.module.msaoperator.io.seqFormat.parser.EGPSFastaReader类，方便用户编写Java脚本操作序列。 <small>2024/08/15</small></li>
+			<li>2.0.3.47 Direct sequence mapping 模块提供命令行版本。 <small>2024/08/15</small></li>
+			<li>2.0.3.48 Direct sequence mapping 模块提新增--outputTotal参数，方便用户输出统计结果。 <small>2024/08/16</small></li>
+			<li>2.0.3.49 新增Batch External Commands模块，该模块可批量运行脚本。 <small>2024/08/16</small></li>
+			<li>2.0.3.50 Direct sequence mapping 模块，根据用户反馈，在运行时一般笔记本设置16G内存之后内存不够。现在新增功能，逐条染色体运行，降低内存消耗。 <small>2024/08/16</small></li>
+			<li>2.0.3.51 GFF3 operator 模块，新增Java脚本化运行的快捷API类，用户可以使用 edu.sinh.beauty.unisoft.module.gff3opr.util.YuGFF3Parser 快速调用，当前提供导出所需bed文件信息的实例。 <small>2024/08/19</small></li>
+			<li>2.0.3.52 新增 Tsv处理器模块，当前提供重命名功能，用户可以使用 edu.sinh.beauty.unisoft.module.tsvtools.FirstColumnRenamer 快速调用。 <small>2024/08/20</small></li>
+			<li>2.0.3.53 Direct sequence mapping 模块支持多个字符串include和exclude。 <small>2024/08/20</small></li>
+			<li>2.0.3.54 Tsv处理器模块模块新增功能与使用文档，详见 https://www.yuque.com/u21499046/egpsdoc/dxw307kq73qw1n4y。 <small>2024/08/21</small></li>
+			<li>2.0.3.55 Batch External Commands 模块模块新增功能与使用文档，详见 https://www.yuque.com/u21499046/egpsdoc/aggsm4g8u7rgmsgp。 <small>2024/08/21</small></li>
+			<li>2.0.3.56 基于简约法推断祖先状态的流程，改善下游总结与可视化的功能，详见 https://www.yuque.com/u21499046/egpsdoc/pr5qx32gnxa53p36 以及各个子文档。 <small>2024/08/21</small></li>
+			<li>2.0.3.57 Modern tree view 模块底部状态栏和右键Display more information 新增更多的显示内容。 <small>2024/08/22</small></li>
+			<li>2.0.3.58 启用硬件加速的选项：-Dsun.java2d.opengl=true， 解决图形界面卡顿的问题。 <small>2024/08/25</small></li>
+			<li>2.0.3.59 新增绘制纠缠图教程，新增计算两棵进化树 R-F距离（Robinson-Foulds Metric）的功能。详见：https://www.yuque.com/u21499046/egpsdoc/gfnvenvwcl96oq18 <small>2024/08/26</small></li>
+			<li>2.0.3.60 提供eGPS 2的模块总结使用手册，并不断完善。详见：https://www.yuque.com/u21499046/egpsdoc/opafmd2i4zvxskzc <small>2024/08/26</small></li>
+			<li>2.0.3.61 将Swingx的引用库从1.6.5降低为1.6.1，高版本会造成软件渲染极其缓慢。 <small>2024/08/26</small></li>
+			<li>2.0.3.62 将CGB2.0和CGB1.0放入eGPS2平台中。 <small>2024/08/29</small></li>
+			<li>2.0.3.63 修复CGB2.0和CGB1.0 插件 Cancel 报错的问题。 <small>2024/08/30</small></li>
+			<li>2.0.3.64 完成对 Alignment view 大型可视化模块的使用手册。详见：https://www.yuque.com/u21499046/egpsdoc/rthwek9lk1vwbwn3 <small>2024/08/30</small></li>
+			<li>2.0.3.65 完成对 Evolutionary distance view 可视化模块的使用手册。详见：https://www.yuque.com/u21499046/egpsdoc/updf1skouytkolsp <small>2024/08/30</small></li>
+			<li>2.0.3.66 完成对 mutation presenter 可视化模块的使用手册。详见：https://www.yuque.com/u21499046/egpsdoc/lf5qz1swogudompd <small>2024/08/30</small></li>
+			<li>2.0.3.67 完成对 Alignment diversity 和 Alignment trimmer 可视化模块的使用手册。详见：https://www.yuque.com/u21499046/egpsdoc/iyt7u6odcmz548ed <small>2024/08/30</small></li>
+			<li>2.0.3.68 完成对 voice运行机制的撰写。详见：https://www.yuque.com/u21499046/egpsdoc/ttrxkedmluog0w8e <small>2024/08/30</small></li>
+			<li>2.0.3.69 完成对 奖励模块使用 的撰写。详见：https://www.yuque.com/u21499046/egpsdoc/bg3nosqa55h327cq <small>2024/08/30</small></li>
+			<li>2.0.3.70 Modern Tree View 新增布局矩形布局新形式：Inner Y Axis <small>2024/09/01</small></li>
+			<li>2.0.3.71 Modern Tree View 新增布局矩形布局新形式：Rectangular half circle <small>2024/09/02</small></li>
+			<li>2.0.3.72 新增模块 Table-like text view，用以查看表格类数据。 <small>2024/09/05</small></li>
+			<li>2.0.3.73 新增模块 Aligned Protein To CDS，用以转换联配。 <small>2024/09/05</small></li>
+			<li>2.0.3.74 新增模块 Bench Ensembl annotation downloader，用以批量下载数据。 <small>2024/09/06</small></li>
+			<li>2.0.3.75 重新设计模块 Bench Ensembl annotation downloader，用子Tab的形式表示所有的步骤，完成第一个子模块 Species recongnization。 <small>2024/09/06</small></li>
+			<li>2.0.3.76 新增快捷打开最后一次运行模块的功能，详见https://www.yuque.com/u21499046/egpsdoc/udfcskvbx9b5hfim <small>2024/09/06</small></li>
+			<li>2.0.3.77 重新设计模块 Bench Ensembl annotation downloader，用子Tab的形式表示所有的步骤，完成子模块 URL Batch downloader。 <small>2024/09/06</small></li>
+			<li>2.0.3.78 重新设计模块 Bench Ensembl annotation downloader，用子Tab的形式表示所有的步骤，完成子模块 URL Batch parser。 <small>2024/09/08</small></li>
+			<li>2.0.3.79 为voice模块运行机制新增GUI输入的功能，用户同时按住Ctrl+Shift+Alt+鼠标单机可以单出Input File Chooser。 <small>2024/09/08</small></li>
+			<li>2.0.3.80 模块 Alignment view ，如果导入条序列中，输入数据中出现空格和Tab键，可以自动消除 <small>2024/09/08</small></li>
+			<li>2.0.3.81 完成模块 Bench Ensembl annotation downloader，现在三个Sub voice Tab组成了一个完整的数据下载流程，后续所有模块可以参照这个过程，不断形成比较简短的Pipeline。 <small>2024/09/09</small></li>
+			<li>2.0.3.82 模块 Alignment view ，修复导出连续 pdf的功能。 <small>2024/09/09</small></li>
+			<li>2.0.3.83 模块 Alignment view ，修复导出间断 pdf的功能。<strong>我们发现，如果要导出的碱基数量更多，需要有更加复杂的导出界面设计，这里先记录一下，这个需求。默认输出和font有关，默认条件下Windows使用是30个unit一行。</strong> <small>2024/09/09</small></li>
+			<li>2.0.3.84 模块 Alignment view ，调整导出为 pptx 格式矢量图的功能。 <small>2024/09/09</small></li>
+			<li>2.0.3.85 重新设计模块 Bench Ensembl annotation downloader，用子Tab的形式表示所有的步骤，完成子模块 Already Download Checker。 <small>2024/09/09</small></li>
+			<li>2.0.3.86 JTabbedPanel设置的间距更大一些，看起来更加美观一些。 <small>2024/09/09</small></li>
+			<li>2.0.3.87 新增 URL Batch downloader 子模块 下载指示器，这样用户就能看到单个文件的下载进度。 <small>2024/09/09</small></li>
+			<li>2.0.3.88 模块 File greper，新增 $query.string= 不输入信息的处理方式，此时相当于head的功能，用户可以调整$results.limitation.count参数显示内容。 <small>2024/09/10</small></li>
+			<li>2.0.3.89 修复模块 File greper 中的字符串重叠问题。neighbor.line.number 这个参数本来是想要得到 前面的line和后面的line，但是实测发现，这样容易重叠，还是指定为后面的相邻内容。 <small>2024/09/10</small></li>
+			<li>2.0.3.90 模块 File greper，支持使用正则表达式。但是发现实在太慢了，转而用 Boyer-Moore 算法 <small>2024/09/10</small></li>
+			<li>2.0.3.91 TSV Reader 新增 orginzeMap方法，该方法适合直接产生map。同时优化之前的asMap方法 <small>2024/09/10</small></li>
+			<li>2.0.3.92 新增 Operational workbench 类型的模块 Batch Peptides Operator，目标为处理蛋白质文件 <small>2024/09/10</small></li>
+			<li>2.0.3.93 模块 Batch Peptides Operator，完成子模块 1. Extract unique peptide. <small>2024/09/10</small></li>
+			<li>2.0.3.94 模块 Batch Peptides Operator，完成子模块 2. Extract one gene with longest peptide. <small>2024/09/11</small></li>
+			<li>2.0.3.95 去除 NinePatch4j.jar 文件这个依赖，将源代码放入eGPS源代码。  <small>2024/09/11</small></li>
+			<li>2.0.3.96 为模块 Bench Ensembl annotation downloader，新增子Tab，Alternative download approach。 <small>2024/09/12</small></li>
+			<li>2.0.3.97 为模块 Bench Ensembl annotation downloader，新增子Tab， Download File Validator。 <small>2024/09/12</small></li>
+			<li>2.0.3.98 新增模块 Fasta Tools，新增子Tab: Fasta Concatenate。 <small>2024/09/12</small></li>
+			<li>2.0.3.99 模块 Fasta Tools，新增子Tab: Extract Sequence Partial Match。 <small>2024/09/12</small></li>
+			<li>2.0.3.100 模块 Fasta Tools，新增子Tab: Rename Sequence Partial Match。 <small>2024/09/13</small></li>
+		</ul>
+
+	</blockquote>
+</body>
+
+</html>

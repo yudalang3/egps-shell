@@ -1,0 +1,89 @@
+<html>
+<head>
+<title>Input Format Help</title>
+</head>
+<body>
+
+<h2><font color="#2c3e50">Input Content Guide</font></h2>
+
+<p>This panel accepts structured input in a key-value format. You can type directly or load content from a file.</p>
+
+<hr>
+
+<h3><font color="#34495e">Line Format Rules</font></h3>
+
+<table border="1" cellpadding="8" cellspacing="0" bgcolor="#f9f9f9">
+<tr bgcolor="#ecf0f1">
+    <td><b>Prefix</b></td>
+    <td><b>Meaning</b></td>
+    <td><b>Example</b></td>
+</tr>
+<tr>
+    <td><font color="blue"><b>#</b></font></td>
+    <td>Comment (ignored by parser)</td>
+    <td><code># This is a comment</code></td>
+</tr>
+<tr>
+    <td><font color="red"><b>$</b></font></td>
+    <td>Parameter definition</td>
+    <td><code>$input_file=/path/to/file.txt</code></td>
+</tr>
+<tr>
+    <td><font color="gray">(blank)</font></td>
+    <td>Blank lines are ignored</td>
+    <td></td>
+</tr>
+</table>
+
+<h3><font color="#34495e">Parameter Format</font></h3>
+<p>Parameters follow the pattern: <font color="red"><code>$name=value</code></font></p>
+<ul>
+    <li><b>name</b>: Parameter identifier (alphanumeric, underscore allowed)</li>
+    <li><b>value</b>: Can be text, number, file path, or special format</li>
+</ul>
+
+<h3><font color="#34495e">Special Value Formats</font></h3>
+
+<table border="1" cellpadding="8" cellspacing="0" bgcolor="#f9f9f9">
+<tr bgcolor="#ecf0f1">
+    <td><b>Type</b></td>
+    <td><b>Format</b></td>
+    <td><b>Example</b></td>
+</tr>
+<tr>
+    <td>Color (RGBA)</td>
+    <td>R,G,B,A (0-255)</td>
+    <td><code>255,100,50,255</code></td>
+</tr>
+<tr>
+    <td>Color (Hex)</td>
+    <td>#RRGGBB or #RRGGBBAA</td>
+    <td><code>#FF6432</code> or <code>#FF6432FF</code></td>
+</tr>
+<tr>
+    <td>Font</td>
+    <td>name,style,size</td>
+    <td><code>Arial,0,14</code></td>
+</tr>
+<tr>
+    <td>File Path</td>
+    <td>Absolute or relative path</td>
+    <td><code>/home/user/data.txt</code></td>
+</tr>
+</table>
+
+<p><b>Font Style Values:</b> 0=PLAIN, 1=BOLD, 2=ITALIC, 3=BOLD+ITALIC</p>
+
+<h3><font color="#34495e">Tabular Data</font></h3>
+<p>For table-like data, separate columns with <b>Tab</b> character.</p>
+
+<h3><font color="#34495e">Quick Tips</font></h3>
+<ul>
+    <li><b>Double-click</b> on a parameter line to quickly select the name or value</li>
+    <li><b>Ctrl+Click</b> in the input area to insert a file path</li>
+    <li>Use the <b>Focus</b> button for distraction-free editing</li>
+    <li>Click <b>Examples</b> to see sample inputs for this module</li>
+</ul>
+
+</body>
+</html>
