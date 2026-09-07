@@ -24,7 +24,7 @@
 
 ```bash
 # 进入项目根目录
-cd /path/to/egps-main.gui
+cd /path/to/egps-shell
 
 # 运行脚本
 bash docs/module_plugin_course/create-all-test-plugins.sh
@@ -305,7 +305,7 @@ mv dependency-egps/myplugin.jar ~/.egps2/config/plugin/
 恭喜！你已经成功创建并运行了你的第一个 eGPS 模块！
 
 **继续学习**：
-- 📄 [eGPS2.plugin.properties_zh.md](eGPS2.plugin.properties_zh.md) - **配置文件说明书（必读）**
+- 📄 [05_eGPS2.plugin.properties_zh.md](05_eGPS2.plugin.properties_zh.md) - **配置文件说明书（必读）**
 - 📖 [02_PLUGIN_DEVELOPMENT_zh.md](02_PLUGIN_DEVELOPMENT_zh.md) - 详细的插件开发教程
 - 📖 [03_BUILTIN_DEVELOPMENT_zh.md](03_BUILTIN_DEVELOPMENT_zh.md) - 内置模块开发教程
 - 📖 [04_ARCHITECTURE_zh.md](04_ARCHITECTURE_zh.md) - 架构原理和高级主题

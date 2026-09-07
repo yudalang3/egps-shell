@@ -1,6 +1,6 @@
 # How to Use UnifiedAccessPoint
 
-`UnifiedAccessPoint` is the shell-wide entry point for shared runtime objects in `egps-main`.
+`UnifiedAccessPoint` is the shell-wide entry point for shared runtime objects in `egps-shell`.
 
 **Implementation basis:** `src/egps2/UnifiedAccessPoint.java`
 

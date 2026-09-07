@@ -1,6 +1,6 @@
 # egps-shell Plugin Integration Reference
 
-This document describes how plugin integration currently works in `egps-shell`, with implementation behavior verified against the current `egps-main` codebase.
+This document describes how plugin integration currently works in `egps-shell`, with implementation behavior verified against the current `egps-shell` codebase.
 
 ## Overview
 

@@ -1,6 +1,6 @@
 # 如何使用 UnifiedAccessPoint
 
-`UnifiedAccessPoint` 是 `egps-main` 当前提供的壳层级统一入口，用来访问一些共享运行时对象。
+`UnifiedAccessPoint` 是 `egps-shell` 当前提供的壳层级统一入口，用来访问一些共享运行时对象。
 
 **实现依据：** `src/egps2/UnifiedAccessPoint.java`
 

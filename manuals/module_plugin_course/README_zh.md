@@ -133,7 +133,7 @@ flowchart TD
 
 ---
 
-### 📄 [配置文件说明书](eGPS2.plugin.properties_zh.md)
+### 📄 [配置文件说明书](05_eGPS2.plugin.properties_zh.md)
 
 **适合人群**：所有插件开发者
 
@@ -171,7 +171,7 @@ flowchart TD
 
 ```bash
 # 进入项目根目录
-cd /path/to/egps-main.gui
+cd /path/to/egps-shell
 
 # 运行脚本
 bash docs/module_plugin_course/create-all-test-plugins.sh
@@ -519,7 +519,7 @@ bash docs/module_plugin_course/create-all-test-plugins.sh
 - [02. 插件开发教程](02_PLUGIN_DEVELOPMENT_zh.md)
 - [03. 内置模块开发教程](03_BUILTIN_DEVELOPMENT_zh.md)
 - [04. 架构原理说明](04_ARCHITECTURE_zh.md)
-- [配置文件说明书](eGPS2.plugin.properties_zh.md) ⭐ **必读**
+- [配置文件说明书](05_eGPS2.plugin.properties_zh.md) ⭐ **必读**
 
 ---
 
@@ -566,7 +566,7 @@ java -cp "./out/production/egps-main.gui:dependency-egps/*" egps2.Launcher
 **第一步**：运行自动脚本
 
 ```bash
-cd /path/to/egps-main.gui
+cd /path/to/egps-shell
 bash docs/module_plugin_course/create-all-test-plugins.sh
 ```
 

@@ -2,7 +2,7 @@
 
 This `docs/` directory is the reference documentation set for `egps-shell`.
 
-`egps-shell` is the GUI shell and baseline runtime described to external readers. Its current closed-source implementation lives in the `egps-main` repository.
+`egps-shell` is the open-source GUI framework and baseline runtime. This repository contains its implementation source code.
 
 ## Writing Scope
 
@@ -11,13 +11,13 @@ The default subject in `docs/` is `egps-shell`.
 Use this writing pattern throughout the directory:
 
 - When explaining behavior to external readers, speak in terms of `egps-shell`.
-- When citing implementation evidence, say that the behavior is implemented in `egps-main` by specific classes or modules.
+- When citing implementation evidence, say that the behavior is implemented in `egps-shell` by specific classes or modules.
 
 ## Boundary: README vs docs vs manuals
 
 | Location | Main subject | Purpose | Typical questions |
 | --- | --- | --- | --- |
-| `README.md`, `README_zh.md` | `egps-main` | Repository entry | What is this repo? How do I build and run the current source tree? |
+| `README.md`, `README_zh.md` | `egps-shell` | Repository entry | What is this repo? How do I build and run the current source tree? |
 | `docs/` | `egps-shell` | Reference documentation | How does the shell start? How are modules discovered? How does VOICE work? |
 | `manuals/` | `egps-shell` | Tutorials and practical guides | How do I learn the framework? How do I develop a module or plugin step by step? |
 

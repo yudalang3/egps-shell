@@ -215,7 +215,7 @@ public class SystemInfoTool extends FastBaseTemplate {
 #!/bin/bash
 set -e
 
-EGPS_HOME="/path/to/egps-main.gui"
+EGPS_HOME="/path/to/egps-shell"
 MODULE_NAME="system-info-tool"
 VERSION="1.0.0"
 
@@ -317,7 +317,7 @@ mv dependency-egps/mymodule.jar ~/.egps2/config/plugin/
 #!/bin/bash
 
 JAR_FILE="mymodule-1.0.0.jar"
-EGPS_HOME="/path/to/egps-main.gui"
+EGPS_HOME="/path/to/egps-shell"
 
 echo "选择安装方式:"
 echo "1) 内置模块 (Built-in) - 放到 dependency-egps/"
@@ -457,7 +457,7 @@ fi
 
 ## 📚 下一步
 
-- [eGPS2.plugin.properties_zh.md](eGPS2.plugin.properties_zh.md) - 配置文件详细说明
+- [05_eGPS2.plugin.properties_zh.md](05_eGPS2.plugin.properties_zh.md) - 配置文件详细说明
 - [04_ARCHITECTURE_zh.md](04_ARCHITECTURE_zh.md) - 深入理解模块系统架构
 - 研究现有内置模块的源代码: `src/egps2/builtin/modules/`
 - 了解 `ModuleDiscoveryService` 的工作原理

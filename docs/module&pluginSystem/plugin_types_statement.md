@@ -1,6 +1,6 @@
 # Current Plugin Implementation Types
 
-This document explains the plugin implementation styles currently supported by `egps-shell`, and how those styles are actually integrated by the current `egps-main` implementation.
+This document explains the plugin implementation styles currently supported by `egps-shell`, and how those styles are actually integrated by the current `egps-shell` implementation.
 
 ## 1. Two Supported Plugin Styles
 

@@ -1,6 +1,6 @@
 # Understanding How `egps-shell` Launches
 
-This document explains the startup flow of `egps-shell`, and points back to the entry classes in the current `egps-main` implementation. It is intended to help with understanding the real runtime path, local debugging, and problem tracing.
+This document explains the startup flow of `egps-shell`, and points back to the entry classes in the current `egps-shell` implementation. It is intended to help with understanding the real runtime path, local debugging, and problem tracing.
 
 The current entry classes are mainly:
 

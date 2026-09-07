@@ -24,7 +24,7 @@ After this quick start, you should be able to:
 ### Step 1: run the generator script
 
 ```bash
-cd /path/to/egps-main.gui
+cd /path/to/egps-shell
 bash docs/module_plugin_course/create-all-test-plugins.sh
 ```
 

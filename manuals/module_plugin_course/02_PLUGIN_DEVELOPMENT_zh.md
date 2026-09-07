@@ -178,7 +178,7 @@ public class MySimplePlugin extends FastBaseTemplate {
 
 ```bash
 # 设置变量
-EGPS_HOME="/path/to/egps-main.gui"
+EGPS_HOME="/path/to/egps-shell"
 SRC_DIR="src"
 BUILD_DIR="build"
 
@@ -661,7 +661,7 @@ props.store(new FileWriter(configFile), "My Plugin Config");
 #!/bin/bash
 set -e
 
-EGPS_HOME="/path/to/egps-main.gui"
+EGPS_HOME="/path/to/egps-shell"
 PLUGIN_NAME="my-simple-plugin"
 VERSION="1.0.0"
 
@@ -771,7 +771,7 @@ try {
 
 ## 📚 下一步
 
-- [eGPS2.plugin.properties_zh.md](eGPS2.plugin.properties_zh.md) - **配置文件详细说明（推荐阅读）**
+- [05_eGPS2.plugin.properties_zh.md](05_eGPS2.plugin.properties_zh.md) - **配置文件详细说明（推荐阅读）**
 - [03_BUILTIN_DEVELOPMENT_zh.md](03_BUILTIN_DEVELOPMENT_zh.md) - 学习如何开发内置模块
 - [04_ARCHITECTURE_zh.md](04_ARCHITECTURE_zh.md) - 深入理解 eGPS 模块系统架构
 - 参考内置模块源代码: `src/egps2/builtin/modules/`

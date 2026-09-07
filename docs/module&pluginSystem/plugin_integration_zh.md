@@ -1,6 +1,6 @@
 # egps-shell 插件接入参考
 
-本文说明当前 `egps-shell` 中插件接入机制的真实行为，并以当前 `egps-main` 代码实现为依据。
+本文说明当前 `egps-shell` 中插件接入机制的真实行为，并以当前 `egps-shell` 代码实现为依据。
 
 ## 总览
 

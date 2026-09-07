@@ -105,7 +105,7 @@ This script generates several example plugins so developers can inspect working 
 Typical workflow:
 
 ```bash
-cd /path/to/egps-main.gui
+cd /path/to/egps-shell
 bash docs/module_plugin_course/create-all-test-plugins.sh
 ```
 
