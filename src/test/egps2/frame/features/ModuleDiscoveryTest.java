@@ -22,7 +22,7 @@ import java.util.stream.Collectors;
  *
  * <p>Usage:
  * <pre>
- * java -cp "./out/production/egps-main.gui:dependency-egps/*" egps2.frame.features.ModuleDiscoveryTest
+ * java -cp "./out/production/egps-shell:dependency-egps/*" egps2.frame.features.ModuleDiscoveryTest
  * </pre>
  *
  * @author eGPS Dev Team

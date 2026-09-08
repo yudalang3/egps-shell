@@ -144,7 +144,7 @@ EOF
 # 编译 Plugin 1
 echo "  ⚙️  编译中..."
 javac -d "$WORK_DIR/plugin1" \
-      -cp "dependency-egps/*:out/production/egps-main.gui" \
+      -cp "dependency-egps/*:out/production/egps-shell" \
       "$WORK_DIR/plugin1/test/fastbase/FastBasePlugin.java"
 
 # 创建配置文件
@@ -335,7 +335,7 @@ EOF
 # 编译 Plugin 2
 echo "  ⚙️  编译中..."
 javac -d "$WORK_DIR/plugin2" \
-      -cp "dependency-egps/*:out/production/egps-main.gui" \
+      -cp "dependency-egps/*:out/production/egps-shell" \
       "$WORK_DIR/plugin2/test/direct/DirectPlugin.java"
 
 # 创建配置文件
@@ -727,7 +727,7 @@ EOF
 # 编译 Plugin 3
 echo "  ⚙️  编译中..."
 javac -d "$WORK_DIR/plugin3" \
-      -cp "dependency-egps/*:out/production/egps-main.gui" \
+      -cp "dependency-egps/*:out/production/egps-shell" \
       "$WORK_DIR/plugin3/test/calculator/SimpleCalculator.java"
 
 # 创建配置文件
@@ -1140,7 +1140,7 @@ EOF
 # 编译 Plugin 4
 echo "  ⚙️  编译中..."
 javac -d "$WORK_DIR/plugin4" \
-      -cp "dependency-egps/*:out/production/egps-main.gui" \
+      -cp "dependency-egps/*:out/production/egps-shell" \
       "$WORK_DIR/plugin4/test/clipboard/ClipboardPaste.java"
 
 # 创建配置文件
@@ -1242,7 +1242,7 @@ After installation:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 Start eGPS:
-    java -cp "./out/production/egps-main.gui:dependency-egps/*" egps2.Launcher
+    java -cp "./out/production/egps-shell:dependency-egps/*" egps2.Launcher
 
 Open plugins:
     Method 1: Menu Bar → Plugins → Select plugin
@@ -1327,7 +1327,7 @@ echo "━━━━━━━━━━━━━━━━━━━━━━━━�
 echo "🚀 启动 eGPS："
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo ""
-echo "  java -cp \"./out/production/egps-main.gui:dependency-egps/*\" egps2.Launcher"
+echo "  java -cp \"./out/production/egps-shell:dependency-egps/*\" egps2.Launcher"
 echo ""
 echo "然后按 Ctrl+2 打开 Module Gallery 查看插件！"
 echo ""

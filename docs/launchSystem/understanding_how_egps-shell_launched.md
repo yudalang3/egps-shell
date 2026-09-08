@@ -10,12 +10,12 @@ The current entry classes are mainly:
 ## Entry Points and Common Commands
 
 - Standard entry: `egps2.Launcher` (`src/egps2/Launcher.java`)  
-  Command: `java -cp "./out/production/egps-main.gui:dependency-egps/*" -Xmx12g @eGPS.args egps2.Launcher`
+  Command: `java -cp "./out/production/egps-shell:dependency-egps/*" -Xmx12g @eGPS.args egps2.Launcher`
 - Development entry: `egps2.Launcher4Dev` (`src/egps2/Launcher4Dev.java`)  
-  Command: `java -cp "./out/production/egps-main.gui:dependency-egps/*" -Xmx12g @eGPS.args egps2.Launcher4Dev`
+  Command: `java -cp "./out/production/egps-shell:dependency-egps/*" -Xmx12g @eGPS.args egps2.Launcher4Dev`
 - Launching a predefined module by passing a loader FQCN  
-  Command: `java -cp "./out/production/egps-main.gui:dependency-egps/*" -Xmx12g @eGPS.args egps2.Launcher egps2.builtin.modules.voice.IndependentModuleLoader`
-- Compilation (JDK 25): `javac -d ./out/production/egps-main.gui -cp "dependency-egps/*" $(find src -name "*.java")`
+  Command: `java -cp "./out/production/egps-shell:dependency-egps/*" -Xmx12g @eGPS.args egps2.Launcher egps2.builtin.modules.voice.IndependentModuleLoader`
+- Compilation (JDK 25): `javac -d ./out/production/egps-shell -cp "dependency-egps/*" $(find src -name "*.java")`
 
 Notes:
 

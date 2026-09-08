@@ -187,7 +187,7 @@ mkdir -p $BUILD_DIR
 
 # 编译
 javac -d $BUILD_DIR \
-      -cp "$EGPS_HOME/dependency-egps/*:$EGPS_HOME/out/production/egps-main.gui" \
+      -cp "$EGPS_HOME/dependency-egps/*:$EGPS_HOME/out/production/egps-shell" \
       -encoding UTF-8 \
       $SRC_DIR/com/mycompany/myplugin/MySimplePlugin.java
 ```
@@ -242,7 +242,7 @@ cp dist/my-simple-plugin.jar ~/.egps2/config/plugin/
 ```bash
 # 启动 eGPS
 cd $EGPS_HOME
-java -cp "./out/production/egps-main.gui:dependency-egps/*" egps2.Launcher
+java -cp "./out/production/egps-shell:dependency-egps/*" egps2.Launcher
 
 # 按 Ctrl+2 打开 Module Gallery
 # 或者从菜单 Plugins → My Simple Plugin
@@ -571,7 +571,7 @@ public class MyComplexPluginPanel extends ModuleFace {
 ```bash
 # 编译
 javac -d $BUILD_DIR \
-      -cp "$EGPS_HOME/dependency-egps/*:$EGPS_HOME/out/production/egps-main.gui" \
+      -cp "$EGPS_HOME/dependency-egps/*:$EGPS_HOME/out/production/egps-shell" \
       -encoding UTF-8 \
       $SRC_DIR/com/mycompany/complexpl​ugin/*.java
 ```
@@ -674,7 +674,7 @@ mkdir -p build dist
 # 编译
 echo "⚙️  编译中..."
 javac -d build \
-      -cp "$EGPS_HOME/dependency-egps/*:$EGPS_HOME/out/production/egps-main.gui" \
+      -cp "$EGPS_HOME/dependency-egps/*:$EGPS_HOME/out/production/egps-shell" \
       -encoding UTF-8 \
       src/com/mycompany/myplugin/*.java
 

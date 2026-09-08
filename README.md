@@ -11,7 +11,7 @@ If you need a bundled distribution that includes `egps-base`, `egps-shell`, and 
 ## Overview
 
 - `egps-shell` is the maintained open-source GUI framework and baseline runtime.
-- `egps-main.gui` is the historical name retained by the IDEA module and build output directory.
+- The IDEA module shares the repository name and builds to `out/production/egps-shell`.
 - `egps2` is the main Java package namespace used by the current codebase.
 - The application is Swing-based and supports modular loading, plugin integration, and VOICE-based workflows.
 
@@ -37,14 +37,14 @@ If you need a bundled distribution that includes `egps-base`, `egps-shell`, and 
 
 Use JDK 25 and run commands from the repository root. Dependencies are managed through `dependency-egps/*`; this project does not use Maven or Gradle. The dependency directory is not tracked by Git, so prepare matching dependency JARs (including `egps-base`) first.
 
-The current IDEA module inherits project output settings. Its name is `egps-main.gui`, normally producing `out/production/egps-main.gui`. The manual commands below use that path and exclude `src/test/`. Start with an empty output directory to avoid packaging stale classes or previously compiled tests.
+The current IDEA module inherits project output settings. Its name is `egps-shell`, normally producing `out/production/egps-shell`. The manual commands below use that path and exclude `src/test/`. Start with an empty output directory to avoid packaging stale classes or previously compiled tests.
 
 `javac` does not copy images, HTML, fonts, or other resources. After compilation succeeds, copy non-Java files while preserving their paths relative to `src`.
 
 Windows PowerShell 7:
 
 ```powershell
-$buildDir = "out/production/egps-main.gui"
+$buildDir = "out/production/egps-shell"
 New-Item -ItemType Directory -Force -Path $buildDir | Out-Null
 $sourceRoot = (Resolve-Path src).Path
 Get-ChildItem src -Recurse -Filter *.java |
@@ -66,7 +66,7 @@ Get-ChildItem src -Recurse -File |
 macOS/Linux (Bash with native Java):
 
 ```bash
-build_dir="out/production/egps-main.gui"
+build_dir="out/production/egps-shell"
 mkdir -p "$build_dir"
 find src -path src/test -prune -o -name '*.java' -print | sed 's/.*/"&"/' > out/sources.txt
 javac -encoding UTF-8 -d "$build_dir" -cp "dependency-egps/*" @out/sources.txt &&
@@ -86,7 +86,7 @@ find src -path src/test -prune -o -type f ! -name '*.java' -exec sh -c '
 After compiling and copying resources, package directly (both platforms):
 
 ```text
-jar --create --file out/egps-shell-0.0.1.jar -C out/production/egps-main.gui .
+jar --create --file out/egps-shell-0.0.1.jar -C out/production/egps-shell .
 ```
 
 This only packages existing output: it does not compile, bundle dependency JARs, or copy to deployment directories. Prepare dependencies separately for deployment.
@@ -100,17 +100,17 @@ At runtime, you need both the compiled classes and the dependency JARs.
 For Windows PowerShell 7:
 
 ```powershell
-java -cp "out/production/egps-main.gui;dependency-egps/*" -Xmx12g '@eGPS.args' egps2.Launcher
-java -cp "out/production/egps-main.gui;dependency-egps/*" -Xmx12g '@eGPS.args' egps2.Launcher4Dev
-java -cp "out/production/egps-main.gui;dependency-egps/*" -Xmx12g '@eGPS.args' egps2.Launcher com.example.YourModuleLoader
+java -cp "out/production/egps-shell;dependency-egps/*" -Xmx12g '@eGPS.args' egps2.Launcher
+java -cp "out/production/egps-shell;dependency-egps/*" -Xmx12g '@eGPS.args' egps2.Launcher4Dev
+java -cp "out/production/egps-shell;dependency-egps/*" -Xmx12g '@eGPS.args' egps2.Launcher com.example.YourModuleLoader
 ```
 
 For macOS/Linux:
 
 ```sh
-java -cp "out/production/egps-main.gui:dependency-egps/*" -Xmx12g @eGPS.args egps2.Launcher
-java -cp "out/production/egps-main.gui:dependency-egps/*" -Xmx12g @eGPS.args egps2.Launcher4Dev
-java -cp "out/production/egps-main.gui:dependency-egps/*" -Xmx12g @eGPS.args egps2.Launcher com.example.YourModuleLoader
+java -cp "out/production/egps-shell:dependency-egps/*" -Xmx12g @eGPS.args egps2.Launcher
+java -cp "out/production/egps-shell:dependency-egps/*" -Xmx12g @eGPS.args egps2.Launcher4Dev
+java -cp "out/production/egps-shell:dependency-egps/*" -Xmx12g @eGPS.args egps2.Launcher com.example.YourModuleLoader
 ```
 
 The third command launches a specific module directly by passing the fully qualified loader class name.
@@ -122,7 +122,7 @@ If the module is VOICE-based and exposes `SubTabModuleRunner`, you can use `egps
 Example on macOS/Linux:
 
 ```sh
-java -cp "out/production/egps-main.gui:dependency-egps/*" @eGPS.args egps2.builtin.modules.CLI your.package.YourRunner path/to/config.txt
+java -cp "out/production/egps-shell:dependency-egps/*" @eGPS.args egps2.builtin.modules.CLI your.package.YourRunner path/to/config.txt
 ```
 
 On Windows PowerShell, use `;` instead of `:` in the classpath and quote the argument file as `'@eGPS.args'`.
@@ -136,15 +136,15 @@ Compile the main sources and copy resources before running this discovery diagno
 Windows PowerShell 7:
 
 ```powershell
-javac -encoding UTF-8 -d out/test-classes -cp "out/production/egps-main.gui;dependency-egps/*" src/test/egps2/frame/features/ModuleDiscoveryServiceTest.java
-java -cp "out/test-classes;out/production/egps-main.gui;dependency-egps/*" '@eGPS.args' test.egps2.frame.features.ModuleDiscoveryServiceTest
+javac -encoding UTF-8 -d out/test-classes -cp "out/production/egps-shell;dependency-egps/*" src/test/egps2/frame/features/ModuleDiscoveryServiceTest.java
+java -cp "out/test-classes;out/production/egps-shell;dependency-egps/*" '@eGPS.args' test.egps2.frame.features.ModuleDiscoveryServiceTest
 ```
 
 macOS/Linux:
 
 ```bash
-javac -encoding UTF-8 -d out/test-classes -cp "out/production/egps-main.gui:dependency-egps/*" src/test/egps2/frame/features/ModuleDiscoveryServiceTest.java
-java -cp "out/test-classes:out/production/egps-main.gui:dependency-egps/*" @eGPS.args test.egps2.frame.features.ModuleDiscoveryServiceTest
+javac -encoding UTF-8 -d out/test-classes -cp "out/production/egps-shell:dependency-egps/*" src/test/egps2/frame/features/ModuleDiscoveryServiceTest.java
+java -cp "out/test-classes:out/production/egps-shell:dependency-egps/*" @eGPS.args test.egps2.frame.features.ModuleDiscoveryServiceTest
 ```
 
 - `test.egps2.frame.features.ModuleDiscoveryServiceTest`: checks scanning and filtering; its package really includes `test.`.

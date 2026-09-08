@@ -10,12 +10,12 @@
 ## 运行入口与常用命令
 
 - 标准启动入口：`egps2.Launcher`（`src/egps2/Launcher.java`）  
-  运行命令：`java -cp "./out/production/egps-main.gui:dependency-egps/*" -Xmx12g @eGPS.args egps2.Launcher`
+  运行命令：`java -cp "./out/production/egps-shell:dependency-egps/*" -Xmx12g @eGPS.args egps2.Launcher`
 - 开发模式入口：`egps2.Launcher4Dev`（`src/egps2/Launcher4Dev.java`）  
-  运行命令：`java -cp "./out/production/egps-main.gui:dependency-egps/*" -Xmx12g @eGPS.args egps2.Launcher4Dev`
+  运行命令：`java -cp "./out/production/egps-shell:dependency-egps/*" -Xmx12g @eGPS.args egps2.Launcher4Dev`
 - 指定启动模块（传入模块加载器 FQCN，启动后自动打开模块标签页）  
-  运行命令：`java -cp "./out/production/egps-main.gui:dependency-egps/*" -Xmx12g @eGPS.args egps2.Launcher egps2.builtin.modules.voice.IndependentModuleLoader`
-- 编译（JDK 25）：`javac -d ./out/production/egps-main.gui -cp "dependency-egps/*" $(find src -name "*.java")`
+  运行命令：`java -cp "./out/production/egps-shell:dependency-egps/*" -Xmx12g @eGPS.args egps2.Launcher egps2.builtin.modules.voice.IndependentModuleLoader`
+- 编译（JDK 25）：`javac -d ./out/production/egps-shell -cp "dependency-egps/*" $(find src -name "*.java")`
 
 说明：
 

@@ -363,7 +363,7 @@ Class<?> moduleClass = appLoader.loadClass("com.example.MyModule");
 
 ```java
 // 在 Launcher 启动时，dependency-egps 已经在 classpath 中
-// java -cp "./out/production/egps-main.gui:dependency-egps/*" egps2.Launcher
+// java -cp "./out/production/egps-shell:dependency-egps/*" egps2.Launcher
 ```
 
 #### 加载流程

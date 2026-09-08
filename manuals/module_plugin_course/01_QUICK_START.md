@@ -17,7 +17,7 @@ After this quick start, you should be able to:
 
 - basic Java knowledge
 - comfort with command-line usage
-- a compiled eGPS project (`out/production/egps-main.gui` exists)
+- a compiled eGPS project (`out/production/egps-shell` exists)
 
 ## Method 1: use the automation script (recommended)
 

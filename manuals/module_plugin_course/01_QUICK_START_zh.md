@@ -16,7 +16,7 @@
 
 - 基本的 Java 编程知识
 - 了解如何使用命令行
-- 已经编译好的 eGPS 项目（`out/production/egps-main.gui` 目录存在）
+- 已经编译好的 eGPS 项目（`out/production/egps-shell` 目录存在）
 
 ## 🚀 方式 1: 使用自动化脚本（推荐）
 
@@ -79,13 +79,13 @@ cp plug_dist/*.jar dependency-egps/
 For MacOS/Linux:
 
 ```bash
-java -cp "out/production/egps-main.gui:dependency-egps/*" -Xmx12g @eGPS.args egps2.Launcher
+java -cp "out/production/egps-shell:dependency-egps/*" -Xmx12g @eGPS.args egps2.Launcher
 ```
 
 For Windows:
 
 ```bash
-java -cp "out/production/egps-main.gui;dependency-egps/*" -Xmx12g '@eGPS.args' egps2.Launcher
+java -cp "out/production/egps-shell;dependency-egps/*" -Xmx12g '@eGPS.args' egps2.Launcher
 ```
 
 ### 步骤 5: 查看你的插件

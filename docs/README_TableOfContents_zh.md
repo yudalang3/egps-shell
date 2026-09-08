@@ -25,7 +25,7 @@
 
 ### 运行时与架构参考
 
-- `docs/launchSystem/understanding_how_main.gui_launched.md`：说明当前启动流程、启动入口类和运行时配置路径。
+- `docs/launchSystem/understanding_how_egps-shell_launched.md`：说明当前启动流程、启动入口类和运行时配置路径。
 - `docs/module&pluginSystem/plugin_integration.md`：说明当前插件加载与模块发现的整体机制。
 - `docs/module&pluginSystem/plugin_gallery_integration_statement.md`：说明当前插件、配置合并结果与 Module Gallery 之间的关系。
 - `docs/module&pluginSystem/plugin_types_statement.md`：说明当前支持的插件实现类型及其边界。
@@ -72,7 +72,7 @@
 
 如果第一次阅读这套参考文档，建议按下面顺序进入：
 
-1. `docs/launchSystem/understanding_how_main.gui_launched.md`
+1. `docs/launchSystem/understanding_how_egps-shell_launched.md`
 2. `docs/module&pluginSystem/plugin_integration.md`
 3. `docs/module&pluginSystem/module_discovery_exclusion_rules.md`
 4. `manuals/01_VOICE_architecture_zh.md`

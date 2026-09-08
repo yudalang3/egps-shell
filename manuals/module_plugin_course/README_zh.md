@@ -556,7 +556,7 @@ public class MyPlugin extends FastBaseTemplate {
 启动时能看到模块加载的详细信息：
 
 ```bash
-java -cp "./out/production/egps-main.gui:dependency-egps/*" egps2.Launcher
+java -cp "./out/production/egps-shell:dependency-egps/*" egps2.Launcher
 ```
 
 ---
@@ -583,7 +583,7 @@ cp plug_dist/*.jar dependency-egps/
 **第三步**：启动 eGPS
 
 ```bash
-java -cp "./out/production/egps-main.gui:dependency-egps/*" egps2.Launcher
+java -cp "./out/production/egps-shell:dependency-egps/*" egps2.Launcher
 ```
 
 **第四步**：查看你的模块

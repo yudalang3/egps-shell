@@ -9,7 +9,7 @@ This document describes the current startup entry points for `egps-shell`.
 ### Production launcher
 
 ```bash
-java -cp "./out/production/egps-main.gui:dependency-egps/*" -Xmx12g @eGPS.args egps2.Launcher
+java -cp "./out/production/egps-shell:dependency-egps/*" -Xmx12g @eGPS.args egps2.Launcher
 ```
 
 Use this as the normal shell startup path.
@@ -17,7 +17,7 @@ Use this as the normal shell startup path.
 ### Development launcher
 
 ```bash
-java -cp "./out/production/egps-main.gui:dependency-egps/*" -Xmx12g @eGPS.args egps2.Launcher4Dev
+java -cp "./out/production/egps-shell:dependency-egps/*" -Xmx12g @eGPS.args egps2.Launcher4Dev
 ```
 
 `Launcher4Dev` only sets `Launcher.isDev = true` and then delegates to `Launcher.main(args)`.
@@ -25,7 +25,7 @@ java -cp "./out/production/egps-main.gui:dependency-egps/*" -Xmx12g @eGPS.args e
 ### Launch one module directly
 
 ```bash
-java -cp "./out/production/egps-main.gui:dependency-egps/*" -Xmx12g @eGPS.args egps2.Launcher egps2.builtin.modules.voice.IndependentModuleLoader
+java -cp "./out/production/egps-shell:dependency-egps/*" -Xmx12g @eGPS.args egps2.Launcher egps2.builtin.modules.voice.IndependentModuleLoader
 ```
 
 If you pass one or more module-loader FQCNs after `egps2.Launcher`, the shell registers them and opens them after the main frame becomes available.

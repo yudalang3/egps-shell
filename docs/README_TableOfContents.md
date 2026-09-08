@@ -25,7 +25,7 @@ Use this writing pattern throughout the directory:
 
 ### Runtime and architecture reference
 
-- `docs/launchSystem/understanding_how_main.gui_launched.md`: explains the current launch flow, startup entry classes, and runtime configuration paths.
+- `docs/launchSystem/understanding_how_egps-shell_launched.md`: explains the current launch flow, startup entry classes, and runtime configuration paths.
 - `docs/module&pluginSystem/plugin_integration.md`: explains the current plugin loading and discovery model.
 - `docs/module&pluginSystem/plugin_gallery_integration_statement.md`: explains the current relationship between plugins, config-backed loading, and Module Gallery presentation.
 - `docs/module&pluginSystem/plugin_types_statement.md`: explains the current supported plugin implementation styles and their boundaries.
@@ -72,7 +72,7 @@ Use this writing pattern throughout the directory:
 
 If you are new to the reference docs, a practical order is:
 
-1. `docs/launchSystem/understanding_how_main.gui_launched.md`
+1. `docs/launchSystem/understanding_how_egps-shell_launched.md`
 2. `docs/module&pluginSystem/plugin_integration.md`
 3. `docs/module&pluginSystem/module_discovery_exclusion_rules.md`
 4. `manuals/01_VOICE_architecture.md`

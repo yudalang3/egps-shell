@@ -65,7 +65,7 @@ Built-in 模式是指将模块打包成 JAR 文件，放置到 `dependency-egps`
 cp dist/mymodule.jar ~/.egps2/config/plugin/
 
 # 启动 eGPS 测试
-java -cp "./out/production/egps-main.gui:dependency-egps/*" egps2.Launcher
+java -cp "./out/production/egps-shell:dependency-egps/*" egps2.Launcher
 ```
 
 #### 步骤 3: 转为 Built-in
@@ -80,7 +80,7 @@ rm ~/.egps2/config/plugin/mymodule.jar
 cp dist/mymodule.jar dependency-egps/
 
 # 重启 eGPS
-java -cp "./out/production/egps-main.gui:dependency-egps/*" egps2.Launcher
+java -cp "./out/production/egps-shell:dependency-egps/*" egps2.Launcher
 ```
 
 完成！现在你的模块就是内置模块了。
@@ -228,7 +228,7 @@ mkdir -p build dist
 # 编译
 echo "⚙️  编译..."
 javac -d build \
-      -cp "$EGPS_HOME/dependency-egps/*:$EGPS_HOME/out/production/egps-main.gui" \
+      -cp "$EGPS_HOME/dependency-egps/*:$EGPS_HOME/out/production/egps-shell" \
       -encoding UTF-8 \
       src/com/mycompany/sysinfo/SystemInfoTool.java
 

@@ -9,7 +9,7 @@
 ### 正常启动入口
 
 ```bash
-java -cp "./out/production/egps-main.gui:dependency-egps/*" -Xmx12g @eGPS.args egps2.Launcher
+java -cp "./out/production/egps-shell:dependency-egps/*" -Xmx12g @eGPS.args egps2.Launcher
 ```
 
 这条命令是当前常规的壳程序启动路径。
@@ -17,7 +17,7 @@ java -cp "./out/production/egps-main.gui:dependency-egps/*" -Xmx12g @eGPS.args e
 ### 开发模式启动入口
 
 ```bash
-java -cp "./out/production/egps-main.gui:dependency-egps/*" -Xmx12g @eGPS.args egps2.Launcher4Dev
+java -cp "./out/production/egps-shell:dependency-egps/*" -Xmx12g @eGPS.args egps2.Launcher4Dev
 ```
 
 `Launcher4Dev` 当前只做一件事：先把 `Launcher.isDev = true`，然后委托给 `Launcher.main(args)`。
@@ -25,7 +25,7 @@ java -cp "./out/production/egps-main.gui:dependency-egps/*" -Xmx12g @eGPS.args e
 ### 启动时直接打开某个模块
 
 ```bash
-java -cp "./out/production/egps-main.gui:dependency-egps/*" -Xmx12g @eGPS.args egps2.Launcher egps2.builtin.modules.voice.IndependentModuleLoader
+java -cp "./out/production/egps-shell:dependency-egps/*" -Xmx12g @eGPS.args egps2.Launcher egps2.builtin.modules.voice.IndependentModuleLoader
 ```
 
 如果你在 `egps2.Launcher` 后面再传一个或多个模块加载器类全名，壳程序会先注册这些模块，再在主窗体可用后自动打开它们。

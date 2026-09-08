@@ -19,11 +19,11 @@ import java.util.Set;
  * <p><strong>Usage:</strong>
  * <pre>
  * # Compile the test
- * javac -d ./out/production/egps-main.gui -cp "dependency-egps/*:./out/production/egps-main.gui" \
+ * javac -d ./out/production/egps-shell -cp "dependency-egps/*:./out/production/egps-shell" \
  *       src/test/egps2/frame/features/FastBaseTemplateDiscoveryTest.java
  *
  * # Run the test
- * java -cp "./out/production/egps-main.gui:dependency-egps/*" \
+ * java -cp "./out/production/egps-shell:dependency-egps/*" \
  *      egps2.frame.features.FastBaseTemplateDiscoveryTest
  * </pre>
  *

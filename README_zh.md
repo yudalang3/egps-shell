@@ -11,7 +11,7 @@
 ## 概述
 
 - `egps-shell` 是当前维护中的开源 GUI 主框架与基础运行时。
-- `egps-main.gui` 是现有 IDEA 模块名和构建输出目录中保留的历史名称。
+- IDEA 模块名与仓库名称一致，编译输出为 `out/production/egps-shell`。
 - `egps2` 是当前代码库使用的主要 Java 包命名空间。
 - 这个应用基于 Swing，支持模块化加载、插件接入，以及基于 VOICE 的工作流。
 
@@ -37,14 +37,14 @@
 
 使用 JDK 25，从仓库根目录执行命令。依赖通过 `dependency-egps/*` 管理，本项目不使用 Maven 或 Gradle。该依赖目录不随 Git 提交，需要事先准备匹配的依赖 JAR（包括 `egps-base`）。
 
-当前 IDEA 配置继承项目输出设置，模块名为 `egps-main.gui`，通常输出到 `out/production/egps-main.gui`。以下手动命令使用同一路径，排除 `src/test/`。请使用空的输出目录，避免打包旧类或此前编译的测试类。
+当前 IDEA 配置继承项目输出设置，模块名为 `egps-shell`，通常输出到 `out/production/egps-shell`。以下手动命令使用同一路径，排除 `src/test/`。请使用空的输出目录，避免打包旧类或此前编译的测试类。
 
 `javac` 不会复制图片、HTML、字体等资源；编译成功后必须按源码相对路径复制非 Java 文件。
 
 Windows PowerShell 7：
 
 ```powershell
-$buildDir = "out/production/egps-main.gui"
+$buildDir = "out/production/egps-shell"
 New-Item -ItemType Directory -Force -Path $buildDir | Out-Null
 $sourceRoot = (Resolve-Path src).Path
 Get-ChildItem src -Recurse -Filter *.java |
@@ -66,7 +66,7 @@ Get-ChildItem src -Recurse -File |
 macOS/Linux（Bash，使用本机 Java）：
 
 ```bash
-build_dir="out/production/egps-main.gui"
+build_dir="out/production/egps-shell"
 mkdir -p "$build_dir"
 find src -path src/test -prune -o -name '*.java' -print | sed 's/.*/"&"/' > out/sources.txt
 javac -encoding UTF-8 -d "$build_dir" -cp "dependency-egps/*" @out/sources.txt &&
@@ -86,7 +86,7 @@ find src -path src/test -prune -o -type f ! -name '*.java' -exec sh -c '
 编译并复制资源后，可直接打包（两个平台通用）：
 
 ```text
-jar --create --file out/egps-shell-0.0.1.jar -C out/production/egps-main.gui .
+jar --create --file out/egps-shell-0.0.1.jar -C out/production/egps-shell .
 ```
 
 该命令只打包当前输出，不编译、不包含依赖 JAR，也不复制到部署目录。部署时需另行准备依赖。
@@ -100,17 +100,17 @@ jar --create --file out/egps-shell-0.0.1.jar -C out/production/egps-main.gui .
 Windows PowerShell 7：
 
 ```powershell
-java -cp "out/production/egps-main.gui;dependency-egps/*" -Xmx12g '@eGPS.args' egps2.Launcher
-java -cp "out/production/egps-main.gui;dependency-egps/*" -Xmx12g '@eGPS.args' egps2.Launcher4Dev
-java -cp "out/production/egps-main.gui;dependency-egps/*" -Xmx12g '@eGPS.args' egps2.Launcher com.example.YourModuleLoader
+java -cp "out/production/egps-shell;dependency-egps/*" -Xmx12g '@eGPS.args' egps2.Launcher
+java -cp "out/production/egps-shell;dependency-egps/*" -Xmx12g '@eGPS.args' egps2.Launcher4Dev
+java -cp "out/production/egps-shell;dependency-egps/*" -Xmx12g '@eGPS.args' egps2.Launcher com.example.YourModuleLoader
 ```
 
 macOS/Linux：
 
 ```sh
-java -cp "out/production/egps-main.gui:dependency-egps/*" -Xmx12g @eGPS.args egps2.Launcher
-java -cp "out/production/egps-main.gui:dependency-egps/*" -Xmx12g @eGPS.args egps2.Launcher4Dev
-java -cp "out/production/egps-main.gui:dependency-egps/*" -Xmx12g @eGPS.args egps2.Launcher com.example.YourModuleLoader
+java -cp "out/production/egps-shell:dependency-egps/*" -Xmx12g @eGPS.args egps2.Launcher
+java -cp "out/production/egps-shell:dependency-egps/*" -Xmx12g @eGPS.args egps2.Launcher4Dev
+java -cp "out/production/egps-shell:dependency-egps/*" -Xmx12g @eGPS.args egps2.Launcher com.example.YourModuleLoader
 ```
 
 第三条命令用于直接打开某个模块，参数需要传入模块加载器类的完整类名。
@@ -122,7 +122,7 @@ java -cp "out/production/egps-main.gui:dependency-egps/*" -Xmx12g @eGPS.args egp
 macOS/Linux 示例：
 
 ```sh
-java -cp "out/production/egps-main.gui:dependency-egps/*" @eGPS.args egps2.builtin.modules.CLI your.package.YourRunner path/to/config.txt
+java -cp "out/production/egps-shell:dependency-egps/*" @eGPS.args egps2.builtin.modules.CLI your.package.YourRunner path/to/config.txt
 ```
 
 Windows PowerShell 下将 classpath 中的 `:` 换成 `;`，并将参数文件写成带引号的 `'@eGPS.args'`。
@@ -136,15 +136,15 @@ Windows PowerShell 下将 classpath 中的 `:` 换成 `;`，并将参数文件�
 Windows PowerShell 7：
 
 ```powershell
-javac -encoding UTF-8 -d out/test-classes -cp "out/production/egps-main.gui;dependency-egps/*" src/test/egps2/frame/features/ModuleDiscoveryServiceTest.java
-java -cp "out/test-classes;out/production/egps-main.gui;dependency-egps/*" '@eGPS.args' test.egps2.frame.features.ModuleDiscoveryServiceTest
+javac -encoding UTF-8 -d out/test-classes -cp "out/production/egps-shell;dependency-egps/*" src/test/egps2/frame/features/ModuleDiscoveryServiceTest.java
+java -cp "out/test-classes;out/production/egps-shell;dependency-egps/*" '@eGPS.args' test.egps2.frame.features.ModuleDiscoveryServiceTest
 ```
 
 macOS/Linux：
 
 ```bash
-javac -encoding UTF-8 -d out/test-classes -cp "out/production/egps-main.gui:dependency-egps/*" src/test/egps2/frame/features/ModuleDiscoveryServiceTest.java
-java -cp "out/test-classes:out/production/egps-main.gui:dependency-egps/*" @eGPS.args test.egps2.frame.features.ModuleDiscoveryServiceTest
+javac -encoding UTF-8 -d out/test-classes -cp "out/production/egps-shell:dependency-egps/*" src/test/egps2/frame/features/ModuleDiscoveryServiceTest.java
+java -cp "out/test-classes:out/production/egps-shell:dependency-egps/*" @eGPS.args test.egps2.frame.features.ModuleDiscoveryServiceTest
 ```
 
 - `test.egps2.frame.features.ModuleDiscoveryServiceTest`：检查扫描与过滤，包名确实含 `test.`。
